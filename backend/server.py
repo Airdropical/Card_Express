@@ -41,7 +41,7 @@ CONTENT_PATH = FRONTEND / "data" / "testlauf-03-ergebnisse.json"
 PROFILE_SCHEMA_PATH = ROOT / "data" / "user-profile.schema.json"
 MAX_BODY_BYTES = 1_000_000
 TOKEN_TTL = timedelta(days=30)
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
+GEMINI_API_KEY = (os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY") or "").strip()
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
 GEMINI_FALLBACK_MODEL = os.environ.get("GEMINI_FALLBACK_MODEL", "gemini-3.1-flash-lite").strip()
 AI_DAILY_REQUEST_LIMIT = int(os.environ.get("AI_DAILY_REQUEST_LIMIT", "40"))
@@ -527,7 +527,7 @@ def settle_ai_usage(db: Session, usage_id: UUID, model: str, result: dict[str, A
 
 def gemini_generate(parts: list[dict[str, Any]], schema: dict[str, Any]) -> tuple[dict[str, Any], str]:
     if not GEMINI_API_KEY:
-        raise HTTPException(status_code=503, detail="AI backend is not configured")
+        raise HTTPException(status_code=503, detail="Set GEMINI_API_KEY (or GOOGLE_API_KEY) in the Railway service variables")
     models = [GEMINI_MODEL]
     if GEMINI_FALLBACK_MODEL and GEMINI_FALLBACK_MODEL != GEMINI_MODEL:
         models.append(GEMINI_FALLBACK_MODEL)
@@ -569,7 +569,7 @@ def gemini_generate(parts: list[dict[str, Any]], schema: dict[str, Any]) -> tupl
 
 def execute_ai(request: Request, db: Session, account: Account, route: str, parts: list[dict[str, Any]], schema: dict[str, Any]) -> dict[str, Any]:
     if not GEMINI_API_KEY:
-        raise HTTPException(status_code=503, detail="AI backend is not configured")
+        raise HTTPException(status_code=503, detail="Set GEMINI_API_KEY (or GOOGLE_API_KEY) in the Railway service variables")
     fail_rate_limit(db, request, "ai", limit=AI_RATE_LIMIT_PER_MINUTE, window_seconds=60, subject=str(account.id), by_ip=False)
     usage = reserve_ai_usage(db, account)
     result, model = gemini_generate(parts, schema)
@@ -812,8 +812,9 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         "You are an assistant inside a local study app. Reply in " + language + ". Selected action mode: " + body.mode + ". "
         "In vocabulary mode, treat the request as vocabulary work; in deck mode, treat it as flashcard/deck work. Never claim an action is done. The user must review and approve every action. "
         "For vocabulary, the active source language is " + body.sourceLanguage + " and the target language is " + body.targetLanguage + ". Keep term in the source language and translation in the target language. "
+        "Write every vocabulary example sentence entirely in the target language (" + body.targetLanguage + "), never in the app interface language or source language. "
         "For a new folder use create_vocabulary_folder with folderName and vocabularyEntries. For an existing folder use add_vocabulary with folderName and vocabularyEntries. "
-        "When the user says many or gives no quantity, suggest 10 useful entries; maximum 30. Include concise example sentences, valid synonyms where useful, and difficulty 1-3. Do not mix language pairs or invent alternate language directions. "
+        "When the user says many or gives no quantity, suggest 10 useful entries; maximum 30. Provide concise target-language example sentences for review, valid synonyms where useful, and difficulty 1-3. Do not mix language pairs or invent alternate language directions. "
         "For a new main flashcard deck use create_deck with deckName. When a request combines a new main deck, a subdeck, and cards, return ONE create_deck_tree action only, with deckName, subdeckName, and all cards on that action. "
         "For a request targeting an existing parent, create_subdeck uses parentDeck and deckName with cards directly included. Use create_cards only for cards added to an existing deck. "
         "For create_calendar_entry, provide dateISO as YYYY-MM-DD, title, and kind; if the user mentions a matching deck, set deckName to its exact name. If required details are unclear, ask a concise question and return actions []. "
