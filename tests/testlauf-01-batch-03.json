@@ -1,0 +1,668 @@
+[
+  {
+    "lemma": {
+      "id": "de-ball-nomen",
+      "sprache": "de",
+      "text": "Ball",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Bälle"
+    },
+    "senses": [
+      {
+        "id": "de-ball-nomen-1",
+        "bedeutung_kurz": "runder Gegenstand zum Spielen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "ball",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein runder Gegenstand zum Spielen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Kinder spielen mit einem Ball.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Ball liegt unter dem Tisch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A round object for games.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Kinder spielen mit einem Ball.",
+                "uebersetzung": "The children are playing with a ball.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Ball liegt unter dem Tisch.",
+                "uebersetzung": "The ball is under the table.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-ball-nomen-2",
+        "bedeutung_kurz": "festlicher Tanzabend",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "ball",
+          "alternativen": [
+            "formal dance"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein festlicher Abend mit Tanz.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie trägt ein langes Kleid zum Ball.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Ball beginnt um acht Uhr.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A formal evening with dancing.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie trägt ein langes Kleid zum Ball.",
+                "uebersetzung": "She is wearing a long dress to the ball.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Ball beginnt um acht Uhr.",
+                "uebersetzung": "The ball begins at eight o'clock.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-blatt-nomen",
+      "sprache": "de",
+      "text": "Blatt",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "das",
+      "plural": "Blätter"
+    },
+    "senses": [
+      {
+        "id": "de-blatt-nomen-1",
+        "bedeutung_kurz": "Teil einer Pflanze",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "leaf",
+          "alternativen": [
+            "blade"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Der flache, meist grüne Teil einer Pflanze, der am Stängel wächst.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ein Blatt fällt vom Baum.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Im Frühling bekommt die Pflanze neue Blätter.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A flat green part of a plant.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ein Blatt fällt vom Baum.",
+                "uebersetzung": "A leaf is falling from the tree.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Im Frühling bekommt die Pflanze neue Blätter.",
+                "uebersetzung": "The plant gets new leaves in spring.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-blatt-nomen-2",
+        "bedeutung_kurz": "einzelne Seite aus Papier",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "sheet of paper",
+          "alternativen": [
+            "page"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein einzelnes, dünnes Stück Papier.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Bitte gib mir ein Blatt Papier.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Auf dem Blatt steht mein Name.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "One single, thin piece of paper.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Bitte gib mir ein Blatt Papier.",
+                "uebersetzung": "Please give me a sheet of paper.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Auf dem Blatt steht mein Name.",
+                "uebersetzung": "My name is on the sheet.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-zug-nomen",
+      "sprache": "de",
+      "text": "Zug",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "der",
+      "plural": "Züge"
+    },
+    "senses": [
+      {
+        "id": "de-zug-nomen-1",
+        "bedeutung_kurz": "Schienenfahrzeug",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "train",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein langes Fahrzeug, das auf Schienen fährt und Menschen oder Dinge transportiert.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Zug fährt um zehn Uhr ab.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir nehmen den Zug nach Hamburg.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A long vehicle that travels on rails and carries people or goods.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Zug fährt um zehn Uhr ab.",
+                "uebersetzung": "The train leaves at ten o'clock.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir nehmen den Zug nach Hamburg.",
+                "uebersetzung": "We are taking the train to Hamburg.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-zug-nomen-2",
+        "bedeutung_kurz": "einzelner Spielschritt",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "move",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine einzelne Handlung, die ein Spieler in einem Spiel ausführt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das war ein guter Zug.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Jetzt bist du am Zug.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "One action that a player makes during a game.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das war ein guter Zug.",
+                "uebersetzung": "That was a good move.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Jetzt bist du am Zug.",
+                "uebersetzung": "Now it is your turn.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-bahn-nomen",
+      "sprache": "de",
+      "text": "Bahn",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "die",
+      "plural": "Bahnen"
+    },
+    "senses": [
+      {
+        "id": "de-bahn-nomen-1",
+        "bedeutung_kurz": "Schienenverkehr",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "railway",
+          "alternativen": [
+            "train",
+            "railroad"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein System aus Zügen und Schienen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Bahn ist heute pünktlich.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir fahren mit der Bahn zur Arbeit.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A system of trains and railway tracks.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Bahn ist heute pünktlich.",
+                "uebersetzung": "The railway is on time today.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir fahren mit der Bahn zur Arbeit.",
+                "uebersetzung": "We take the train to work.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-bahn-nomen-2",
+        "bedeutung_kurz": "markierter Streifen zum Sport",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "lane",
+          "alternativen": [
+            "track"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein markierter Streifen, auf dem man zum Beispiel im Schwimmbad schwimmt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie schwimmt auf der ersten Bahn.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Bahn im Schwimmbad ist frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A marked strip for swimming or racing.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie schwimmt auf der ersten Bahn.",
+                "uebersetzung": "She is swimming in the first lane.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Bahn im Schwimmbad ist frei.",
+                "uebersetzung": "The lane in the pool is free.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-laufen-verb",
+      "sprache": "de",
+      "text": "laufen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-laufen-verb-1",
+        "bedeutung_kurz": "sich schnell zu Fuß bewegen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "run",
+          "alternativen": [
+            "jog"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Sich schnell zu Fuß bewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich laufe jeden Morgen im Park.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Hund läuft über die Wiese.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To move quickly on foot.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich laufe jeden Morgen im Park.",
+                "uebersetzung": "I run in the park every morning.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Hund läuft über die Wiese.",
+                "uebersetzung": "The dog runs across the meadow.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-laufen-verb-2",
+        "bedeutung_kurz": "in Betrieb sein",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "run",
+          "alternativen": [
+            "operate",
+            "work"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Maschine ist an und läuft.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Motor läuft sehr leise.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Computer läuft wieder.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A machine is on and works.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Motor läuft sehr leise.",
+                "uebersetzung": "The engine is running very quietly.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Computer läuft wieder.",
+                "uebersetzung": "The computer is working again.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]

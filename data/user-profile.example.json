@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "profile_id": "local-profile-1",
+  "created_at": "2026-11-04T08:00:00Z",
+  "updated_at": "2026-11-04T08:00:00Z",
+  "display_name": null,
+  "settings": {
+    "ui_language": "de",
+    "learning_languages": ["en"],
+    "default_explanation_language": "de",
+    "daily_streak_goal": 5,
+    "time_zone": "Europe/Berlin"
+  },
+  "folders": [
+    {"folder_id": "travel", "name": "Reisen", "parent_folder_id": null, "created_at": "2026-11-04T08:00:00Z", "sort_order": 0},
+    {"folder_id": "airport", "name": "Am Flughafen", "parent_folder_id": "travel", "created_at": "2026-11-04T08:00:00Z", "sort_order": 0}
+  ],
+  "word_states": [
+    {
+      "lemma_id": "en-acquire-verb",
+      "sense_id": "en-acquire-verb-1",
+      "favorite": true,
+      "saved_at": "2026-11-04T08:15:00Z",
+      "saved_in_folder_ids": ["airport"],
+      "quiz": {"enabled": true, "categories": ["Beruf", "B2"], "difficulty": 4},
+      "progress": {"correct": 3, "incorrect": 1, "attempts": 4, "last_practiced_at": "2026-11-04T08:30:00Z", "due_at": "2026-11-07T08:30:00Z", "box": 2}
+    }
+  ],
+  "activity_days": [
+    {"date": "2026-11-04", "practice_count": 4, "correct_count": 3, "incorrect_count": 1, "unique_sense_ids": ["en-acquire-verb-1"]}
+  ],
+  "stats_snapshot": {
+    "calculated_at": "2026-11-04T08:30:00Z",
+    "saved_lemma_count": 1,
+    "saved_sense_count": 1,
+    "favorite_lemma_count": 1,
+    "favorite_sense_count": 1,
+    "quiz_lemma_count": 1,
+    "quiz_sense_count": 1,
+    "current_streak_days": 1,
+    "longest_streak_days": 1,
+    "total_active_days": 1,
+    "unique_senses_practiced": 1,
+    "total_practice_count": 4,
+    "total_correct_count": 3,
+    "total_incorrect_count": 1
+  }
+}

@@ -1,0 +1,554 @@
+[
+  {
+    "lemma": {
+      "id": "en-book-nomen",
+      "sprache": "en",
+      "text": "book",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": "books"
+    },
+    "senses": [
+      {
+        "id": "en-book-nomen-1",
+        "bedeutung_kurz": "pages bound together for reading",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Buch",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Pages with words or pictures to read.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I read a book every night.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This book is about animals.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Seiten mit Text oder Bildern zum Lesen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I read a book every night.",
+                "uebersetzung": "Ich lese jeden Abend ein Buch.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This book is about animals.",
+                "uebersetzung": "Dieses Buch handelt von Tieren.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-close-adjektiv",
+      "sprache": "en",
+      "text": "close",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-close-adjektiv-1",
+        "bedeutung_kurz": "near in space",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "nah",
+          "alternativen": [
+            "nahe"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Not far away.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our hotel is close to the station.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The shop is close to my home.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nicht weit entfernt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our hotel is close to the station.",
+                "uebersetzung": "Unser Hotel ist nahe am Bahnhof.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The shop is close to my home.",
+                "uebersetzung": "Der Laden ist in der Nähe meines Zuhauses.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-close-adjektiv-2",
+        "bedeutung_kurz": "having a strong personal relationship",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "eng",
+          "alternativen": [
+            "vertraut"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Having a strong personal relationship with someone.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "My sister and I are close.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "They are close friends.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine enge persönliche Beziehung zu jemandem haben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "My sister and I are close.",
+                "uebersetzung": "Meine Schwester und ich stehen uns nahe.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "They are close friends.",
+                "uebersetzung": "Sie sind enge Freunde.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-mean-verb",
+      "sprache": "en",
+      "text": "mean",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-mean-verb-1",
+        "bedeutung_kurz": "have a particular meaning",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "bedeuten",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To have a particular meaning.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "What does this word mean?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The red light means stop.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine bestimmte Bedeutung haben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "What does this word mean?",
+                "uebersetzung": "Was bedeutet dieses Wort?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The red light means stop.",
+                "uebersetzung": "Das rote Licht bedeutet Stopp.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-mean-verb-2",
+        "bedeutung_kurz": "intend or want to say",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "meinen",
+          "alternativen": [
+            "beabsichtigen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To want to say something or intend to do it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I mean that we need more time.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I did not mean to hurt you.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Etwas sagen wollen oder die Absicht haben, es zu tun.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I mean that we need more time.",
+                "uebersetzung": "Ich meine, dass wir mehr Zeit brauchen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I did not mean to hurt you.",
+                "uebersetzung": "Ich wollte dich nicht verletzen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-fast-adjektiv",
+      "sprache": "en",
+      "text": "fast",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-fast-adjektiv-1",
+        "bedeutung_kurz": "moving at high speed",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "schnell",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Moving at a high speed.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "This train is very fast.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He is a fast runner.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Sich mit hoher Geschwindigkeit bewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "This train is very fast.",
+                "uebersetzung": "Dieser Zug ist sehr schnell.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He is a fast runner.",
+                "uebersetzung": "Er ist ein schneller Läufer.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-hard-adjektiv",
+      "sprache": "en",
+      "text": "hard",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-hard-adjektiv-1",
+        "bedeutung_kurz": "difficult to do or understand",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "schwierig",
+          "alternativen": [
+            "schwer"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Needing a lot of effort or not easy to understand.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Math is hard for me.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This question is hard.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Viel Mühe brauchen oder nicht leicht zu verstehen sein.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Math is hard for me.",
+                "uebersetzung": "Mathe ist schwierig für mich.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This question is hard.",
+                "uebersetzung": "Diese Frage ist schwierig.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-hard-adjektiv-2",
+        "bedeutung_kurz": "firm and not soft",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "hart",
+          "alternativen": [
+            "fest"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Firm and not soft, so it is difficult to press into it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The bread is hard.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This chair is too hard.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Fest und nicht weich, sodass man schwer hineindrücken kann.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The bread is hard.",
+                "uebersetzung": "Das Brot ist hart.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This chair is too hard.",
+                "uebersetzung": "Dieser Stuhl ist zu hart.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]

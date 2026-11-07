@@ -1,0 +1,670 @@
+[
+  {
+    "lemma": {
+      "id": "en-run-verb",
+      "sprache": "en",
+      "text": "run",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-run-verb-1",
+        "bedeutung_kurz": "move quickly on foot",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "laufen",
+          "alternativen": [
+            "rennen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To move quickly on your feet.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I run in the park every morning.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The children run to school.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Sich schnell auf den Füßen bewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I run in the park every morning.",
+                "uebersetzung": "Ich laufe jeden Morgen im Park.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The children run to school.",
+                "uebersetzung": "Die Kinder laufen zur Schule.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-run-verb-2",
+        "bedeutung_kurz": "operate or work",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "laufen",
+          "alternativen": [
+            "funktionieren"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A machine runs when it works.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The engine runs quietly.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This app runs on my phone.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Maschine ist an und läuft.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The engine runs quietly.",
+                "uebersetzung": "Der Motor läuft leise.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This app runs on my phone.",
+                "uebersetzung": "Diese App läuft auf meinem Telefon.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-get-verb",
+      "sprache": "en",
+      "text": "get",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-get-verb-1",
+        "bedeutung_kurz": "receive or obtain",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "bekommen",
+          "alternativen": [
+            "erhalten"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To receive something or come to have it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I get a message every day.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She gets a new book today.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas bekommen oder erhalten.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I get a message every day.",
+                "uebersetzung": "Ich bekomme jeden Tag eine Nachricht.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She gets a new book today.",
+                "uebersetzung": "Sie bekommt heute ein neues Buch.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-get-verb-2",
+        "bedeutung_kurz": "understand",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "verstehen",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To understand the meaning of something.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I get your point.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Do you get this question?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Den Sinn von etwas verstehen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I get your point.",
+                "uebersetzung": "Ich verstehe, was du meinst.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Do you get this question?",
+                "uebersetzung": "Verstehst du diese Frage?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-take-verb",
+      "sprache": "en",
+      "text": "take",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-take-verb-1",
+        "bedeutung_kurz": "carry or bring with you",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "mitnehmen",
+          "alternativen": [
+            "nehmen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To carry something with you.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Please take your coat with you.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I take my bag to work.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas greifen und mitnehmen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Please take your coat with you.",
+                "uebersetzung": "Nimm bitte deinen Mantel mit.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I take my bag to work.",
+                "uebersetzung": "Ich nehme meine Tasche mit zur Arbeit.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-take-verb-2",
+        "bedeutung_kurz": "use or swallow medicine",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "einnehmen",
+          "alternativen": [
+            "nehmen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To use or swallow a medicine.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Take this medicine after lunch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He takes one tablet each day.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Medikament benutzen oder schlucken.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Take this medicine after lunch.",
+                "uebersetzung": "Nimm dieses Medikament nach dem Mittagessen ein.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He takes one tablet each day.",
+                "uebersetzung": "Er nimmt jeden Tag eine Tablette.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-set-verb",
+      "sprache": "en",
+      "text": "set",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-set-verb-1",
+        "bedeutung_kurz": "put something in a place",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "stellen",
+          "alternativen": [
+            "legen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To put something in a particular place.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She sets the cup on the table.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Set your bag by the door.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Etwas an einen bestimmten Platz stellen oder legen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She sets the cup on the table.",
+                "uebersetzung": "Sie stellt die Tasse auf den Tisch.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Set your bag by the door.",
+                "uebersetzung": "Stell deine Tasche an die Tür.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-set-verb-2",
+        "bedeutung_kurz": "choose a time or value",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "einstellen",
+          "alternativen": [
+            "festlegen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To choose and fix a particular time or value.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I set an alarm for seven.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Set the timer for ten minutes.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine bestimmte Zeit oder einen Wert auswählen und einstellen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I set an alarm for seven.",
+                "uebersetzung": "Ich stelle den Wecker auf sieben.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Set the timer for ten minutes.",
+                "uebersetzung": "Stelle den Timer auf zehn Minuten.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-watch-verb",
+      "sprache": "en",
+      "text": "watch",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-watch-verb-1",
+        "bedeutung_kurz": "look at something for a time",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "ansehen",
+          "alternativen": [
+            "schauen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To look at something and pay attention.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We watch a film on Friday.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She watches the birds in the garden.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Etwas eine Zeit lang ansehen und aufmerksam verfolgen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We watch a film on Friday.",
+                "uebersetzung": "Wir sehen am Freitag einen Film.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She watches the birds in the garden.",
+                "uebersetzung": "Sie beobachtet die Vögel im Garten.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-watch-verb-2",
+        "bedeutung_kurz": "look after or monitor",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "aufpassen auf",
+          "alternativen": [
+            "beobachten"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To pay attention so nothing goes wrong.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Can you watch the baby for a minute?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Watch your step on the stairs.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Auf eine Person oder Sache achten, damit nichts passiert.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Can you watch the baby for a minute?",
+                "uebersetzung": "Kannst du eine Minute auf das Baby aufpassen?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Watch your step on the stairs.",
+                "uebersetzung": "Pass auf der Treppe auf, wohin du trittst.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]

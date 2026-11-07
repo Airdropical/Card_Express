@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f4">
+  <meta name="description" content="HTML-Vorschau für Word Express: Vokabelinhalte aus dem gemeinsamen JSON-Schema.">
+  <title>Word Express — Lernvorschau</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js?v=testlauf-03" defer onerror="window.__wordExpressScriptError='app.js konnte nicht geladen werden';console.error(window.__wordExpressScriptError,this.src);var p=document.getElementById('diagnostic-panel');if(p)p.open=true;var l=document.getElementById('diagnostic-log');if(l)l.textContent=window.__wordExpressScriptError+'\nURL: '+this.src"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Word Express Startseite">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span class="brand-copy"><strong>word express</strong><small>Sprachen lernen, Wort für Wort</small></span>
+      </a>
+      <div class="topbar-meta">
+        <span class="preview-pill"><span class="status-dot"></span> HTML-Vorschau</span>
+        <span class="dataset-label">Testlauf 3 · 40 Wörter</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="intro-row" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">INHALTSMODELL · VORSCHAU</p>
+          <h1 id="page-title">Deine Wörter. Klar erklärt.</h1>
+          <p class="intro-copy">So könnten Bedeutungen, Übersetzungen und Beispiele aus dem gemeinsamen Datenschema in der App erscheinen.</p>
+        </div>
+        <div class="progress-card" aria-live="polite">
+          <div class="progress-top"><span>Wortauswahl</span><strong id="word-count">—</strong></div>
+          <div class="progress-track"><span id="progress-fill"></span></div>
+          <small id="position-label">Lade Testdaten …</small>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Wortvorschau">
+        <aside class="sidebar panel" aria-label="Wortauswahl und Einstellungen">
+          <div class="sidebar-heading">
+            <div><p class="eyebrow">DEINE VORSCHAU</p><h2>Wortliste</h2></div>
+            <span class="count-badge" id="list-count">0</span>
+          </div>
+
+          <div class="controls-grid">
+            <label class="field-label" for="learning-language">Ich lerne</label>
+            <select id="learning-language" class="select-control">
+              <option value="en">Englisch</option>
+              <option value="de">Deutsch</option>
+            </select>
+            <label class="field-label" for="explanation-language">Erklärung auf</label>
+            <select id="explanation-language" class="select-control">
+              <option value="de">Deutsch</option>
+              <option value="en">Englisch</option>
+            </select>
+          </div>
+
+          <label class="search-box" for="word-search">
+            <span aria-hidden="true" class="search-icon">⌕</span>
+            <input id="word-search" type="search" placeholder="Wort suchen …" autocomplete="off">
+            <kbd>⌘ K</kbd>
+          </label>
+
+          <div class="word-list-header"><span>WÖRTER</span><span id="filter-label">Alle Niveaus</span></div>
+          <nav id="word-list" class="word-list" aria-label="Wörter"></nav>
+          <div id="empty-list" class="empty-state hidden">Keine Wörter gefunden.</div>
+          <div class="sidebar-footnote"><span class="footnote-icon">i</span><span>Vorschau mit den geprüften Testdaten. Dein Lernstand wird hier nicht gespeichert.</span></div>
+        </aside>
+
+        <section class="content-column" aria-label="Wortkarte">
+          <div class="toolbar">
+            <div class="mode-label"><span class="mode-icon" aria-hidden="true">✳</span><span>Wort entdecken</span></div>
+            <label class="level-filter"><span>Niveau</span>
+              <select id="level-filter" class="select-control compact">
+                <option value="all">Alle</option>
+                <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option>
+                <option value="B2">B2</option><option value="C1">C1</option><option value="C2">C2</option>
+              </select>
+            </label>
+          </div>
+
+          <article id="word-card" class="word-card panel" aria-live="polite">
+            <div class="card-loading"><span class="loader"></span><p>Testdaten werden geladen …</p></div>
+          </article>
+
+          <div class="card-navigation">
+            <button id="previous-button" class="button button-secondary" type="button">
+              <span aria-hidden="true">←</span><span>Zurück</span>
+            </button>
+            <div class="keyboard-hint">Mit den Pfeiltasten wechseln</div>
+            <button id="next-button" class="button button-primary" type="button">
+              <span>Nächstes Wort</span><span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div id="toast" class="toast" role="status" aria-live="polite"></div>
+          <details id="diagnostic-panel" class="diagnostic-panel">
+            <summary>Technische Diagnose</summary>
+            <pre id="diagnostic-log">Warte auf Start …</pre>
+          </details>
+        </section>
+      </section>
+
+      <footer class="page-footer">
+        <span>WORD EXPRESS <span class="footer-separator">/</span> PRODUKTVORSCHAU</span>
+        <span>Inhalte aus <code>data/testlauf-03-ergebnisse.json</code></span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

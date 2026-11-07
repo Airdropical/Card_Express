@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://word-express.local/schema/user-profile-1.0.json",
+  "title": "Word Express User Profile",
+  "description": "Nutzerspezifische Ordner, Favoriten, Quiz-Planung, Lernfortschritt und Aktivität. Verweise nutzen stabile IDs aus dem getrennten Inhaltsbestand.",
+  "type": "object",
+  "required": ["schema_version", "profile_id", "created_at", "updated_at", "folders", "word_states", "activity_days"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "profile_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "display_name": {"type": ["string", "null"], "maxLength": 80},
+    "settings": {"$ref": "#/$defs/Settings"},
+    "folders": {"type": "array", "items": {"$ref": "#/$defs/Folder"}},
+    "word_states": {"type": "array", "items": {"$ref": "#/$defs/WordState"}},
+    "activity_days": {"type": "array", "items": {"$ref": "#/$defs/ActivityDay"}},
+    "stats_snapshot": {"$ref": "#/$defs/StatsSnapshot"}
+  },
+  "$defs": {
+    "Language": {"enum": ["de", "en"]},
+    "Settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ui_language": {"$ref": "#/$defs/Language"},
+        "learning_languages": {"type": "array", "items": {"$ref": "#/$defs/Language"}, "uniqueItems": true},
+        "default_explanation_language": {"$ref": "#/$defs/Language"},
+        "daily_streak_goal": {"type": "integer", "minimum": 1, "maximum": 100},
+        "time_zone": {"type": "string", "minLength": 1, "description": "IANA-Zeitzone, z. B. Europe/Berlin; Grundlage für Tagesgrenzen der Streak."}
+      }
+    },
+    "Folder": {
+      "type": "object",
+      "required": ["folder_id", "name", "parent_folder_id", "created_at", "sort_order"],
+      "additionalProperties": false,
+      "properties": {
+        "folder_id": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1, "maxLength": 80},
+        "parent_folder_id": {"type": ["string", "null"], "description": "Null = Hauptordner; sonst ID des übergeordneten Ordners."},
+        "created_at": {"type": "string", "format": "date-time"},
+        "sort_order": {"type": "integer", "minimum": 0}
+      }
+    },
+    "WordState": {
+      "type": "object",
+      "required": ["lemma_id", "sense_id", "favorite", "saved_in_folder_ids", "quiz", "progress"],
+      "additionalProperties": false,
+      "properties": {
+        "lemma_id": {"type": "string", "minLength": 1},
+        "sense_id": {"type": "string", "minLength": 1, "description": "Quiz und Fortschritt beziehen sich auf genau diese Bedeutung im gemeinsamen Inhaltsbestand."},
+        "favorite": {"type": "boolean"},
+        "saved_at": {"type": ["string", "null"], "format": "date-time"},
+        "saved_in_folder_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "quiz": {"$ref": "#/$defs/QuizMetadata"},
+        "progress": {"$ref": "#/$defs/WordProgress"}
+      }
+    },
+    "QuizMetadata": {
+      "type": "object",
+      "required": ["enabled", "categories", "difficulty"],
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "categories": {"type": "array", "items": {"type": "string", "minLength": 1, "maxLength": 60}, "uniqueItems": true},
+        "difficulty": {"type": ["integer", "null"], "minimum": 1, "maximum": 5}
+      }
+    },
+    "WordProgress": {
+      "type": "object",
+      "required": ["correct", "incorrect", "attempts", "last_practiced_at", "due_at", "box"],
+      "additionalProperties": false,
+      "properties": {
+        "correct": {"type": "integer", "minimum": 0},
+        "incorrect": {"type": "integer", "minimum": 0},
+        "attempts": {"type": "integer", "minimum": 0},
+        "last_practiced_at": {"type": ["string", "null"], "format": "date-time"},
+        "due_at": {"type": ["string", "null"], "format": "date-time"},
+        "box": {"type": "integer", "minimum": 0, "maximum": 5}
+      }
+    },
+    "ActivityDay": {
+      "type": "object",
+      "required": ["date", "practice_count", "correct_count", "incorrect_count", "unique_sense_ids"],
+      "additionalProperties": false,
+      "properties": {
+        "date": {"type": "string", "format": "date"},
+        "practice_count": {"type": "integer", "minimum": 1},
+        "correct_count": {"type": "integer", "minimum": 0},
+        "incorrect_count": {"type": "integer", "minimum": 0},
+        "unique_sense_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "StatsSnapshot": {
+      "type": "object",
+      "required": ["calculated_at", "saved_lemma_count", "saved_sense_count", "favorite_lemma_count", "favorite_sense_count", "quiz_lemma_count", "quiz_sense_count", "current_streak_days", "longest_streak_days", "total_active_days", "unique_senses_practiced", "total_practice_count", "total_correct_count", "total_incorrect_count"],
+      "additionalProperties": false,
+      "properties": {
+        "calculated_at": {"type": "string", "format": "date-time"},
+        "saved_lemma_count": {"type": "integer", "minimum": 0},
+        "saved_sense_count": {"type": "integer", "minimum": 0},
+        "favorite_lemma_count": {"type": "integer", "minimum": 0},
+        "favorite_sense_count": {"type": "integer", "minimum": 0},
+        "quiz_lemma_count": {"type": "integer", "minimum": 0},
+        "quiz_sense_count": {"type": "integer", "minimum": 0},
+        "current_streak_days": {"type": "integer", "minimum": 0},
+        "longest_streak_days": {"type": "integer", "minimum": 0},
+        "total_active_days": {"type": "integer", "minimum": 0},
+        "unique_senses_practiced": {"type": "integer", "minimum": 0},
+        "total_practice_count": {"type": "integer", "minimum": 0},
+        "total_correct_count": {"type": "integer", "minimum": 0},
+        "total_incorrect_count": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

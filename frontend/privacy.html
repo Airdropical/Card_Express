@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Datenschutzhinweise · Word Express</title>
+  <style>
+    body { max-width: 760px; margin: 48px auto; padding: 0 20px; color: #242424; font: 17px/1.6 system-ui, sans-serif; }
+    h1, h2 { line-height: 1.2; }
+    .draft { padding: 14px 16px; border-left: 4px solid #6950d8; background: #f4f1ff; }
+  </style>
+</head>
+<body>
+  <h1>Datenschutzhinweise für Word Express</h1>
+  <p class="draft"><strong>Technischer Entwurf für den privaten Testbetrieb.</strong> Vor einer Veröffentlichung müssen Betreibername, Kontakt, Rechtsgrundlage, Hosting-Region, Aufbewahrungsfristen und Betroffenenrechte mit den tatsächlichen Betriebsbedingungen ergänzt und rechtlich geprüft werden.</p>
+  <h2>Welche Daten verarbeitet werden</h2>
+  <p>Bei einem Konto werden die E-Mail-Adresse und ein kryptografisch gehashter Passwortwert gespeichert. Nach der Anmeldung kann die App Ordner, Favoriten, Quiz-Einstellungen, Lernfortschritt, Aktivitätstage und Spracheinstellungen als Profil synchronisieren. Das Passwort wird nicht im Klartext gespeichert. Die App speichert das Sitzungstoken im iOS-Schlüsselbund.</p>
+  <h2>Technische Betriebsdaten</h2>
+  <p>Die API verarbeitet Verbindungsdaten zur Bereitstellung und zum Schutz vor übermäßigen Anfragen. Für Anmelde- und Registrierungsgrenzen werden gehashte IP-/Kontokennungen und zeitlich begrenzte Zähler in PostgreSQL gespeichert. Anfrageinhalte und Passwörter werden nicht in Anwendungslogs geschrieben. Railway kann eigene Infrastruktur- und Sicherungsprotokolle nach den dort geltenden Einstellungen führen.</p>
+  <h2>Speicherung und Löschung</h2>
+  <p>Profildaten bleiben lokal auf dem Gerät, wenn kein Konto verwendet wird. Cloud-Profile werden in der PostgreSQL-Datenbank des Betreibers gespeichert. In der App kann ein angemeldetes Konto nach erneuter Passworteingabe gelöscht werden; dabei werden Konto und zugeordnetes Cloud-Profil aus der Datenbank entfernt. Lokale App-Daten werden dabei zurückgesetzt.</p>
+  <h2>Inhalte und Drittanbieter</h2>
+  <p>Die Wortdaten werden mit der App bereitgestellt. In dieser Version werden keine KI-Anfragen, Werbe- oder Analyse-Tracker an externe Anbieter gesendet. Der Hosting-Anbieter verarbeitet technische Verbindungsdaten, soweit dies für den Betrieb erforderlich ist.</p>
+  <h2>Kontakt</h2>
+  <p>Verantwortlicher und Kontaktadresse müssen vor einer Veröffentlichung hier eingetragen werden.</p>
+</body>
+</html>

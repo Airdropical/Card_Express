@@ -1,0 +1,282 @@
+[
+  {
+    "sprache": "de",
+    "text": "Band",
+    "wortart": "nomen",
+    "niveau": "B1",
+    "id": "de-band-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "Leiter",
+    "wortart": "nomen",
+    "niveau": "B1",
+    "id": "de-leiter-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "See",
+    "wortart": "nomen",
+    "niveau": "B1",
+    "id": "de-see-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "Kiefer",
+    "wortart": "nomen",
+    "niveau": "B1",
+    "id": "de-kiefer-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "Mutter",
+    "wortart": "nomen",
+    "niveau": "B1",
+    "id": "de-mutter-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "werfen",
+    "wortart": "verb",
+    "niveau": "B1",
+    "id": "de-werfen-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "schlafen",
+    "wortart": "verb",
+    "niveau": "A2",
+    "id": "de-schlafen-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "geben",
+    "wortart": "verb",
+    "niveau": "A2",
+    "id": "de-geben-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "behalten",
+    "wortart": "verb",
+    "niveau": "B1",
+    "id": "de-behalten-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "ziehen",
+    "wortart": "verb",
+    "niveau": "B1",
+    "id": "de-ziehen-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "erwerben",
+    "wortart": "verb",
+    "niveau": "B2",
+    "id": "de-erwerben-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "öffentlich",
+    "wortart": "adjektiv",
+    "niveau": "B1",
+    "id": "de-oeffentlich-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "seltsam",
+    "wortart": "adjektiv",
+    "niveau": "B1",
+    "id": "de-seltsam-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "dünn",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "de-duenn-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "sauer",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "de-sauer-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "oft",
+    "wortart": "adverb",
+    "niveau": "A2",
+    "id": "de-oft-adverb"
+  },
+  {
+    "sprache": "de",
+    "text": "kaum",
+    "wortart": "adverb",
+    "niveau": "B1",
+    "id": "de-kaum-adverb"
+  },
+  {
+    "sprache": "de",
+    "text": "während",
+    "wortart": "praeposition",
+    "niveau": "B1",
+    "id": "de-waehrend-praeposition"
+  },
+  {
+    "sprache": "de",
+    "text": "gegen",
+    "wortart": "praeposition",
+    "niveau": "A2",
+    "id": "de-gegen-praeposition"
+  },
+  {
+    "sprache": "de",
+    "text": "ohne",
+    "wortart": "praeposition",
+    "niveau": "A1",
+    "id": "de-ohne-praeposition"
+  },
+  {
+    "sprache": "en",
+    "text": "bark",
+    "wortart": "nomen",
+    "niveau": "B1",
+    "id": "en-bark-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "crane",
+    "wortart": "nomen",
+    "niveau": "B1",
+    "id": "en-crane-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "match",
+    "wortart": "nomen",
+    "niveau": "A2",
+    "id": "en-match-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "seal",
+    "wortart": "nomen",
+    "niveau": "B2",
+    "id": "en-seal-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "band",
+    "wortart": "nomen",
+    "niveau": "B1",
+    "id": "en-band-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "throw",
+    "wortart": "verb",
+    "niveau": "A2",
+    "id": "en-throw-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "sleep",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-sleep-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "give",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-give-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "keep",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-keep-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "acquire",
+    "wortart": "verb",
+    "niveau": "B2",
+    "id": "en-acquire-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "obtain",
+    "wortart": "verb",
+    "niveau": "B2",
+    "id": "en-obtain-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "public",
+    "wortart": "adjektiv",
+    "niveau": "B1",
+    "id": "en-public-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "strange",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "en-strange-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "thin",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "en-thin-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "sour",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "en-sour-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "often",
+    "wortart": "adverb",
+    "niveau": "A1",
+    "id": "en-often-adverb"
+  },
+  {
+    "sprache": "en",
+    "text": "barely",
+    "wortart": "adverb",
+    "niveau": "B1",
+    "id": "en-barely-adverb"
+  },
+  {
+    "sprache": "en",
+    "text": "during",
+    "wortart": "praeposition",
+    "niveau": "B1",
+    "id": "en-during-praeposition"
+  },
+  {
+    "sprache": "en",
+    "text": "against",
+    "wortart": "praeposition",
+    "niveau": "A2",
+    "id": "en-against-praeposition"
+  },
+  {
+    "sprache": "en",
+    "text": "without",
+    "wortart": "praeposition",
+    "niveau": "A1",
+    "id": "en-without-praeposition"
+  }
+]

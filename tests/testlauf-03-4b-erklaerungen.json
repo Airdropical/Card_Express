@@ -1,0 +1,1622 @@
+[
+  {
+    "sense_id": "de-band-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein einzelner Teil einer Buchreihe oder eines mehrbändigen Werkes.",
+    "merkhilfe": "Der Band eines Buches ist ein einzelner Teil einer Reihe.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-band-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "One part of a book series or a multi-volume work.",
+    "merkhilfe": "A book volume is one part of a series.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-band-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein schmales, langes Stück Stoff oder Material, oft zum Binden.",
+    "merkhilfe": "Ein Band aus Stoff kann etwas zusammenhalten oder schmücken.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-band-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A long, narrow piece of fabric or other material, often used for tying.",
+    "merkhilfe": "A fabric ribbon can tie or decorate something.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-band-nomen-3",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Eine Gruppe von Musikern, die gemeinsam Musik spielt.",
+    "merkhilfe": "Der Buchband, das Stoffband, die Musikband: Der Artikel hilft beim Unterscheiden.",
+    "verwechslung": "Nicht verwechseln: der Band ist ein Buchteil; die Band ist eine Musikgruppe.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-band-nomen-3",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A group of musicians who perform music together.",
+    "merkhilfe": "In German, the article changes: der Band, das Band, die Band.",
+    "verwechslung": "In German, der Band is a book volume; die Band is a music group.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-leiter-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein Gerät mit zwei Holmen und Sprossen, auf das man steigt.",
+    "merkhilfe": "Eine Leiter hat Sprossen, auf denen man steht.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-leiter-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A frame with steps that people climb to reach a higher place.",
+    "merkhilfe": "A ladder has rungs that you step on.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-leiter-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Eine Person, die für eine Gruppe oder ein Team verantwortlich ist.",
+    "merkhilfe": "Ein Leiter führt Menschen; eine Leiter hat Sprossen.",
+    "verwechslung": "Der Leiter ist eine Person; die Leiter ist das Gerät mit Sprossen.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-leiter-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A person responsible for guiding or directing a group.",
+    "merkhilfe": "A leader guides people; a ladder has rungs.",
+    "verwechslung": "In German, der Leiter is a person; die Leiter is the climbing frame.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-see-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein großes Gewässer, das vollständig von Land umgeben ist.",
+    "merkhilfe": "Der See liegt im Land; die See ist das Meer.",
+    "verwechslung": "Nicht verwechseln: der See ist ein Binnengewässer, die See das Meer.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-see-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A large body of water that is completely surrounded by land.",
+    "merkhilfe": "In German, der See is a lake; die See is the sea.",
+    "verwechslung": "The German article changes the meaning: der See is a lake, die See is the sea.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-see-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Das große, salzige Gewässer zwischen Ländern und Kontinenten.",
+    "merkhilfe": "Die See bedeutet Meer; im üblichen Sinn hat das Wort keinen Plural.",
+    "verwechslung": "Der See ist ein Binnengewässer; die See bedeutet Meer.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-see-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A large area of salty water between countries and continents.",
+    "merkhilfe": "Die See means the sea and normally has no plural in this sense.",
+    "verwechslung": "Der See is an inland lake; die See means the sea.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-kiefer-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Der Knochen im Mund, in dem die unteren und oberen Zähne sitzen.",
+    "merkhilfe": "Der Kieferknochen sitzt im Gesicht; die Kiefer ist auch ein Nadelbaum.",
+    "verwechslung": "Der Kiefer ist der Knochen; die Kiefer ist der Baum.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-kiefer-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "The bone in the mouth that holds the upper or lower teeth.",
+    "merkhilfe": "Der Kiefer is the jawbone; die Kiefer is also a pine tree.",
+    "verwechslung": "Der Kiefer is the jaw; die Kiefer is the tree.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-kiefer-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein Nadelbaum mit langen Nadeln und harten Zapfen.",
+    "merkhilfe": "Die Kiefer als Baum wächst im Wald; der Kieferknochen sitzt im Gesicht.",
+    "verwechslung": "Die Kiefer ist ein Baum; der Kiefer ist der Knochen im Gesicht.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-kiefer-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A coniferous tree with long needles and hard cones.",
+    "merkhilfe": "Die Kiefer is the tree; der Kiefer is the jawbone.",
+    "verwechslung": "Die Kiefer is a tree; der Kiefer is the jawbone.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-mutter-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Eine Frau, die ein Kind geboren hat oder großzieht.",
+    "merkhilfe": "Mütter gehören zur Familie; Muttern passen auf Schrauben.",
+    "verwechslung": "Die Mutter als Elternteil hat den Plural Mütter; das Schraubenteil heißt Muttern.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-mutter-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A woman who has given birth to or raises a child.",
+    "merkhilfe": "German uses Mütter for mothers and Muttern for screw nuts.",
+    "verwechslung": "The family word has plural Mütter; the threaded part has plural Muttern.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-mutter-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein Metallteil mit Innengewinde, das auf eine Schraube gedreht wird.",
+    "merkhilfe": "Mütter gehören zur Familie; Muttern passen auf Schrauben.",
+    "verwechslung": "Die Mutter als Elternteil hat den Plural Mütter; das Schraubenteil heißt Muttern.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-mutter-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A small metal part with internal threads that screws onto a bolt.",
+    "merkhilfe": "German uses Mütter for mothers and Muttern for screw nuts.",
+    "verwechslung": "The family word has plural Mütter; the threaded part has plural Muttern.",
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-werfen-verb-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Etwas mit der Hand durch die Luft bewegen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-werfen-verb-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "To send something through the air with your hand.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-schlafen-verb-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Im Schlaf ruhen, nicht wach sein.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-schlafen-verb-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "To rest while asleep.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-geben-verb-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Jemandem etwas überreichen oder zur Verfügung stellen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-geben-verb-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "To hand something to someone.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-behalten-verb-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Etwas weiter bei sich haben und nicht zurückgeben.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-behalten-verb-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "To continue to have something.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-ziehen-verb-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Etwas mit Kraft zu sich oder an einen anderen Ort bewegen.",
+    "merkhilfe": "Hier bedeutet ziehen, etwas mit Kraft zu bewegen.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-ziehen-verb-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "To use force to move something toward you or to another place.",
+    "merkhilfe": "Here, ziehen means to pull something.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-ziehen-verb-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Seinen Wohnort wechseln und in eine andere Wohnung oder ein anderes Haus gehen.",
+    "merkhilfe": "Wenn man den Wohnort wechselt, zieht man um.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-ziehen-verb-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "To leave one home and begin living in another place.",
+    "merkhilfe": "When changing homes, German uses ziehen or umziehen.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-erwerben-verb-1",
+    "erklaersprache": "de",
+    "stufe": "B2",
+    "definition": "Etwas durch Kauf, Arbeit oder Lernen bekommen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-erwerben-verb-1",
+    "erklaersprache": "en",
+    "stufe": "B2",
+    "definition": "To get or gain something through purchase, effort, or learning.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-oeffentlich-adjektiv-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Für alle Menschen zugänglich oder für alle bestimmt.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-oeffentlich-adjektiv-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "Open or available for everyone to use or attend.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-seltsam-adjektiv-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ungewöhnlich und deshalb überraschend oder schwer zu erklären.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-seltsam-adjektiv-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "Unusual in a way that is surprising or difficult to explain.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-duenn-adjektiv-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Von einer Seite zur anderen nur wenig dick.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-duenn-adjektiv-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Having little distance from one side to the other.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-sauer-adjektiv-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Mit einem starken Geschmack wie bei einer Zitrone oder Essig.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-sauer-adjektiv-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Having a sharp taste like lemon or vinegar.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-oft-adverb-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Viele Male oder in kurzen Abständen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-oft-adverb-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Many times or at short intervals.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-kaum-adverb-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Nur in sehr kleinem Maß oder fast gar nicht.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-kaum-adverb-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "Only to a very small degree or almost not at all.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-waehrend-praeposition-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "In der Zeit, in der etwas anderes geschieht.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-waehrend-praeposition-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "Throughout the time when another event is happening.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-gegen-praeposition-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "In Kontakt mit einer Fläche oder mit Bewegung auf sie zu.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-gegen-praeposition-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Touching a surface or moving toward it.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-gegen-praeposition-2",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Im Widerstand zu jemandem oder als Gegner in einem Wettkampf.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-gegen-praeposition-2",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Opposing someone or competing with them.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-ohne-praeposition-1",
+    "erklaersprache": "de",
+    "stufe": "A1",
+    "definition": "Wenn etwas oder jemand nicht dabei ist.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "de-ohne-praeposition-1",
+    "erklaersprache": "en",
+    "stufe": "A1",
+    "definition": "When something is not there or not used.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-bark-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein kurzes, lautes Geräusch, das ein Hund macht.",
+    "merkhilfe": "Bark kann das Bellen eines Hundes oder die Rinde eines Baumes bedeuten.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-bark-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "The short, loud sound that a dog makes.",
+    "merkhilfe": "Bark can mean a dog’s sound or the outer covering of a tree.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-bark-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Die raue äußere Schicht, die den Stamm eines Baumes schützt.",
+    "merkhilfe": "Bark kann die Rinde eines Baumes oder das Bellen eines Hundes bedeuten.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-bark-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "The rough outer layer that covers and protects a tree trunk.",
+    "merkhilfe": "Bark can mean a tree’s outer covering or a dog’s sound.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-crane-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein großer Watvogel mit langen Beinen und langem Hals.",
+    "merkhilfe": "A crane kann ein Kranich sein; die Maschine hebt schwere Lasten.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-crane-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A large bird with long legs and a long neck, often found near water.",
+    "merkhilfe": "A crane can be a bird; the machine lifts heavy loads.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-crane-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Eine Maschine, die schwere Dinge hochhebt und bewegt.",
+    "merkhilfe": "Die Maschine crane hebt Lasten; der Vogel crane ist ein Kranich.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-crane-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A machine used to lift and move heavy objects.",
+    "merkhilfe": "The machine crane lifts loads; the bird crane is a wading bird.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-match-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Ein sportlicher Wettkampf zwischen zwei Personen oder Teams.",
+    "merkhilfe": "Match bedeutet hier ein Sportspiel; ein anderes match ist ein Streichholz.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-match-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "A sports contest between two people or teams.",
+    "merkhilfe": "Match can mean a sports contest or a small stick used to light a fire.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-match-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Ein kleines Holzstäbchen, mit dem man ein Feuer anzünden kann.",
+    "merkhilfe": "Ein match zum Anzünden heißt auf Deutsch Streichholz; ein Sport-match ist ein Spiel.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-match-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "A small stick used to start a fire.",
+    "merkhilfe": "A match can be a lighting stick or a sports contest.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-seal-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B2",
+    "definition": "Ein Meeressäugetier mit Flossen, das an Küsten lebt.",
+    "merkhilfe": "Seal kann eine Robbe oder ein amtliches Siegel bedeuten.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-seal-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B2",
+    "definition": "A sea mammal with flippers that often lives near coasts.",
+    "merkhilfe": "Seal can mean a sea animal or an official mark.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-seal-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B2",
+    "definition": "Ein Zeichen auf einem Dokument, das zeigt, dass es echt oder offiziell ist.",
+    "merkhilfe": "Das seal auf einem Dokument ist ein Siegel; das Tier ist eine Robbe.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-seal-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B2",
+    "definition": "A mark on a document showing that it is genuine or official.",
+    "merkhilfe": "A seal on a document is an official mark; the animal is a marine mammal.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-band-nomen-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Eine Gruppe von Musikern, die gemeinsam Musik spielt.",
+    "merkhilfe": "Band kann eine Musikgruppe oder ein schmales Materialstück sein.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-band-nomen-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A group of musicians who perform music together.",
+    "merkhilfe": "Band can mean a music group or a narrow strip of material.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-band-nomen-2",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Ein schmales Stück Material, das etwas umgibt, verbindet oder hält.",
+    "merkhilfe": "Band kann eine Musikgruppe oder ein schmales Materialstück sein.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-band-nomen-2",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "A narrow strip of material that wraps, joins, or holds things together.",
+    "merkhilfe": "Band can mean a music group or a narrow strip of material.",
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-throw-verb-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Etwas mit der Hand durch die Luft bewegen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-throw-verb-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "To send something through the air with your hand.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-sleep-verb-1",
+    "erklaersprache": "de",
+    "stufe": "A1",
+    "definition": "Im Schlaf ruhen, nicht wach sein.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-sleep-verb-1",
+    "erklaersprache": "en",
+    "stufe": "A1",
+    "definition": "To rest while asleep.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-give-verb-1",
+    "erklaersprache": "de",
+    "stufe": "A1",
+    "definition": "Jemandem etwas überreichen oder zur Verfügung stellen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-give-verb-1",
+    "erklaersprache": "en",
+    "stufe": "A1",
+    "definition": "To hand something to someone.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-keep-verb-1",
+    "erklaersprache": "de",
+    "stufe": "A1",
+    "definition": "Etwas weiter bei sich haben.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-keep-verb-1",
+    "erklaersprache": "en",
+    "stufe": "A1",
+    "definition": "To continue to have something.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-acquire-verb-1",
+    "erklaersprache": "de",
+    "stufe": "B2",
+    "definition": "Etwas durch Kauf, Arbeit oder Lernen bekommen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-acquire-verb-1",
+    "erklaersprache": "en",
+    "stufe": "B2",
+    "definition": "To get or gain something through purchase, effort, or learning.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-obtain-verb-1",
+    "erklaersprache": "de",
+    "stufe": "B2",
+    "definition": "Etwas nach einer Suche, durch Mühe oder bei einer Stelle bekommen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-obtain-verb-1",
+    "erklaersprache": "en",
+    "stufe": "B2",
+    "definition": "To get something after effort, searching, or asking an authority.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-public-adjektiv-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Für alle Menschen zugänglich oder für alle bestimmt.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-public-adjektiv-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "Open or available for everyone to use or attend.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-strange-adjektiv-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Ungewöhnlich und deshalb überraschend oder schwer zu erklären.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-strange-adjektiv-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Unusual in a way that is surprising or difficult to explain.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-thin-adjektiv-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Von einer Seite zur anderen nur wenig dick.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-thin-adjektiv-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Having little distance from one side to the other.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-sour-adjektiv-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Mit einem starken Geschmack wie bei einer Zitrone oder Essig.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-sour-adjektiv-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Having a sharp taste like lemon or vinegar.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-often-adverb-1",
+    "erklaersprache": "de",
+    "stufe": "A1",
+    "definition": "Viele Male oder in kurzen Abständen.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-often-adverb-1",
+    "erklaersprache": "en",
+    "stufe": "A1",
+    "definition": "Many times or at short intervals.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-barely-adverb-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "Nur in sehr kleinem Maß oder fast gar nicht.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-barely-adverb-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "Only to a very small degree or almost not at all.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-during-praeposition-1",
+    "erklaersprache": "de",
+    "stufe": "B1",
+    "definition": "In der Zeit, in der etwas anderes geschieht.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-during-praeposition-1",
+    "erklaersprache": "en",
+    "stufe": "B1",
+    "definition": "Throughout the time when another event is happening.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-against-praeposition-1",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "In Kontakt mit einer Fläche oder mit Bewegung auf sie zu.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-against-praeposition-1",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Touching a surface or moving toward it.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-against-praeposition-2",
+    "erklaersprache": "de",
+    "stufe": "A2",
+    "definition": "Im Widerstand zu jemandem oder als Gegner in einem Wettkampf.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-against-praeposition-2",
+    "erklaersprache": "en",
+    "stufe": "A2",
+    "definition": "Opposing someone or competing with them.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-without-praeposition-1",
+    "erklaersprache": "de",
+    "stufe": "A1",
+    "definition": "Wenn etwas fehlt oder nicht benutzt wird.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "sense_id": "en-without-praeposition-1",
+    "erklaersprache": "en",
+    "stufe": "A1",
+    "definition": "When something is not there or not used.",
+    "merkhilfe": null,
+    "verwechslung": null,
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  }
+]

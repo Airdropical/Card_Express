@@ -1,0 +1,474 @@
+[
+  {
+    "lemma": {
+      "id": "de-frei-adjektiv",
+      "sprache": "de",
+      "text": "frei",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-frei-adjektiv-1",
+        "bedeutung_kurz": "nicht in Gefangenschaft oder gebunden",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "free",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nicht gefangen oder von einer anderen Person kontrolliert.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Vogel ist wieder frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nach vielen Jahren ist der Gefangene wieder frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Not imprisoned or controlled by another person.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Vogel ist wieder frei.",
+                "uebersetzung": "The bird is free again.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nach vielen Jahren ist der Gefangene wieder frei.",
+                "uebersetzung": "After many years, the prisoner is free again.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-frei-adjektiv-2",
+        "bedeutung_kurz": "nicht besetzt oder verfügbar",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "available",
+          "alternativen": [
+            "free"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nicht besetzt und deshalb für andere verfügbar.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ist dieser Platz noch frei?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Am Dienstag habe ich frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Not being used, so someone else can use it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ist dieser Platz noch frei?",
+                "uebersetzung": "Is this seat still free?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Am Dienstag habe ich frei.",
+                "uebersetzung": "I am free on Tuesday.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-schwer-adjektiv",
+      "sprache": "de",
+      "text": "schwer",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-schwer-adjektiv-1",
+        "bedeutung_kurz": "viel Gewicht haben",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "heavy",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Viel Gewicht haben und nicht leicht zu tragen sein.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Diese Tasche ist sehr schwer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der schwere Koffer steht im Flur.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Having a lot of weight and being difficult to carry.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Diese Tasche ist sehr schwer.",
+                "uebersetzung": "This bag is very heavy.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der schwere Koffer steht im Flur.",
+                "uebersetzung": "The heavy suitcase is in the hall.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-schwer-adjektiv-2",
+        "bedeutung_kurz": "nicht leicht zu tun oder zu verstehen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "difficult",
+          "alternativen": [
+            "hard"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Viel Mühe brauchen oder nicht leicht zu verstehen sein.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Frage ist schwer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Deutsch ist am Anfang nicht schwer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Needing a lot of effort or not being easy to understand.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Frage ist schwer.",
+                "uebersetzung": "The question is difficult.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Deutsch ist am Anfang nicht schwer.",
+                "uebersetzung": "German is not difficult at first.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-spaet-adjektiv",
+      "sprache": "de",
+      "text": "spät",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-spaet-adjektiv-1",
+        "bedeutung_kurz": "nach der üblichen Zeit",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "late",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nach der Zeit, zu der etwas normalerweise passiert oder erwartet wird.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Bus kommt heute spät.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Es ist schon spät.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "After the time when something usually happens or is expected.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Bus kommt heute spät.",
+                "uebersetzung": "The bus is coming late today.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Es ist schon spät.",
+                "uebersetzung": "It is already late.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-werden-verb",
+      "sprache": "de",
+      "text": "werden",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-werden-verb-1",
+        "bedeutung_kurz": "einen neuen Zustand bekommen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "become",
+          "alternativen": [
+            "get"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Einen neuen Zustand oder eine neue Eigenschaft bekommen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Im Herbst werden die Tage kürzer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie wird bald Ärztin.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To begin to have a new state or quality.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Im Herbst werden die Tage kürzer.",
+                "uebersetzung": "The days become shorter in autumn.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie wird bald Ärztin.",
+                "uebersetzung": "She will soon become a doctor.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-werden-verb-2",
+        "bedeutung_kurz": "Passiv bilden",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "be",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Es bildet mit einem Partizip das Passiv.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Essen wird frisch gekocht.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Straße wird repariert.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "It forms the passive with a past participle.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Essen wird frisch gekocht.",
+                "uebersetzung": "The food is cooked fresh.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Straße wird repariert.",
+                "uebersetzung": "The road is being repaired.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]

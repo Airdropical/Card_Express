@@ -1,0 +1,270 @@
+[
+  {
+    "lemma": {
+      "id": "de-bank-nomen",
+      "sprache": "de",
+      "text": "Bank",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "die",
+      "plural": "Banken (Geldinstitut), Bänke (Sitzmöbel)"
+    },
+    "senses": [
+      {
+        "id": "de-bank-nomen-1",
+        "bedeutung_kurz": "Geldinstitut",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "bank",
+          "alternativen": [
+            "financial institution"
+          ],
+          "verknuepfter_sense_id": "en-bank-nomen-1"
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein Unternehmen, bei dem Menschen Geld aufbewahren, überweisen oder leihen können.",
+            "merkhilfe": null,
+            "verwechslung": "Eine Sitzbank heißt auf Englisch bench.",
+            "beispiele": [
+              {
+                "satz": "Die Bank öffnet um neun.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich hole Geld bei der Bank.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A company where people can keep, send, or borrow money.",
+            "merkhilfe": null,
+            "verwechslung": "A seat is called a bench.",
+            "beispiele": [
+              {
+                "satz": "Die Bank öffnet um neun.",
+                "uebersetzung": "The bank opens at nine.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich hole Geld bei der Bank.",
+                "uebersetzung": "I get money from the bank.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-bank-nomen-2",
+        "bedeutung_kurz": "Sitzmöbel",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "bench",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein langer Sitz für mehrere Menschen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Bank im Park ist frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir sitzen auf einer Bank.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A long seat for several people.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Bank im Park ist frei.",
+                "uebersetzung": "The bench in the park is free.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir sitzen auf einer Bank.",
+                "uebersetzung": "We are sitting on a bench.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [
+        "Der Plural hängt von der Bedeutung ab: Banken (Geldinstitut), Bänke (Sitzmöbel)."
+      ],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-bank-nomen",
+      "sprache": "en",
+      "text": "bank",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "banks"
+    },
+    "senses": [
+      {
+        "id": "en-bank-nomen-1",
+        "bedeutung_kurz": "financial institution",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Bank",
+          "alternativen": [
+            "Geldinstitut"
+          ],
+          "verknuepfter_sense_id": "de-bank-nomen-1"
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein Unternehmen, bei dem Menschen Geld aufbewahren, überweisen oder leihen können.",
+            "merkhilfe": null,
+            "verwechslung": "Für eine Sitzbank sagt man bench.",
+            "beispiele": [
+              {
+                "satz": "She works at a bank.",
+                "uebersetzung": "Sie arbeitet bei einer Bank.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The bank closes at five.",
+                "uebersetzung": "Die Bank schließt um fünf.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A company where people can keep, send, or borrow money.",
+            "merkhilfe": null,
+            "verwechslung": "A seat is called a bench.",
+            "beispiele": [
+              {
+                "satz": "She works at a bank.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The bank closes at five.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-bank-nomen-2",
+        "bedeutung_kurz": "side of a river",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Ufer",
+          "alternativen": [
+            "Flussufer"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Das Land direkt neben einem Fluss oder See.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We sat on the bank of the river.",
+                "uebersetzung": "Wir saßen am Ufer des Flusses.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The river bank was covered with grass.",
+                "uebersetzung": "Das Flussufer war mit Gras bedeckt.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "The land beside a river or lake.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We sat on the bank of the river.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The river bank was covered with grass.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]

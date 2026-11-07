@@ -1,0 +1,282 @@
+[
+  {
+    "sprache": "de",
+    "text": "Apfel",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "de-apfel-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "apple",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "en-apple-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "Haus",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "de-haus-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "house",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "en-house-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "Wasser",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "de-wasser-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "water",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "en-water-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "gehen",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "de-gehen-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "go",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-go-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "klein",
+    "wortart": "adjektiv",
+    "niveau": "A1",
+    "id": "de-klein-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "small",
+    "wortart": "adjektiv",
+    "niveau": "A1",
+    "id": "en-small-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "freundlich",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "de-freundlich-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "friendly",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "en-friendly-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "Tisch",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "de-tisch-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "table",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "en-table-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "essen",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "de-essen-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "eat",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-eat-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "lernen",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "de-lernen-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "learn",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-learn-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "Morgen",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "de-morgen-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "morning",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "en-morning-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "schnell",
+    "wortart": "adjektiv",
+    "niveau": "A1",
+    "id": "de-schnell-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "fast",
+    "wortart": "adjektiv",
+    "niveau": "A1",
+    "id": "en-fast-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "Fenster",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "de-fenster-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "window",
+    "wortart": "nomen",
+    "niveau": "A1",
+    "id": "en-window-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "fragen",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "de-fragen-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "ask",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-ask-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "Arbeit",
+    "wortart": "nomen",
+    "niveau": "A2",
+    "id": "de-arbeit-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "work",
+    "wortart": "nomen",
+    "niveau": "A2",
+    "id": "en-work-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "ruhig",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "de-ruhig-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "quiet",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "en-quiet-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "kaufen",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "de-kaufen-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "buy",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-buy-verb"
+  },
+  {
+    "sprache": "de",
+    "text": "wichtig",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "de-wichtig-adjektiv"
+  },
+  {
+    "sprache": "en",
+    "text": "important",
+    "wortart": "adjektiv",
+    "niveau": "A2",
+    "id": "en-important-adjektiv"
+  },
+  {
+    "sprache": "de",
+    "text": "Reise",
+    "wortart": "nomen",
+    "niveau": "A2",
+    "id": "de-reise-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "trip",
+    "wortart": "nomen",
+    "niveau": "A2",
+    "id": "en-trip-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "Schild",
+    "wortart": "nomen",
+    "niveau": "A2",
+    "id": "de-schild-nomen"
+  },
+  {
+    "sprache": "en",
+    "text": "sign",
+    "wortart": "nomen",
+    "niveau": "A2",
+    "id": "en-sign-nomen"
+  },
+  {
+    "sprache": "de",
+    "text": "helfen",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "de-helfen-verb"
+  },
+  {
+    "sprache": "en",
+    "text": "help",
+    "wortart": "verb",
+    "niveau": "A1",
+    "id": "en-help-verb"
+  }
+]

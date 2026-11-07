@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://word-express.local/schema/manifest-1.1.json",
+  "title": "Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "content_version",
+    "datum",
+    "anzahl_eintraege",
+    "dateien"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "content_version": {
+      "type": "string"
+    },
+    "datum": {
+      "type": "string",
+      "format": "date"
+    },
+    "anzahl_eintraege": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "dateien": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

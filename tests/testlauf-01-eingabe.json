@@ -1,0 +1,242 @@
+[
+  {
+    "sprache": "de",
+    "text": "Bank",
+    "wortart": "nomen",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "de",
+    "text": "Schloss",
+    "wortart": "nomen",
+    "niveau": "B1"
+  },
+  {
+    "sprache": "de",
+    "text": "Lampe",
+    "wortart": "nomen",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "Freund",
+    "wortart": "nomen",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "Licht",
+    "wortart": "nomen",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "Weg",
+    "wortart": "nomen",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "Ball",
+    "wortart": "nomen",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "Blatt",
+    "wortart": "nomen",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "de",
+    "text": "Zug",
+    "wortart": "nomen",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "de",
+    "text": "Bahn",
+    "wortart": "nomen",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "de",
+    "text": "laufen",
+    "wortart": "verb",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "fahren",
+    "wortart": "verb",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "spielen",
+    "wortart": "verb",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "finden",
+    "wortart": "verb",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "nehmen",
+    "wortart": "verb",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "de",
+    "text": "klar",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "de",
+    "text": "frei",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "de",
+    "text": "schwer",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "de",
+    "text": "spät",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "de",
+    "text": "werden",
+    "wortart": "verb",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "bank",
+    "wortart": "nomen",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "spring",
+    "wortart": "nomen",
+    "niveau": "B1"
+  },
+  {
+    "sprache": "en",
+    "text": "bat",
+    "wortart": "nomen",
+    "niveau": "B1"
+  },
+  {
+    "sprache": "en",
+    "text": "light",
+    "wortart": "nomen",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "right",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "kind",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "run",
+    "wortart": "verb",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "en",
+    "text": "get",
+    "wortart": "verb",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "en",
+    "text": "take",
+    "wortart": "verb",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "en",
+    "text": "set",
+    "wortart": "verb",
+    "niveau": "B1"
+  },
+  {
+    "sprache": "en",
+    "text": "watch",
+    "wortart": "verb",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "book",
+    "wortart": "nomen",
+    "niveau": "A1"
+  },
+  {
+    "sprache": "en",
+    "text": "close",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "mean",
+    "wortart": "verb",
+    "niveau": "B1"
+  },
+  {
+    "sprache": "en",
+    "text": "fast",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "hard",
+    "wortart": "adjektiv",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "fair",
+    "wortart": "adjektiv",
+    "niveau": "B1"
+  },
+  {
+    "sprache": "en",
+    "text": "point",
+    "wortart": "nomen",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "break",
+    "wortart": "verb",
+    "niveau": "A2"
+  },
+  {
+    "sprache": "en",
+    "text": "charge",
+    "wortart": "verb",
+    "niveau": "B1"
+  }
+]

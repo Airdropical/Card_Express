@@ -1,0 +1,3754 @@
+[
+  {
+    "lemma": {
+      "id": "de-apfel-nomen",
+      "sprache": "de",
+      "text": "Apfel",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Äpfel"
+    },
+    "senses": [
+      {
+        "id": "de-apfel-nomen-1",
+        "bedeutung_kurz": "Frucht vom Apfelbaum",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "apple",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-apple-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Der Apfel wächst am Apfelbaum. Seine Kerne liegen innen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Apfel ist rot.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich esse einen Apfel.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "An apple grows on an apple tree. Its seeds are inside the core.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Apfel ist rot.",
+                "uebersetzung": "The apple is red.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich esse einen Apfel.",
+                "uebersetzung": "I am eating an apple.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-apple-nomen",
+      "sprache": "en",
+      "text": "apple",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": "apples"
+    },
+    "senses": [
+      {
+        "id": "en-apple-nomen-1",
+        "bedeutung_kurz": "fruit from an apple tree",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Apfel",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-apfel-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Der Apfel wächst am Apfelbaum. Seine Kerne liegen innen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The apple is red.",
+                "uebersetzung": "Der Apfel ist rot.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I am eating an apple.",
+                "uebersetzung": "Ich esse einen Apfel.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "An apple grows on an apple tree. Its seeds are inside the core.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The apple is red.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I am eating an apple.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-haus-nomen",
+      "sprache": "de",
+      "text": "Haus",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "das",
+      "plural": "Häuser"
+    },
+    "senses": [
+      {
+        "id": "de-haus-nomen-1",
+        "bedeutung_kurz": "Gebäude zum Wohnen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "house",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-house-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Gebäude mit Zimmern, in dem Menschen wohnen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Unser Haus hat drei Zimmer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Haus steht am See.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A building with rooms where people live.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Unser Haus hat drei Zimmer.",
+                "uebersetzung": "Our house has three rooms.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Haus steht am See.",
+                "uebersetzung": "The house is beside the lake.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-house-nomen",
+      "sprache": "en",
+      "text": "house",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": "houses"
+    },
+    "senses": [
+      {
+        "id": "en-house-nomen-1",
+        "bedeutung_kurz": "building for living",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Haus",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-haus-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Gebäude mit Zimmern, in dem Menschen wohnen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our house has three rooms.",
+                "uebersetzung": "Unser Haus hat drei Zimmer.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The house is beside the lake.",
+                "uebersetzung": "Das Haus steht am See.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A building with rooms where people live.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our house has three rooms.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The house is beside the lake.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-wasser-nomen",
+      "sprache": "de",
+      "text": "Wasser",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "das",
+      "plural": "Wasser"
+    },
+    "senses": [
+      {
+        "id": "de-wasser-nomen-1",
+        "bedeutung_kurz": "Flüssigkeit",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "water",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-water-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Die Flüssigkeit, die aus dem Hahn fließt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Wasser ist kalt.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte trink mehr Wasser.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "The clear liquid from taps and rivers.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Wasser ist kalt.",
+                "uebersetzung": "The water is cold.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte trink mehr Wasser.",
+                "uebersetzung": "Please drink more water.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-water-nomen",
+      "sprache": "en",
+      "text": "water",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-water-nomen-1",
+        "bedeutung_kurz": "liquid",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Wasser",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-wasser-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Die Flüssigkeit, die aus dem Hahn fließt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The water is cold.",
+                "uebersetzung": "Das Wasser ist kalt.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Please drink more water.",
+                "uebersetzung": "Bitte trink mehr Wasser.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "The clear liquid from taps and rivers.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The water is cold.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Please drink more water.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-gehen-verb",
+      "sprache": "de",
+      "text": "gehen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-gehen-verb-1",
+        "bedeutung_kurz": "sich zu Fuß bewegen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "go",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-go-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Sich mit den Füßen fortbewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir gehen jetzt nach Hause.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Gehst du heute zur Schule?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To move on foot from place to place.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir gehen jetzt nach Hause.",
+                "uebersetzung": "We are going home now.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Gehst du heute zur Schule?",
+                "uebersetzung": "Are you going to school today?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-go-verb",
+      "sprache": "en",
+      "text": "go",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-go-verb-1",
+        "bedeutung_kurz": "move on foot",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "gehen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-gehen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Sich mit den Füßen fortbewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We are going home now.",
+                "uebersetzung": "Wir gehen jetzt nach Hause.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Are you going to school today?",
+                "uebersetzung": "Gehst du heute zur Schule?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To move on foot from place to place.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We are going home now.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Are you going to school today?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-klein-adjektiv",
+      "sprache": "de",
+      "text": "klein",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-klein-adjektiv-1",
+        "bedeutung_kurz": "nicht groß",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "small",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-small-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Nicht groß; von geringer Größe.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Hund ist noch klein.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie wohnt in einer kleinen Wohnung.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Not large in size or amount.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Hund ist noch klein.",
+                "uebersetzung": "The dog is still small.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie wohnt in einer kleinen Wohnung.",
+                "uebersetzung": "She lives in a small apartment.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-small-adjektiv",
+      "sprache": "en",
+      "text": "small",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-small-adjektiv-1",
+        "bedeutung_kurz": "not large",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "klein",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-klein-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Nicht groß; von geringer Größe.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The dog is still small.",
+                "uebersetzung": "Der Hund ist noch klein.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She lives in a small apartment.",
+                "uebersetzung": "Sie wohnt in einer kleinen Wohnung.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Not large in size or amount.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The dog is still small.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She lives in a small apartment.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-freundlich-adjektiv",
+      "sprache": "de",
+      "text": "freundlich",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-freundlich-adjektiv-1",
+        "bedeutung_kurz": "nett zu anderen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "friendly",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-friendly-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Offen und nett zu anderen, auch wenn man sie kaum kennt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Nachbarin ist immer freundlich.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Verkäufer war sehr freundlich.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Kind and welcoming toward other people.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Nachbarin ist immer freundlich.",
+                "uebersetzung": "The neighbor is always friendly.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Verkäufer war sehr freundlich.",
+                "uebersetzung": "The shop assistant was very friendly.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-friendly-adjektiv",
+      "sprache": "en",
+      "text": "friendly",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-friendly-adjektiv-1",
+        "bedeutung_kurz": "kind to others",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "freundlich",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-freundlich-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Offen und nett zu anderen, auch wenn man sie kaum kennt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The neighbor is always friendly.",
+                "uebersetzung": "Die Nachbarin ist immer freundlich.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The shop assistant was very friendly.",
+                "uebersetzung": "Der Verkäufer war sehr freundlich.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Kind and welcoming toward other people.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The neighbor is always friendly.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The shop assistant was very friendly.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-tisch-nomen",
+      "sprache": "de",
+      "text": "Tisch",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Tische"
+    },
+    "senses": [
+      {
+        "id": "de-tisch-nomen-1",
+        "bedeutung_kurz": "Möbelstück",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "table",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-table-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Möbelstück mit einer flachen Platte und Beinen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Essen steht auf dem Tisch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir sitzen zusammen am Tisch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Furniture with a flat top and legs.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Essen steht auf dem Tisch.",
+                "uebersetzung": "The food is on the table.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir sitzen zusammen am Tisch.",
+                "uebersetzung": "We are sitting together at the table.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-table-nomen",
+      "sprache": "en",
+      "text": "table",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": "tables"
+    },
+    "senses": [
+      {
+        "id": "en-table-nomen-1",
+        "bedeutung_kurz": "piece of furniture",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Tisch",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-tisch-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Möbelstück mit einer flachen Platte und Beinen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The food is on the table.",
+                "uebersetzung": "Das Essen steht auf dem Tisch.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We are sitting together at the table.",
+                "uebersetzung": "Wir sitzen zusammen am Tisch.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Furniture with a flat top and legs.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The food is on the table.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We are sitting together at the table.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-essen-verb",
+      "sprache": "de",
+      "text": "essen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-essen-verb-1",
+        "bedeutung_kurz": "Nahrung zu sich nehmen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "eat",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-eat-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Nahrung aufnehmen, indem man sie kaut und schluckt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir essen um sieben Uhr.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Kind isst einen Apfel.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To chew and swallow food.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir essen um sieben Uhr.",
+                "uebersetzung": "We eat at seven o’clock.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Kind isst einen Apfel.",
+                "uebersetzung": "The child is eating an apple.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-eat-verb",
+      "sprache": "en",
+      "text": "eat",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-eat-verb-1",
+        "bedeutung_kurz": "consume food",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "essen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-essen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Nahrung aufnehmen, indem man sie kaut und schluckt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We eat at seven o’clock.",
+                "uebersetzung": "Wir essen um sieben Uhr.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The child is eating an apple.",
+                "uebersetzung": "Das Kind isst einen Apfel.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To chew and swallow food.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We eat at seven o’clock.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The child is eating an apple.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-lernen-verb",
+      "sprache": "de",
+      "text": "lernen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-lernen-verb-1",
+        "bedeutung_kurz": "Wissen erwerben",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "learn",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-learn-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Wissen oder Fähigkeiten durch Übung bekommen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich lerne jeden Tag Englisch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Kinder lernen neue Wörter.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To gain knowledge or skill by practicing.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich lerne jeden Tag Englisch.",
+                "uebersetzung": "I learn English every day.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Kinder lernen neue Wörter.",
+                "uebersetzung": "The children are learning new words.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-learn-verb",
+      "sprache": "en",
+      "text": "learn",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-learn-verb-1",
+        "bedeutung_kurz": "gain knowledge",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "lernen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-lernen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Wissen oder Fähigkeiten durch Übung bekommen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I learn English every day.",
+                "uebersetzung": "Ich lerne jeden Tag Englisch.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The children are learning new words.",
+                "uebersetzung": "Die Kinder lernen neue Wörter.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To gain knowledge or skill by practicing.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I learn English every day.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The children are learning new words.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-morgen-nomen",
+      "sprache": "de",
+      "text": "Morgen",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Morgen"
+    },
+    "senses": [
+      {
+        "id": "de-morgen-nomen-1",
+        "bedeutung_kurz": "früher Teil des Tages",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "morning",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-morning-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Die Zeit vom Aufstehen bis zum Mittag.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Am Morgen trinke ich Tee.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Morgen ist heute kühl.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "The early part of the day before noon.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Am Morgen trinke ich Tee.",
+                "uebersetzung": "I drink tea in the morning.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Morgen ist heute kühl.",
+                "uebersetzung": "The morning is cool today.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-morning-nomen",
+      "sprache": "en",
+      "text": "morning",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": "mornings"
+    },
+    "senses": [
+      {
+        "id": "en-morning-nomen-1",
+        "bedeutung_kurz": "early part of the day",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Morgen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-morgen-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Die Zeit vom Aufstehen bis zum Mittag.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I drink tea in the morning.",
+                "uebersetzung": "Am Morgen trinke ich Tee.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The morning is cool today.",
+                "uebersetzung": "Der Morgen ist heute kühl.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "The early part of the day before noon.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I drink tea in the morning.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The morning is cool today.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-schnell-adjektiv",
+      "sprache": "de",
+      "text": "schnell",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-schnell-adjektiv-1",
+        "bedeutung_kurz": "mit hoher Geschwindigkeit",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "fast",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-fast-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Mit hoher Geschwindigkeit oder in kurzer Zeit.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Zug fährt sehr schnell.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Auto ist schnell.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Moving at high speed or taking little time.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Zug fährt sehr schnell.",
+                "uebersetzung": "The train is moving very fast.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Auto ist schnell.",
+                "uebersetzung": "This car is fast.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-fast-adjektiv",
+      "sprache": "en",
+      "text": "fast",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-fast-adjektiv-1",
+        "bedeutung_kurz": "at high speed",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "schnell",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-schnell-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Mit hoher Geschwindigkeit oder in kurzer Zeit.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The train is moving very fast.",
+                "uebersetzung": "Der Zug fährt sehr schnell.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This car is fast.",
+                "uebersetzung": "Das Auto ist schnell.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Moving at high speed or taking little time.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The train is moving very fast.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This car is fast.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-fenster-nomen",
+      "sprache": "de",
+      "text": "Fenster",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "das",
+      "plural": "Fenster"
+    },
+    "senses": [
+      {
+        "id": "de-fenster-nomen-1",
+        "bedeutung_kurz": "Öffnung mit Glas",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "window",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-window-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Öffnung in der Wand mit Glas.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Fenster ist noch offen.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie schaut aus dem Fenster.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A glass opening in a wall.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Fenster ist noch offen.",
+                "uebersetzung": "The window is still open.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie schaut aus dem Fenster.",
+                "uebersetzung": "She is looking out of the window.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-window-nomen",
+      "sprache": "en",
+      "text": "window",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": "windows"
+    },
+    "senses": [
+      {
+        "id": "en-window-nomen-1",
+        "bedeutung_kurz": "opening with glass",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Fenster",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-fenster-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Öffnung in der Wand mit Glas.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The window is still open.",
+                "uebersetzung": "Das Fenster ist noch offen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She is looking out of the window.",
+                "uebersetzung": "Sie schaut aus dem Fenster.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A glass opening in a wall.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The window is still open.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She is looking out of the window.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-fragen-verb",
+      "sprache": "de",
+      "text": "fragen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-fragen-verb-1",
+        "bedeutung_kurz": "eine Frage stellen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "ask",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-ask-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Frage stellen und eine Antwort erwarten.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Darf ich dich etwas fragen?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er fragt nach dem Weg.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To request information from someone with a question.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Darf ich dich etwas fragen?",
+                "uebersetzung": "May I ask you something?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er fragt nach dem Weg.",
+                "uebersetzung": "He is asking for directions.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-ask-verb",
+      "sprache": "en",
+      "text": "ask",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-ask-verb-1",
+        "bedeutung_kurz": "ask a question",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "fragen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-fragen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Frage stellen und eine Antwort erwarten.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "May I ask you something?",
+                "uebersetzung": "Darf ich dich etwas fragen?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He is asking for directions.",
+                "uebersetzung": "Er fragt nach dem Weg.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To request information from someone with a question.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "May I ask you something?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He is asking for directions.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-arbeit-nomen",
+      "sprache": "de",
+      "text": "Arbeit",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "die",
+      "plural": "Arbeiten"
+    },
+    "senses": [
+      {
+        "id": "de-arbeit-nomen-1",
+        "bedeutung_kurz": "Aufgabe oder Tätigkeit",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "work",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-work-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine Tätigkeit, für die man Zeit und Mühe aufwendet; oft als Beruf.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Meine Arbeit beginnt um acht.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nach der Arbeit fahre ich nach Hause.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "An activity that takes effort, often done as a job.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Meine Arbeit beginnt um acht.",
+                "uebersetzung": "My work starts at eight.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nach der Arbeit fahre ich nach Hause.",
+                "uebersetzung": "I go home after work.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-work-nomen",
+      "sprache": "en",
+      "text": "work",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-work-nomen-1",
+        "bedeutung_kurz": "task or activity",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Arbeit",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-arbeit-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine Tätigkeit, für die man Zeit und Mühe aufwendet; oft als Beruf.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "My work starts at eight.",
+                "uebersetzung": "Meine Arbeit beginnt um acht.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I go home after work.",
+                "uebersetzung": "Nach der Arbeit fahre ich nach Hause.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "An activity that takes effort, often done as a job.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "My work starts at eight.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I go home after work.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-ruhig-adjektiv",
+      "sprache": "de",
+      "text": "ruhig",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-ruhig-adjektiv-1",
+        "bedeutung_kurz": "mit wenig Lärm",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "quiet",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-quiet-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Mit wenig oder keinem Lärm; ohne laute Geräusche.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Zimmer ist heute ruhig.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte bleibt ruhig im Flur.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Making little or no sound.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Zimmer ist heute ruhig.",
+                "uebersetzung": "The room is quiet today.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte bleibt ruhig im Flur.",
+                "uebersetzung": "Please stay quiet in the hallway.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-quiet-adjektiv",
+      "sprache": "en",
+      "text": "quiet",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-quiet-adjektiv-1",
+        "bedeutung_kurz": "with little noise",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "ruhig",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-ruhig-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Mit wenig oder keinem Lärm; ohne laute Geräusche.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The room is quiet today.",
+                "uebersetzung": "Das Zimmer ist heute ruhig.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Please stay quiet in the hallway.",
+                "uebersetzung": "Bitte bleibt ruhig im Flur.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Making little or no sound.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The room is quiet today.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Please stay quiet in the hallway.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-kaufen-verb",
+      "sprache": "de",
+      "text": "kaufen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-kaufen-verb-1",
+        "bedeutung_kurz": "gegen Geld bekommen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "buy",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-buy-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas bekommen, indem man dafür Geld bezahlt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir kaufen frisches Brot.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie kauft ein neues Fahrrad.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To get something by paying money for it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir kaufen frisches Brot.",
+                "uebersetzung": "We are buying fresh bread.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie kauft ein neues Fahrrad.",
+                "uebersetzung": "She is buying a new bicycle.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-buy-verb",
+      "sprache": "en",
+      "text": "buy",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-buy-verb-1",
+        "bedeutung_kurz": "get something for money",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "kaufen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-kaufen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas bekommen, indem man dafür Geld bezahlt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We are buying fresh bread.",
+                "uebersetzung": "Wir kaufen frisches Brot.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She is buying a new bicycle.",
+                "uebersetzung": "Sie kauft ein neues Fahrrad.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To get something by paying money for it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We are buying fresh bread.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She is buying a new bicycle.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-wichtig-adjektiv",
+      "sprache": "de",
+      "text": "wichtig",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-wichtig-adjektiv-1",
+        "bedeutung_kurz": "von großer Bedeutung",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "important",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-important-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nötig oder mit großem Einfluss auf das Ergebnis.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Gesundheit ist sehr wichtig.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Vergiss nicht den wichtigen Termin.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Needed or likely to affect an important result.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Gesundheit ist sehr wichtig.",
+                "uebersetzung": "Health is very important.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Vergiss nicht den wichtigen Termin.",
+                "uebersetzung": "Do not forget the important appointment.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-important-adjektiv",
+      "sprache": "en",
+      "text": "important",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-important-adjektiv-1",
+        "bedeutung_kurz": "of great importance",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "wichtig",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-wichtig-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nötig oder mit großem Einfluss auf das Ergebnis.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Health is very important.",
+                "uebersetzung": "Gesundheit ist sehr wichtig.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Do not forget the important appointment.",
+                "uebersetzung": "Vergiss nicht den wichtigen Termin.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Needed or likely to affect an important result.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Health is very important.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Do not forget the important appointment.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-reise-nomen",
+      "sprache": "de",
+      "text": "Reise",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "die",
+      "plural": "Reisen"
+    },
+    "senses": [
+      {
+        "id": "de-reise-nomen-1",
+        "bedeutung_kurz": "Fahrt zu einem anderen Ort",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "trip",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-trip-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine Fahrt oder ein Weg zu einem anderen Ort.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Unsere Reise beginnt am Montag.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie macht eine Reise nach Italien.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A journey from one place to another, often over some distance.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Unsere Reise beginnt am Montag.",
+                "uebersetzung": "Our trip begins on Monday.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie macht eine Reise nach Italien.",
+                "uebersetzung": "She is taking a trip to Italy.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-trip-nomen",
+      "sprache": "en",
+      "text": "trip",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "trips"
+    },
+    "senses": [
+      {
+        "id": "en-trip-nomen-1",
+        "bedeutung_kurz": "journey to another place",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Reise",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-reise-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine Fahrt oder ein Weg zu einem anderen Ort.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our trip begins on Monday.",
+                "uebersetzung": "Unsere Reise beginnt am Montag.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She is taking a trip to Italy.",
+                "uebersetzung": "Sie macht eine Reise nach Italien.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A journey from one place to another, often over some distance.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our trip begins on Monday.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She is taking a trip to Italy.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-schild-nomen",
+      "sprache": "de",
+      "text": "Schild",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-schild-nomen-1",
+        "bedeutung_kurz": "Tafel mit Nachricht",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "sign",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-sign-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine Tafel mit Text oder Zeichen, die Informationen gibt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schild zeigt den Weg zum Bahnhof.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte lies das Schild an der Tür.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A board with words or symbols that gives information.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schild zeigt den Weg zum Bahnhof.",
+                "uebersetzung": "The sign shows the way to the station.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte lies das Schild an der Tür.",
+                "uebersetzung": "Please read the sign on the door.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "das",
+        "plural": "Schilder"
+      },
+      {
+        "id": "de-schild-nomen-2",
+        "bedeutung_kurz": "Schutzwaffe",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "shield",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein Gegenstand, den man vor sich hält, um Schläge abzuwehren.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Soldat trägt einen Schild.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Schild schützt ihn vor einem Schlag.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A protective object carried to block blows or weapons.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Soldat trägt einen Schild.",
+                "uebersetzung": "The soldier carries a shield.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Schild schützt ihn vor einem Schlag.",
+                "uebersetzung": "The shield protects him from a blow.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "der",
+        "plural": "Schilde"
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-sign-nomen",
+      "sprache": "en",
+      "text": "sign",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "signs"
+    },
+    "senses": [
+      {
+        "id": "en-sign-nomen-1",
+        "bedeutung_kurz": "board with a message",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Schild",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-schild-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein flacher Gegenstand mit einer Nachricht oder einem Zeichen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The sign shows the way to the station.",
+                "uebersetzung": "Das Schild zeigt den Weg zum Bahnhof.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Please read the sign on the door.",
+                "uebersetzung": "Bitte lies das Schild an der Tür.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A board that shows words or a symbol.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The sign shows the way to the station.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Please read the sign on the door.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-helfen-verb",
+      "sprache": "de",
+      "text": "helfen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-helfen-verb-1",
+        "bedeutung_kurz": "jemanden unterstützen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "help",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-help-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas tun, damit jemand eine Aufgabe schafft.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Kannst du mir bitte helfen?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Lehrer hilft dem Schüler.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To make someone’s task easier.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Kannst du mir bitte helfen?",
+                "uebersetzung": "Can you please help me?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Lehrer hilft dem Schüler.",
+                "uebersetzung": "The teacher helps the student.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-help-verb",
+      "sprache": "en",
+      "text": "help",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-help-verb-1",
+        "bedeutung_kurz": "support someone",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "helfen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-helfen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas tun, damit jemand eine Aufgabe schafft.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Can you please help me?",
+                "uebersetzung": "Kannst du mir bitte helfen?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The teacher helps the student.",
+                "uebersetzung": "Der Lehrer hilft dem Schüler.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To make someone’s task easier.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Can you please help me?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The teacher helps the student.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  }
+]

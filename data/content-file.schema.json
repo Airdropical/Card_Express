@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://word-express.local/schema/content-file-1.1.json",
+  "title": "ContentFile",
+  "description": "JSON-Datei mit einer Liste vollständiger LemmaEntry-Objekte.",
+  "type": "array",
+  "items": {
+    "$ref": "https://word-express.local/schema/lemma-entry-1.1.json"
+  }
+}

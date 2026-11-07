@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LemmaEntry",
+  "description": "Ein Wort mit Bedeutungen, Übersetzungen und Erklärungen. Schlüssel bewusst ohne Umlaute (code-freundlich). Sprachcodes als ISO-Codes; weitere Sprachen benötigen eine Erweiterung der unterstützten Codes und Übersetzungsregeln. Inhaltsversion 1.1; nutzerspezifische Ablage- und Lernprofile stehen separat.",
+  "type": "object",
+  "required": [
+    "lemma",
+    "senses",
+    "qualitaet"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "lemma": {
+      "$ref": "#/$defs/Lemma"
+    },
+    "senses": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/Sense"
+      }
+    },
+    "qualitaet": {
+      "$ref": "#/$defs/Qualitaet"
+    }
+  },
+  "$defs": {
+    "Sprache": {
+      "enum": [
+        "de",
+        "en"
+      ]
+    },
+    "Niveau": {
+      "enum": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
+    },
+    "Lemma": {
+      "type": "object",
+      "required": [
+        "id",
+        "sprache",
+        "text",
+        "wortart",
+        "niveau"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "z. B. en-bank-noun"
+        },
+        "sprache": {
+          "$ref": "#/$defs/Sprache"
+        },
+        "text": {
+          "type": "string"
+        },
+        "wortart": {
+          "enum": [
+            "nomen",
+            "verb",
+            "adjektiv",
+            "adverb",
+            "praeposition",
+            "konjunktion",
+            "pronomen",
+            "interjektion",
+            "andere"
+          ]
+        },
+        "ipa": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "haeufigkeitsrang": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "niveau": {
+          "$ref": "#/$defs/Niveau"
+        },
+        "artikel": {
+          "enum": [
+            "der",
+            "die",
+            "das",
+            null
+          ],
+          "description": "Nur deutsche Nomen. Gegen Beispielsätzen plausibilisieren; automatische Abweichungen sind Prüfwarnungen, keine alleinige Quelle für eine Korrektur."
+        },
+        "plural": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Vollständige Pluralform. Wenn für alle Senses gleich, einmal am Lemma speichern; bei Bedeutungswechseln am jeweiligen Sense."
+        }
+      }
+    },
+    "Sense": {
+      "type": "object",
+      "required": [
+        "id",
+        "bedeutung_kurz",
+        "uebersetzung",
+        "explanations"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "z. B. en-bank-noun-1"
+        },
+        "bedeutung_kurz": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Kurze Disambiguierung in der Sprache des Lemmas, z. B. 'Geldinstitut'"
+        },
+        "uebersetzung": {
+          "type": "object",
+          "required": [
+            "sprache",
+            "text"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sprache": {
+              "$ref": "#/$defs/Sprache"
+            },
+            "text": {
+              "type": "string"
+            },
+            "alternativen": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 3,
+              "description": "Synonyme oder weitere passende Übersetzungen ausschließlich in der Sprache aus uebersetzung.sprache."
+            },
+            "verknuepfte_sense_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string"
+              },
+              "description": "IDs aller passenden Senses in der Zielsprache."
+            }
+          }
+        },
+        "explanations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Explanation"
+          }
+        },
+        "artikel": {
+          "enum": [
+            "der",
+            "die",
+            "das",
+            null
+          ],
+          "description": "Optionaler Artikel für diese Bedeutung; überschreibt lemma.artikel."
+        },
+        "plural": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Optionaler Plural für diese Bedeutung; überschreibt lemma.plural."
+        }
+      }
+    },
+    "Explanation": {
+      "type": "object",
+      "required": [
+        "erklaersprache",
+        "stufe",
+        "definition",
+        "beispiele",
+        "qualitaet"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "erklaersprache": {
+          "$ref": "#/$defs/Sprache"
+        },
+        "stufe": {
+          "$ref": "#/$defs/Niveau"
+        },
+        "definition": {
+          "type": "string",
+          "maxLength": 220
+        },
+        "merkhilfe": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 160
+        },
+        "verwechslung": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "beispiele": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "satz",
+              "quelle"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "satz": {
+                "type": "string",
+                "description": "Satz in der Lernsprache"
+              },
+              "uebersetzung": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "In der Erklärsprache; null, wenn Lern- und Erklärsprache gleich sind"
+              },
+              "quelle": {
+                "enum": [
+                  "tatoeba",
+                  "ki"
+                ]
+              },
+              "quelle_id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Tatoeba-Satz-ID für Namensnennung"
+              }
+            }
+          }
+        },
+        "qualitaet": {
+          "$ref": "#/$defs/Qualitaet"
+        }
+      }
+    },
+    "Qualitaet": {
+      "type": "object",
+      "required": [
+        "status",
+        "modellversion",
+        "datum"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "roh",
+            "geprueft",
+            "freigegeben",
+            "prueffliste"
+          ]
+        },
+        "pruef_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "hinweise": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "modellversion": {
+          "type": "string"
+        },
+        "datum": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  },
+  "$id": "https://word-express.local/schema/lemma-entry-1.1.json"
+}

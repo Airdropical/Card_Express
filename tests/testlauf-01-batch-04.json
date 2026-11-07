@@ -1,0 +1,610 @@
+[
+  {
+    "lemma": {
+      "id": "de-fahren-verb",
+      "sprache": "de",
+      "text": "fahren",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-fahren-verb-1",
+        "bedeutung_kurz": "mit einem Fahrzeug reisen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "travel",
+          "alternativen": [
+            "go by vehicle"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Mit einem Fahrzeug reisen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir fahren mit dem Bus nach Berlin.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie fährt jeden Tag zur Arbeit.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To travel in a vehicle.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir fahren mit dem Bus nach Berlin.",
+                "uebersetzung": "We are traveling to Berlin by bus.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie fährt jeden Tag zur Arbeit.",
+                "uebersetzung": "She travels to work every day.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-fahren-verb-2",
+        "bedeutung_kurz": "ein Fahrzeug lenken",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "drive",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Auto selbst lenken.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich fahre heute das Auto.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Kannst du schon fahren?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To control and drive a car.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich fahre heute das Auto.",
+                "uebersetzung": "I am driving the car today.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Kannst du schon fahren?",
+                "uebersetzung": "Can you drive yet?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-spielen-verb",
+      "sprache": "de",
+      "text": "spielen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-spielen-verb-1",
+        "bedeutung_kurz": "an einem Spiel teilnehmen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "play",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Bei einem Spiel mitmachen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Kinder spielen im Garten.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir spielen heute Karten.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To take part in a game.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Kinder spielen im Garten.",
+                "uebersetzung": "The children are playing in the garden.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir spielen heute Karten.",
+                "uebersetzung": "We are playing cards today.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-spielen-verb-2",
+        "bedeutung_kurz": "Musik machen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "play",
+          "alternativen": [
+            "perform"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Auf einem Instrument Musik machen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie spielt Klavier.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er spielt ein Lied auf der Gitarre.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To make music on an instrument.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie spielt Klavier.",
+                "uebersetzung": "She plays the piano.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er spielt ein Lied auf der Gitarre.",
+                "uebersetzung": "He is playing a song on the guitar.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-finden-verb",
+      "sprache": "de",
+      "text": "finden",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-finden-verb-1",
+        "bedeutung_kurz": "etwas entdecken oder wiedersehen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "find",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas Gesuchtes entdecken.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich finde meine Schlüssel nicht.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir finden den Weg nach Hause.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To find something you want.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich finde meine Schlüssel nicht.",
+                "uebersetzung": "I cannot find my keys.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir finden den Weg nach Hause.",
+                "uebersetzung": "We find the way home.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-finden-verb-2",
+        "bedeutung_kurz": "eine Meinung haben",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "think",
+          "alternativen": [
+            "find"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Meinung über etwas haben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich finde den Film spannend.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wie findest du die Idee?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To have an opinion about something.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich finde den Film spannend.",
+                "uebersetzung": "I think the film is exciting.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wie findest du die Idee?",
+                "uebersetzung": "What do you think of the idea?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-nehmen-verb",
+      "sprache": "de",
+      "text": "nehmen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-nehmen-verb-1",
+        "bedeutung_kurz": "etwas greifen oder mit sich tragen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "take",
+          "alternativen": [
+            "pick up"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas greifen und mitnehmen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Er nimmt den Koffer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nimm bitte deinen Mantel mit.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To pick something up and carry it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Er nimmt den Koffer.",
+                "uebersetzung": "He takes the suitcase.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nimm bitte deinen Mantel mit.",
+                "uebersetzung": "Please take your coat with you.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-klar-adjektiv",
+      "sprache": "de",
+      "text": "klar",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-klar-adjektiv-1",
+        "bedeutung_kurz": "leicht zu verstehen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "clear",
+          "alternativen": [
+            "obvious"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "So deutlich, dass man es gut verstehen kann.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Deine Erklärung ist klar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ist die Aufgabe jetzt klar?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Easy to understand because it is expressed in a clear way.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Deine Erklärung ist klar.",
+                "uebersetzung": "Your explanation is clear.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ist die Aufgabe jetzt klar?",
+                "uebersetzung": "Is the task clear now?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-klar-adjektiv-2",
+        "bedeutung_kurz": "sauber und durchsichtig",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "clear",
+          "alternativen": [
+            "transparent"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Durchsichtig und ohne Schmutz oder Farbe.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Wasser im See ist klar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Himmel ist heute klar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Transparent and without dirt or color.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Wasser im See ist klar.",
+                "uebersetzung": "The water in the lake is clear.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Himmel ist heute klar.",
+                "uebersetzung": "The sky is clear today.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]

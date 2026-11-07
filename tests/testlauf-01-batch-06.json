@@ -1,0 +1,556 @@
+[
+  {
+    "lemma": {
+      "id": "en-spring-nomen",
+      "sprache": "en",
+      "text": "spring",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": "springs"
+    },
+    "senses": [
+      {
+        "id": "en-spring-nomen-1",
+        "bedeutung_kurz": "season after winter",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Frühling",
+          "alternativen": [
+            "springtime"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "The season between winter and summer, when the weather becomes warmer.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Spring begins in March.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Flowers bloom in spring.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Die Jahreszeit zwischen Winter und Sommer, wenn es wieder wärmer wird.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Spring begins in March.",
+                "uebersetzung": "Der Frühling beginnt im März.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Flowers bloom in spring.",
+                "uebersetzung": "Blumen blühen im Frühling.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-spring-nomen-2",
+        "bedeutung_kurz": "elastic coil in a device",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Feder",
+          "alternativen": [
+            "Spiralfeder"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A metal coil that returns to shape when pressed.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The spring in the mattress is broken.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This spring pushes the door back.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine Metallfeder, die nach Druck wieder ihre Form annimmt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The spring in the mattress is broken.",
+                "uebersetzung": "Die Feder in der Matratze ist kaputt.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This spring pushes the door back.",
+                "uebersetzung": "Diese Feder drückt die Tür zurück.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-bat-nomen",
+      "sprache": "en",
+      "text": "bat",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": "bats"
+    },
+    "senses": [
+      {
+        "id": "en-bat-nomen-1",
+        "bedeutung_kurz": "night-flying animal",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Fledermaus",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A small animal that flies at night and often lives in caves.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "A bat flew out of the cave.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The bat sleeps during the day.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein kleines Tier, das nachts fliegt und sich oft in Höhlen aufhält.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "A bat flew out of the cave.",
+                "uebersetzung": "Eine Fledermaus flog aus der Höhle.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The bat sleeps during the day.",
+                "uebersetzung": "Die Fledermaus schläft am Tag.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-bat-nomen-2",
+        "bedeutung_kurz": "club used to hit a ball",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Schläger",
+          "alternativen": [
+            "Baseballschläger"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A long object used to hit a ball in a game.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He hit the ball with a bat.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She bought a new bat.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein länglicher Gegenstand, mit dem man in einem Spiel einen Ball schlägt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He hit the ball with a bat.",
+                "uebersetzung": "Er schlug den Ball mit einem Schläger.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She bought a new bat.",
+                "uebersetzung": "Sie kaufte einen neuen Schläger.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-light-nomen",
+      "sprache": "en",
+      "text": "light",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "lights"
+    },
+    "senses": [
+      {
+        "id": "en-light-nomen-1",
+        "bedeutung_kurz": "brightness that helps us see",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Licht",
+          "alternativen": [
+            "Helligkeit"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Brightness that lets people see things and people.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "There is enough light to read.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Turn on the light, please.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Helligkeit, durch die man Menschen und Dinge sehen kann.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "There is enough light to read.",
+                "uebersetzung": "Es gibt genug Licht zum Lesen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Turn on the light, please.",
+                "uebersetzung": "Mach bitte das Licht an.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-right-adjektiv",
+      "sprache": "en",
+      "text": "right",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-right-adjektiv-1",
+        "bedeutung_kurz": "correct or true",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "richtig",
+          "alternativen": [
+            "korrekt"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Correct and not wrong.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Your answer is right.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Is this the right address?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Richtig und nicht falsch.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Your answer is right.",
+                "uebersetzung": "Deine Antwort ist richtig.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Is this the right address?",
+                "uebersetzung": "Ist das die richtige Adresse?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-right-adjektiv-2",
+        "bedeutung_kurz": "on the side opposite left",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "rechts",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "On the side opposite to the left side.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The shop is on the right side.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Keep to the right side of the road.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Auf der Seite, die der linken Seite gegenüberliegt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The shop is on the right side.",
+                "uebersetzung": "Der Laden ist auf der rechten Seite.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Keep to the right side of the road.",
+                "uebersetzung": "Bleib auf der rechten Straßenseite.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-kind-adjektiv",
+      "sprache": "en",
+      "text": "kind",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-kind-adjektiv-1",
+        "bedeutung_kurz": "friendly and helpful",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "freundlich",
+          "alternativen": [
+            "nett"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Friendly and helpful toward other people.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our neighbor is very kind.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "It was kind of you to help.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Freundlich und hilfsbereit zu anderen Menschen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our neighbor is very kind.",
+                "uebersetzung": "Unser Nachbar ist sehr freundlich.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "It was kind of you to help.",
+                "uebersetzung": "Es war nett von dir zu helfen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]

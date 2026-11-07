@@ -1,0 +1,4655 @@
+[
+  {
+    "lemma": {
+      "id": "de-band-nomen",
+      "sprache": "de",
+      "text": "Band",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-band-nomen-1",
+        "bedeutung_kurz": "Buchband",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "volume",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein einzelner Teil einer Buchreihe oder eines mehrbändigen Werkes.",
+            "merkhilfe": "Der Band eines Buches ist ein einzelner Teil einer Reihe.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der zweite Band erscheint im Herbst.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich lese den ersten Band noch einmal.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "One part of a book series or a multi-volume work.",
+            "merkhilfe": "A book volume is one part of a series.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der zweite Band erscheint im Herbst.",
+                "uebersetzung": "The second volume comes out in autumn.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich lese den ersten Band noch einmal.",
+                "uebersetzung": "I am reading the first volume again.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "der",
+        "plural": "Bände"
+      },
+      {
+        "id": "de-band-nomen-2",
+        "bedeutung_kurz": "Stoff- oder Materialstreifen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "ribbon",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-band-nomen-2"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein schmales, langes Stück Stoff oder Material, oft zum Binden.",
+            "merkhilfe": "Ein Band aus Stoff kann etwas zusammenhalten oder schmücken.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie band ein rotes Band um das Geschenk.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Band hält die Vorhänge zusammen.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A long, narrow piece of fabric or other material, often used for tying.",
+            "merkhilfe": "A fabric ribbon can tie or decorate something.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie band ein rotes Band um das Geschenk.",
+                "uebersetzung": "She tied a red ribbon around the gift.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Band hält die Vorhänge zusammen.",
+                "uebersetzung": "The ribbon holds the curtains together.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "das",
+        "plural": "Bänder"
+      },
+      {
+        "id": "de-band-nomen-3",
+        "bedeutung_kurz": "Musikgruppe",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "band",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-band-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine Gruppe von Musikern, die gemeinsam Musik spielt.",
+            "merkhilfe": "Der Buchband, das Stoffband, die Musikband: Der Artikel hilft beim Unterscheiden.",
+            "verwechslung": "Nicht verwechseln: der Band ist ein Buchteil; die Band ist eine Musikgruppe.",
+            "beispiele": [
+              {
+                "satz": "Die Band spielt heute Abend im Park.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Unsere Band probt jeden Dienstag.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A group of musicians who perform music together.",
+            "merkhilfe": "In German, the article changes: der Band, das Band, die Band.",
+            "verwechslung": "In German, der Band is a book volume; die Band is a music group.",
+            "beispiele": [
+              {
+                "satz": "Die Band spielt heute Abend im Park.",
+                "uebersetzung": "The band is playing in the park tonight.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Unsere Band probt jeden Dienstag.",
+                "uebersetzung": "Our band rehearses every Tuesday.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "die",
+        "plural": "Bands"
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-leiter-nomen",
+      "sprache": "de",
+      "text": "Leiter",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-leiter-nomen-1",
+        "bedeutung_kurz": "Gerät zum Hinaufsteigen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "ladder",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein Gerät mit zwei Holmen und Sprossen, auf das man steigt.",
+            "merkhilfe": "Eine Leiter hat Sprossen, auf denen man steht.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Leiter steht neben dem Apfelbaum.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er stieg vorsichtig auf die Leiter.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A frame with steps that people climb to reach a higher place.",
+            "merkhilfe": "A ladder has rungs that you step on.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Leiter steht neben dem Apfelbaum.",
+                "uebersetzung": "The ladder is beside the apple tree.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er stieg vorsichtig auf die Leiter.",
+                "uebersetzung": "He climbed the ladder carefully.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "die",
+        "plural": "Leitern"
+      },
+      {
+        "id": "de-leiter-nomen-2",
+        "bedeutung_kurz": "Person mit Führungsaufgabe",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "leader",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine Person, die für eine Gruppe oder ein Team verantwortlich ist.",
+            "merkhilfe": "Ein Leiter führt Menschen; eine Leiter hat Sprossen.",
+            "verwechslung": "Der Leiter ist eine Person; die Leiter ist das Gerät mit Sprossen.",
+            "beispiele": [
+              {
+                "satz": "Der Leiter erklärt den neuen Plan.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Leiter sprach mit allen Mitarbeitenden.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A person responsible for guiding or directing a group.",
+            "merkhilfe": "A leader guides people; a ladder has rungs.",
+            "verwechslung": "In German, der Leiter is a person; die Leiter is the climbing frame.",
+            "beispiele": [
+              {
+                "satz": "Der Leiter erklärt den neuen Plan.",
+                "uebersetzung": "The leader explains the new plan.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Leiter sprach mit allen Mitarbeitenden.",
+                "uebersetzung": "The leader spoke with all the staff.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "der",
+        "plural": "Leiter"
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-see-nomen",
+      "sprache": "de",
+      "text": "See",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-see-nomen-1",
+        "bedeutung_kurz": "Binnengewässer",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "lake",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein großes Gewässer, das vollständig von Land umgeben ist.",
+            "merkhilfe": "Der See liegt im Land; die See ist das Meer.",
+            "verwechslung": "Nicht verwechseln: der See ist ein Binnengewässer, die See das Meer.",
+            "beispiele": [
+              {
+                "satz": "Der See friert in kalten Wintern zu.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir schwammen gestern im See.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A large body of water that is completely surrounded by land.",
+            "merkhilfe": "In German, der See is a lake; die See is the sea.",
+            "verwechslung": "The German article changes the meaning: der See is a lake, die See is the sea.",
+            "beispiele": [
+              {
+                "satz": "Der See friert in kalten Wintern zu.",
+                "uebersetzung": "The lake freezes over in cold winters.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir schwammen gestern im See.",
+                "uebersetzung": "We swam in the lake yesterday.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "der",
+        "plural": "Seen"
+      },
+      {
+        "id": "de-see-nomen-2",
+        "bedeutung_kurz": "Meer",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "sea",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Das große, salzige Gewässer zwischen Ländern und Kontinenten.",
+            "merkhilfe": "Die See bedeutet Meer; im üblichen Sinn hat das Wort keinen Plural.",
+            "verwechslung": "Der See ist ein Binnengewässer; die See bedeutet Meer.",
+            "beispiele": [
+              {
+                "satz": "Die See ist heute sehr ruhig.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bei schwerer See blieb das Boot im Hafen.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A large area of salty water between countries and continents.",
+            "merkhilfe": "Die See means the sea and normally has no plural in this sense.",
+            "verwechslung": "Der See is an inland lake; die See means the sea.",
+            "beispiele": [
+              {
+                "satz": "Die See ist heute sehr ruhig.",
+                "uebersetzung": "The sea is very calm today.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bei schwerer See blieb das Boot im Hafen.",
+                "uebersetzung": "In rough seas, the boat stayed in the harbor.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "die"
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-kiefer-nomen",
+      "sprache": "de",
+      "text": "Kiefer",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-kiefer-nomen-1",
+        "bedeutung_kurz": "Knochen im Mund",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "jaw",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Der Knochen im Mund, in dem die unteren und oberen Zähne sitzen.",
+            "merkhilfe": "Der Kieferknochen sitzt im Gesicht; die Kiefer ist auch ein Nadelbaum.",
+            "verwechslung": "Der Kiefer ist der Knochen; die Kiefer ist der Baum.",
+            "beispiele": [
+              {
+                "satz": "Der Zahnarzt untersuchte ihren Kiefer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nach dem Sturz tat ihm der Kiefer weh.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "The bone in the mouth that holds the upper or lower teeth.",
+            "merkhilfe": "Der Kiefer is the jawbone; die Kiefer is also a pine tree.",
+            "verwechslung": "Der Kiefer is the jaw; die Kiefer is the tree.",
+            "beispiele": [
+              {
+                "satz": "Der Zahnarzt untersuchte ihren Kiefer.",
+                "uebersetzung": "The dentist examined her jaw.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nach dem Sturz tat ihm der Kiefer weh.",
+                "uebersetzung": "His jaw hurt after the fall.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "der",
+        "plural": "Kiefer"
+      },
+      {
+        "id": "de-kiefer-nomen-2",
+        "bedeutung_kurz": "Nadelbaum",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "pine tree",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein Nadelbaum mit langen Nadeln und harten Zapfen.",
+            "merkhilfe": "Die Kiefer als Baum wächst im Wald; der Kieferknochen sitzt im Gesicht.",
+            "verwechslung": "Die Kiefer ist ein Baum; der Kiefer ist der Knochen im Gesicht.",
+            "beispiele": [
+              {
+                "satz": "Eine Kiefer wächst neben dem alten Haus.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Im Wald stehen viele hohe Kiefern.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A coniferous tree with long needles and hard cones.",
+            "merkhilfe": "Die Kiefer is the tree; der Kiefer is the jawbone.",
+            "verwechslung": "Die Kiefer is a tree; der Kiefer is the jawbone.",
+            "beispiele": [
+              {
+                "satz": "Eine Kiefer wächst neben dem alten Haus.",
+                "uebersetzung": "A pine tree grows beside the old house.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Im Wald stehen viele hohe Kiefern.",
+                "uebersetzung": "Many tall pine trees stand in the forest.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "die",
+        "plural": "Kiefern"
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-mutter-nomen",
+      "sprache": "de",
+      "text": "Mutter",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-mutter-nomen-1",
+        "bedeutung_kurz": "weiblicher Elternteil",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "mother",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine Frau, die ein Kind geboren hat oder großzieht.",
+            "merkhilfe": "Mütter gehören zur Familie; Muttern passen auf Schrauben.",
+            "verwechslung": "Die Mutter als Elternteil hat den Plural Mütter; das Schraubenteil heißt Muttern.",
+            "beispiele": [
+              {
+                "satz": "Meine Mutter holt mich nach der Schule ab.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Mutter wartet vor dem Klassenraum.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A woman who has given birth to or raises a child.",
+            "merkhilfe": "German uses Mütter for mothers and Muttern for screw nuts.",
+            "verwechslung": "The family word has plural Mütter; the threaded part has plural Muttern.",
+            "beispiele": [
+              {
+                "satz": "Meine Mutter holt mich nach der Schule ab.",
+                "uebersetzung": "My mother is picking me up after school.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Mutter wartet vor dem Klassenraum.",
+                "uebersetzung": "The mother is waiting outside the classroom.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "die",
+        "plural": "Mütter"
+      },
+      {
+        "id": "de-mutter-nomen-2",
+        "bedeutung_kurz": "Schraubenteil",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "nut",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein Metallteil mit Innengewinde, das auf eine Schraube gedreht wird.",
+            "merkhilfe": "Mütter gehören zur Familie; Muttern passen auf Schrauben.",
+            "verwechslung": "Die Mutter als Elternteil hat den Plural Mütter; das Schraubenteil heißt Muttern.",
+            "beispiele": [
+              {
+                "satz": "Dreh die Mutter auf die Schraube.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Mutter hält das Rad an der Achse fest.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A small metal part with internal threads that screws onto a bolt.",
+            "merkhilfe": "German uses Mütter for mothers and Muttern for screw nuts.",
+            "verwechslung": "The family word has plural Mütter; the threaded part has plural Muttern.",
+            "beispiele": [
+              {
+                "satz": "Dreh die Mutter auf die Schraube.",
+                "uebersetzung": "Turn the nut onto the bolt.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Mutter hält das Rad an der Achse fest.",
+                "uebersetzung": "The nut holds the wheel on the axle.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": "die",
+        "plural": "Muttern"
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-werfen-verb",
+      "sprache": "de",
+      "text": "werfen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-werfen-verb-1",
+        "bedeutung_kurz": "etwas durch die Luft bewegen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "throw",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-throw-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Etwas mit der Hand durch die Luft bewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie wirft den Ball zurück.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er hat den Schlüssel auf den Tisch geworfen.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To send something through the air with your hand.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie wirft den Ball zurück.",
+                "uebersetzung": "She throws the ball back.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er hat den Schlüssel auf den Tisch geworfen.",
+                "uebersetzung": "He threw the key onto the table.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-schlafen-verb",
+      "sprache": "de",
+      "text": "schlafen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-schlafen-verb-1",
+        "bedeutung_kurz": "ruhen im Schlaf",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "sleep",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-sleep-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Im Schlaf ruhen, nicht wach sein.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Baby schläft schon.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir schliefen im Zug ein.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To rest while asleep.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Baby schläft schon.",
+                "uebersetzung": "The baby is already asleep.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir schliefen im Zug ein.",
+                "uebersetzung": "We fell asleep on the train.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-geben-verb",
+      "sprache": "de",
+      "text": "geben",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-geben-verb-1",
+        "bedeutung_kurz": "jemandem etwas reichen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "give",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-give-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Jemandem etwas überreichen oder zur Verfügung stellen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie gibt dem Kind ein Glas Wasser.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er gab mir gestern seinen Schlüssel.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To hand something to someone.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie gibt dem Kind ein Glas Wasser.",
+                "uebersetzung": "She gives the child a glass of water.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er gab mir gestern seinen Schlüssel.",
+                "uebersetzung": "He gave me his key yesterday.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-behalten-verb",
+      "sprache": "de",
+      "text": "behalten",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-behalten-verb-1",
+        "bedeutung_kurz": "nicht zurückgeben",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "keep",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-keep-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Etwas weiter bei sich haben und nicht zurückgeben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Du kannst das Buch behalten.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie behielt den Brief als Erinnerung.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To continue to have something.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Du kannst das Buch behalten.",
+                "uebersetzung": "You can keep the book.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie behielt den Brief als Erinnerung.",
+                "uebersetzung": "She kept the letter as a memory.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-ziehen-verb",
+      "sprache": "de",
+      "text": "ziehen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-ziehen-verb-1",
+        "bedeutung_kurz": "mit Kraft bewegen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "pull",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Etwas mit Kraft zu sich oder an einen anderen Ort bewegen.",
+            "merkhilfe": "Hier bedeutet ziehen, etwas mit Kraft zu bewegen.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Er zieht den Koffer über den Boden.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie zog den Vorhang zu.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To use force to move something toward you or to another place.",
+            "merkhilfe": "Here, ziehen means to pull something.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Er zieht den Koffer über den Boden.",
+                "uebersetzung": "He pulls the suitcase across the floor.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie zog den Vorhang zu.",
+                "uebersetzung": "She pulled the curtain closed.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "de-ziehen-verb-2",
+        "bedeutung_kurz": "den Wohnort wechseln",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "move",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Seinen Wohnort wechseln und in eine andere Wohnung oder ein anderes Haus gehen.",
+            "merkhilfe": "Wenn man den Wohnort wechselt, zieht man um.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir ziehen im Mai nach Hamburg.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie ist letztes Jahr nach Berlin gezogen.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To leave one home and begin living in another place.",
+            "merkhilfe": "When changing homes, German uses ziehen or umziehen.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir ziehen im Mai nach Hamburg.",
+                "uebersetzung": "We are moving to Hamburg in May.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie ist letztes Jahr nach Berlin gezogen.",
+                "uebersetzung": "She moved to Berlin last year.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-erwerben-verb",
+      "sprache": "de",
+      "text": "erwerben",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-erwerben-verb-1",
+        "bedeutung_kurz": "durch Kauf oder Leistung bekommen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "acquire",
+          "alternativen": [
+            "acquire",
+            "obtain"
+          ],
+          "verknuepfte_sense_ids": [
+            "en-acquire-verb-1",
+            "en-obtain-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B2",
+            "definition": "Etwas durch Kauf, Arbeit oder Lernen bekommen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie erwarb ein altes Haus am Stadtrand.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Unternehmen hat die Rechte erworben.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B2",
+            "definition": "To get or gain something through purchase, effort, or learning.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie erwarb ein altes Haus am Stadtrand.",
+                "uebersetzung": "She acquired an old house outside the city.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Das Unternehmen hat die Rechte erworben.",
+                "uebersetzung": "The company acquired the rights.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-oeffentlich-adjektiv",
+      "sprache": "de",
+      "text": "öffentlich",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-oeffentlich-adjektiv-1",
+        "bedeutung_kurz": "für alle zugänglich",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "public",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-public-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Für alle Menschen zugänglich oder für alle bestimmt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Sitzung ist öffentlich.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Park ist öffentlich zugänglich.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Open or available for everyone to use or attend.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Sitzung ist öffentlich.",
+                "uebersetzung": "The meeting is open to the public.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Park ist öffentlich zugänglich.",
+                "uebersetzung": "The park is open to the public.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-seltsam-adjektiv",
+      "sprache": "de",
+      "text": "seltsam",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-seltsam-adjektiv-1",
+        "bedeutung_kurz": "ungewöhnlich und schwer erklärbar",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "strange",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-strange-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ungewöhnlich und deshalb überraschend oder schwer zu erklären.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Antwort klingt seltsam.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Es war ein seltsamer Zufall.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Unusual in a way that is surprising or difficult to explain.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Antwort klingt seltsam.",
+                "uebersetzung": "The answer sounds strange.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Es war ein seltsamer Zufall.",
+                "uebersetzung": "It was a strange coincidence.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-duenn-adjektiv",
+      "sprache": "de",
+      "text": "dünn",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-duenn-adjektiv-1",
+        "bedeutung_kurz": "geringe Dicke",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "thin",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-thin-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Von einer Seite zur anderen nur wenig dick.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Papier ist sehr dünn.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die dünne Suppe schmeckt nicht gut.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Having little distance from one side to the other.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Papier ist sehr dünn.",
+                "uebersetzung": "The paper is very thin.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die dünne Suppe schmeckt nicht gut.",
+                "uebersetzung": "The thin soup does not taste good.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-sauer-adjektiv",
+      "sprache": "de",
+      "text": "sauer",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-sauer-adjektiv-1",
+        "bedeutung_kurz": "säuerlicher Geschmack",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "sour",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-sour-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Mit einem starken Geschmack wie bei einer Zitrone oder Essig.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Zitrone schmeckt sauer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Beeren waren noch sauer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Having a sharp taste like lemon or vinegar.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Zitrone schmeckt sauer.",
+                "uebersetzung": "The lemon tastes sour.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Beeren waren noch sauer.",
+                "uebersetzung": "The berries were still sour.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-oft-adverb",
+      "sprache": "de",
+      "text": "oft",
+      "wortart": "adverb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-oft-adverb-1",
+        "bedeutung_kurz": "häufig",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "often",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-often-adverb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Viele Male oder in kurzen Abständen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie fährt oft mit dem Rad zur Arbeit.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir treffen uns oft nach dem Unterricht.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Many times or at short intervals.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie fährt oft mit dem Rad zur Arbeit.",
+                "uebersetzung": "She often cycles to work.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir treffen uns oft nach dem Unterricht.",
+                "uebersetzung": "We often meet after class.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-kaum-adverb",
+      "sprache": "de",
+      "text": "kaum",
+      "wortart": "adverb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-kaum-adverb-1",
+        "bedeutung_kurz": "fast nicht",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "barely",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-barely-adverb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Nur in sehr kleinem Maß oder fast gar nicht.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich konnte die Musik kaum hören.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wegen des Nebels sahen wir kaum etwas.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Only to a very small degree or almost not at all.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich konnte die Musik kaum hören.",
+                "uebersetzung": "I could barely hear the music.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wegen des Nebels sahen wir kaum etwas.",
+                "uebersetzung": "Because of the fog, we could barely see anything.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-waehrend-praeposition",
+      "sprache": "de",
+      "text": "während",
+      "wortart": "praeposition",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-waehrend-praeposition-1",
+        "bedeutung_kurz": "zur selben Zeit wie",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "during",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-during-praeposition-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "In der Zeit, in der etwas anderes geschieht.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Während des Gesprächs blieb es ruhig.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Während der Reise las sie ein Buch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Throughout the time when another event is happening.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Während des Gesprächs blieb es ruhig.",
+                "uebersetzung": "It stayed quiet during the conversation.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Während der Reise las sie ein Buch.",
+                "uebersetzung": "She read a book during the journey.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-gegen-praeposition",
+      "sprache": "de",
+      "text": "gegen",
+      "wortart": "praeposition",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-gegen-praeposition-1",
+        "bedeutung_kurz": "Kontakt mit einer Fläche",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "against",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-against-praeposition-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "In Kontakt mit einer Fläche oder mit Bewegung auf sie zu.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Regen schlug gegen das Fenster.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Leiter lehnte gegen die Wand.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Touching a surface or moving toward it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Regen schlug gegen das Fenster.",
+                "uebersetzung": "The rain beat against the window.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Leiter lehnte gegen die Wand.",
+                "uebersetzung": "The ladder rested against the wall.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "de-gegen-praeposition-2",
+        "bedeutung_kurz": "Widerstand oder Gegnerschaft",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "against",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-against-praeposition-2"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Im Widerstand zu jemandem oder als Gegner in einem Wettkampf.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Unsere Mannschaft spielt gegen den Tabellenführer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie stimmte gegen den Vorschlag.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Opposing someone or competing with them.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Unsere Mannschaft spielt gegen den Tabellenführer.",
+                "uebersetzung": "Our team is playing against the league leaders.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie stimmte gegen den Vorschlag.",
+                "uebersetzung": "She voted against the proposal.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-ohne-praeposition",
+      "sprache": "de",
+      "text": "ohne",
+      "wortart": "praeposition",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-ohne-praeposition-1",
+        "bedeutung_kurz": "nicht mit etwas",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "without",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "en-without-praeposition-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Wenn etwas oder jemand nicht dabei ist.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Er ging ohne Jacke hinaus.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie trinkt ihren Tee ohne Zucker.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "When something is not there or not used.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Er ging ohne Jacke hinaus.",
+                "uebersetzung": "He went outside without a coat.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie trinkt ihren Tee ohne Zucker.",
+                "uebersetzung": "She drinks her tea without sugar.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-bark-nomen",
+      "sprache": "en",
+      "text": "bark",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": "barks"
+    },
+    "senses": [
+      {
+        "id": "en-bark-nomen-1",
+        "bedeutung_kurz": "sound made by a dog",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Bellen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein kurzes, lautes Geräusch, das ein Hund macht.",
+            "merkhilfe": "Bark kann das Bellen eines Hundes oder die Rinde eines Baumes bedeuten.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We heard a loud bark outside.",
+                "uebersetzung": "Wir hörten draußen ein lautes Bellen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The dog’s bark woke the baby.",
+                "uebersetzung": "Das Bellen des Hundes weckte das Baby.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "The short, loud sound that a dog makes.",
+            "merkhilfe": "Bark can mean a dog’s sound or the outer covering of a tree.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We heard a loud bark outside.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The dog’s bark woke the baby.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "en-bark-nomen-2",
+        "bedeutung_kurz": "outer covering of a tree",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Baumrinde",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Die raue äußere Schicht, die den Stamm eines Baumes schützt.",
+            "merkhilfe": "Bark kann die Rinde eines Baumes oder das Bellen eines Hundes bedeuten.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The bark protects the tree.",
+                "uebersetzung": "Die Rinde schützt den Baum.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "A bird sat on the bark of the old tree.",
+                "uebersetzung": "Ein Vogel saß auf der Rinde des alten Baumes.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "The rough outer layer that covers and protects a tree trunk.",
+            "merkhilfe": "Bark can mean a tree’s outer covering or a dog’s sound.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The bark protects the tree.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "A bird sat on the bark of the old tree.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-crane-nomen",
+      "sprache": "en",
+      "text": "crane",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": "cranes"
+    },
+    "senses": [
+      {
+        "id": "en-crane-nomen-1",
+        "bedeutung_kurz": "large wading bird",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Kranich",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein großer Watvogel mit langen Beinen und langem Hals.",
+            "merkhilfe": "A crane kann ein Kranich sein; die Maschine hebt schwere Lasten.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "A crane walked through the marsh.",
+                "uebersetzung": "Ein Kranich ging durch den Sumpf.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The crane has a long, pointed beak.",
+                "uebersetzung": "Der Kranich hat einen langen, spitzen Schnabel.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A large bird with long legs and a long neck, often found near water.",
+            "merkhilfe": "A crane can be a bird; the machine lifts heavy loads.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "A crane walked through the marsh.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The crane has a long, pointed beak.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "en-crane-nomen-2",
+        "bedeutung_kurz": "lifting machine",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Kran",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine Maschine, die schwere Dinge hochhebt und bewegt.",
+            "merkhilfe": "Die Maschine crane hebt Lasten; der Vogel crane ist ein Kranich.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The crane lifted a steel beam.",
+                "uebersetzung": "Der Kran hob einen Stahlträger.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "A crane stood beside the new building.",
+                "uebersetzung": "Ein Kran stand neben dem neuen Gebäude.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A machine used to lift and move heavy objects.",
+            "merkhilfe": "The machine crane lifts loads; the bird crane is a wading bird.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The crane lifted a steel beam.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "A crane stood beside the new building.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-match-nomen",
+      "sprache": "en",
+      "text": "match",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "matches"
+    },
+    "senses": [
+      {
+        "id": "en-match-nomen-1",
+        "bedeutung_kurz": "sports contest",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Spiel",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein sportlicher Wettkampf zwischen zwei Personen oder Teams.",
+            "merkhilfe": "Match bedeutet hier ein Sportspiel; ein anderes match ist ein Streichholz.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The match ended in a draw.",
+                "uebersetzung": "Das Spiel endete unentschieden.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We watched the match on Saturday.",
+                "uebersetzung": "Wir sahen das Spiel am Samstag.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A sports contest between two people or teams.",
+            "merkhilfe": "Match can mean a sports contest or a small stick used to light a fire.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The match ended in a draw.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We watched the match on Saturday.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "en-match-nomen-2",
+        "bedeutung_kurz": "small stick for lighting",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Streichholz",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein kleines Holzstäbchen, mit dem man ein Feuer anzünden kann.",
+            "merkhilfe": "Ein match zum Anzünden heißt auf Deutsch Streichholz; ein Sport-match ist ein Spiel.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He lit the fire with a match.",
+                "uebersetzung": "Er entzündete das Feuer mit einem Streichholz.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The match burned for a few seconds.",
+                "uebersetzung": "Das Streichholz brannte einige Sekunden.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A small stick used to start a fire.",
+            "merkhilfe": "A match can be a lighting stick or a sports contest.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He lit the fire with a match.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The match burned for a few seconds.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-seal-nomen",
+      "sprache": "en",
+      "text": "seal",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B2",
+      "artikel": null,
+      "plural": "seals"
+    },
+    "senses": [
+      {
+        "id": "en-seal-nomen-1",
+        "bedeutung_kurz": "sea animal",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Robbe",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B2",
+            "definition": "Ein Meeressäugetier mit Flossen, das an Küsten lebt.",
+            "merkhilfe": "Seal kann eine Robbe oder ein amtliches Siegel bedeuten.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "A seal rested on a rock near the shore.",
+                "uebersetzung": "Eine Robbe ruhte auf einem Felsen am Ufer.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We saw a seal swimming in the bay.",
+                "uebersetzung": "Wir sahen eine Robbe in der Bucht schwimmen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B2",
+            "definition": "A sea mammal with flippers that often lives near coasts.",
+            "merkhilfe": "Seal can mean a sea animal or an official mark.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "A seal rested on a rock near the shore.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We saw a seal swimming in the bay.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "en-seal-nomen-2",
+        "bedeutung_kurz": "official mark",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Siegel",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B2",
+            "definition": "Ein Zeichen auf einem Dokument, das zeigt, dass es echt oder offiziell ist.",
+            "merkhilfe": "Das seal auf einem Dokument ist ein Siegel; das Tier ist eine Robbe.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The envelope bears the official seal.",
+                "uebersetzung": "Der Umschlag trägt das amtliche Siegel.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She pressed the seal into the soft wax.",
+                "uebersetzung": "Sie drückte das Siegel in das weiche Wachs.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B2",
+            "definition": "A mark on a document showing that it is genuine or official.",
+            "merkhilfe": "A seal on a document is an official mark; the animal is a marine mammal.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The envelope bears the official seal.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She pressed the seal into the soft wax.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-band-nomen",
+      "sprache": "en",
+      "text": "band",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": "bands"
+    },
+    "senses": [
+      {
+        "id": "en-band-nomen-1",
+        "bedeutung_kurz": "group of musicians",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Band",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-band-nomen-3"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine Gruppe von Musikern, die gemeinsam Musik spielt.",
+            "merkhilfe": "Band kann eine Musikgruppe oder ein schmales Materialstück sein.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The band played at the festival.",
+                "uebersetzung": "Die Band spielte auf dem Festival.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "A local band released a new song.",
+                "uebersetzung": "Eine lokale Band veröffentlichte ein neues Lied.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A group of musicians who perform music together.",
+            "merkhilfe": "Band can mean a music group or a narrow strip of material.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The band played at the festival.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "A local band released a new song.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "en-band-nomen-2",
+        "bedeutung_kurz": "narrow strip",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Streifen",
+          "alternativen": [
+            "Band"
+          ],
+          "verknuepfte_sense_ids": [
+            "de-band-nomen-2"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein schmales Stück Material, das etwas umgibt, verbindet oder hält.",
+            "merkhilfe": "Band kann eine Musikgruppe oder ein schmales Materialstück sein.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He wore a band around his wrist.",
+                "uebersetzung": "Er trug ein Band um sein Handgelenk.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "A rubber band holds the papers together.",
+                "uebersetzung": "Ein Gummiband hält die Papiere zusammen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A narrow strip of material that wraps, joins, or holds things together.",
+            "merkhilfe": "Band can mean a music group or a narrow strip of material.",
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He wore a band around his wrist.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "A rubber band holds the papers together.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-throw-verb",
+      "sprache": "en",
+      "text": "throw",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-throw-verb-1",
+        "bedeutung_kurz": "send through the air by hand",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "werfen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-werfen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Etwas mit der Hand durch die Luft bewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She threw the ball back to me.",
+                "uebersetzung": "Sie warf mir den Ball zurück.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He has thrown the keys onto the table.",
+                "uebersetzung": "Er hat die Schlüssel auf den Tisch geworfen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To send something through the air with your hand.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She threw the ball back to me.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He has thrown the keys onto the table.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-sleep-verb",
+      "sprache": "en",
+      "text": "sleep",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-sleep-verb-1",
+        "bedeutung_kurz": "rest while unconscious",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "schlafen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-schlafen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Im Schlaf ruhen, nicht wach sein.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The baby slept for three hours.",
+                "uebersetzung": "Das Baby schlief drei Stunden.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I have slept badly this week.",
+                "uebersetzung": "Ich habe diese Woche schlecht geschlafen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To rest while asleep.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The baby slept for three hours.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I have slept badly this week.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-give-verb",
+      "sprache": "en",
+      "text": "give",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-give-verb-1",
+        "bedeutung_kurz": "hand something to someone",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "geben",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-geben-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Jemandem etwas überreichen oder zur Verfügung stellen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She gave him a glass of water.",
+                "uebersetzung": "Sie gab ihm ein Glas Wasser.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "They have given us clear instructions.",
+                "uebersetzung": "Sie haben uns klare Anweisungen gegeben.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To hand something to someone.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She gave him a glass of water.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "They have given us clear instructions.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-keep-verb",
+      "sprache": "en",
+      "text": "keep",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-keep-verb-1",
+        "bedeutung_kurz": "continue to have something",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "behalten",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-behalten-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas weiter bei sich haben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "You can keep the book.",
+                "uebersetzung": "Du kannst das Buch behalten.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She kept the letter as a memory.",
+                "uebersetzung": "Sie behielt den Brief als Erinnerung.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To continue to have something.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "You can keep the book.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She kept the letter as a memory.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-acquire-verb",
+      "sprache": "en",
+      "text": "acquire",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-acquire-verb-1",
+        "bedeutung_kurz": "get or gain something",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "erwerben",
+          "alternativen": [
+            "erlangen"
+          ],
+          "verknuepfte_sense_ids": [
+            "de-erwerben-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B2",
+            "definition": "Etwas durch Kauf, Arbeit oder Lernen bekommen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She acquired an old house outside the city.",
+                "uebersetzung": "Sie erwarb ein altes Haus am Stadtrand.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The company acquired the rights.",
+                "uebersetzung": "Das Unternehmen erwarb die Rechte.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B2",
+            "definition": "To get or gain something through purchase, effort, or learning.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She acquired an old house outside the city.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The company acquired the rights.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-obtain-verb",
+      "sprache": "en",
+      "text": "obtain",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-obtain-verb-1",
+        "bedeutung_kurz": "get something through effort",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "erhalten",
+          "alternativen": [
+            "bekommen"
+          ],
+          "verknuepfte_sense_ids": [
+            "de-erwerben-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B2",
+            "definition": "Etwas nach einer Suche, durch Mühe oder bei einer Stelle bekommen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I obtained a permit from the city.",
+                "uebersetzung": "Ich erhielt eine Genehmigung von der Stadt.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "They obtained permission to enter.",
+                "uebersetzung": "Sie erhielten die Erlaubnis einzutreten.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B2",
+            "definition": "To get something after effort, searching, or asking an authority.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I obtained a permit from the city.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "They obtained permission to enter.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-public-adjektiv",
+      "sprache": "en",
+      "text": "public",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-public-adjektiv-1",
+        "bedeutung_kurz": "open or available to everyone",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "öffentlich",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-oeffentlich-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Für alle Menschen zugänglich oder für alle bestimmt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The meeting is open to the public.",
+                "uebersetzung": "Die Sitzung ist öffentlich.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Public transport stops here.",
+                "uebersetzung": "Hier hält der öffentliche Nahverkehr.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Open or available for everyone to use or attend.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The meeting is open to the public.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Public transport stops here.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-strange-adjektiv",
+      "sprache": "en",
+      "text": "strange",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-strange-adjektiv-1",
+        "bedeutung_kurz": "unusual and surprising",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "seltsam",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-seltsam-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ungewöhnlich und deshalb überraschend oder schwer zu erklären.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "It seems strange to leave so early.",
+                "uebersetzung": "Es scheint seltsam, so früh zu gehen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I heard a strange noise outside.",
+                "uebersetzung": "Ich hörte draußen ein seltsames Geräusch.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Unusual in a way that is surprising or difficult to explain.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "It seems strange to leave so early.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I heard a strange noise outside.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-thin-adjektiv",
+      "sprache": "en",
+      "text": "thin",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-thin-adjektiv-1",
+        "bedeutung_kurz": "small distance between sides",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "dünn",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-duenn-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Von einer Seite zur anderen nur wenig dick.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The paper is thin and easy to tear.",
+                "uebersetzung": "Das Papier ist dünn und leicht zu zerreißen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The ice was too thin to walk on.",
+                "uebersetzung": "Das Eis war zu dünn, um darauf zu gehen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Having little distance from one side to the other.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The paper is thin and easy to tear.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The ice was too thin to walk on.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-sour-adjektiv",
+      "sprache": "en",
+      "text": "sour",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-sour-adjektiv-1",
+        "bedeutung_kurz": "sharp acidic taste",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "sauer",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-sauer-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Mit einem starken Geschmack wie bei einer Zitrone oder Essig.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The lemon tastes sour.",
+                "uebersetzung": "Die Zitrone schmeckt sauer.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The berries were still sour.",
+                "uebersetzung": "Die Beeren waren noch sauer.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Having a sharp taste like lemon or vinegar.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The lemon tastes sour.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The berries were still sour.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-often-adverb",
+      "sprache": "en",
+      "text": "often",
+      "wortart": "adverb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-often-adverb-1",
+        "bedeutung_kurz": "many times",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "oft",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-oft-adverb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Viele Male oder in kurzen Abständen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She often cycles to work.",
+                "uebersetzung": "Sie fährt oft mit dem Rad zur Arbeit.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We often meet after class.",
+                "uebersetzung": "Wir treffen uns oft nach dem Unterricht.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Many times or at short intervals.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She often cycles to work.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We often meet after class.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-barely-adverb",
+      "sprache": "en",
+      "text": "barely",
+      "wortart": "adverb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-barely-adverb-1",
+        "bedeutung_kurz": "almost not",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "kaum",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-kaum-adverb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Nur in sehr kleinem Maß oder fast gar nicht.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I could barely hear the music.",
+                "uebersetzung": "Ich konnte die Musik kaum hören.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Because of the fog, we could barely see anything.",
+                "uebersetzung": "Wegen des Nebels sahen wir kaum etwas.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Only to a very small degree or almost not at all.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I could barely hear the music.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Because of the fog, we could barely see anything.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-during-praeposition",
+      "sprache": "en",
+      "text": "during",
+      "wortart": "praeposition",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-during-praeposition-1",
+        "bedeutung_kurz": "throughout a period",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "während",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-waehrend-praeposition-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "In der Zeit, in der etwas anderes geschieht.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She read during the journey.",
+                "uebersetzung": "Sie las während der Reise.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The phone rang during dinner.",
+                "uebersetzung": "Das Telefon klingelte während des Abendessens.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Throughout the time when another event is happening.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She read during the journey.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The phone rang during dinner.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-against-praeposition",
+      "sprache": "en",
+      "text": "against",
+      "wortart": "praeposition",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-against-praeposition-1",
+        "bedeutung_kurz": "contact with a surface",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "gegen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-gegen-praeposition-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "In Kontakt mit einer Fläche oder mit Bewegung auf sie zu.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The rain beat against the window.",
+                "uebersetzung": "Der Regen schlug gegen das Fenster.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The ladder rested against the wall.",
+                "uebersetzung": "Die Leiter lehnte gegen die Wand.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Touching a surface or moving toward it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The rain beat against the window.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The ladder rested against the wall.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      },
+      {
+        "id": "en-against-praeposition-2",
+        "bedeutung_kurz": "opposition or competition",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "gegen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-gegen-praeposition-2"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Im Widerstand zu jemandem oder als Gegner in einem Wettkampf.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our team played against the league leaders.",
+                "uebersetzung": "Unsere Mannschaft spielt gegen den Tabellenführer.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She voted against the proposal.",
+                "uebersetzung": "Sie stimmte gegen den Vorschlag.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Opposing someone or competing with them.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our team played against the league leaders.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She voted against the proposal.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-without-praeposition",
+      "sprache": "en",
+      "text": "without",
+      "wortart": "praeposition",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-without-praeposition-1",
+        "bedeutung_kurz": "not having or using something",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "ohne",
+          "alternativen": [],
+          "verknuepfte_sense_ids": [
+            "de-ohne-praeposition-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Wenn etwas fehlt oder nicht benutzt wird.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He went out without a coat.",
+                "uebersetzung": "Er ging ohne Jacke hinaus.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She drinks tea without sugar.",
+                "uebersetzung": "Sie trinkt Tee ohne Zucker.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "When something is not there or not used.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He went out without a coat.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She drinks tea without sugar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "GPT-6 (Codex)",
+              "datum": "2026-11-04"
+            }
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "GPT-6 (Codex)",
+      "datum": "2026-11-04"
+    }
+  }
+]

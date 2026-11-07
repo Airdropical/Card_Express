@@ -1,0 +1,6063 @@
+[
+  {
+    "lemma": {
+      "id": "de-bank-nomen",
+      "sprache": "de",
+      "text": "Bank",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "die",
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-bank-nomen-1",
+        "bedeutung_kurz": "Geldinstitut",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "bank",
+          "alternativen": [
+            "financial institution"
+          ],
+          "verknuepfte_sense_ids": [
+            "en-bank-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein Unternehmen, bei dem Menschen Geld aufbewahren, überweisen oder leihen können.",
+            "merkhilfe": null,
+            "verwechslung": "Eine Sitzbank heißt auf Englisch bench.",
+            "beispiele": [
+              {
+                "satz": "Die Bank öffnet um neun.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich hole Geld bei der Bank.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [
+                "Der Plural hängt von der Bedeutung ab: Banken (Geldinstitut), Bänke (Sitzmöbel)."
+              ],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A company where people can keep, send, or borrow money.",
+            "merkhilfe": null,
+            "verwechslung": "A seat is called a bench.",
+            "beispiele": [
+              {
+                "satz": "Die Bank öffnet um neun.",
+                "uebersetzung": "The bank opens at nine.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich hole Geld bei der Bank.",
+                "uebersetzung": "I get money from the bank.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [
+                "Der Plural hängt von der Bedeutung ab: Banken (Geldinstitut), Bänke (Sitzmöbel)."
+              ],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": "Banken"
+      },
+      {
+        "id": "de-bank-nomen-2",
+        "bedeutung_kurz": "Sitzmöbel",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "bench",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein langer Sitz für mehrere Menschen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Bank im Park ist frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir sitzen auf einer Bank.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [
+                "Der Plural hängt von der Bedeutung ab: Banken (Geldinstitut), Bänke (Sitzmöbel)."
+              ],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A long seat for several people.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Bank im Park ist frei.",
+                "uebersetzung": "The bench in the park is free.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir sitzen auf einer Bank.",
+                "uebersetzung": "We are sitting on a bench.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [
+                "Der Plural hängt von der Bedeutung ab: Banken (Geldinstitut), Bänke (Sitzmöbel)."
+              ],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": "Bänke"
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [
+        "Der Plural hängt von der Bedeutung ab: Banken (Geldinstitut), Bänke (Sitzmöbel)."
+      ],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-bank-nomen",
+      "sprache": "en",
+      "text": "bank",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "banks"
+    },
+    "senses": [
+      {
+        "id": "en-bank-nomen-1",
+        "bedeutung_kurz": "financial institution",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Bank",
+          "alternativen": [
+            "Geldinstitut"
+          ],
+          "verknuepfte_sense_ids": [
+            "de-bank-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein Unternehmen, bei dem Menschen Geld aufbewahren, überweisen oder leihen können.",
+            "merkhilfe": null,
+            "verwechslung": "Für eine Sitzbank sagt man bench.",
+            "beispiele": [
+              {
+                "satz": "She works at a bank.",
+                "uebersetzung": "Sie arbeitet bei einer Bank.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The bank closes at five.",
+                "uebersetzung": "Die Bank schließt um fünf.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A company where people can keep, send, or borrow money.",
+            "merkhilfe": null,
+            "verwechslung": "A seat is called a bench.",
+            "beispiele": [
+              {
+                "satz": "She works at a bank.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The bank closes at five.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-bank-nomen-2",
+        "bedeutung_kurz": "side of a river",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Ufer",
+          "alternativen": [
+            "Flussufer"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Das Land direkt neben einem Fluss oder See.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We sat on the bank of the river.",
+                "uebersetzung": "Wir saßen am Ufer des Flusses.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The river bank was covered with grass.",
+                "uebersetzung": "Das Flussufer war mit Gras bedeckt.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "The land beside a river or lake.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We sat on the bank of the river.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The river bank was covered with grass.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-schloss-nomen",
+      "sprache": "de",
+      "text": "Schloss",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "das",
+      "plural": "Schlösser"
+    },
+    "senses": [
+      {
+        "id": "de-schloss-nomen-1",
+        "bedeutung_kurz": "großes Wohngebäude",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "castle",
+          "alternativen": [
+            "palace"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein großes, oft altes Gebäude, in dem früher Könige oder Adlige wohnten.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schloss steht auf einem Hügel.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir besuchen heute das Schloss.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A large, often old building where a king or noble family lived.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schloss steht auf einem Hügel.",
+                "uebersetzung": "The castle stands on a hill.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir besuchen heute das Schloss.",
+                "uebersetzung": "We are visiting the castle today.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-schloss-nomen-2",
+        "bedeutung_kurz": "Verschluss an einer Tür",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "lock",
+          "alternativen": [
+            "door lock"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein Gerät, das eine Tür mit einem Schlüssel öffnet.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schloss an der Tür ist kaputt.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich brauche einen Schlüssel für das Schloss.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A device that opens a door with a key.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schloss an der Tür ist kaputt.",
+                "uebersetzung": "The lock on the door is broken.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich brauche einen Schlüssel für das Schloss.",
+                "uebersetzung": "I need a key for the lock.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-lampe-nomen",
+      "sprache": "de",
+      "text": "Lampe",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "die",
+      "plural": "Lampen"
+    },
+    "senses": [
+      {
+        "id": "de-lampe-nomen-1",
+        "bedeutung_kurz": "Gerät zum Beleuchten",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "lamp",
+          "alternativen": [
+            "light"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Lampe gibt Licht.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Lampe steht auf dem Tisch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Abends mache ich die Lampe an.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A lamp gives light.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Lampe steht auf dem Tisch.",
+                "uebersetzung": "The lamp is on the table.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Abends mache ich die Lampe an.",
+                "uebersetzung": "I turn on the lamp in the evening.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-freund-nomen",
+      "sprache": "de",
+      "text": "Freund",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Freunde"
+    },
+    "senses": [
+      {
+        "id": "de-freund-nomen-1",
+        "bedeutung_kurz": "männlicher Freund, nicht romantisch",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "male friend",
+          "alternativen": [
+            "friend"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Freund ist ein Mann. Er ist dir wichtig.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Mein Freund hilft mir oft.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Mein Freund spielt mit mir Fußball.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A male friend is someone you trust.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Mein Freund hilft mir oft.",
+                "uebersetzung": "My friend often helps me.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Mein Freund spielt mit mir Fußball.",
+                "uebersetzung": "My friend plays football with me.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-freund-nomen-2",
+        "bedeutung_kurz": "romantischer Partner",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "boyfriend",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Freund ist ein Mann. Er ist dein Partner.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Mein Freund und ich sind ein Paar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie liebt ihren Freund sehr.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A boyfriend is your male partner.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Mein Freund und ich sind ein Paar.",
+                "uebersetzung": "My boyfriend and I are a couple.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie liebt ihren Freund sehr.",
+                "uebersetzung": "She loves her boyfriend very much.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-licht-nomen",
+      "sprache": "de",
+      "text": "Licht",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "das",
+      "plural": "Lichter"
+    },
+    "senses": [
+      {
+        "id": "de-licht-nomen-1",
+        "bedeutung_kurz": "Helligkeit zum Sehen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "light",
+          "alternativen": [
+            "illumination"
+          ],
+          "verknuepfte_sense_ids": [
+            "en-light-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Licht macht Dinge sichtbar.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Licht im Zimmer ist hell.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte mach das Licht aus.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Light is brightness. It helps us see.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Licht im Zimmer ist hell.",
+                "uebersetzung": "The light in the room is bright.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte mach das Licht aus.",
+                "uebersetzung": "Please turn off the light.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-weg-nomen",
+      "sprache": "de",
+      "text": "Weg",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Wege"
+    },
+    "senses": [
+      {
+        "id": "de-weg-nomen-1",
+        "bedeutung_kurz": "Strecke von einem Ort zum anderen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "way",
+          "alternativen": [
+            "route",
+            "path"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Strecke zu einem Ort.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Weg zum Bahnhof ist kurz.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir gehen diesen Weg zu Fuß.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A route to a place.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Weg zum Bahnhof ist kurz.",
+                "uebersetzung": "The way to the station is short.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir gehen diesen Weg zu Fuß.",
+                "uebersetzung": "We are walking this route.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-weg-nomen-2",
+        "bedeutung_kurz": "Methode, etwas zu erreichen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "way",
+          "alternativen": [
+            "method"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Methode für ein Ziel.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir finden einen Weg, das Problem zu lösen.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Dieser Weg ist einfacher.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A way to reach a goal.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir finden einen Weg, das Problem zu lösen.",
+                "uebersetzung": "We will find a way to solve the problem.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Dieser Weg ist einfacher.",
+                "uebersetzung": "This way is easier.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-ball-nomen",
+      "sprache": "de",
+      "text": "Ball",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Bälle"
+    },
+    "senses": [
+      {
+        "id": "de-ball-nomen-1",
+        "bedeutung_kurz": "runder Gegenstand zum Spielen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "ball",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein runder Gegenstand zum Spielen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Kinder spielen mit einem Ball.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Ball liegt unter dem Tisch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A round object for games.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Kinder spielen mit einem Ball.",
+                "uebersetzung": "The children are playing with a ball.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Ball liegt unter dem Tisch.",
+                "uebersetzung": "The ball is under the table.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-ball-nomen-2",
+        "bedeutung_kurz": "festlicher Tanzabend",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "ball",
+          "alternativen": [
+            "formal dance"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein festlicher Abend mit Tanz.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie trägt ein langes Kleid zum Ball.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Ball beginnt um acht Uhr.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A formal evening with dancing.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie trägt ein langes Kleid zum Ball.",
+                "uebersetzung": "She is wearing a long dress to the ball.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Ball beginnt um acht Uhr.",
+                "uebersetzung": "The ball begins at eight o'clock.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-blatt-nomen",
+      "sprache": "de",
+      "text": "Blatt",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "das",
+      "plural": "Blätter"
+    },
+    "senses": [
+      {
+        "id": "de-blatt-nomen-1",
+        "bedeutung_kurz": "Teil einer Pflanze",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "leaf",
+          "alternativen": [
+            "blade"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Der flache, meist grüne Teil einer Pflanze, der am Stängel wächst.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ein Blatt fällt vom Baum.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Im Frühling bekommt die Pflanze neue Blätter.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A flat green part of a plant.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ein Blatt fällt vom Baum.",
+                "uebersetzung": "A leaf is falling from the tree.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Im Frühling bekommt die Pflanze neue Blätter.",
+                "uebersetzung": "The plant gets new leaves in spring.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-blatt-nomen-2",
+        "bedeutung_kurz": "einzelne Seite aus Papier",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "sheet of paper",
+          "alternativen": [
+            "page"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein einzelnes, dünnes Stück Papier.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Bitte gib mir ein Blatt Papier.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Auf dem Blatt steht mein Name.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "One single, thin piece of paper.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Bitte gib mir ein Blatt Papier.",
+                "uebersetzung": "Please give me a sheet of paper.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Auf dem Blatt steht mein Name.",
+                "uebersetzung": "My name is on the sheet.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-zug-nomen",
+      "sprache": "de",
+      "text": "Zug",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "der",
+      "plural": "Züge"
+    },
+    "senses": [
+      {
+        "id": "de-zug-nomen-1",
+        "bedeutung_kurz": "Schienenfahrzeug",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "train",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein langes Fahrzeug, das auf Schienen fährt und Menschen oder Dinge transportiert.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Zug fährt um zehn Uhr ab.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir nehmen den Zug nach Hamburg.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A long vehicle that travels on rails and carries people or goods.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Zug fährt um zehn Uhr ab.",
+                "uebersetzung": "The train leaves at ten o'clock.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir nehmen den Zug nach Hamburg.",
+                "uebersetzung": "We are taking the train to Hamburg.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-zug-nomen-2",
+        "bedeutung_kurz": "einzelner Spielschritt",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "move",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine einzelne Handlung, die ein Spieler in einem Spiel ausführt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das war ein guter Zug.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Jetzt bist du am Zug.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "One action that a player makes during a game.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das war ein guter Zug.",
+                "uebersetzung": "That was a good move.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Jetzt bist du am Zug.",
+                "uebersetzung": "Now it is your turn.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-bahn-nomen",
+      "sprache": "de",
+      "text": "Bahn",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "die",
+      "plural": "Bahnen"
+    },
+    "senses": [
+      {
+        "id": "de-bahn-nomen-1",
+        "bedeutung_kurz": "Schienenverkehr",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "railway",
+          "alternativen": [
+            "train",
+            "railroad"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein System aus Zügen und Schienen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Bahn ist heute pünktlich.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir fahren mit der Bahn zur Arbeit.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A system of trains and railway tracks.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Bahn ist heute pünktlich.",
+                "uebersetzung": "The railway is on time today.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir fahren mit der Bahn zur Arbeit.",
+                "uebersetzung": "We take the train to work.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-bahn-nomen-2",
+        "bedeutung_kurz": "markierter Streifen zum Sport",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "lane",
+          "alternativen": [
+            "track"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein markierter Streifen, auf dem man zum Beispiel im Schwimmbad schwimmt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie schwimmt auf der ersten Bahn.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Bahn im Schwimmbad ist frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A marked strip for swimming or racing.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie schwimmt auf der ersten Bahn.",
+                "uebersetzung": "She is swimming in the first lane.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Bahn im Schwimmbad ist frei.",
+                "uebersetzung": "The lane in the pool is free.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-laufen-verb",
+      "sprache": "de",
+      "text": "laufen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-laufen-verb-1",
+        "bedeutung_kurz": "sich schnell zu Fuß bewegen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "run",
+          "alternativen": [
+            "jog"
+          ],
+          "verknuepfte_sense_ids": [
+            "en-run-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Sich schnell zu Fuß bewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich laufe jeden Morgen im Park.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Hund läuft über die Wiese.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To move quickly on foot.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich laufe jeden Morgen im Park.",
+                "uebersetzung": "I run in the park every morning.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Hund läuft über die Wiese.",
+                "uebersetzung": "The dog runs across the meadow.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-laufen-verb-2",
+        "bedeutung_kurz": "in Betrieb sein",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "run",
+          "alternativen": [
+            "operate",
+            "work"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Maschine ist an und läuft.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Motor läuft sehr leise.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Computer läuft wieder.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A machine is on and works.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Motor läuft sehr leise.",
+                "uebersetzung": "The engine is running very quietly.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Computer läuft wieder.",
+                "uebersetzung": "The computer is working again.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-fahren-verb",
+      "sprache": "de",
+      "text": "fahren",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-fahren-verb-1",
+        "bedeutung_kurz": "mit einem Fahrzeug reisen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "travel",
+          "alternativen": [
+            "go by vehicle"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Mit einem Fahrzeug reisen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir fahren mit dem Bus nach Berlin.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie fährt jeden Tag zur Arbeit.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To travel in a vehicle.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir fahren mit dem Bus nach Berlin.",
+                "uebersetzung": "We are traveling to Berlin by bus.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie fährt jeden Tag zur Arbeit.",
+                "uebersetzung": "She travels to work every day.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-fahren-verb-2",
+        "bedeutung_kurz": "ein Fahrzeug lenken",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "drive",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Auto selbst lenken.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich fahre heute das Auto.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Kannst du schon fahren?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To control and drive a car.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich fahre heute das Auto.",
+                "uebersetzung": "I am driving the car today.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Kannst du schon fahren?",
+                "uebersetzung": "Can you drive yet?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-spielen-verb",
+      "sprache": "de",
+      "text": "spielen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-spielen-verb-1",
+        "bedeutung_kurz": "an einem Spiel teilnehmen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "play",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Bei einem Spiel mitmachen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Kinder spielen im Garten.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir spielen heute Karten.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To take part in a game.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Kinder spielen im Garten.",
+                "uebersetzung": "The children are playing in the garden.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir spielen heute Karten.",
+                "uebersetzung": "We are playing cards today.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-spielen-verb-2",
+        "bedeutung_kurz": "Musik machen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "play",
+          "alternativen": [
+            "perform"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Auf einem Instrument Musik machen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie spielt Klavier.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er spielt ein Lied auf der Gitarre.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To make music on an instrument.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Sie spielt Klavier.",
+                "uebersetzung": "She plays the piano.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Er spielt ein Lied auf der Gitarre.",
+                "uebersetzung": "He is playing a song on the guitar.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-finden-verb",
+      "sprache": "de",
+      "text": "finden",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-finden-verb-1",
+        "bedeutung_kurz": "etwas entdecken oder wiedersehen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "find",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas Gesuchtes entdecken.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich finde meine Schlüssel nicht.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir finden den Weg nach Hause.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To find something you want.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich finde meine Schlüssel nicht.",
+                "uebersetzung": "I cannot find my keys.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir finden den Weg nach Hause.",
+                "uebersetzung": "We find the way home.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-finden-verb-2",
+        "bedeutung_kurz": "eine Meinung haben",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "think",
+          "alternativen": [
+            "find"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Meinung über etwas haben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich finde den Film spannend.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wie findest du die Idee?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To have an opinion about something.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ich finde den Film spannend.",
+                "uebersetzung": "I think the film is exciting.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wie findest du die Idee?",
+                "uebersetzung": "What do you think of the idea?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-nehmen-verb",
+      "sprache": "de",
+      "text": "nehmen",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-nehmen-verb-1",
+        "bedeutung_kurz": "etwas greifen oder mit sich tragen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "take",
+          "alternativen": [
+            "pick up"
+          ],
+          "verknuepfte_sense_ids": [
+            "en-take-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas greifen und mitnehmen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Er nimmt den Koffer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nimm bitte deinen Mantel mit.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To pick something up and carry it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Er nimmt den Koffer.",
+                "uebersetzung": "He takes the suitcase.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nimm bitte deinen Mantel mit.",
+                "uebersetzung": "Please take your coat with you.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-klar-adjektiv",
+      "sprache": "de",
+      "text": "klar",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-klar-adjektiv-1",
+        "bedeutung_kurz": "leicht zu verstehen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "clear",
+          "alternativen": [
+            "obvious"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "So deutlich, dass man es gut verstehen kann.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Deine Erklärung ist klar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ist die Aufgabe jetzt klar?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Easy to understand because it is expressed in a clear way.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Deine Erklärung ist klar.",
+                "uebersetzung": "Your explanation is clear.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ist die Aufgabe jetzt klar?",
+                "uebersetzung": "Is the task clear now?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-klar-adjektiv-2",
+        "bedeutung_kurz": "sauber und durchsichtig",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "clear",
+          "alternativen": [
+            "transparent"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Durchsichtig und ohne Schmutz oder Farbe.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Wasser im See ist klar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Himmel ist heute klar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Transparent and without dirt or color.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Wasser im See ist klar.",
+                "uebersetzung": "The water in the lake is clear.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der Himmel ist heute klar.",
+                "uebersetzung": "The sky is clear today.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-frei-adjektiv",
+      "sprache": "de",
+      "text": "frei",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-frei-adjektiv-1",
+        "bedeutung_kurz": "nicht in Gefangenschaft oder gebunden",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "free",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nicht gefangen oder von einer anderen Person kontrolliert.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Vogel ist wieder frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nach vielen Jahren ist der Gefangene wieder frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Not imprisoned or controlled by another person.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Vogel ist wieder frei.",
+                "uebersetzung": "The bird is free again.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Nach vielen Jahren ist der Gefangene wieder frei.",
+                "uebersetzung": "After many years, the prisoner is free again.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-frei-adjektiv-2",
+        "bedeutung_kurz": "nicht besetzt oder verfügbar",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "available",
+          "alternativen": [
+            "free"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nicht besetzt und deshalb für andere verfügbar.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ist dieser Platz noch frei?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Am Dienstag habe ich frei.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Not being used, so someone else can use it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Ist dieser Platz noch frei?",
+                "uebersetzung": "Is this seat still free?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Am Dienstag habe ich frei.",
+                "uebersetzung": "I am free on Tuesday.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-schwer-adjektiv",
+      "sprache": "de",
+      "text": "schwer",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-schwer-adjektiv-1",
+        "bedeutung_kurz": "viel Gewicht haben",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "heavy",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Viel Gewicht haben und nicht leicht zu tragen sein.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Diese Tasche ist sehr schwer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der schwere Koffer steht im Flur.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Having a lot of weight and being difficult to carry.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Diese Tasche ist sehr schwer.",
+                "uebersetzung": "This bag is very heavy.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Der schwere Koffer steht im Flur.",
+                "uebersetzung": "The heavy suitcase is in the hall.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-schwer-adjektiv-2",
+        "bedeutung_kurz": "nicht leicht zu tun oder zu verstehen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "difficult",
+          "alternativen": [
+            "hard"
+          ],
+          "verknuepfte_sense_ids": [
+            "en-hard-adjektiv-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Viel Mühe brauchen oder nicht leicht zu verstehen sein.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Frage ist schwer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Deutsch ist am Anfang nicht schwer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Needing a lot of effort or not being easy to understand.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Frage ist schwer.",
+                "uebersetzung": "The question is difficult.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Deutsch ist am Anfang nicht schwer.",
+                "uebersetzung": "German is not difficult at first.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-spaet-adjektiv",
+      "sprache": "de",
+      "text": "spät",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-spaet-adjektiv-1",
+        "bedeutung_kurz": "nach der üblichen Zeit",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "late",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nach der Zeit, zu der etwas normalerweise passiert oder erwartet wird.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Bus kommt heute spät.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Es ist schon spät.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "After the time when something usually happens or is expected.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Bus kommt heute spät.",
+                "uebersetzung": "The bus is coming late today.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Es ist schon spät.",
+                "uebersetzung": "It is already late.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-werden-verb",
+      "sprache": "de",
+      "text": "werden",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "de-werden-verb-1",
+        "bedeutung_kurz": "einen neuen Zustand bekommen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "become",
+          "alternativen": [
+            "get"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Einen neuen Zustand oder eine neue Eigenschaft bekommen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Im Herbst werden die Tage kürzer.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie wird bald Ärztin.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To begin to have a new state or quality.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Im Herbst werden die Tage kürzer.",
+                "uebersetzung": "The days become shorter in autumn.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie wird bald Ärztin.",
+                "uebersetzung": "She will soon become a doctor.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "de-werden-verb-2",
+        "bedeutung_kurz": "Passiv bilden",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "be",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Es bildet mit einem Partizip das Passiv.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Essen wird frisch gekocht.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Straße wird repariert.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "It forms the passive with a past participle.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Essen wird frisch gekocht.",
+                "uebersetzung": "The food is cooked fresh.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Die Straße wird repariert.",
+                "uebersetzung": "The road is being repaired.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-spring-nomen",
+      "sprache": "en",
+      "text": "spring",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": "springs"
+    },
+    "senses": [
+      {
+        "id": "en-spring-nomen-1",
+        "bedeutung_kurz": "season after winter",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Frühling",
+          "alternativen": [
+            "springtime"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "The season between winter and summer, when the weather becomes warmer.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Spring begins in March.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Flowers bloom in spring.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Die Jahreszeit zwischen Winter und Sommer, wenn es wieder wärmer wird.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Spring begins in March.",
+                "uebersetzung": "Der Frühling beginnt im März.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Flowers bloom in spring.",
+                "uebersetzung": "Blumen blühen im Frühling.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-spring-nomen-2",
+        "bedeutung_kurz": "elastic coil in a device",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Feder",
+          "alternativen": [
+            "Spiralfeder"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A metal coil that returns to shape when pressed.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The spring in the mattress is broken.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This spring pushes the door back.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine Metallfeder, die nach Druck wieder ihre Form annimmt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The spring in the mattress is broken.",
+                "uebersetzung": "Die Feder in der Matratze ist kaputt.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This spring pushes the door back.",
+                "uebersetzung": "Diese Feder drückt die Tür zurück.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-bat-nomen",
+      "sprache": "en",
+      "text": "bat",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": "bats"
+    },
+    "senses": [
+      {
+        "id": "en-bat-nomen-1",
+        "bedeutung_kurz": "night-flying animal",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Fledermaus",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A small animal that flies at night and often lives in caves.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "A bat flew out of the cave.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The bat sleeps during the day.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein kleines Tier, das nachts fliegt und sich oft in Höhlen aufhält.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "A bat flew out of the cave.",
+                "uebersetzung": "Eine Fledermaus flog aus der Höhle.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The bat sleeps during the day.",
+                "uebersetzung": "Die Fledermaus schläft am Tag.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-bat-nomen-2",
+        "bedeutung_kurz": "club used to hit a ball",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Schläger",
+          "alternativen": [
+            "Baseballschläger"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "A long object used to hit a ball in a game.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He hit the ball with a bat.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She bought a new bat.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Ein länglicher Gegenstand, mit dem man in einem Spiel einen Ball schlägt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "He hit the ball with a bat.",
+                "uebersetzung": "Er schlug den Ball mit einem Schläger.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She bought a new bat.",
+                "uebersetzung": "Sie kaufte einen neuen Schläger.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-light-nomen",
+      "sprache": "en",
+      "text": "light",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "lights"
+    },
+    "senses": [
+      {
+        "id": "en-light-nomen-1",
+        "bedeutung_kurz": "brightness that helps us see",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Licht",
+          "alternativen": [
+            "Helligkeit"
+          ],
+          "verknuepfte_sense_ids": [
+            "de-licht-nomen-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Brightness that lets people see things and people.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "There is enough light to read.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Turn on the light, please.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Helligkeit, durch die man Menschen und Dinge sehen kann.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "There is enough light to read.",
+                "uebersetzung": "Es gibt genug Licht zum Lesen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Turn on the light, please.",
+                "uebersetzung": "Mach bitte das Licht an.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-right-adjektiv",
+      "sprache": "en",
+      "text": "right",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-right-adjektiv-1",
+        "bedeutung_kurz": "correct or true",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "richtig",
+          "alternativen": [
+            "korrekt"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Correct and not wrong.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Your answer is right.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Is this the right address?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Richtig und nicht falsch.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Your answer is right.",
+                "uebersetzung": "Deine Antwort ist richtig.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Is this the right address?",
+                "uebersetzung": "Ist das die richtige Adresse?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-right-adjektiv-2",
+        "bedeutung_kurz": "on the side opposite left",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "rechts",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "On the side opposite to the left side.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The shop is on the right side.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Keep to the right side of the road.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Auf der Seite, die der linken Seite gegenüberliegt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The shop is on the right side.",
+                "uebersetzung": "Der Laden ist auf der rechten Seite.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Keep to the right side of the road.",
+                "uebersetzung": "Bleib auf der rechten Straßenseite.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-kind-adjektiv",
+      "sprache": "en",
+      "text": "kind",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-kind-adjektiv-1",
+        "bedeutung_kurz": "friendly and helpful",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "freundlich",
+          "alternativen": [
+            "nett"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Friendly and helpful toward other people.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our neighbor is very kind.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "It was kind of you to help.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Freundlich und hilfsbereit zu anderen Menschen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our neighbor is very kind.",
+                "uebersetzung": "Unser Nachbar ist sehr freundlich.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "It was kind of you to help.",
+                "uebersetzung": "Es war nett von dir, zu helfen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-run-verb",
+      "sprache": "en",
+      "text": "run",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-run-verb-1",
+        "bedeutung_kurz": "move quickly on foot",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "laufen",
+          "alternativen": [
+            "rennen"
+          ],
+          "verknuepfte_sense_ids": [
+            "de-laufen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To move quickly on your feet.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I run in the park every morning.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The children run to school.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Sich schnell auf den Füßen bewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I run in the park every morning.",
+                "uebersetzung": "Ich laufe jeden Morgen im Park.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The children run to school.",
+                "uebersetzung": "Die Kinder laufen zur Schule.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-run-verb-2",
+        "bedeutung_kurz": "operate or work",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "laufen",
+          "alternativen": [
+            "funktionieren"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A machine runs when it works.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The engine runs quietly.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This app runs on my phone.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Maschine ist an und läuft.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The engine runs quietly.",
+                "uebersetzung": "Der Motor läuft leise.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This app runs on my phone.",
+                "uebersetzung": "Diese App läuft auf meinem Telefon.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-get-verb",
+      "sprache": "en",
+      "text": "get",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-get-verb-1",
+        "bedeutung_kurz": "receive or obtain",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "bekommen",
+          "alternativen": [
+            "erhalten"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To receive something or come to have it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I get a message every day.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She gets a new book today.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas bekommen oder erhalten.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I get a message every day.",
+                "uebersetzung": "Ich bekomme jeden Tag eine Nachricht.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She gets a new book today.",
+                "uebersetzung": "Sie bekommt heute ein neues Buch.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-get-verb-2",
+        "bedeutung_kurz": "understand",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "verstehen",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To understand the meaning of something.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I get your point.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Do you get this question?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Den Sinn von etwas verstehen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I get your point.",
+                "uebersetzung": "Ich verstehe, was du meinst.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Do you get this question?",
+                "uebersetzung": "Verstehst du diese Frage?",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-take-verb",
+      "sprache": "en",
+      "text": "take",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-take-verb-1",
+        "bedeutung_kurz": "carry or bring with you",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "mitnehmen",
+          "alternativen": [
+            "nehmen"
+          ],
+          "verknuepfte_sense_ids": [
+            "de-nehmen-verb-1"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To carry something with you.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Please take your coat with you.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I take my bag to work.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Etwas greifen und mitnehmen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Please take your coat with you.",
+                "uebersetzung": "Nimm bitte deinen Mantel mit.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I take my bag to work.",
+                "uebersetzung": "Ich nehme meine Tasche mit zur Arbeit.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-take-verb-2",
+        "bedeutung_kurz": "use or swallow medicine",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "einnehmen",
+          "alternativen": [
+            "nehmen"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "To use or swallow a medicine.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Take this medicine after lunch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He takes one tablet each day.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Medikament benutzen oder schlucken.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Take this medicine after lunch.",
+                "uebersetzung": "Nimm dieses Medikament nach dem Mittagessen ein.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He takes one tablet each day.",
+                "uebersetzung": "Er nimmt jeden Tag eine Tablette.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-set-verb",
+      "sprache": "en",
+      "text": "set",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-set-verb-1",
+        "bedeutung_kurz": "put something in a place",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "stellen",
+          "alternativen": [
+            "legen"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To put something in a particular place.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She sets the cup on the table.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Set your bag by the door.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Etwas an einen bestimmten Platz stellen oder legen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She sets the cup on the table.",
+                "uebersetzung": "Sie stellt die Tasse auf den Tisch.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Set your bag by the door.",
+                "uebersetzung": "Stell deine Tasche an die Tür.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-set-verb-2",
+        "bedeutung_kurz": "choose a time or value",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "einstellen",
+          "alternativen": [
+            "festlegen"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To choose and fix a particular time or value.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I set an alarm for seven.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Set the timer for ten minutes.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine bestimmte Zeit oder einen Wert auswählen und einstellen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I set an alarm for seven.",
+                "uebersetzung": "Ich stelle den Wecker auf sieben.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Set the timer for ten minutes.",
+                "uebersetzung": "Stelle den Timer auf zehn Minuten.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-watch-verb",
+      "sprache": "en",
+      "text": "watch",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-watch-verb-1",
+        "bedeutung_kurz": "look at something for a time",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "ansehen",
+          "alternativen": [
+            "schauen"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To look at something and pay attention.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We watch a film on Friday.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She watches the birds in the garden.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Etwas eine Zeit lang ansehen und aufmerksam verfolgen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "We watch a film on Friday.",
+                "uebersetzung": "Wir sehen am Freitag einen Film.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She watches the birds in the garden.",
+                "uebersetzung": "Sie beobachtet die Vögel im Garten.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-watch-verb-2",
+        "bedeutung_kurz": "look after or monitor",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "aufpassen auf",
+          "alternativen": [
+            "beobachten"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To pay attention so nothing goes wrong.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Can you watch the baby for a minute?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Watch your step on the stairs.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Auf eine Person oder Sache achten, damit nichts passiert.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Can you watch the baby for a minute?",
+                "uebersetzung": "Kannst du eine Minute auf das Baby aufpassen?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Watch your step on the stairs.",
+                "uebersetzung": "Pass auf der Treppe auf, wohin du trittst.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-book-nomen",
+      "sprache": "en",
+      "text": "book",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": null,
+      "plural": "books"
+    },
+    "senses": [
+      {
+        "id": "en-book-nomen-1",
+        "bedeutung_kurz": "pages bound together for reading",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Buch",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Pages with words or pictures to read.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I read a book every night.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This book is about animals.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Seiten mit Text oder Bildern zum Lesen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I read a book every night.",
+                "uebersetzung": "Ich lese jeden Abend ein Buch.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This book is about animals.",
+                "uebersetzung": "Dieses Buch handelt von Tieren.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-close-adjektiv",
+      "sprache": "en",
+      "text": "close",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-close-adjektiv-1",
+        "bedeutung_kurz": "near in space",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "nah",
+          "alternativen": [
+            "nahe"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Not far away.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our hotel is close to the station.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The shop is close to my home.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Nicht weit entfernt.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Our hotel is close to the station.",
+                "uebersetzung": "Unser Hotel ist nahe am Bahnhof.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The shop is close to my home.",
+                "uebersetzung": "Der Laden ist in der Nähe meines Zuhauses.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-close-adjektiv-2",
+        "bedeutung_kurz": "having a strong personal relationship",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "eng",
+          "alternativen": [
+            "vertraut"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Having a strong personal relationship with someone.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "My sister and I are close.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "They are close friends.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine enge persönliche Beziehung zu jemandem haben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "My sister and I are close.",
+                "uebersetzung": "Meine Schwester und ich stehen uns nahe.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "They are close friends.",
+                "uebersetzung": "Sie sind enge Freunde.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-mean-verb",
+      "sprache": "en",
+      "text": "mean",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-mean-verb-1",
+        "bedeutung_kurz": "have a particular meaning",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "bedeuten",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To have a particular meaning.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "What does this word mean?",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The red light means stop.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Eine bestimmte Bedeutung haben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "What does this word mean?",
+                "uebersetzung": "Was bedeutet dieses Wort?",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The red light means stop.",
+                "uebersetzung": "Das rote Licht bedeutet Stopp.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-mean-verb-2",
+        "bedeutung_kurz": "intend or want to say",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "meinen",
+          "alternativen": [
+            "beabsichtigen"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To want to say something or intend to do it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I mean that we need more time.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I did not mean to hurt you.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Etwas sagen wollen oder die Absicht haben, es zu tun.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I mean that we need more time.",
+                "uebersetzung": "Ich meine, dass wir mehr Zeit brauchen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I did not mean to hurt you.",
+                "uebersetzung": "Ich wollte dich nicht verletzen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-fast-adjektiv",
+      "sprache": "en",
+      "text": "fast",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-fast-adjektiv-1",
+        "bedeutung_kurz": "moving at high speed",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "schnell",
+          "alternativen": [],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Moving at a high speed.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "This train is very fast.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He is a fast runner.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Sich mit hoher Geschwindigkeit bewegen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "This train is very fast.",
+                "uebersetzung": "Dieser Zug ist sehr schnell.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He is a fast runner.",
+                "uebersetzung": "Er ist ein schneller Läufer.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-hard-adjektiv",
+      "sprache": "en",
+      "text": "hard",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-hard-adjektiv-1",
+        "bedeutung_kurz": "difficult to do or understand",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "schwierig",
+          "alternativen": [
+            "schwer"
+          ],
+          "verknuepfte_sense_ids": [
+            "de-schwer-adjektiv-2"
+          ]
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Needing a lot of effort or not easy to understand.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Math is hard for me.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This question is hard.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Viel Mühe brauchen oder nicht leicht zu verstehen sein.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Math is hard for me.",
+                "uebersetzung": "Mathe ist schwierig für mich.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This question is hard.",
+                "uebersetzung": "Diese Frage ist schwierig.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-hard-adjektiv-2",
+        "bedeutung_kurz": "firm and not soft",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "hart",
+          "alternativen": [
+            "fest"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "Firm and not soft, so it is difficult to press into it.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The bread is hard.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This chair is too hard.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Fest und nicht weich, sodass man schwer hineindrücken kann.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The bread is hard.",
+                "uebersetzung": "Das Brot ist hart.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "This chair is too hard.",
+                "uebersetzung": "Dieser Stuhl ist zu hart.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-fair-adjektiv",
+      "sprache": "en",
+      "text": "fair",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-fair-adjektiv-1",
+        "bedeutung_kurz": "reasonable and treating people equally",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "fair",
+          "alternativen": [
+            "gerecht"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Reasonable and treating people in an equal way.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The teacher is fair to everyone.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "That is a fair price.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Angemessen und so, dass alle Menschen gleich behandelt werden.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The teacher is fair to everyone.",
+                "uebersetzung": "Der Lehrer ist zu allen gerecht.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "That is a fair price.",
+                "uebersetzung": "Das ist ein fairer Preis.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-fair-adjektiv-2",
+        "bedeutung_kurz": "light in color",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "hell",
+          "alternativen": [
+            "blond"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Light in color, especially describing skin or hair.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She has fair hair.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He has fair skin.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Hell, besonders bei Haut oder Haaren.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She has fair hair.",
+                "uebersetzung": "Sie hat helles Haar.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He has fair skin.",
+                "uebersetzung": "Er hat helle Haut.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-point-nomen",
+      "sprache": "en",
+      "text": "point",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "points"
+    },
+    "senses": [
+      {
+        "id": "en-point-nomen-1",
+        "bedeutung_kurz": "sharp end of something",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Spitze",
+          "alternativen": [
+            "Ende"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "The narrow, sharp end of an object.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The pencil has a sharp point.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The point of the knife is small.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Das schmale, scharfe Ende eines Gegenstands.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The pencil has a sharp point.",
+                "uebersetzung": "Der Bleistift hat eine scharfe Spitze.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The point of the knife is small.",
+                "uebersetzung": "Die Spitze des Messers ist klein.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-point-nomen-2",
+        "bedeutung_kurz": "idea or important detail",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Punkt",
+          "alternativen": [
+            "Aspekt"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "One idea or an important part of an explanation.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "That is an important point.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I see your point.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine einzelne Idee oder ein wichtiger Teil einer Erklärung.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "That is an important point.",
+                "uebersetzung": "Das ist ein wichtiger Punkt.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I see your point.",
+                "uebersetzung": "Ich verstehe deinen Punkt.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-break-verb",
+      "sprache": "en",
+      "text": "break",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-break-verb-1",
+        "bedeutung_kurz": "separate into pieces",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "zerbrechen",
+          "alternativen": [
+            "brechen"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To damage something so that it separates into pieces.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Do not break this glass.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She breaks the chocolate into small pieces.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Etwas in mehrere Stücke teilen oder beschädigen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Do not break this glass.",
+                "uebersetzung": "Zerbrich dieses Glas nicht.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She breaks the chocolate into small pieces.",
+                "uebersetzung": "Sie bricht die Schokolade in kleine Stücke.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-break-verb-2",
+        "bedeutung_kurz": "stop for a short rest",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "eine Pause machen",
+          "alternativen": [
+            "unterbrechen"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To stop an activity for a short time in order to rest.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Let's break for lunch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We break for lunch at noon.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Kurz mit einer Tätigkeit aufhören, um sich auszuruhen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Let's break for lunch.",
+                "uebersetzung": "Lass uns Mittagspause machen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We break for lunch at noon.",
+                "uebersetzung": "Der Unterricht wird mittags unterbrochen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-charge-verb",
+      "sprache": "en",
+      "text": "charge",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-charge-verb-1",
+        "bedeutung_kurz": "ask someone to pay money",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "berechnen",
+          "alternativen": [
+            "verlangen"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To ask someone to pay a particular amount of money for something.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "They charge ten euros for delivery.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The hotel charges extra for breakfast.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Einen bestimmten Geldbetrag für etwas verlangen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "They charge ten euros for delivery.",
+                "uebersetzung": "Sie berechnen zehn Euro für die Lieferung.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The hotel charges extra for breakfast.",
+                "uebersetzung": "Das Hotel berechnet einen Aufpreis für das Frühstück.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      },
+      {
+        "id": "en-charge-verb-2",
+        "bedeutung_kurz": "put electricity into a battery",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "aufladen",
+          "alternativen": [
+            "laden"
+          ],
+          "verknuepfte_sense_ids": []
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To put electrical energy into a battery or device again.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I charge my phone every night.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She charges the battery at work.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Einer Batterie oder einem Gerät wieder elektrische Energie geben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I charge my phone every night.",
+                "uebersetzung": "Ich lade mein Telefon jede Nacht auf.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She charges the battery at work.",
+                "uebersetzung": "Sie lädt die Batterie bei der Arbeit auf.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ],
+            "qualitaet": {
+              "status": "roh",
+              "pruef_score": null,
+              "hinweise": [],
+              "modellversion": "ChatGPT",
+              "datum": "2026-11-04"
+            }
+          }
+        ],
+        "artikel": null,
+        "plural": null
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT (manueller Test)",
+      "datum": "2026-11-04"
+    }
+  }
+]

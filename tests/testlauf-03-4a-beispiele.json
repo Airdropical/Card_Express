@@ -1,0 +1,974 @@
+[
+  {
+    "sense_id": "de-band-nomen-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Der zweite Band erscheint im Herbst.",
+        "uebersetzung_andere_sprache": "The second volume comes out in autumn.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Ich lese den ersten Band noch einmal.",
+        "uebersetzung_andere_sprache": "I am reading the first volume again.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-band-nomen-2",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Sie band ein rotes Band um das Geschenk.",
+        "uebersetzung_andere_sprache": "She tied a red ribbon around the gift.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Das Band hält die Vorhänge zusammen.",
+        "uebersetzung_andere_sprache": "The ribbon holds the curtains together.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-band-nomen-3",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Die Band spielt heute Abend im Park.",
+        "uebersetzung_andere_sprache": "The band is playing in the park tonight.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Unsere Band probt jeden Dienstag.",
+        "uebersetzung_andere_sprache": "Our band rehearses every Tuesday.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-leiter-nomen-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Die Leiter steht neben dem Apfelbaum.",
+        "uebersetzung_andere_sprache": "The ladder is beside the apple tree.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Er stieg vorsichtig auf die Leiter.",
+        "uebersetzung_andere_sprache": "He climbed the ladder carefully.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-leiter-nomen-2",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Der Leiter erklärt den neuen Plan.",
+        "uebersetzung_andere_sprache": "The leader explains the new plan.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Der Leiter sprach mit allen Mitarbeitenden.",
+        "uebersetzung_andere_sprache": "The leader spoke with all the staff.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-see-nomen-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Der See friert in kalten Wintern zu.",
+        "uebersetzung_andere_sprache": "The lake freezes over in cold winters.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Wir schwammen gestern im See.",
+        "uebersetzung_andere_sprache": "We swam in the lake yesterday.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-see-nomen-2",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Die See ist heute sehr ruhig.",
+        "uebersetzung_andere_sprache": "The sea is very calm today.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Bei schwerer See blieb das Boot im Hafen.",
+        "uebersetzung_andere_sprache": "In rough seas, the boat stayed in the harbor.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-kiefer-nomen-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Der Zahnarzt untersuchte ihren Kiefer.",
+        "uebersetzung_andere_sprache": "The dentist examined her jaw.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Nach dem Sturz tat ihm der Kiefer weh.",
+        "uebersetzung_andere_sprache": "His jaw hurt after the fall.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-kiefer-nomen-2",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Eine Kiefer wächst neben dem alten Haus.",
+        "uebersetzung_andere_sprache": "A pine tree grows beside the old house.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Im Wald stehen viele hohe Kiefern.",
+        "uebersetzung_andere_sprache": "Many tall pine trees stand in the forest.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-mutter-nomen-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Meine Mutter holt mich nach der Schule ab.",
+        "uebersetzung_andere_sprache": "My mother is picking me up after school.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Die Mutter wartet vor dem Klassenraum.",
+        "uebersetzung_andere_sprache": "The mother is waiting outside the classroom.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-mutter-nomen-2",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Dreh die Mutter auf die Schraube.",
+        "uebersetzung_andere_sprache": "Turn the nut onto the bolt.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Die Mutter hält das Rad an der Achse fest.",
+        "uebersetzung_andere_sprache": "The nut holds the wheel on the axle.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-werfen-verb-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Sie wirft den Ball zurück.",
+        "uebersetzung_andere_sprache": "She throws the ball back.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Er hat den Schlüssel auf den Tisch geworfen.",
+        "uebersetzung_andere_sprache": "He threw the key onto the table.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-schlafen-verb-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Das Baby schläft schon.",
+        "uebersetzung_andere_sprache": "The baby is already asleep.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Wir schliefen im Zug ein.",
+        "uebersetzung_andere_sprache": "We fell asleep on the train.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-geben-verb-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Sie gibt dem Kind ein Glas Wasser.",
+        "uebersetzung_andere_sprache": "She gives the child a glass of water.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Er gab mir gestern seinen Schlüssel.",
+        "uebersetzung_andere_sprache": "He gave me his key yesterday.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-behalten-verb-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Du kannst das Buch behalten.",
+        "uebersetzung_andere_sprache": "You can keep the book.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Sie behielt den Brief als Erinnerung.",
+        "uebersetzung_andere_sprache": "She kept the letter as a memory.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-ziehen-verb-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Er zieht den Koffer über den Boden.",
+        "uebersetzung_andere_sprache": "He pulls the suitcase across the floor.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Sie zog den Vorhang zu.",
+        "uebersetzung_andere_sprache": "She pulled the curtain closed.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-ziehen-verb-2",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Wir ziehen im Mai nach Hamburg.",
+        "uebersetzung_andere_sprache": "We are moving to Hamburg in May.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Sie ist letztes Jahr nach Berlin gezogen.",
+        "uebersetzung_andere_sprache": "She moved to Berlin last year.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-erwerben-verb-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Sie erwarb ein altes Haus am Stadtrand.",
+        "uebersetzung_andere_sprache": "She acquired an old house outside the city.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Das Unternehmen hat die Rechte erworben.",
+        "uebersetzung_andere_sprache": "The company acquired the rights.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-oeffentlich-adjektiv-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Die Sitzung ist öffentlich.",
+        "uebersetzung_andere_sprache": "The meeting is open to the public.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Der Park ist öffentlich zugänglich.",
+        "uebersetzung_andere_sprache": "The park is open to the public.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-seltsam-adjektiv-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Die Antwort klingt seltsam.",
+        "uebersetzung_andere_sprache": "The answer sounds strange.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Es war ein seltsamer Zufall.",
+        "uebersetzung_andere_sprache": "It was a strange coincidence.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-duenn-adjektiv-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Das Papier ist sehr dünn.",
+        "uebersetzung_andere_sprache": "The paper is very thin.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Die dünne Suppe schmeckt nicht gut.",
+        "uebersetzung_andere_sprache": "The thin soup does not taste good.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-sauer-adjektiv-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Die Zitrone schmeckt sauer.",
+        "uebersetzung_andere_sprache": "The lemon tastes sour.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Die Beeren waren noch sauer.",
+        "uebersetzung_andere_sprache": "The berries were still sour.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-oft-adverb-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Sie fährt oft mit dem Rad zur Arbeit.",
+        "uebersetzung_andere_sprache": "She often cycles to work.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Wir treffen uns oft nach dem Unterricht.",
+        "uebersetzung_andere_sprache": "We often meet after class.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-kaum-adverb-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Ich konnte die Musik kaum hören.",
+        "uebersetzung_andere_sprache": "I could barely hear the music.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Wegen des Nebels sahen wir kaum etwas.",
+        "uebersetzung_andere_sprache": "Because of the fog, we could barely see anything.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-waehrend-praeposition-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Während des Gesprächs blieb es ruhig.",
+        "uebersetzung_andere_sprache": "It stayed quiet during the conversation.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Während der Reise las sie ein Buch.",
+        "uebersetzung_andere_sprache": "She read a book during the journey.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-gegen-praeposition-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Der Regen schlug gegen das Fenster.",
+        "uebersetzung_andere_sprache": "The rain beat against the window.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Die Leiter lehnte gegen die Wand.",
+        "uebersetzung_andere_sprache": "The ladder rested against the wall.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-gegen-praeposition-2",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Unsere Mannschaft spielt gegen den Tabellenführer.",
+        "uebersetzung_andere_sprache": "Our team is playing against the league leaders.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Sie stimmte gegen den Vorschlag.",
+        "uebersetzung_andere_sprache": "She voted against the proposal.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "de-ohne-praeposition-1",
+    "lernsprache": "de",
+    "beispiele": [
+      {
+        "satz": "Er ging ohne Jacke hinaus.",
+        "uebersetzung_andere_sprache": "He went outside without a coat.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Sie trinkt ihren Tee ohne Zucker.",
+        "uebersetzung_andere_sprache": "She drinks her tea without sugar.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-bark-nomen-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "We heard a loud bark outside.",
+        "uebersetzung_andere_sprache": "Wir hörten draußen ein lautes Bellen.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "The dog’s bark woke the baby.",
+        "uebersetzung_andere_sprache": "Das Bellen des Hundes weckte das Baby.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-bark-nomen-2",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The bark protects the tree.",
+        "uebersetzung_andere_sprache": "Die Rinde schützt den Baum.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "A bird sat on the bark of the old tree.",
+        "uebersetzung_andere_sprache": "Ein Vogel saß auf der Rinde des alten Baumes.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-crane-nomen-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "A crane walked through the marsh.",
+        "uebersetzung_andere_sprache": "Ein Kranich ging durch den Sumpf.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "The crane has a long, pointed beak.",
+        "uebersetzung_andere_sprache": "Der Kranich hat einen langen, spitzen Schnabel.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-crane-nomen-2",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The crane lifted a steel beam.",
+        "uebersetzung_andere_sprache": "Der Kran hob einen Stahlträger.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "A crane stood beside the new building.",
+        "uebersetzung_andere_sprache": "Ein Kran stand neben dem neuen Gebäude.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-match-nomen-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The match ended in a draw.",
+        "uebersetzung_andere_sprache": "Das Spiel endete unentschieden.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "We watched the match on Saturday.",
+        "uebersetzung_andere_sprache": "Wir sahen das Spiel am Samstag.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-match-nomen-2",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "He lit the fire with a match.",
+        "uebersetzung_andere_sprache": "Er entzündete das Feuer mit einem Streichholz.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "The match burned for a few seconds.",
+        "uebersetzung_andere_sprache": "Das Streichholz brannte einige Sekunden.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-seal-nomen-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "A seal rested on a rock near the shore.",
+        "uebersetzung_andere_sprache": "Eine Robbe ruhte auf einem Felsen am Ufer.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "We saw a seal swimming in the bay.",
+        "uebersetzung_andere_sprache": "Wir sahen eine Robbe in der Bucht schwimmen.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-seal-nomen-2",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The envelope bears the official seal.",
+        "uebersetzung_andere_sprache": "Der Umschlag trägt das amtliche Siegel.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "She pressed the seal into the soft wax.",
+        "uebersetzung_andere_sprache": "Sie drückte das Siegel in das weiche Wachs.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-band-nomen-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The band played at the festival.",
+        "uebersetzung_andere_sprache": "Die Band spielte auf dem Festival.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "A local band released a new song.",
+        "uebersetzung_andere_sprache": "Eine lokale Band veröffentlichte ein neues Lied.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-band-nomen-2",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "He wore a band around his wrist.",
+        "uebersetzung_andere_sprache": "Er trug ein Band um sein Handgelenk.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "A rubber band holds the papers together.",
+        "uebersetzung_andere_sprache": "Ein Gummiband hält die Papiere zusammen.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-throw-verb-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "She threw the ball back to me.",
+        "uebersetzung_andere_sprache": "Sie warf mir den Ball zurück.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "He has thrown the keys onto the table.",
+        "uebersetzung_andere_sprache": "Er hat die Schlüssel auf den Tisch geworfen.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-sleep-verb-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The baby slept for three hours.",
+        "uebersetzung_andere_sprache": "Das Baby schlief drei Stunden.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "I have slept badly this week.",
+        "uebersetzung_andere_sprache": "Ich habe diese Woche schlecht geschlafen.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-give-verb-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "She gave him a glass of water.",
+        "uebersetzung_andere_sprache": "Sie gab ihm ein Glas Wasser.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "They have given us clear instructions.",
+        "uebersetzung_andere_sprache": "Sie haben uns klare Anweisungen gegeben.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-keep-verb-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "You can keep the book.",
+        "uebersetzung_andere_sprache": "Du kannst das Buch behalten.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "She kept the letter as a memory.",
+        "uebersetzung_andere_sprache": "Sie behielt den Brief als Erinnerung.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-acquire-verb-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "She acquired an old house outside the city.",
+        "uebersetzung_andere_sprache": "Sie erwarb ein altes Haus am Stadtrand.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "The company acquired the rights.",
+        "uebersetzung_andere_sprache": "Das Unternehmen erwarb die Rechte.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-obtain-verb-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "I obtained a permit from the city.",
+        "uebersetzung_andere_sprache": "Ich erhielt eine Genehmigung von der Stadt.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "They obtained permission to enter.",
+        "uebersetzung_andere_sprache": "Sie erhielten die Erlaubnis einzutreten.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-public-adjektiv-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The meeting is open to the public.",
+        "uebersetzung_andere_sprache": "Die Sitzung ist öffentlich.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Public transport stops here.",
+        "uebersetzung_andere_sprache": "Hier hält der öffentliche Nahverkehr.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-strange-adjektiv-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "It seems strange to leave so early.",
+        "uebersetzung_andere_sprache": "Es scheint seltsam, so früh zu gehen.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "I heard a strange noise outside.",
+        "uebersetzung_andere_sprache": "Ich hörte draußen ein seltsames Geräusch.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-thin-adjektiv-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The paper is thin and easy to tear.",
+        "uebersetzung_andere_sprache": "Das Papier ist dünn und leicht zu zerreißen.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "The ice was too thin to walk on.",
+        "uebersetzung_andere_sprache": "Das Eis war zu dünn, um darauf zu gehen.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-sour-adjektiv-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The lemon tastes sour.",
+        "uebersetzung_andere_sprache": "Die Zitrone schmeckt sauer.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "The berries were still sour.",
+        "uebersetzung_andere_sprache": "Die Beeren waren noch sauer.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-often-adverb-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "She often cycles to work.",
+        "uebersetzung_andere_sprache": "Sie fährt oft mit dem Rad zur Arbeit.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "We often meet after class.",
+        "uebersetzung_andere_sprache": "Wir treffen uns oft nach dem Unterricht.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-barely-adverb-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "I could barely hear the music.",
+        "uebersetzung_andere_sprache": "Ich konnte die Musik kaum hören.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "Because of the fog, we could barely see anything.",
+        "uebersetzung_andere_sprache": "Wegen des Nebels sahen wir kaum etwas.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-during-praeposition-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "She read during the journey.",
+        "uebersetzung_andere_sprache": "Sie las während der Reise.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "The phone rang during dinner.",
+        "uebersetzung_andere_sprache": "Das Telefon klingelte während des Abendessens.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-against-praeposition-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "The rain beat against the window.",
+        "uebersetzung_andere_sprache": "Der Regen schlug gegen das Fenster.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "The ladder rested against the wall.",
+        "uebersetzung_andere_sprache": "Die Leiter lehnte gegen die Wand.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-against-praeposition-2",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "Our team played against the league leaders.",
+        "uebersetzung_andere_sprache": "Unsere Mannschaft spielt gegen den Tabellenführer.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "She voted against the proposal.",
+        "uebersetzung_andere_sprache": "Sie stimmte gegen den Vorschlag.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  },
+  {
+    "sense_id": "en-without-praeposition-1",
+    "lernsprache": "en",
+    "beispiele": [
+      {
+        "satz": "He went out without a coat.",
+        "uebersetzung_andere_sprache": "Er ging ohne Jacke hinaus.",
+        "quelle": "ki",
+        "quelle_id": null
+      },
+      {
+        "satz": "She drinks tea without sugar.",
+        "uebersetzung_andere_sprache": "Sie trinkt Tee ohne Zucker.",
+        "quelle": "ki",
+        "quelle_id": null
+      }
+    ]
+  }
+]

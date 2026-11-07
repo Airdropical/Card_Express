@@ -1,0 +1,559 @@
+[
+  {
+    "lemma": {
+      "id": "de-schloss-nomen",
+      "sprache": "de",
+      "text": "Schloss",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": "das",
+      "plural": "Schlösser"
+    },
+    "senses": [
+      {
+        "id": "de-schloss-nomen-1",
+        "bedeutung_kurz": "großes Wohngebäude",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "castle",
+          "alternativen": [
+            "palace"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein großes, oft altes Gebäude, in dem früher Könige oder Adlige wohnten.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schloss steht auf einem Hügel.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir besuchen heute das Schloss.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A large, often old building where a king or noble family lived.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schloss steht auf einem Hügel.",
+                "uebersetzung": "The castle stands on a hill.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir besuchen heute das Schloss.",
+                "uebersetzung": "We are visiting the castle today.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-schloss-nomen-2",
+        "bedeutung_kurz": "Verschluss an einer Tür",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "lock",
+          "alternativen": [
+            "door lock"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Ein Gerät, das eine Tür mit einem Schlüssel öffnet.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schloss an der Tür ist kaputt.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich brauche einen Schlüssel für das Schloss.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "A device that opens a door with a key.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Schloss an der Tür ist kaputt.",
+                "uebersetzung": "The lock on the door is broken.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Ich brauche einen Schlüssel für das Schloss.",
+                "uebersetzung": "I need a key for the lock.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-lampe-nomen",
+      "sprache": "de",
+      "text": "Lampe",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "die",
+      "plural": "Lampen"
+    },
+    "senses": [
+      {
+        "id": "de-lampe-nomen-1",
+        "bedeutung_kurz": "Gerät zum Beleuchten",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "lamp",
+          "alternativen": [
+            "light"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Lampe gibt Licht.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Lampe steht auf dem Tisch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Abends mache ich die Lampe an.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A lamp gives light.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Die Lampe steht auf dem Tisch.",
+                "uebersetzung": "The lamp is on the table.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Abends mache ich die Lampe an.",
+                "uebersetzung": "I turn on the lamp in the evening.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-freund-nomen",
+      "sprache": "de",
+      "text": "Freund",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Freunde"
+    },
+    "senses": [
+      {
+        "id": "de-freund-nomen-1",
+        "bedeutung_kurz": "männlicher Freund, nicht romantisch",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "male friend",
+          "alternativen": [
+            "friend"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Freund ist ein Mann. Er ist dir wichtig.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Mein Freund hilft mir oft.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Mein Freund spielt mit mir Fußball.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A male friend is someone you trust.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Mein Freund hilft mir oft.",
+                "uebersetzung": "My friend often helps me.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Mein Freund spielt mit mir Fußball.",
+                "uebersetzung": "My friend plays football with me.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-freund-nomen-2",
+        "bedeutung_kurz": "romantischer Partner",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "boyfriend",
+          "alternativen": [],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Ein Freund ist ein Mann. Er ist dein Partner.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Mein Freund und ich sind ein Paar.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie liebt ihren Freund sehr.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A boyfriend is your male partner.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Mein Freund und ich sind ein Paar.",
+                "uebersetzung": "My boyfriend and I are a couple.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Sie liebt ihren Freund sehr.",
+                "uebersetzung": "She loves her boyfriend very much.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-licht-nomen",
+      "sprache": "de",
+      "text": "Licht",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "das",
+      "plural": "Lichter"
+    },
+    "senses": [
+      {
+        "id": "de-licht-nomen-1",
+        "bedeutung_kurz": "Helligkeit zum Sehen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "light",
+          "alternativen": [
+            "illumination"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Licht macht Dinge sichtbar.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Licht im Zimmer ist hell.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte mach das Licht aus.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "Light is brightness. It helps us see.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Das Licht im Zimmer ist hell.",
+                "uebersetzung": "The light in the room is bright.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Bitte mach das Licht aus.",
+                "uebersetzung": "Please turn off the light.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "de-weg-nomen",
+      "sprache": "de",
+      "text": "Weg",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A1",
+      "artikel": "der",
+      "plural": "Wege"
+    },
+    "senses": [
+      {
+        "id": "de-weg-nomen-1",
+        "bedeutung_kurz": "Strecke von einem Ort zum anderen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "way",
+          "alternativen": [
+            "route",
+            "path"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Strecke zu einem Ort.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Weg zum Bahnhof ist kurz.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir gehen diesen Weg zu Fuß.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A route to a place.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Der Weg zum Bahnhof ist kurz.",
+                "uebersetzung": "The way to the station is short.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Wir gehen diesen Weg zu Fuß.",
+                "uebersetzung": "We are walking this route.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-weg-nomen-2",
+        "bedeutung_kurz": "Methode, etwas zu erreichen",
+        "uebersetzung": {
+          "sprache": "en",
+          "text": "way",
+          "alternativen": [
+            "method"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "de",
+            "stufe": "A1",
+            "definition": "Eine Methode für ein Ziel.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir finden einen Weg, das Problem zu lösen.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Dieser Weg ist einfacher.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "en",
+            "stufe": "A1",
+            "definition": "A way to reach a goal.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Wir finden einen Weg, das Problem zu lösen.",
+                "uebersetzung": "We will find a way to solve the problem.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "Dieser Weg ist einfacher.",
+                "uebersetzung": "This way is easier.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]

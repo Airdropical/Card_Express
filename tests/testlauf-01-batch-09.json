@@ -1,0 +1,538 @@
+[
+  {
+    "lemma": {
+      "id": "en-fair-adjektiv",
+      "sprache": "en",
+      "text": "fair",
+      "wortart": "adjektiv",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-fair-adjektiv-1",
+        "bedeutung_kurz": "reasonable and treating people equally",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "fair",
+          "alternativen": [
+            "gerecht"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Reasonable and treating people in an equal way.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The teacher is fair to everyone.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "That is a fair price.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Angemessen und so, dass alle Menschen gleich behandelt werden.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The teacher is fair to everyone.",
+                "uebersetzung": "Der Lehrer ist zu allen gerecht.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "That is a fair price.",
+                "uebersetzung": "Das ist ein fairer Preis.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-fair-adjektiv-2",
+        "bedeutung_kurz": "light in color",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "hell",
+          "alternativen": [
+            "blond"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "Light in color, especially describing skin or hair.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She has fair hair.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He has fair skin.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Hell, besonders bei Haut oder Haaren.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "She has fair hair.",
+                "uebersetzung": "Sie hat helles Haar.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "He has fair skin.",
+                "uebersetzung": "Er hat helle Haut.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-point-nomen",
+      "sprache": "en",
+      "text": "point",
+      "wortart": "nomen",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": "points"
+    },
+    "senses": [
+      {
+        "id": "en-point-nomen-1",
+        "bedeutung_kurz": "sharp end of something",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Spitze",
+          "alternativen": [
+            "Ende"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "The narrow, sharp end of an object.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The pencil has a sharp point.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The point of the knife is small.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Das schmale, scharfe Ende eines Gegenstands.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "The pencil has a sharp point.",
+                "uebersetzung": "Der Bleistift hat eine scharfe Spitze.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The point of the knife is small.",
+                "uebersetzung": "Die Spitze des Messers ist klein.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-point-nomen-2",
+        "bedeutung_kurz": "idea or important detail",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "Punkt",
+          "alternativen": [
+            "Aspekt"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "One idea or an important part of an explanation.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "That is an important point.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I see your point.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Eine einzelne Idee oder ein wichtiger Teil einer Erklärung.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "That is an important point.",
+                "uebersetzung": "Das ist ein wichtiger Punkt.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "I see your point.",
+                "uebersetzung": "Ich verstehe deinen Punkt.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-break-verb",
+      "sprache": "en",
+      "text": "break",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "A2",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-break-verb-1",
+        "bedeutung_kurz": "separate into pieces",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "zerbrechen",
+          "alternativen": [
+            "brechen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To damage something so that it separates into pieces.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Do not break this glass.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She breaks the chocolate into small pieces.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Etwas in mehrere Stücke teilen oder beschädigen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Do not break this glass.",
+                "uebersetzung": "Zerbrich dieses Glas nicht.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She breaks the chocolate into small pieces.",
+                "uebersetzung": "Sie bricht die Schokolade in kleine Stücke.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-break-verb-2",
+        "bedeutung_kurz": "stop for a short rest",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "eine Pause machen",
+          "alternativen": [
+            "unterbrechen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "A2",
+            "definition": "To stop an activity for a short time in order to rest.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Let's break for lunch.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We break for lunch at noon.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "A2",
+            "definition": "Kurz mit einer Tätigkeit aufhören, um sich auszuruhen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "Let's break for lunch.",
+                "uebersetzung": "Lass uns Mittagspause machen.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "We break for lunch at noon.",
+                "uebersetzung": "Der Unterricht wird mittags unterbrochen.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  },
+  {
+    "lemma": {
+      "id": "en-charge-verb",
+      "sprache": "en",
+      "text": "charge",
+      "wortart": "verb",
+      "ipa": null,
+      "haeufigkeitsrang": null,
+      "niveau": "B1",
+      "artikel": null,
+      "plural": null
+    },
+    "senses": [
+      {
+        "id": "en-charge-verb-1",
+        "bedeutung_kurz": "ask someone to pay money",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "berechnen",
+          "alternativen": [
+            "verlangen"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To ask someone to pay a particular amount of money for something.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "They charge ten euros for delivery.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The hotel charges extra for breakfast.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Einen bestimmten Geldbetrag für etwas verlangen.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "They charge ten euros for delivery.",
+                "uebersetzung": "Sie berechnen zehn Euro für die Lieferung.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "The hotel charges extra for breakfast.",
+                "uebersetzung": "Das Hotel berechnet einen Aufpreis für das Frühstück.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "en-charge-verb-2",
+        "bedeutung_kurz": "put electricity into a battery",
+        "uebersetzung": {
+          "sprache": "de",
+          "text": "aufladen",
+          "alternativen": [
+            "laden"
+          ],
+          "verknuepfter_sense_id": null
+        },
+        "explanations": [
+          {
+            "erklaersprache": "en",
+            "stufe": "B1",
+            "definition": "To put electrical energy into a battery or device again.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I charge my phone every night.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She charges the battery at work.",
+                "uebersetzung": null,
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          },
+          {
+            "erklaersprache": "de",
+            "stufe": "B1",
+            "definition": "Einer Batterie oder einem Gerät wieder elektrische Energie geben.",
+            "merkhilfe": null,
+            "verwechslung": null,
+            "beispiele": [
+              {
+                "satz": "I charge my phone every night.",
+                "uebersetzung": "Ich lade mein Telefon jede Nacht auf.",
+                "quelle": "ki",
+                "quelle_id": null
+              },
+              {
+                "satz": "She charges the battery at work.",
+                "uebersetzung": "Sie lädt die Batterie bei der Arbeit auf.",
+                "quelle": "ki",
+                "quelle_id": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "qualitaet": {
+      "status": "roh",
+      "pruef_score": null,
+      "hinweise": [],
+      "modellversion": "ChatGPT",
+      "datum": "2026-11-04"
+    }
+  }
+]
