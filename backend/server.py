@@ -615,6 +615,38 @@ def detect_deck_tree_request(message: str) -> dict[str, Any] | None:
     return {"deckName": main, "subdeckName": child, "cardCount": count}
 
 
+def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[str, Any] | None:
+    """Recognize explicit card creation requests aimed at a deck the app already has."""
+    if not re.search(r"\b(?:erstelle|erstell|mache|mach|füge|fuege|generiere|create|add|make|generate)\b", message, re.IGNORECASE):
+        return None
+    if not re.search(r"\b(?:karten|lern?karten|flashcards|cards)\b", message, re.IGNORECASE):
+        return None
+
+    matches: list[tuple[int, int, str, bool]] = []
+    for raw_name in decks:
+        name = str(raw_name).strip()
+        if not name:
+            continue
+        for match in re.finditer(r"(?<!\w)" + re.escape(name) + r"(?!\w)", message, re.IGNORECASE):
+            prefix = message[max(0, match.start() - 48):match.start()]
+            is_subdeck_reference = bool(re.search(r"\b(?:unterdeck|subdeck)\b", prefix, re.IGNORECASE))
+            matches.append((match.start(), len(name), name, is_subdeck_reference))
+
+    if not matches:
+        return None
+    # Prefer an exact deck name explicitly introduced as an Unterdeck; otherwise use the
+    # last named existing deck in the request (e.g. "Satzglieder im Deck Deutsch").
+    subdeck_matches = [item for item in matches if item[3]]
+    candidates = subdeck_matches or matches
+    _, _, target = max(candidates, key=lambda item: (item[0], item[1]))
+    if sum(1 for name in decks if str(name).strip().casefold() == target.casefold()) > 1:
+        return None
+
+    count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
+    count = min(max(int(count_match.group(1)), 1), 20) if count_match else 5
+    return {"deckName": target, "cardCount": count}
+
+
 def sanitize_agent_plan(plan: dict[str, Any]) -> dict[str, Any]:
     actions = plan.get("actions", [])
     if not isinstance(actions, list):
@@ -846,6 +878,7 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     decks = "\n".join(deck[:120] for deck in body.decks)
     folders = "\n".join(folder[:120] for folder in body.vocabularyFolders)
     tree = detect_deck_tree_request(body.message)
+    existing_cards = detect_existing_deck_cards_request(body.message, body.decks) if not tree else None
     if tree:
         prompt = (
             "Create exactly " + str(tree["cardCount"]) + " flashcards in German for the requested subdeck. Main deck: " + tree["deckName"] + ". Subdeck: " + tree["subdeckName"] + ". "
@@ -859,6 +892,20 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         if len(valid) < tree["cardCount"]:
             raise HTTPException(status_code=502, detail="AI did not create all requested cards; please try again")
         return {"reply": "Preview for " + tree["deckName"] + " › " + tree["subdeckName"] + " with " + str(tree["cardCount"]) + " cards.", "actions": [{"type": "create_deck_tree", "deckName": tree["deckName"], "subdeckName": tree["subdeckName"], "cards": valid[:tree["cardCount"]]}]}
+    if existing_cards:
+        count = existing_cards["cardCount"]
+        prompt = (
+            "Create exactly " + str(count) + " accurate, non-duplicate flashcards in " + language + " for the existing deck or subdeck named \"" + existing_cards["deckName"] + "\". "
+            "Treat the user's full instruction as the learning objective and make each card test that objective directly. "
+            "For German grammar exercises, the front must contain a distinct, complex German sentence and a clear task to identify the requested sentence constituents; the back must show the same sentence segmented and label each constituent accurately. "
+            "Never create cards that merely translate the deck name or describe the topic. Do not claim the cards are saved. Return only the required JSON. User instruction: " + body.message
+        )
+        result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
+        cards = result.get("cards", []) if isinstance(result, dict) else []
+        valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
+        if len(valid) < count:
+            raise HTTPException(status_code=502, detail="AI did not create all requested cards; please try again")
+        return {"reply": "Preview for " + existing_cards["deckName"] + " with " + str(count) + " cards.", "actions": [{"type": "create_cards", "deckName": existing_cards["deckName"], "cards": valid[:count]}]}
     prompt = (
         "You are an assistant inside a local study app. Reply in " + language + ". Selected action mode: " + body.mode + ". "
         "In vocabulary mode, treat the request as vocabulary work; in deck mode, treat it as flashcard/deck work. Never claim an action is done. The user must review and approve every action. "
