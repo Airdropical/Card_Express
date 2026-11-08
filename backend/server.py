@@ -614,9 +614,47 @@ def detect_deck_tree_request(message: str) -> dict[str, Any] | None:
     main, child = name_after(r"\bdeck"), name_after(r"\bunterdeck")
     if not main or not child:
         return None
-    count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
-    count = min(max(int(count_match.group(1)), 1), 20) if count_match else 10
+    count = requested_flashcard_count(message) or 10
     return {"deckName": main, "subdeckName": child, "cardCount": count}
+
+
+def requested_flashcard_count(message: str) -> int | None:
+    number_words = {
+        "ein": 1, "eine": 1, "einen": 1, "eins": 1, "zwei": 2, "drei": 3, "vier": 4,
+        "fünf": 5, "funf": 5, "sechs": 6, "sieben": 7, "acht": 8, "neun": 9, "zehn": 10,
+        "elf": 11, "zwölf": 12, "zwolf": 12, "dreizehn": 13, "vierzehn": 14, "fünfzehn": 15,
+        "funfzehn": 15, "sechzehn": 16, "siebzehn": 17, "achtzehn": 18, "neunzehn": 19, "zwanzig": 20,
+    }
+    match = re.search(
+        r"\b(\d{1,2}|ein(?:e|en|s)?|zwei|drei|vier|fünf|funf|sechs|sieben|acht|neun|zehn|elf|zwölf|zwolf|dreizehn|vierzehn|fünfzehn|funfzehn|sechzehn|siebzehn|achtzehn|neunzehn|zwanzig)\s+(?:(?:neue?|weitere|zusätzliche|zusaetzliche)\s+)?(?:lern)?karten\b",
+        message,
+        re.IGNORECASE,
+    )
+    if not match:
+        return None
+    token = match.group(1).casefold()
+    amount = int(token) if token.isdigit() else number_words[token]
+    return min(max(amount, 1), 20)
+
+
+def enforce_requested_card_count(plan: dict[str, Any], count: int) -> dict[str, Any]:
+    remaining = count
+    card_action_types = {"create_deck_tree", "create_subdeck", "create_cards"}
+    for action in plan.get("actions", []):
+        if action.get("type") not in card_action_types:
+            continue
+        cards = action.get("cards") or []
+        if not isinstance(cards, list):
+            cards = []
+        action["cards"] = cards[:remaining]
+        remaining -= len(action["cards"])
+    if remaining > 0:
+        raise HTTPException(status_code=502, detail="AI did not create the requested number of cards; please try again")
+    plan["actions"] = [
+        action for action in plan.get("actions", [])
+        if action.get("type") not in {"create_cards"} or action.get("cards")
+    ]
+    return plan
 
 
 def detect_new_subdeck_request(message: str, decks: list[str]) -> dict[str, Any] | None:
@@ -641,8 +679,7 @@ def detect_new_subdeck_request(message: str, decks: list[str]) -> dict[str, Any]
     matching_parents = [str(deck).strip() for deck in decks if str(deck).strip().casefold() == parent.casefold()]
     if len(matching_parents) != 1 or not child:
         return None
-    count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
-    count = min(max(int(count_match.group(1)), 1), 20) if count_match else 10
+    count = requested_flashcard_count(message) or 10
     return {"parentDeck": matching_parents[0], "deckName": child, "cardCount": count}
 
 
@@ -667,8 +704,7 @@ def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[s
         parent = explicit_parent.group(1).strip().strip(" '\"“”„")
         matching_parents = [str(name).strip() for name in decks if str(name).strip().casefold() == parent.casefold()]
         if target and len(matching_parents) == 1:
-            count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
-            count = min(max(int(count_match.group(1)), 1), 20) if count_match else 10
+            count = requested_flashcard_count(message) or 10
             return {"deckName": target, "parentDeck": matching_parents[0], "cardCount": count}
 
     matches: list[tuple[int, int, str, bool]] = []
@@ -697,8 +733,7 @@ def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[s
     if sum(1 for name in decks if str(name).strip().casefold() == target.casefold()) > 1 and not parent:
         return None
 
-    count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
-    count = min(max(int(count_match.group(1)), 1), 20) if count_match else 10
+    count = requested_flashcard_count(message) or 10
     return {"deckName": target, "parentDeck": parent, "cardCount": count}
 
 
@@ -942,7 +977,8 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     elif existing_cards:
         print(f"[TutorAgent][plan] route=existing_deck_cards cards={existing_cards['cardCount']}", flush=True)
     else:
-        print(f"[TutorAgent][plan] route=general mode={body.mode!r} known_decks={len(body.decks)}", flush=True)
+        requested_count = requested_flashcard_count(body.message)
+        print(f"[TutorAgent][plan] route=general mode={body.mode!r} known_decks={len(body.decks)} requested_cards={requested_count or '-'}", flush=True)
     if tree:
         prompt = (
             "Create exactly " + str(tree["cardCount"]) + " flashcards in German for the requested subdeck. Main deck: " + tree["deckName"] + ". Subdeck: " + tree["subdeckName"] + ". "
@@ -1001,6 +1037,11 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     )
     result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], AGENT_PLAN_SCHEMA)
     plan = sanitize_agent_plan(result if isinstance(result, dict) else {})
+    requested_count = requested_flashcard_count(body.message)
+    if requested_count is not None:
+        generated_count = sum(len(action.get("cards") or []) for action in plan["actions"] if action.get("type") in {"create_deck_tree", "create_subdeck", "create_cards"})
+        print(f"[TutorAgent][plan] requested_cards={requested_count} generated_cards={generated_count}", flush=True)
+        plan = enforce_requested_card_count(plan, requested_count)
     if not plan["actions"] and re.search(r"\b(?:vorbereit|erstellt|angelegt|hinzugefügt|added|created|prepared|ready)\w*\b", plan.get("reply", ""), re.IGNORECASE):
         plan["reply"] = "Ich konnte noch keinen umsetzbaren Vorschlag erstellen. Bitte nenne das genaue Ziel-Deck oder präzisiere den Auftrag."
     return plan
