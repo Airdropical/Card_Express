@@ -619,6 +619,8 @@ def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[s
     """Recognize explicit card creation requests aimed at a deck the app already has."""
     if not re.search(r"\b(?:erstelle|erstell|mache|mach|füge|fuege|generiere|create|add|make|generate)\b", message, re.IGNORECASE):
         return None
+    if re.search(r"\b(?:erstelle|erstell|create)\s+(?:mir\s+)?(?:ein(?:en)?\s+)?(?:neues?\s+)?unterdeck\b", message, re.IGNORECASE):
+        return None
     if not re.search(r"\b(?:karten|lern?karten|flashcards|cards)\b", message, re.IGNORECASE):
         return None
 
@@ -630,6 +632,11 @@ def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[s
         for match in re.finditer(r"(?<!\w)" + re.escape(name) + r"(?!\w)", message, re.IGNORECASE):
             prefix = message[max(0, match.start() - 48):match.start()]
             is_subdeck_reference = bool(re.search(r"\b(?:unterdeck|subdeck)\b", prefix, re.IGNORECASE))
+            prefix = re.split(r"[,;:.!?()\n]", message[:match.start()])[-1]
+            is_subdeck_reference = bool(
+                re.search(r"\b(?:unterdeck|subdeck)\s*$", prefix, re.IGNORECASE)
+                or re.search(r"\b(?:in|im|für|fuer|for)\s+(?:dem\s+|den\s+)?$", prefix, re.IGNORECASE)
+            )
             matches.append((match.start(), len(name), name, is_subdeck_reference))
 
     if not matches:
@@ -640,11 +647,17 @@ def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[s
     candidates = subdeck_matches or matches
     _, _, target = max(candidates, key=lambda item: (item[0], item[1]))
     if sum(1 for name in decks if str(name).strip().casefold() == target.casefold()) > 1:
+    target_match = max(candidates, key=lambda item: (item[0], item[1]))
+    target = target_match[2]
+    parent_matches = [item for item in matches if item[2].casefold() != target.casefold() and re.search(r"\bdeck\s*$", re.split(r"[,;:.!?()\n]", message[:item[0]])[-1], re.IGNORECASE)]
+    parent = max(parent_matches, key=lambda item: item[0])[2] if parent_matches else None
+    if sum(1 for name in decks if str(name).strip().casefold() == target.casefold()) > 1 and not parent:
         return None
 
     count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
     count = min(max(int(count_match.group(1)), 1), 20) if count_match else 5
     return {"deckName": target, "cardCount": count}
+    return {"deckName": target, "parentDeck": parent, "cardCount": count}
 
 
 def sanitize_agent_plan(plan: dict[str, Any]) -> dict[str, Any]:
@@ -880,6 +893,12 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     tree = detect_deck_tree_request(body.message)
     existing_cards = detect_existing_deck_cards_request(body.message, body.decks) if not tree else None
     if tree:
+        print(f"[TutorAgent][plan] route=new_deck_tree cards={tree['cardCount']}", flush=True)
+    elif existing_cards:
+        print(f"[TutorAgent][plan] route=existing_deck_cards cards={existing_cards['cardCount']}", flush=True)
+    else:
+        print(f"[TutorAgent][plan] route=general mode={body.mode!r} known_decks={len(body.decks)}", flush=True)
+    if tree:
         prompt = (
             "Create exactly " + str(tree["cardCount"]) + " flashcards in German for the requested subdeck. Main deck: " + tree["deckName"] + ". Subdeck: " + tree["subdeckName"] + ". "
             "Follow the full user instruction and its learning objective. The FRONT of every card must be a distinct complex sentence and a task to identify its sentence constituents. "
@@ -905,10 +924,15 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
         if len(valid) < count:
             raise HTTPException(status_code=502, detail="AI did not create all requested cards; please try again")
+        action = {"type": "create_cards", "deckName": existing_cards["deckName"], "cards": valid[:count]}
+        if existing_cards["parentDeck"]:
+            action["parentDeck"] = existing_cards["parentDeck"]
         return {"reply": "Preview for " + existing_cards["deckName"] + " with " + str(count) + " cards.", "actions": [{"type": "create_cards", "deckName": existing_cards["deckName"], "cards": valid[:count]}]}
+        return {"reply": "Preview for " + existing_cards["deckName"] + " with " + str(count) + " cards.", "actions": [action]}
     prompt = (
         "You are an assistant inside a local study app. Reply in " + language + ". Selected action mode: " + body.mode + ". "
         "In vocabulary mode, treat the request as vocabulary work; in deck mode, treat it as flashcard/deck work. Never claim an action is done. The user must review and approve every action. "
+        "In vocabulary mode, treat the request as vocabulary work; in deck mode, treat it as flashcard/deck work. Never claim an action is done or prepared unless the corresponding complete action is present in actions. The user must review and approve every action. "
         "For vocabulary, the active source language is " + body.sourceLanguage + " and the target language is " + body.targetLanguage + ". Keep term in the source language and translation in the target language. "
         "Write every vocabulary example sentence entirely in the target language (" + body.targetLanguage + "), never in the app interface language or source language. "
         "For a new folder use create_vocabulary_folder with folderName and vocabularyEntries. For an existing folder use add_vocabulary with folderName and vocabularyEntries. "
@@ -920,6 +944,10 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     )
     result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], AGENT_PLAN_SCHEMA)
     return sanitize_agent_plan(result if isinstance(result, dict) else {})
+    plan = sanitize_agent_plan(result if isinstance(result, dict) else {})
+    if not plan["actions"] and re.search(r"\b(?:vorbereit|erstellt|angelegt|hinzugefügt|added|created|prepared|ready)\w*\b", plan.get("reply", ""), re.IGNORECASE):
+        plan["reply"] = "Ich konnte noch keinen umsetzbaren Vorschlag erstellen. Bitte nenne das genaue Ziel-Deck oder präzisiere den Auftrag."
+    return plan
 
 
 @app.post("/api/summary")
