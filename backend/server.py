@@ -48,6 +48,7 @@ AI_DAILY_REQUEST_LIMIT = int(os.environ.get("AI_DAILY_REQUEST_LIMIT", "40"))
 AI_TOTAL_REQUEST_LIMIT = int(os.environ.get("AI_TOTAL_REQUEST_LIMIT", "400"))
 AI_BUDGET_USD = float(os.environ.get("AI_BUDGET_USD", "5"))
 AI_RATE_LIMIT_PER_MINUTE = int(os.environ.get("AI_RATE_LIMIT_PER_MINUTE", "8"))
+AI_UNLIMITED_ACCOUNT_EMAIL = os.environ.get("AI_UNLIMITED_ACCOUNT_EMAIL", "").strip().casefold()
 AI_MAX_OUTPUT_TOKENS = int(os.environ.get("AI_MAX_OUTPUT_TOKENS", "2048"))
 AI_INPUT_USD_PER_MILLION = float(os.environ.get("AI_INPUT_USD_PER_MILLION", "0.50"))
 AI_OUTPUT_USD_PER_MILLION = float(os.environ.get("AI_OUTPUT_USD_PER_MILLION", "3.00"))
@@ -476,7 +477,7 @@ def estimate_ai_cost(model: str, input_tokens: int, output_tokens: int) -> float
     return input_tokens * input_rate / 1_000_000 + output_tokens * output_rate / 1_000_000
 
 
-def reserve_ai_usage(db: Session, account: Account) -> AIUsage:
+def reserve_ai_usage(db: Session, account: Account, enforce_limits: bool = True) -> AIUsage:
     # Serialize reservation checks so concurrent requests cannot overshoot the pilot budget.
     db.execute(text("SELECT pg_advisory_xact_lock(74190321)"))
     now = utcnow()
@@ -493,12 +494,13 @@ def reserve_ai_usage(db: Session, account: Account) -> AIUsage:
         estimate_ai_cost(GEMINI_MODEL, 100_000, AI_MAX_OUTPUT_TOKENS),
         estimate_ai_cost(GEMINI_FALLBACK_MODEL or GEMINI_MODEL, 100_000, AI_MAX_OUTPUT_TOKENS),
     )
-    if daily_count >= AI_DAILY_REQUEST_LIMIT:
-        raise HTTPException(status_code=429, detail="Daily AI request limit reached")
-    if total_count >= AI_TOTAL_REQUEST_LIMIT:
-        raise HTTPException(status_code=429, detail="Private pilot AI request limit reached")
-    if spent + reservation > AI_BUDGET_USD:
-        raise HTTPException(status_code=429, detail="Private pilot AI budget reached")
+    if enforce_limits:
+        if daily_count >= AI_DAILY_REQUEST_LIMIT:
+            raise HTTPException(status_code=429, detail="Daily AI request limit reached")
+        if total_count >= AI_TOTAL_REQUEST_LIMIT:
+            raise HTTPException(status_code=429, detail="Private pilot AI request limit reached")
+        if spent + reservation > AI_BUDGET_USD:
+            raise HTTPException(status_code=429, detail="Private pilot AI budget reached")
     usage = AIUsage(
         id=UUID(bytes=secrets.token_bytes(16), version=4), account_id=account.id,
         created_at=now, reserved_cost=reservation, actual_cost=None,
@@ -571,8 +573,10 @@ def gemini_generate(parts: list[dict[str, Any]], schema: dict[str, Any]) -> tupl
 def execute_ai(request: Request, db: Session, account: Account, route: str, parts: list[dict[str, Any]], schema: dict[str, Any]) -> dict[str, Any]:
     if not GEMINI_API_KEY:
         raise HTTPException(status_code=503, detail="Set GEMINI_API_KEY (or GOOGLE_API_KEY) in the Railway service variables")
-    fail_rate_limit(db, request, "ai", limit=AI_RATE_LIMIT_PER_MINUTE, window_seconds=60, subject=str(account.id), by_ip=False)
-    usage = reserve_ai_usage(db, account)
+    unlimited_operator = bool(AI_UNLIMITED_ACCOUNT_EMAIL) and account.email.strip().casefold() == AI_UNLIMITED_ACCOUNT_EMAIL
+    if not unlimited_operator:
+        fail_rate_limit(db, request, "ai", limit=AI_RATE_LIMIT_PER_MINUTE, window_seconds=60, subject=str(account.id), by_ip=False)
+    usage = reserve_ai_usage(db, account, enforce_limits=not unlimited_operator)
     result, model = gemini_generate(parts, schema)
     settle_ai_usage(db, usage.id, model, result)
     return result
