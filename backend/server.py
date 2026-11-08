@@ -793,6 +793,12 @@ def tutor(body: TutorRequest, request: Request, account: Account = Depends(curre
             "Use words from the supplied vocabulary naturally, but never turn the exercise into an isolated word-translation quiz. "
             "Ask one short, contextually natural question per turn and wait for the learner. On later turns, respond to what they mean; "
             "if useful, give one brief correction in " + source_language + ", then continue the role-play with the next question in " + target_language + ". "
+            "Ask one short, contextually natural question per turn and wait for the learner. On later turns, respond to what they mean. "
+            "If the learner makes a meaningful grammar or vocabulary mistake, do not silently ignore it or only repeat the correct answer. "
+            "Briefly identify the exact problem and show a natural corrected version in " + target_language + "; explain the rule simply in " + source_language + ". "
+            "Then give one short targeted practice prompt that lets the learner retry the same grammar point before continuing the role-play. "
+            "If they make the same grammar mistake again, offer one more example and a simpler hint. After they use the structure correctly, acknowledge it briefly and continue the dialogue. "
+            "Do not overcorrect minor typos or natural variants when the meaning and grammar are acceptable. "
             "On the first turn, introduce a simple everyday situation in " + target_language + " and ask the learner a relevant question in that language. "
             "Keep the role-play coherent and do not repeat the same opening question.")
     elif body.mode == "quiz":
