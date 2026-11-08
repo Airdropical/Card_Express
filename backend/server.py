@@ -615,6 +615,33 @@ def detect_deck_tree_request(message: str) -> dict[str, Any] | None:
     return {"deckName": main, "subdeckName": child, "cardCount": count}
 
 
+def detect_new_subdeck_request(message: str, decks: list[str]) -> dict[str, Any] | None:
+    """Recognize creation of a named subdeck and cards inside an existing parent deck."""
+    if not re.search(r"\b(?:erstelle|erstell|lege\s+an|create|add)\b", message, re.IGNORECASE):
+        return None
+    parent_match = re.search(
+        r"\b(?:im|in\s+dem|in)\s+deck\s+[\"“„]?(.+?)[\"”„]?\s+mit\s+dem\s+namen\b",
+        message,
+        re.IGNORECASE,
+    )
+    child_match = re.search(
+        r"\bmit\s+dem\s+namen\s+[\"“„]?(.+?)[\"”„]?"
+        r"(?=\s+und\s+(?:passend|dazu|erstelle|erstell|generiere)|[,;.!?]|$)",
+        message,
+        re.IGNORECASE,
+    )
+    if not parent_match or not child_match or not re.search(r"\b(?:unterdeck|subdeck)\b", message, re.IGNORECASE):
+        return None
+    parent = parent_match.group(1).strip().strip(" '\"“”„")
+    child = child_match.group(1).strip().strip(" '\"“”„")
+    matching_parents = [str(deck).strip() for deck in decks if str(deck).strip().casefold() == parent.casefold()]
+    if len(matching_parents) != 1 or not child:
+        return None
+    count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
+    count = min(max(int(count_match.group(1)), 1), 20) if count_match else 10
+    return {"parentDeck": matching_parents[0], "deckName": child, "cardCount": count}
+
+
 def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[str, Any] | None:
     """Recognize explicit card creation requests aimed at a deck the app already has."""
     if not re.search(r"\b(?:erstelle|erstell|mache|mach|füge|fuege|generiere|create|add|make|generate)\b", message, re.IGNORECASE):
@@ -886,9 +913,12 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     decks = "\n".join(deck[:120] for deck in body.decks)
     folders = "\n".join(folder[:120] for folder in body.vocabularyFolders)
     tree = detect_deck_tree_request(body.message)
-    existing_cards = detect_existing_deck_cards_request(body.message, body.decks) if not tree else None
+    new_subdeck = detect_new_subdeck_request(body.message, body.decks) if not tree else None
+    existing_cards = detect_existing_deck_cards_request(body.message, body.decks) if not tree and not new_subdeck else None
     if tree:
         print(f"[TutorAgent][plan] route=new_deck_tree cards={tree['cardCount']}", flush=True)
+    elif new_subdeck:
+        print(f"[TutorAgent][plan] route=new_subdeck cards={new_subdeck['cardCount']}", flush=True)
     elif existing_cards:
         print(f"[TutorAgent][plan] route=existing_deck_cards cards={existing_cards['cardCount']}", flush=True)
     else:
@@ -906,6 +936,20 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         if len(valid) < tree["cardCount"]:
             raise HTTPException(status_code=502, detail="AI did not create all requested cards; please try again")
         return {"reply": "Preview for " + tree["deckName"] + " › " + tree["subdeckName"] + " with " + str(tree["cardCount"]) + " cards.", "actions": [{"type": "create_deck_tree", "deckName": tree["deckName"], "subdeckName": tree["subdeckName"], "cards": valid[:tree["cardCount"]]}]}
+    if new_subdeck:
+        count = new_subdeck["cardCount"]
+        prompt = (
+            "Create exactly " + str(count) + " accurate, non-duplicate flashcards in " + language + " for a new subdeck named \"" + new_subdeck["deckName"] + "\" under the existing parent deck \"" + new_subdeck["parentDeck"] + "\". "
+            "Follow the user's full learning objective. Make each card directly useful for practice, with a clear question on the front and a precise answer on the back. "
+            "Return only the required JSON. User instruction: " + body.message
+        )
+        result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
+        cards = result.get("cards", []) if isinstance(result, dict) else []
+        valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
+        if len(valid) < count:
+            raise HTTPException(status_code=502, detail="AI did not create all requested cards; please try again")
+        action = {"type": "create_subdeck", "parentDeck": new_subdeck["parentDeck"], "deckName": new_subdeck["deckName"], "cards": valid[:count]}
+        return {"reply": "Preview for " + new_subdeck["parentDeck"] + " › " + new_subdeck["deckName"] + " with " + str(count) + " cards.", "actions": [action]}
     if existing_cards:
         count = existing_cards["cardCount"]
         prompt = (
