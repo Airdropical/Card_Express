@@ -26,7 +26,7 @@ from argon2 import PasswordHasher
 from argon2.exceptions import InvalidHashError, VerifyMismatchError
 from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from jsonschema import Draft202012Validator
 from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator
@@ -85,14 +85,31 @@ class RequestBodyLimitMiddleware:
             await self.application(scope, receive, send)
             return
         headers = {key.lower(): value for key, value in scope.get("headers", [])}
+
+        async def send_with_security_headers(message):
+            if message["type"] == "http.response.start":
+                response_headers = list(message.get("headers", []))
+                response_headers.extend([
+                    (b"x-content-type-options", b"nosniff"),
+                    (b"referrer-policy", b"strict-origin-when-cross-origin"),
+                    (b"x-frame-options", b"DENY"),
+                    (b"permissions-policy", b"camera=(), microphone=(), geolocation=()"),
+                    (b"content-security-policy", b"default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"),
+                ])
+                forwarded_proto = headers.get(b"x-forwarded-proto", b"").split(b",", 1)[0].strip()
+                if forwarded_proto == b"https" or scope.get("scheme") == "https":
+                    response_headers.append((b"strict-transport-security", b"max-age=31536000; includeSubDomains"))
+                message = {**message, "headers": response_headers}
+            await send(message)
+
         raw_length = headers.get(b"content-length")
         if raw_length:
             try:
                 if int(raw_length) > self.max_bytes:
-                    await self._reject(send, 413, "Request body is too large")
+                    await self._reject(send_with_security_headers, 413, "Request body is too large")
                     return
             except ValueError:
-                await self._reject(send, 400, "Invalid content length")
+                await self._reject(send_with_security_headers, 400, "Invalid content length")
                 return
         chunks: list[bytes] = []
         size = 0
@@ -106,7 +123,7 @@ class RequestBodyLimitMiddleware:
             chunk = message.get("body", b"")
             size += len(chunk)
             if size > self.max_bytes:
-                await self._reject(send, 413, "Request body is too large")
+                await self._reject(send_with_security_headers, 413, "Request body is too large")
                 return
             chunks.append(chunk)
             more_body = message.get("more_body", False)
@@ -120,7 +137,7 @@ class RequestBodyLimitMiddleware:
                 return {"type": "http.request", "body": body, "more_body": False}
             return await receive()
 
-        await self.application(scope, replay_body, send)
+        await self.application(scope, replay_body, send_with_security_headers)
 
     async def _reject(self, send, response_status: int, message: str):
         body = json.dumps({"detail": message}).encode("utf-8")
@@ -270,10 +287,13 @@ class TutorHistoryItem(BaseModel):
 class TutorRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     question: str = Field(default="", max_length=1_500)
-    answer: str = Field(default="", max_length=4_000)
+    answer: str = Field(default="", max_length=9_000)
     message: str = Field(min_length=1, max_length=1_500)
     history: list[TutorHistoryItem] = Field(default_factory=list, max_length=10)
     language: str = Field(default="German", max_length=60)
+    mode: str = Field(default="chat", max_length=24)
+    sourceLanguage: str = Field(default="German", max_length=80)
+    targetLanguage: str = Field(default="English", max_length=80)
 
 
 class AgentPlanRequest(BaseModel):
@@ -441,25 +461,6 @@ def validate_profile_document(document: dict[str, Any], account_id: UUID) -> dic
     clean["profile_id"] = str(account_id)
     clean["updated_at"] = now
     return clean
-
-
-@app.middleware("http")
-async def security_headers_and_body_limit(request: Request, call_next):
-    try:
-        length = int(request.headers.get("content-length", "0"))
-    except ValueError:
-        return JSONResponse({"detail": "Invalid content length"}, status_code=400)
-    if length > MAX_BODY_BYTES:
-        return JSONResponse({"detail": "Request body is too large"}, status_code=413)
-    response = await call_next(request)
-    response.headers["X-Content-Type-Options"] = "nosniff"
-    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
-    response.headers["X-Frame-Options"] = "DENY"
-    response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
-    response.headers["Content-Security-Policy"] = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
-    if request.headers.get("x-forwarded-proto", request.url.scheme) == "https":
-        response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
-    return response
 
 
 def estimate_ai_cost(model: str, input_tokens: int, output_tokens: int) -> float:
@@ -781,10 +782,33 @@ def evaluate_answer(body: EvaluateRequest, request: Request, account: Account = 
 def tutor(body: TutorRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
     transcript = "\n".join(("Tutor" if message.role == "assistant" else "Learner") + ": " + message.text for message in body.history)
     language = language_name(body.language)
+    source_language = language_name(body.sourceLanguage)
+    target_language = language_name(body.targetLanguage)
+    context = "\nStudy context:\n" + body.answer
+    conversation = "\nConversation so far:\n" + transcript + "\nLearner's latest message: " + body.message
+
+    if body.mode == "conversation":
+        instructions = (
+            "You are an encouraging language conversation partner. Run an interactive role-play in " + target_language + ". "
+            "Use words from the supplied vocabulary naturally, but never turn the exercise into an isolated word-translation quiz. "
+            "Ask one short, contextually natural question per turn and wait for the learner. On later turns, respond to what they mean; "
+            "if useful, give one brief correction in " + source_language + ", then continue the role-play with the next question in " + target_language + ". "
+            "On the first turn, introduce a simple everyday situation in " + target_language + " and ask the learner a relevant question in that language. "
+            "Keep the role-play coherent and do not repeat the same opening question.")
+    elif body.mode == "quiz":
+        instructions = (
+            "You are conducting a vocabulary translation quiz, not a role-play. Quiz from " + source_language + " to " + target_language + ". "
+            "At the start, show exactly one source-language term from the supplied vocabulary and ask for its translation; do not reveal the translation. "
+            "On each later turn, evaluate the learner's answer against the most recently asked term, accept accurate synonyms, and give brief feedback in " + language + ". "
+            "Then ask one unused source-language term from the supplied list. Do not repeat a term until all available terms in the selected folder have been asked. "
+            "Never invent terms or switch to a conversational role-play. If there are no vocabulary entries, say so clearly.")
+    else:
+        instructions = (
+            "You are a concise, friendly study tutor. Use the supplied context accurately and state uncertainty. "
+            "Reply entirely in " + language + ". Do not change response language based on the learner's latest message.")
+
     prompt = (
-        "You are a concise, friendly study tutor. Use the supplied context accurately and state uncertainty. "
-        "Reply entirely in " + language + ". Do not change response language based on the learner's latest message.\n"
-        "Question context: " + body.question + "\nExpected answer/context: " + body.answer + "\nConversation so far:\n" + transcript + "\nLearner's latest message: " + body.message
+        instructions + context + "\nTutor topic: " + body.question + conversation
     )
     return execute_ai(request, db, account, "tutor", [{"text": prompt}], REPLY_SCHEMA)
 
