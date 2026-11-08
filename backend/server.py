@@ -583,6 +583,24 @@ def language_name(value: str) -> str:
     return names.get(value.casefold(), value or "German")
 
 
+def requests_translation_help(message: str, source_language: str) -> bool:
+    normalized = message.casefold().strip()
+    explicit_requests = (
+        "translate", "translation", "übersetz", "uebersetz", "auf deutsch", "in german",
+        "what does", "what do you mean", "was heißt", "was bedeutet", "verstehe nicht",
+        "versteh ich nicht", "i don't understand", "i dont understand", "don't understand",
+    )
+    if any(phrase in normalized for phrase in explicit_requests):
+        return True
+    source_aliases = {
+        "german": ("german", "deutsch"), "english": ("english", "englisch"),
+        "french": ("french", "französisch", "franzosisch"), "spanish": ("spanish", "español", "spanisch"),
+        "italian": ("italian", "italiano", "italienisch"),
+    }
+    aliases = source_aliases.get(source_language.casefold(), (source_language.casefold(),))
+    return any(f"in {name}" in normalized or f"auf {name}" in normalized for name in aliases)
+
+
 def detect_deck_tree_request(message: str) -> dict[str, Any] | None:
     if not re.search(r"\bdeck\b.*\bunterdeck\b", message, re.IGNORECASE | re.DOTALL):
         return None
@@ -791,8 +809,6 @@ def tutor(body: TutorRequest, request: Request, account: Account = Depends(curre
         instructions = (
             "You are an encouraging language conversation partner. Run an interactive role-play in " + target_language + ". "
             "Use words from the supplied vocabulary naturally, but never turn the exercise into an isolated word-translation quiz. "
-            "Ask one short, contextually natural question per turn and wait for the learner. On later turns, respond to what they mean; "
-            "if useful, give one brief correction in " + source_language + ", then continue the role-play with the next question in " + target_language + ". "
             "Ask one short, contextually natural question per turn and wait for the learner. On later turns, respond to what they mean. "
             "If the learner makes a meaningful grammar or vocabulary mistake, do not silently ignore it or only repeat the correct answer. "
             "Briefly identify the exact problem and show a natural corrected version in " + target_language + "; explain the rule simply in " + source_language + ". "
@@ -801,6 +817,11 @@ def tutor(body: TutorRequest, request: Request, account: Account = Depends(curre
             "Do not overcorrect minor typos or natural variants when the meaning and grammar are acceptable. "
             "On the first turn, introduce a simple everyday situation in " + target_language + " and ask the learner a relevant question in that language. "
             "Keep the role-play coherent and do not repeat the same opening question.")
+        if requests_translation_help(body.message, body.sourceLanguage):
+            instructions += (
+                " The learner explicitly asked for language help. Do not refuse, insist that they continue without help, or pretend not to understand the request. "
+                "Translate the immediately preceding tutor question or phrase into " + source_language + ", explain its key words briefly, and optionally give a simpler paraphrase in " + target_language + ". "
+                "Then invite the learner to answer the original question; accept an answer in either language while they are clarifying.")
     elif body.mode == "quiz":
         instructions = (
             "You are conducting a vocabulary translation quiz, not a role-play. Quiz from " + source_language + " to " + target_language + ". "
