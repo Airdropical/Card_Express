@@ -39,7 +39,10 @@ ROOT = Path(__file__).resolve().parent.parent
 FRONTEND = ROOT / "frontend"
 CONTENT_PATH = FRONTEND / "data" / "testlauf-03-ergebnisse.json"
 PROFILE_SCHEMA_PATH = ROOT / "data" / "user-profile.schema.json"
-MAX_BODY_BYTES = 1_000_000
+IMAGE_MAX_BYTES = 6 * 1024 * 1024
+IMAGE_BASE64_MAX_CHARS = 4 * ((IMAGE_MAX_BYTES + 2) // 3)
+MAX_BODY_BYTES = 10 * 1024 * 1024
+MAX_PROFILE_BYTES = 1_000_000
 TOKEN_TTL = timedelta(days=30)
 GEMINI_API_KEY = (os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY") or "").strip()
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
@@ -263,7 +266,7 @@ class DeleteAccountRequest(BaseModel):
 class GenerateCardsRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     text: str | None = Field(default=None, max_length=18_000)
-    imageBase64: str | None = Field(default=None, max_length=900_000)
+    imageBase64: str | None = Field(default=None, max_length=IMAGE_BASE64_MAX_CHARS)
     mimeType: str = Field(default="image/jpeg", max_length=64)
     language: str = Field(default="German", max_length=60)
     style: str = Field(default="automatic", max_length=60)
@@ -450,7 +453,7 @@ DUMMY_PASSWORD_HASH = hash_password(secrets.token_urlsafe(32))
 
 
 def validate_profile_document(document: dict[str, Any], account_id: UUID) -> dict[str, Any]:
-    if len(json.dumps(document, ensure_ascii=False).encode("utf-8")) > MAX_BODY_BYTES:
+    if len(json.dumps(document, ensure_ascii=False).encode("utf-8")) > MAX_PROFILE_BYTES:
         raise HTTPException(status_code=413, detail="Profile is too large")
     errors = list(PROFILE_VALIDATOR.iter_errors(document))
     if errors:
@@ -889,9 +892,11 @@ def generate_cards(body: GenerateCardsRequest, request: Request, account: Accoun
         if body.mimeType not in {"image/jpeg", "image/png", "image/webp"}:
             raise HTTPException(status_code=400, detail="Unsupported image type")
         try:
-            base64.b64decode(body.imageBase64, validate=True)
+            image_bytes = base64.b64decode(body.imageBase64, validate=True)
         except (ValueError, binascii.Error):
             raise HTTPException(status_code=400, detail="Invalid image data")
+        if len(image_bytes) > IMAGE_MAX_BYTES:
+            raise HTTPException(status_code=413, detail="Image exceeds 6 MB")
         parts.append({"inlineData": {"mimeType": body.mimeType, "data": body.imageBase64}})
     if not parts:
         raise HTTPException(status_code=400, detail="Provide source text or an image")
