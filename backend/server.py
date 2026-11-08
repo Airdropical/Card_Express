@@ -655,6 +655,22 @@ def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[s
     if not re.search(r"\b(?:karten|lern?karten|flashcards|cards)\b", message, re.IGNORECASE):
         return None
 
+    explicit_subdeck = re.search(
+        r"\b(?:in\s+dem|im|in)\s+unterdeck\s+[\"“„]?([^()\[\],;:!?]+?)[\"”„]?"
+        r"(?=\s*(?:\(|,?\s+(?:karten|lern?karten|cards)\b|[:;,.!?]|$))",
+        message,
+        re.IGNORECASE,
+    )
+    explicit_parent = re.search(r"\(\s*(?:im|in\s+dem)\s+deck\s+[\"“„]?([^()\n]+?)[\"”„]?\s*\)", message, re.IGNORECASE)
+    if explicit_subdeck and explicit_parent:
+        target = explicit_subdeck.group(1).strip().strip(" '\"“”„")
+        parent = explicit_parent.group(1).strip().strip(" '\"“”„")
+        matching_parents = [str(name).strip() for name in decks if str(name).strip().casefold() == parent.casefold()]
+        if target and len(matching_parents) == 1:
+            count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
+            count = min(max(int(count_match.group(1)), 1), 20) if count_match else 10
+            return {"deckName": target, "parentDeck": matching_parents[0], "cardCount": count}
+
     matches: list[tuple[int, int, str, bool]] = []
     for raw_name in decks:
         name = str(raw_name).strip()
@@ -682,7 +698,7 @@ def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[s
         return None
 
     count_match = re.search(r"\b(\d{1,2})\s+(?:lern)?karten\b", message, re.IGNORECASE)
-    count = min(max(int(count_match.group(1)), 1), 20) if count_match else 5
+    count = min(max(int(count_match.group(1)), 1), 20) if count_match else 10
     return {"deckName": target, "parentDeck": parent, "cardCount": count}
 
 
@@ -930,9 +946,9 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     if tree:
         prompt = (
             "Create exactly " + str(tree["cardCount"]) + " flashcards in German for the requested subdeck. Main deck: " + tree["deckName"] + ". Subdeck: " + tree["subdeckName"] + ". "
-            "Follow the full user instruction and its learning objective. The FRONT of every card must be a distinct complex sentence and a task to identify its sentence constituents. "
-            "The BACK must give the same sentence segmented and clearly label each constituent (subject, predicate, objects, adverbials as applicable). "
-            "Never make cards that merely translate the subdeck title or explain what sentence constituents are. No duplicates. Return only the required JSON. User instruction: " + body.message
+            "Follow the full user instruction and learning objective. Interpret examples as guidance and independently choose a suitable variety of question types for the topic. "
+            "For this German grammar topic, include a direct question asking for the types of adverbial modifiers and an answer listing the commonly taught categories (temporal, local, modal, causal, with common subdivisions such as final, conditional, concessive, and consecutive). Also include useful questions about attributes: their function, common forms, and how to distinguish them from adverbials. Use sentence-identification cards only where they fit the objective; do not make every card a parsing exercise. "
+            "Keep the questions distinct, accurate, and useful for study. No duplicates. Return only the required JSON. User instruction: " + body.message
         )
         result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
         cards = result.get("cards", []) if isinstance(result, dict) else []
@@ -958,9 +974,9 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         count = existing_cards["cardCount"]
         prompt = (
             "Create exactly " + str(count) + " accurate, non-duplicate flashcards in " + language + " for the existing deck or subdeck named \"" + existing_cards["deckName"] + "\". "
-            "Treat the user's full instruction as the learning objective and make each card test that objective directly. "
-            "For German grammar exercises, the front must contain a distinct, complex German sentence and a clear task to identify the requested sentence constituents; the back must show the same sentence segmented and label each constituent accurately. "
-            "Never create cards that merely translate the deck name or describe the topic. Do not claim the cards are saved. Return only the required JSON. User instruction: " + body.message
+            "Treat examples in the user's message as examples of topics and question style, not as a requirement to repeat the same format on every card. Independently select a useful variety of related study questions. "
+            "For this German grammar topic, include a direct question asking for the types of adverbial modifiers and an answer listing the commonly taught categories (temporal, local, modal, causal, with common subdivisions such as final, conditional, concessive, and consecutive). Also include useful questions about attributes: their function, common forms, and how to distinguish them from adverbials. Use definition, enumeration, distinction, and sentence-identification cards where appropriate; do not force every card into complex-sentence analysis. "
+            "Keep the cards precise, curricular, varied, and non-duplicative. Do not claim the cards are saved. Return only the required JSON. User instruction: " + body.message
         )
         result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
         cards = result.get("cards", []) if isinstance(result, dict) else []
