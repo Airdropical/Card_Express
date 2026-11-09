@@ -34,6 +34,17 @@ from sqlalchemy import BigInteger, DateTime, ForeignKey, Index, Integer, Numeric
 from sqlalchemy.dialects.postgresql import JSONB, UUID as PGUUID, insert
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
 
+from ai_prompts import (
+    agent_plan as build_agent_plan_prompt,
+    card_generation as build_card_generation_prompt,
+    evaluate_answer as build_evaluation_prompt,
+    existing_deck_cards as build_existing_deck_cards_prompt,
+    new_subdeck_cards as build_new_subdeck_cards_prompt,
+    new_tree_cards as build_new_tree_cards_prompt,
+    summarize_cards as build_summary_prompt,
+    tutor_conversation as build_tutor_prompt,
+)
+
 
 ROOT = Path(__file__).resolve().parent.parent
 FRONTEND = ROOT / "frontend"
@@ -901,7 +912,7 @@ def generate_cards(body: GenerateCardsRequest, request: Request, account: Accoun
     if not parts:
         raise HTTPException(status_code=400, detail="Provide source text or an image")
     language = language_name(body.language)
-    prompt = f"Create 5 to 12 accurate flashcards in {language}. Cover key facts without duplicates or invention. Style: {body.style}. {body.instructions} Reply only with the requested JSON."
+    prompt = build_card_generation_prompt(language, body.style, body.instructions)
     result = execute_ai(request, db, account, "generate-cards", [{"text": prompt}, *parts], CARD_SCHEMA)
     cards = result.get("cards")
     if not isinstance(cards, list):
@@ -915,11 +926,7 @@ def evaluate_answer(body: EvaluateRequest, request: Request, account: Account = 
     if not body.question.strip() or not body.expected.strip():
         raise HTTPException(status_code=400, detail="Question and expected answer are required")
     language = language_name(body.language)
-    prompt = (
-        "Evaluate this study answer. Accept accurate paraphrases and synonyms. easy=complete and correct; good=core right with minor omission; hard=materially incomplete; wrong=incorrect, contradictory, or empty. "
-        "Provide concise, specific feedback. REQUIRED OUTPUT LANGUAGE: " + language + ". Write the rating feedback entirely in this language. Do not copy or switch to the learner response language if it differs from the card language. Keep this same language for every evaluation.\n"
-        + "Question: " + body.question + "\nExpected answer: " + body.expected + "\nLearner response: " + body.answer
-    )
+    prompt = build_evaluation_prompt(language, body.question, body.expected, body.answer)
     return execute_ai(request, db, account, "evaluate", [{"text": prompt}], EVALUATION_SCHEMA)
 
 
@@ -929,40 +936,16 @@ def tutor(body: TutorRequest, request: Request, account: Account = Depends(curre
     language = language_name(body.language)
     source_language = language_name(body.sourceLanguage)
     target_language = language_name(body.targetLanguage)
-    context = "\nStudy context:\n" + body.answer
-    conversation = "\nConversation so far:\n" + transcript + "\nLearner's latest message: " + body.message
-
-    if body.mode == "conversation":
-        instructions = (
-            "You are an encouraging language conversation partner. Run an interactive role-play in " + target_language + ". "
-            "Use words from the supplied vocabulary naturally, but never turn the exercise into an isolated word-translation quiz. "
-            "Ask one short, contextually natural question per turn and wait for the learner. On later turns, respond to what they mean. "
-            "If the learner makes a meaningful grammar or vocabulary mistake, do not silently ignore it or only repeat the correct answer. "
-            "Briefly identify the exact problem and show a natural corrected version in " + target_language + "; explain the rule simply in " + source_language + ". "
-            "Then give one short targeted practice prompt that lets the learner retry the same grammar point before continuing the role-play. "
-            "If they make the same grammar mistake again, offer one more example and a simpler hint. After they use the structure correctly, acknowledge it briefly and continue the dialogue. "
-            "Do not overcorrect minor typos or natural variants when the meaning and grammar are acceptable. "
-            "On the first turn, introduce a simple everyday situation in " + target_language + " and ask the learner a relevant question in that language. "
-            "Keep the role-play coherent and do not repeat the same opening question.")
-        if requests_translation_help(body.message, body.sourceLanguage):
-            instructions += (
-                " The learner explicitly asked for language help. Do not refuse, insist that they continue without help, or pretend not to understand the request. "
-                "Translate the immediately preceding tutor question or phrase into " + source_language + ", explain its key words briefly, and optionally give a simpler paraphrase in " + target_language + ". "
-                "Then invite the learner to answer the original question; accept an answer in either language while they are clarifying.")
-    elif body.mode == "quiz":
-        instructions = (
-            "You are conducting a vocabulary translation quiz, not a role-play. Quiz from " + source_language + " to " + target_language + ". "
-            "At the start, show exactly one source-language term from the supplied vocabulary and ask for its translation; do not reveal the translation. "
-            "On each later turn, evaluate the learner's answer against the most recently asked term, accept accurate synonyms, and give brief feedback in " + language + ". "
-            "Then ask one unused source-language term from the supplied list. Do not repeat a term until all available terms in the selected folder have been asked. "
-            "Never invent terms or switch to a conversational role-play. If there are no vocabulary entries, say so clearly.")
-    else:
-        instructions = (
-            "You are a concise, friendly study tutor. Use the supplied context accurately and state uncertainty. "
-            "Reply entirely in " + language + ". Do not change response language based on the learner's latest message.")
-
-    prompt = (
-        instructions + context + "\nTutor topic: " + body.question + conversation
+    prompt = build_tutor_prompt(
+        body.mode,
+        language,
+        source_language,
+        target_language,
+        body.question,
+        body.answer,
+        transcript,
+        body.message,
+        requests_translation_help(body.message, body.sourceLanguage),
     )
     return execute_ai(request, db, account, "tutor", [{"text": prompt}], REPLY_SCHEMA)
 
@@ -985,12 +968,7 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         requested_count = requested_flashcard_count(body.message)
         print(f"[TutorAgent][plan] route=general mode={body.mode!r} known_decks={len(body.decks)} requested_cards={requested_count or '-'}", flush=True)
     if tree:
-        prompt = (
-            "Create exactly " + str(tree["cardCount"]) + " flashcards in German for the requested subdeck. Main deck: " + tree["deckName"] + ". Subdeck: " + tree["subdeckName"] + ". "
-            "Follow the full user instruction and learning objective. Interpret examples as guidance and independently choose a suitable variety of question types for the topic. "
-            "For this German grammar topic, include a direct question asking for the types of adverbial modifiers and an answer listing the commonly taught categories (temporal, local, modal, causal, with common subdivisions such as final, conditional, concessive, and consecutive). Also include useful questions about attributes: their function, common forms, and how to distinguish them from adverbials. Use sentence-identification cards only where they fit the objective; do not make every card a parsing exercise. "
-            "Keep the questions distinct, accurate, and useful for study. No duplicates. Return only the required JSON. User instruction: " + body.message
-        )
+        prompt = build_new_tree_cards_prompt(tree["cardCount"], tree["deckName"], tree["subdeckName"], body.message)
         result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
         cards = result.get("cards", []) if isinstance(result, dict) else []
         valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
@@ -999,11 +977,7 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         return {"reply": "Preview for " + tree["deckName"] + " › " + tree["subdeckName"] + " with " + str(tree["cardCount"]) + " cards.", "actions": [{"type": "create_deck_tree", "deckName": tree["deckName"], "subdeckName": tree["subdeckName"], "cards": valid[:tree["cardCount"]]}]}
     if new_subdeck:
         count = new_subdeck["cardCount"]
-        prompt = (
-            "Create exactly " + str(count) + " accurate, non-duplicate flashcards in " + language + " for a new subdeck named \"" + new_subdeck["deckName"] + "\" under the existing parent deck \"" + new_subdeck["parentDeck"] + "\". "
-            "Follow the user's full learning objective. Make each card directly useful for practice, with a clear question on the front and a precise answer on the back. "
-            "Return only the required JSON. User instruction: " + body.message
-        )
+        prompt = build_new_subdeck_cards_prompt(count, language, new_subdeck["deckName"], new_subdeck["parentDeck"], body.message)
         result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
         cards = result.get("cards", []) if isinstance(result, dict) else []
         valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
@@ -1013,12 +987,7 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         return {"reply": "Preview for " + new_subdeck["parentDeck"] + " › " + new_subdeck["deckName"] + " with " + str(count) + " cards.", "actions": [action]}
     if existing_cards:
         count = existing_cards["cardCount"]
-        prompt = (
-            "Create exactly " + str(count) + " accurate, non-duplicate flashcards in " + language + " for the existing deck or subdeck named \"" + existing_cards["deckName"] + "\". "
-            "Treat examples in the user's message as examples of topics and question style, not as a requirement to repeat the same format on every card. Independently select a useful variety of related study questions. "
-            "For this German grammar topic, include a direct question asking for the types of adverbial modifiers and an answer listing the commonly taught categories (temporal, local, modal, causal, with common subdivisions such as final, conditional, concessive, and consecutive). Also include useful questions about attributes: their function, common forms, and how to distinguish them from adverbials. Use definition, enumeration, distinction, and sentence-identification cards where appropriate; do not force every card into complex-sentence analysis. "
-            "Keep the cards precise, curricular, varied, and non-duplicative. Do not claim the cards are saved. Return only the required JSON. User instruction: " + body.message
-        )
+        prompt = build_existing_deck_cards_prompt(count, language, existing_cards["deckName"], body.message)
         result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
         cards = result.get("cards", []) if isinstance(result, dict) else []
         valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
@@ -1028,18 +997,7 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
         if existing_cards["parentDeck"]:
             action["parentDeck"] = existing_cards["parentDeck"]
         return {"reply": "Preview for " + existing_cards["deckName"] + " with " + str(count) + " cards.", "actions": [action]}
-    prompt = (
-        "You are an assistant inside a local study app. Reply in " + language + ". Selected action mode: " + body.mode + ". "
-        "In vocabulary mode, treat the request as vocabulary work; in deck mode, treat it as flashcard/deck work. Never claim an action is done or prepared unless the corresponding complete action is present in actions. The user must review and approve every action. "
-        "For vocabulary, the active source language is " + body.sourceLanguage + " and the target language is " + body.targetLanguage + ". Keep term in the source language and translation in the target language. "
-        "Write every vocabulary example sentence entirely in the target language (" + body.targetLanguage + "), never in the app interface language or source language. "
-        "For a new folder use create_vocabulary_folder with folderName and vocabularyEntries. For an existing folder use add_vocabulary with folderName and vocabularyEntries. "
-        "When the user says many or gives no quantity, suggest 10 useful entries; maximum 30. Provide concise target-language example sentences for review, valid synonyms where useful, and difficulty 1-3. Do not mix language pairs or invent alternate language directions. "
-        "For a new main flashcard deck use create_deck with deckName. When a request combines a new main deck, a subdeck, and cards, return ONE create_deck_tree action only, with deckName, subdeckName, and all cards on that action. "
-        "For a request targeting an existing parent, create_subdeck uses parentDeck and deckName with cards directly included. Use create_cards only for cards added to an existing deck. "
-        "For create_calendar_entry, provide dateISO as YYYY-MM-DD, title, and kind; if the user mentions a matching deck, set deckName to its exact name. If required details are unclear, ask a concise question and return actions []. "
-        "Keep at most 20 flashcards per deck action and return at most 6 total actions. Existing flashcard decks:\n" + decks + "\nFolders for active language pair " + body.sourceLanguage + " → " + body.targetLanguage + ":\n" + folders + "\nUser request: " + body.message
-    )
+    prompt = build_agent_plan_prompt(language, body.mode, body.sourceLanguage, body.targetLanguage, decks, folders, body.message)
     result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], AGENT_PLAN_SCHEMA)
     plan = sanitize_agent_plan(result if isinstance(result, dict) else {})
     requested_count = requested_flashcard_count(body.message)
@@ -1057,7 +1015,7 @@ def summarize_cards(body: SummaryRequest, request: Request, account: Account = D
     material = "\n".join("Q: " + card.question + "\nA: " + card.answer for card in body.cards)
     if not material.strip():
         raise HTTPException(status_code=400, detail="This deck has no cards")
-    prompt = "Summarize these study cards concisely in " + language_name(body.language) + ", group related ideas, and do not invent facts.\n" + material
+    prompt = build_summary_prompt(language_name(body.language), material)
     return execute_ai(request, db, account, "summary", [{"text": prompt}], SUMMARY_SCHEMA)
 
 
