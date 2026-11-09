@@ -338,7 +338,7 @@ CARD_SCHEMA = {"type": "OBJECT", "properties": {"cards": {"type": "ARRAY", "item
 EVALUATION_SCHEMA = {"type": "OBJECT", "properties": {"rating": {"type": "STRING", "enum": ["easy", "good", "hard", "wrong"]}, "feedback": {"type": "STRING"}}, "required": ["rating", "feedback"]}
 REPLY_SCHEMA = {"type": "OBJECT", "properties": {"reply": {"type": "STRING"}}, "required": ["reply"]}
 SUMMARY_SCHEMA = {"type": "OBJECT", "properties": {"summary": {"type": "STRING"}}, "required": ["summary"]}
-VOCABULARY_DRAFT_SCHEMA = {"type": "OBJECT", "properties": {"term": {"type": "STRING"}, "translation": {"type": "STRING"}, "example": {"type": "STRING"}, "synonyms": {"type": "ARRAY", "items": {"type": "STRING"}}, "difficulty": {"type": "INTEGER"}}, "required": ["term", "translation"]}
+VOCABULARY_DRAFT_SCHEMA = {"type": "OBJECT", "properties": {"term": {"type": "STRING"}, "translation": {"type": "STRING"}, "pronunciation": {"type": "STRING"}, "example": {"type": "STRING"}, "synonyms": {"type": "ARRAY", "items": {"type": "STRING"}}, "difficulty": {"type": "INTEGER"}}, "required": ["term", "translation"]}
 AGENT_PLAN_SCHEMA = {
     "type": "OBJECT",
     "properties": {
