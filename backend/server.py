@@ -1,1030 +1,397 @@
 #!/usr/bin/env python3
-"""Word Express API and static web preview."""
-
-from __future__ import annotations
-
-import base64
-import binascii
-import hashlib
-import json
-import os
-import re
-import secrets
-import threading
-import time
-import urllib.error
-import urllib.parse
-import urllib.request
-from contextlib import asynccontextmanager
-from datetime import datetime, timedelta, timezone
-from pathlib import Path
-from typing import Any
-from uuid import UUID
-
-import jwt
-from argon2 import PasswordHasher
-from argon2.exceptions import InvalidHashError, VerifyMismatchError
-from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response, status
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles
-from jsonschema import Draft202012Validator
-from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator
-from sqlalchemy import BigInteger, DateTime, ForeignKey, Index, Integer, Numeric, String, Text, create_engine, func, select, text
-from sqlalchemy.dialects.postgresql import JSONB, UUID as PGUUID, insert
-from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column, sessionmaker
-
-from ai_prompts import (
-    agent_plan as build_agent_plan_prompt,
-    card_generation as build_card_generation_prompt,
-    evaluate_answer as build_evaluation_prompt,
-    existing_deck_cards as build_existing_deck_cards_prompt,
-    new_subdeck_cards as build_new_subdeck_cards_prompt,
-    new_tree_cards as build_new_tree_cards_prompt,
-    summarize_cards as build_summary_prompt,
-    tutor_conversation as build_tutor_prompt,
-)
-
-
-ROOT = Path(__file__).resolve().parent.parent
-FRONTEND = ROOT / "frontend"
-CONTENT_PATH = FRONTEND / "data" / "testlauf-03-ergebnisse.json"
-PROFILE_SCHEMA_PATH = ROOT / "data" / "user-profile.schema.json"
-IMAGE_MAX_BYTES = 6 * 1024 * 1024
-IMAGE_BASE64_MAX_CHARS = 4 * ((IMAGE_MAX_BYTES + 2) // 3)
-MAX_BODY_BYTES = 10 * 1024 * 1024
-MAX_PROFILE_BYTES = 1_000_000
-TOKEN_TTL = timedelta(days=30)
-GEMINI_API_KEY = (os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY") or "").strip()
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
-GEMINI_FALLBACK_MODEL = os.environ.get("GEMINI_FALLBACK_MODEL", "gemini-3.1-flash-lite").strip()
-AI_DAILY_REQUEST_LIMIT = int(os.environ.get("AI_DAILY_REQUEST_LIMIT", "40"))
-AI_TOTAL_REQUEST_LIMIT = int(os.environ.get("AI_TOTAL_REQUEST_LIMIT", "400"))
-AI_BUDGET_USD = float(os.environ.get("AI_BUDGET_USD", "5"))
-AI_RATE_LIMIT_PER_MINUTE = int(os.environ.get("AI_RATE_LIMIT_PER_MINUTE", "8"))
-AI_UNLIMITED_ACCOUNT_EMAIL = os.environ.get("AI_UNLIMITED_ACCOUNT_EMAIL", "").strip().casefold()
-AI_MAX_OUTPUT_TOKENS = int(os.environ.get("AI_MAX_OUTPUT_TOKENS", "2048"))
-AI_INPUT_USD_PER_MILLION = float(os.environ.get("AI_INPUT_USD_PER_MILLION", "0.50"))
-AI_OUTPUT_USD_PER_MILLION = float(os.environ.get("AI_OUTPUT_USD_PER_MILLION", "3.00"))
-PASSWORD_HASHER = PasswordHasher(time_cost=3, memory_cost=65536, parallelism=2)
-PASSWORD_HASH_SLOTS = threading.BoundedSemaphore(3)
-
-
-def utcnow() -> datetime:
-    return datetime.now(timezone.utc)
-
-
-def database_url() -> str:
-    value = os.environ.get("DATABASE_URL", "").strip()
-    if value.startswith("postgres://"):
-        value = "postgresql+psycopg://" + value[len("postgres://") :]
-    elif value.startswith("postgresql://"):
-        value = "postgresql+psycopg://" + value[len("postgresql://") :]
-    return value
-
-
-DATABASE_URL = database_url()
-JWT_SECRET = os.environ.get("JWT_SECRET", "")
-JWT_ISSUER = os.environ.get("JWT_ISSUER", "word-express")
-REGISTRATION_INVITE_CODE = os.environ.get("REGISTRATION_INVITE_CODE", "")
-CORS_ORIGINS = [item.strip() for item in os.environ.get("CORS_ORIGINS", "").split(",") if item.strip()]
-
-
-class RequestBodyLimitMiddleware:
-    def __init__(self, application, max_bytes: int):
-        self.application = application
-        self.max_bytes = max_bytes
-
-    async def __call__(self, scope, receive, send):
-        if scope["type"] != "http":
-            await self.application(scope, receive, send)
-            return
-        headers = {key.lower(): value for key, value in scope.get("headers", [])}
-
-        async def send_with_security_headers(message):
-            if message["type"] == "http.response.start":
-                response_headers = list(message.get("headers", []))
-                response_headers.extend([
-                    (b"x-content-type-options", b"nosniff"),
-                    (b"referrer-policy", b"strict-origin-when-cross-origin"),
-                    (b"x-frame-options", b"DENY"),
-                    (b"permissions-policy", b"camera=(), microphone=(), geolocation=()"),
-                    (b"content-security-policy", b"default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"),
-                ])
-                forwarded_proto = headers.get(b"x-forwarded-proto", b"").split(b",", 1)[0].strip()
-                if forwarded_proto == b"https" or scope.get("scheme") == "https":
-                    response_headers.append((b"strict-transport-security", b"max-age=31536000; includeSubDomains"))
-                message = {**message, "headers": response_headers}
-            await send(message)
-
-        raw_length = headers.get(b"content-length")
-        if raw_length:
-            try:
-                if int(raw_length) > self.max_bytes:
-                    await self._reject(send_with_security_headers, 413, "Request body is too large")
-                    return
-            except ValueError:
-                await self._reject(send_with_security_headers, 400, "Invalid content length")
-                return
-        chunks: list[bytes] = []
-        size = 0
-        more_body = True
-        while more_body:
-            message = await receive()
-            if message["type"] == "http.disconnect":
-                return
-            if message["type"] != "http.request":
-                continue
-            chunk = message.get("body", b"")
-            size += len(chunk)
-            if size > self.max_bytes:
-                await self._reject(send_with_security_headers, 413, "Request body is too large")
-                return
-            chunks.append(chunk)
-            more_body = message.get("more_body", False)
-        body = b"".join(chunks)
-        consumed = False
-
-        async def replay_body():
-            nonlocal consumed
-            if not consumed:
-                consumed = True
-                return {"type": "http.request", "body": body, "more_body": False}
-            return await receive()
-
-        await self.application(scope, replay_body, send_with_security_headers)
-
-    async def _reject(self, send, response_status: int, message: str):
-        body = json.dumps({"detail": message}).encode("utf-8")
-        await send({"type": "http.response.start", "status": response_status, "headers": [(b"content-type", b"application/json"), (b"content-length", str(len(body)).encode())]})
-        await send({"type": "http.response.body", "body": body})
-
-
-class Base(DeclarativeBase):
-    pass
-
-
-class Account(Base):
-    __tablename__ = "accounts"
-
-    id: Mapped[UUID] = mapped_column(PGUUID(as_uuid=True), primary_key=True)
-    email: Mapped[str] = mapped_column(String(320), unique=True)
-    password_hash: Mapped[str] = mapped_column(Text)
-    token_version: Mapped[int] = mapped_column(Integer, default=0)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
-
-
-class UserProfile(Base):
-    __tablename__ = "user_profiles"
-
-    account_id: Mapped[UUID] = mapped_column(PGUUID(as_uuid=True), ForeignKey("accounts.id", ondelete="CASCADE"), primary_key=True)
-    document: Mapped[dict[str, Any] | None] = mapped_column(JSONB, nullable=True)
-    revision: Mapped[int] = mapped_column(Integer, default=0)
-    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
-
-
-class RateLimitBucket(Base):
-    __tablename__ = "rate_limit_buckets"
-    __table_args__ = (Index("ix_rate_limit_window_start", "window_start"),)
-
-    bucket_key: Mapped[str] = mapped_column(String(128), primary_key=True)
-    window_start: Mapped[int] = mapped_column(BigInteger, primary_key=True)
-    hits: Mapped[int] = mapped_column(Integer, nullable=False)
-
-
-class AIUsage(Base):
-    __tablename__ = "ai_usage"
-    __table_args__ = (Index("ix_ai_usage_created_at", "created_at"), Index("ix_ai_usage_account_id", "account_id"))
-
-    id: Mapped[UUID] = mapped_column(PGUUID(as_uuid=True), primary_key=True)
-    account_id: Mapped[UUID] = mapped_column(PGUUID(as_uuid=True), ForeignKey("accounts.id", ondelete="CASCADE"), nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow)
-    reserved_cost: Mapped[float] = mapped_column(Numeric(12, 6), nullable=False)
-    actual_cost: Mapped[float | None] = mapped_column(Numeric(12, 6), nullable=True)
-    input_tokens: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
-    output_tokens: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
-    model: Mapped[str] = mapped_column(String(100), nullable=False)
-    state: Mapped[str] = mapped_column(String(16), nullable=False, default="reserved")
-
-
-engine = create_engine(DATABASE_URL, pool_pre_ping=True, pool_size=5, max_overflow=5) if DATABASE_URL else None
-SessionLocal = sessionmaker(bind=engine, expire_on_commit=False) if engine else None
-
-
-def get_db():
-    if SessionLocal is None:
-        raise HTTPException(status_code=503, detail="Database is not configured")
-    with SessionLocal() as db:
-        yield db
-
-
-@asynccontextmanager
-async def lifespan(_: FastAPI):
-    if os.environ.get("APP_ENV", "development") == "production":
-        if len(JWT_SECRET) < 32:
-            raise RuntimeError("JWT_SECRET must contain at least 32 characters")
-        if not DATABASE_URL:
-            raise RuntimeError("DATABASE_URL must be configured")
-        if len(REGISTRATION_INVITE_CODE) < 20:
-            raise RuntimeError("REGISTRATION_INVITE_CODE must contain at least 20 characters")
-    yield
-
-
-app = FastAPI(title="Word Express API", version="1.0.0", docs_url=None, redoc_url=None, lifespan=lifespan)
-app.add_middleware(RequestBodyLimitMiddleware, max_bytes=MAX_BODY_BYTES)
-
-if CORS_ORIGINS:
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=CORS_ORIGINS,
-        allow_credentials=False,
-        allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        allow_headers=["Authorization", "Content-Type", "If-Match"],
-        max_age=600,
-    )
-
-
-class Credentials(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    email: EmailStr
-    password: str = Field(min_length=12, max_length=256)
-    invite_code: str | None = Field(default=None, max_length=256)
-
-    @field_validator("password")
-    @classmethod
-    def reject_control_characters(cls, value: str) -> str:
-        if any(ord(character) < 32 for character in value):
-            raise ValueError("Password contains an unsupported character")
-        return value
-
-
-class LoginCredentials(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    email: EmailStr
-    password: str = Field(min_length=1, max_length=256)
-
-
-class ProfileWrite(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    profile: dict[str, Any]
-
-
-class DeleteAccountRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    password: str = Field(min_length=1, max_length=256)
-
-
-class GenerateCardsRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    text: str | None = Field(default=None, max_length=18_000)
-    imageBase64: str | None = Field(default=None, max_length=IMAGE_BASE64_MAX_CHARS)
-    mimeType: str = Field(default="image/jpeg", max_length=64)
-    language: str = Field(default="German", max_length=60)
-    style: str = Field(default="automatic", max_length=60)
-    instructions: str = Field(default="", max_length=1_000)
-
-
-class EvaluateRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    question: str = Field(max_length=1_500)
-    expected: str = Field(max_length=3_000)
-    answer: str = Field(max_length=3_000)
-    language: str = Field(default="German", max_length=60)
-    mode: str = Field(default="automatic", max_length=40)
-
-
-class TutorHistoryItem(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    role: str = Field(max_length=24)
-    text: str = Field(max_length=1_000)
-
-
-class TutorRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    question: str = Field(default="", max_length=1_500)
-    answer: str = Field(default="", max_length=9_000)
-    message: str = Field(min_length=1, max_length=1_500)
-    history: list[TutorHistoryItem] = Field(default_factory=list, max_length=10)
-    language: str = Field(default="German", max_length=60)
-    mode: str = Field(default="chat", max_length=24)
-    sourceLanguage: str = Field(default="German", max_length=80)
-    targetLanguage: str = Field(default="English", max_length=80)
-
-
-class AgentPlanRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    message: str = Field(min_length=1, max_length=1_500)
-    decks: list[str] = Field(default_factory=list, max_length=100)
-    language: str = Field(default="German", max_length=60)
-    mode: str = Field(default="automatic", max_length=40)
-    sourceLanguage: str = Field(default="German", max_length=80)
-    targetLanguage: str = Field(default="English", max_length=80)
-    vocabularyFolders: list[str] = Field(default_factory=list, max_length=100)
-
-
-class SummaryCard(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    question: str = Field(max_length=300)
-    answer: str = Field(max_length=500)
-
-
-class SummaryRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-    cards: list[SummaryCard] = Field(min_length=1, max_length=100)
-    language: str = Field(default="German", max_length=60)
-
-
-CARD_SCHEMA = {"type": "OBJECT", "properties": {"cards": {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {"question": {"type": "STRING"}, "answer": {"type": "STRING"}}, "required": ["question", "answer"]}}}, "required": ["cards"]}
-EVALUATION_SCHEMA = {"type": "OBJECT", "properties": {"rating": {"type": "STRING", "enum": ["easy", "good", "hard", "wrong"]}, "feedback": {"type": "STRING"}}, "required": ["rating", "feedback"]}
-REPLY_SCHEMA = {"type": "OBJECT", "properties": {"reply": {"type": "STRING"}}, "required": ["reply"]}
-SUMMARY_SCHEMA = {"type": "OBJECT", "properties": {"summary": {"type": "STRING"}}, "required": ["summary"]}
-VOCABULARY_DRAFT_SCHEMA = {"type": "OBJECT", "properties": {"term": {"type": "STRING"}, "translation": {"type": "STRING"}, "pronunciation": {"type": "STRING"}, "example": {"type": "STRING"}, "synonyms": {"type": "ARRAY", "items": {"type": "STRING"}}, "difficulty": {"type": "INTEGER"}}, "required": ["term", "translation"]}
-AGENT_PLAN_SCHEMA = {
-    "type": "OBJECT",
-    "properties": {
-        "reply": {"type": "STRING"},
-        "actions": {
-            "type": "ARRAY",
-            "items": {
-                "type": "OBJECT",
-                "properties": {
-                    "type": {"type": "STRING", "enum": ["create_deck", "create_deck_tree", "create_subdeck", "create_cards", "create_calendar_entry", "create_vocabulary_folder", "add_vocabulary"]},
-                    "parentDeck": {"type": "STRING"},
-                    "createParentDeck": {"type": "BOOLEAN"},
-                    "deckName": {"type": "STRING"},
-                    "subdeckName": {"type": "STRING"},
-                    "folderName": {"type": "STRING"},
-                    "title": {"type": "STRING"},
-                    "dateISO": {"type": "STRING"},
-                    "kind": {"type": "STRING", "enum": ["exam", "test", "assignment", "other"]},
-                    "note": {"type": "STRING"},
-                    "cards": {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {"question": {"type": "STRING"}, "answer": {"type": "STRING"}}, "required": ["question", "answer"]}},
-                    "vocabularyEntries": {"type": "ARRAY", "items": VOCABULARY_DRAFT_SCHEMA},
-                },
-                "required": ["type"],
-            },
-        },
-    },
-    "required": ["reply", "actions"],
-}
-
-
-def profile_validator() -> Draft202012Validator:
-    with PROFILE_SCHEMA_PATH.open(encoding="utf-8") as stream:
-        schema = json.load(stream)
-    Draft202012Validator.check_schema(schema)
-    return Draft202012Validator(schema, format_checker=Draft202012Validator.FORMAT_CHECKER)
-
-
-PROFILE_VALIDATOR = profile_validator()
-
-
-def fail_rate_limit(
-    db: Session,
-    request: Request,
-    bucket: str,
-    limit: int,
-    window_seconds: int,
-    subject: str = "",
-    by_ip: bool = True,
-) -> None:
-    forwarded = request.headers.get("x-forwarded-for", "").split(",", 1)[0].strip()
-    peer = request.client.host if request.client else "unknown"
-    ip = forwarded or peer
-    identity = hashlib.sha256(f"{bucket}:{ip if by_ip else ''}:{subject.casefold()}".encode()).hexdigest()
-    timestamp = int(time.time())
-    current_window = timestamp - timestamp % window_seconds
-    statement = (
-        insert(RateLimitBucket)
-        .values(bucket_key=identity, window_start=current_window, hits=1)
-        .on_conflict_do_update(
-            index_elements=[RateLimitBucket.bucket_key, RateLimitBucket.window_start],
-            set_={"hits": RateLimitBucket.hits + 1},
-        )
-        .returning(RateLimitBucket.hits)
-    )
-    hits = db.execute(statement).scalar_one()
-    db.execute(
-        text("DELETE FROM rate_limit_buckets WHERE window_start < :oldest"),
-        {"oldest": timestamp - 86_400},
-    )
-    db.commit()
-    if hits > limit:
-        retry = window_seconds - (int(time.time()) % window_seconds)
-        raise HTTPException(status_code=429, detail="Too many requests", headers={"Retry-After": str(retry)})
-
-
-def issue_token(account: Account) -> str:
-    now = utcnow()
-    return jwt.encode(
-        {
-            "sub": str(account.id),
-            "ver": account.token_version,
-            "iat": now,
-            "exp": now + TOKEN_TTL,
-            "iss": JWT_ISSUER,
-            "aud": "word-express-app",
-        },
-        JWT_SECRET,
-        algorithm="HS256",
-    )
-
-
-def current_account(
-    authorization: str | None = Header(default=None), db: Session = Depends(get_db)
-) -> Account:
-    if not authorization or not authorization.startswith("Bearer "):
-        raise HTTPException(status_code=401, detail="Authentication required", headers={"WWW-Authenticate": "Bearer"})
-    token = authorization[7:].strip()
-    try:
-        claims = jwt.decode(token, JWT_SECRET, algorithms=["HS256"], issuer=JWT_ISSUER, audience="word-express-app")
-        account_id = UUID(claims["sub"])
-    except (jwt.PyJWTError, KeyError, ValueError):
-        raise HTTPException(status_code=401, detail="Invalid or expired session", headers={"WWW-Authenticate": "Bearer"})
-    account = db.get(Account, account_id)
-    if account is None or claims.get("ver") != account.token_version:
-        raise HTTPException(status_code=401, detail="Invalid or expired session", headers={"WWW-Authenticate": "Bearer"})
-    return account
-
-
-def verify_password(password: str, encoded: str) -> bool:
-    with PASSWORD_HASH_SLOTS:
+"""Private-pilot Gemini API with invite-only authentication and hard usage limits."""
+import base64, hashlib, hmac, json, os, re, secrets, sqlite3, threading, time
+import unicodedata
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
+from ai_prompts.planning import build_agent_plan_prompt
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+def load_dotenv():
+    path = os.path.join(ROOT, '.env')
+    if os.path.exists(path):
+        for line in open(path, encoding='utf-8'):
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                key, value = line.split('=', 1); os.environ.setdefault(key.strip(), value.strip().strip('"\''))
+load_dotenv()
+os.umask(0o077)
+APP_ENV = os.environ.get('APP_ENV', 'development').strip().lower()
+LOCAL_AUTH_DISABLED = APP_ENV == 'development' and os.environ.get('LOCAL_AUTH_DISABLED', '1') == '1'
+DATA_DIR = os.environ.get('DATA_DIR', os.path.join(ROOT, 'data'))
+os.makedirs(DATA_DIR, exist_ok=True)
+DB_PATH = os.environ.get('DATABASE_PATH', os.path.join(DATA_DIR, 'pilot.sqlite3'))
+MAX_BODY = 8 * 1024 * 1024
+MODEL = os.environ.get('GEMINI_MODEL', 'gemini-3.5-flash-lite')
+FALLBACK_MODEL = os.environ.get('GEMINI_FALLBACK_MODEL', 'gemini-3.1-flash-lite')
+PILOT_DAILY_LIMIT = int(os.environ.get('PILOT_DAILY_REQUEST_LIMIT', '40'))
+PILOT_TOTAL_LIMIT = int(os.environ.get('PILOT_TOTAL_REQUEST_LIMIT', '400'))
+PILOT_BUDGET_USD = float(os.environ.get('PILOT_BUDGET_USD', '5'))
+RATE_PER_MINUTE = int(os.environ.get('RATE_LIMIT_PER_MINUTE', '8'))
+TOKEN_TTL = int(os.environ.get('SESSION_TTL_SECONDS', str(14 * 86400)))
+DB_LOCK = threading.Lock()
+
+def db():
+    conn = sqlite3.connect(DB_PATH, timeout=10)
+    try: os.chmod(DB_PATH, 0o600)
+    except OSError: pass
+    conn.execute('PRAGMA journal_mode=WAL')
+    conn.execute('''CREATE TABLE IF NOT EXISTS sessions(token_hash TEXT PRIMARY KEY, expires INTEGER NOT NULL)''')
+    conn.execute('''CREATE TABLE IF NOT EXISTS attempts(ip TEXT, stamp INTEGER)''')
+    conn.execute('''CREATE TABLE IF NOT EXISTS traffic(ip TEXT, stamp INTEGER)''')
+    conn.execute('''CREATE TABLE IF NOT EXISTS usage(id INTEGER PRIMARY KEY, stamp INTEGER, input_tokens INTEGER, output_tokens INTEGER, cost REAL)''')
+    conn.execute('''CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY, value TEXT NOT NULL)''')
+    return conn
+
+def password_ok(candidate):
+    # Store scrypt hash as salt_hex:hash_hex. Plaintext env is supported for simple one-user setup.
+    configured = os.environ.get('PILOT_PASSWORD_HASH', '')
+    if configured:
         try:
-            return PASSWORD_HASHER.verify(encoded, password)
-        except (VerifyMismatchError, InvalidHashError):
+            salt_hex, expected = configured.split(':', 1)
+            derived = hashlib.scrypt(candidate.encode(), salt=bytes.fromhex(salt_hex), n=2**14, r=8, p=1).hex()
+            return hmac.compare_digest(derived.encode('ascii'), expected.encode('ascii'))
+        except Exception:
             return False
+    return bool(os.environ.get('PILOT_PASSWORD')) and hmac.compare_digest(candidate.encode('utf-8'), os.environ['PILOT_PASSWORD'].encode('utf-8'))
 
+def error(status, message):
+    exc = RuntimeError(message); exc.status = status; return exc
 
-def hash_password(password: str) -> str:
-    with PASSWORD_HASH_SLOTS:
-        return PASSWORD_HASHER.hash(password)
+def estimate_cost(model, inp, out):
+    # USD per million tokens; conservative published standard-tier rates for the configured models.
+    rates = {'gemini-3.5-flash-lite': (.30, 2.50), 'gemini-3.1-flash-lite': (.25, 1.50)}
+    ir, orate = rates.get(model, (.50, 3.00))
+    return inp * ir / 1_000_000 + out * orate / 1_000_000
 
+def reserve_usage():
+    with DB_LOCK, db() as conn:
+        now = int(time.time()); day = now - 86400
+        count_day = conn.execute('SELECT count(*) FROM usage WHERE stamp>=?', (day,)).fetchone()[0]
+        count_minute = conn.execute('SELECT count(*) FROM usage WHERE stamp>=?', (now-60,)).fetchone()[0]
+        count_total = conn.execute('SELECT count(*) FROM usage').fetchone()[0]
+        spent = conn.execute('SELECT coalesce(sum(cost),0) FROM usage').fetchone()[0]
+        # Reserve a deliberately high 100k input / 2k output token ceiling per call.
+        reserve = max(estimate_cost(MODEL, 100000, 2048), estimate_cost(FALLBACK_MODEL, 100000, 2048))
+        configured_end = int(os.environ.get('PILOT_END_UNIX', '0') or 0)
+        if configured_end:
+            pilot_end = configured_end
+        else:
+            row = conn.execute('SELECT value FROM settings WHERE key=?', ('pilot_start',)).fetchone()
+            if row is None:
+                conn.execute('INSERT INTO settings VALUES(?,?)', ('pilot_start', str(now)))
+                pilot_end = now + 14 * 86400
+            else:
+                pilot_end = int(row[0]) + 14 * 86400
+        if now > pilot_end: raise error(403, 'Der 14-Tage-Privatpilot ist abgelaufen.')
+        if count_minute >= RATE_PER_MINUTE: raise error(429, 'Zu viele KI-Anfragen. Bitte kurz warten.')
+        if count_day >= PILOT_DAILY_LIMIT or count_total >= PILOT_TOTAL_LIMIT: raise error(429, 'Das KI-Kontingent des Privatpiloten ist ausgeschöpft.')
+        if spent + reserve > PILOT_BUDGET_USD: raise error(429, 'Das Kostenlimit des Privatpiloten ist erreicht.')
+        cur = conn.execute('INSERT INTO usage(stamp,input_tokens,output_tokens,cost) VALUES(?,0,0,?)', (now, reserve))
+        return cur.lastrowid
 
-DUMMY_PASSWORD_HASH = hash_password(secrets.token_urlsafe(32))
+def settle_usage(rowid, model, result):
+    usage = result.get('usageMetadata', {})
+    inp = int(usage.get('promptTokenCount', 0)); out = int(usage.get('candidatesTokenCount', 0))
+    with DB_LOCK, db() as conn:
+        # Keep the worst-case reservation if the upstream omits token metadata.
+        if inp or out:
+            conn.execute('UPDATE usage SET input_tokens=?,output_tokens=?,cost=? WHERE id=?', (inp, out, estimate_cost(model, inp, out), rowid))
 
-
-def validate_profile_document(document: dict[str, Any], account_id: UUID) -> dict[str, Any]:
-    if len(json.dumps(document, ensure_ascii=False).encode("utf-8")) > MAX_PROFILE_BYTES:
-        raise HTTPException(status_code=413, detail="Profile is too large")
-    errors = list(PROFILE_VALIDATOR.iter_errors(document))
-    if errors:
-        error = errors[0]
-        location = ".".join(str(part) for part in error.absolute_path) or "profile"
-        raise HTTPException(status_code=422, detail=f"Invalid profile at {location}: {error.message[:180]}")
-    now = utcnow().replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    clean = dict(document)
-    clean["profile_id"] = str(account_id)
-    clean["updated_at"] = now
-    return clean
-
-
-def estimate_ai_cost(model: str, input_tokens: int, output_tokens: int) -> float:
-    # Conservative default rates. Set these to current rates for the selected AI Studio tier.
-    input_rate = AI_INPUT_USD_PER_MILLION
-    output_rate = AI_OUTPUT_USD_PER_MILLION
-    if model == GEMINI_MODEL and "flash-lite" in model:
-        input_rate = float(os.environ.get("AI_PRIMARY_INPUT_USD_PER_MILLION", str(input_rate)))
-        output_rate = float(os.environ.get("AI_PRIMARY_OUTPUT_USD_PER_MILLION", str(output_rate)))
-    elif model == GEMINI_FALLBACK_MODEL and "flash-lite" in model:
-        input_rate = float(os.environ.get("AI_FALLBACK_INPUT_USD_PER_MILLION", str(input_rate)))
-        output_rate = float(os.environ.get("AI_FALLBACK_OUTPUT_USD_PER_MILLION", str(output_rate)))
-    return input_tokens * input_rate / 1_000_000 + output_tokens * output_rate / 1_000_000
-
-
-def reserve_ai_usage(db: Session, account: Account, enforce_limits: bool = True) -> AIUsage:
-    # Serialize reservation checks so concurrent requests cannot overshoot the pilot budget.
-    db.execute(text("SELECT pg_advisory_xact_lock(74190321)"))
-    now = utcnow()
-    day_start = now - timedelta(hours=24)
-    rows = db.execute(
-        select(
-            func.count(AIUsage.id),
-            func.count(AIUsage.id).filter(AIUsage.created_at >= day_start),
-            func.coalesce(func.sum(func.coalesce(AIUsage.actual_cost, AIUsage.reserved_cost)), 0),
-        ).where(AIUsage.account_id == account.id)
-    ).one()
-    total_count, daily_count, spent = int(rows[0]), int(rows[1]), float(rows[2])
-    reservation = max(
-        estimate_ai_cost(GEMINI_MODEL, 100_000, AI_MAX_OUTPUT_TOKENS),
-        estimate_ai_cost(GEMINI_FALLBACK_MODEL or GEMINI_MODEL, 100_000, AI_MAX_OUTPUT_TOKENS),
-    )
-    if enforce_limits:
-        if daily_count >= AI_DAILY_REQUEST_LIMIT:
-            raise HTTPException(status_code=429, detail="Daily AI request limit reached")
-        if total_count >= AI_TOTAL_REQUEST_LIMIT:
-            raise HTTPException(status_code=429, detail="Private pilot AI request limit reached")
-        if spent + reservation > AI_BUDGET_USD:
-            raise HTTPException(status_code=429, detail="Private pilot AI budget reached")
-    usage = AIUsage(
-        id=UUID(bytes=secrets.token_bytes(16), version=4), account_id=account.id,
-        created_at=now, reserved_cost=reservation, actual_cost=None,
-        input_tokens=0, output_tokens=0, model=GEMINI_MODEL, state="reserved",
-    )
-    db.add(usage)
-    db.commit()
-    return usage
-
-
-def settle_ai_usage(db: Session, usage_id: UUID, model: str, result: dict[str, Any]) -> None:
-    metadata = result.get("usageMetadata") or {}
-    input_tokens = max(0, int(metadata.get("promptTokenCount", 0) or 0))
-    output_tokens = max(0, int(metadata.get("candidatesTokenCount", 0) or 0))
-    usage = db.get(AIUsage, usage_id)
-    if usage is None:
-        return
-    usage.model = model[:100]
-    usage.input_tokens = input_tokens
-    usage.output_tokens = output_tokens
-    usage.state = "complete"
-    # Keep the reservation when upstream usage metadata is absent.
-    if input_tokens or output_tokens:
-        usage.actual_cost = estimate_ai_cost(model, input_tokens, output_tokens)
-    db.commit()
-
-
-def gemini_generate(parts: list[dict[str, Any]], schema: dict[str, Any]) -> tuple[dict[str, Any], str]:
-    if not GEMINI_API_KEY:
-        raise HTTPException(status_code=503, detail="Set GEMINI_API_KEY (or GOOGLE_API_KEY) in the Railway service variables")
-    models = [GEMINI_MODEL]
-    if GEMINI_FALLBACK_MODEL and GEMINI_FALLBACK_MODEL != GEMINI_MODEL:
-        models.append(GEMINI_FALLBACK_MODEL)
-    payload = {
-        "contents": [{"role": "user", "parts": parts}],
-        "generationConfig": {"responseMimeType": "application/json", "responseSchema": schema, "maxOutputTokens": AI_MAX_OUTPUT_TOKENS},
-    }
-    retryable = {429, 500, 502, 503, 504}
-    for model in models:
-        url = "https://generativelanguage.googleapis.com/v1beta/models/" + urllib.parse.quote(model, safe="") + ":generateContent"
-        request = urllib.request.Request(
-            url, data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
-            headers={"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}, method="POST",
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=45) as response:
-                decoded = json.loads(response.read())
-            candidates = decoded.get("candidates") or []
-            output = "".join(part.get("text", "") for part in candidates[0].get("content", {}).get("parts", []) if isinstance(part, dict)) if candidates else ""
-            if not output:
-                raise HTTPException(status_code=502, detail="AI returned no usable response")
+def request_gemini(parts, schema):
+    key = os.environ.get('GEMINI_API_KEY')
+    if not key: raise error(503, 'Das KI-Backend ist noch nicht konfiguriert.')
+    import urllib.parse
+    payload = {'contents':[{'role':'user','parts':parts}], 'generationConfig':{'responseMimeType':'application/json','responseSchema':schema,'maxOutputTokens':2048}}
+    def one_model(model, attempts=2):
+        url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?' + urllib.parse.urlencode({'key':key})
+        request = Request(url, data=json.dumps(payload).encode(), headers={'Content-Type':'application/json'}, method='POST')
+        for attempt in range(attempts):
             try:
-                return json.loads(output), model
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=502, detail="AI returned an invalid structured response")
-        except urllib.error.HTTPError as exc:
-            if exc.code in retryable and model != models[-1]:
-                continue
-            print("Gemini request failed with upstream status %s." % exc.code, flush=True)
-            if exc.code in retryable:
-                raise HTTPException(status_code=503, detail="AI service is temporarily unavailable")
-            raise HTTPException(status_code=502, detail="AI service rejected the request")
-        except urllib.error.URLError:
-            if model != models[-1]:
-                continue
-            raise HTTPException(status_code=502, detail="AI service could not be reached")
-    raise HTTPException(status_code=503, detail="AI service is temporarily unavailable")
+                with urlopen(request, timeout=25) as response: return json.loads(response.read()), model
+            except HTTPError as exc:
+                detail = exc.read().decode(errors='replace')
+                if exc.code == 503 and attempt + 1 < attempts: time.sleep(.8); continue
+                if exc.code in (429, 500, 502, 503, 504): raise error(503 if exc.code == 503 else exc.code, 'Der KI-Dienst ist vorübergehend nicht verfügbar. Bitte später erneut versuchen.')
+                raise error(502, 'Der KI-Dienst hat die Anfrage abgelehnt.')
+            except URLError:
+                if attempt + 1 < attempts: time.sleep(.8); continue
+                raise error(502, 'Der KI-Dienst ist nicht erreichbar.')
+    try: result, model = one_model(MODEL)
+    except RuntimeError as exc:
+        if getattr(exc, 'status', None) != 503 or not FALLBACK_MODEL or FALLBACK_MODEL == MODEL: raise
+        result, model = one_model(FALLBACK_MODEL, attempts=1)
+    return result, model
 
+def detect_deck_tree_request(message):
+    """Extract a combined new-deck/subdeck/card request for deterministic sequencing."""
+    if not re.search(r'\bdeck\b.*\bunterdeck\b', message, re.IGNORECASE | re.DOTALL): return None
+    def name_after(pattern):
+        match=re.search(pattern+r'\s+mit\s+dem\s+namen\s*["“„]?([^"”„\n.]+)',message,re.IGNORECASE)
+        if not match: return None
+        return match.group(1).strip().strip('"\'“”„ ').strip()
+    main=name_after(r'\bdeck')
+    child=name_after(r'\bunterdeck')
+    if not main or not child: return None
+    count_match=re.search(r'\b(\d{1,2})\s+(?:lern)?karten\b',message,re.IGNORECASE)
+    count=min(max(int(count_match.group(1)),1),20) if count_match else 10
+    return {'deckName':main,'subdeckName':child,'cardCount':count}
 
-def execute_ai(request: Request, db: Session, account: Account, route: str, parts: list[dict[str, Any]], schema: dict[str, Any]) -> dict[str, Any]:
-    if not GEMINI_API_KEY:
-        raise HTTPException(status_code=503, detail="Set GEMINI_API_KEY (or GOOGLE_API_KEY) in the Railway service variables")
-    unlimited_operator = bool(AI_UNLIMITED_ACCOUNT_EMAIL) and account.email.strip().casefold() == AI_UNLIMITED_ACCOUNT_EMAIL
-    if not unlimited_operator:
-        fail_rate_limit(db, request, "ai", limit=AI_RATE_LIMIT_PER_MINUTE, window_seconds=60, subject=str(account.id), by_ip=False)
-    usage = reserve_ai_usage(db, account, enforce_limits=not unlimited_operator)
-    result, model = gemini_generate(parts, schema)
-    settle_ai_usage(db, usage.id, model, result)
-    return result
+def detect_existing_deck_cards_request(message, decks):
+    """Route explicit requests for cards in an existing deck to card generation."""
+    match=re.search(r'\b(?:im|in\s+dem|in|für\s+(?:das|den))\s+(?:unterdeck|deck)\s+["“„]?([^"”„,\n.!?;:]+?)["”„]?\s*(?:,\s*|\s+)(?=(?:lern)?karten\b)',message,re.IGNORECASE)
+    if not match: return None
+    requested=match.group(1).strip().strip('"\'“”„ ')
+    def key(value):
+        folded=unicodedata.normalize('NFKD',value).encode('ascii','ignore').decode().casefold()
+        return re.sub(r'[^a-z0-9]','',folded)
+    matches=[str(name).strip() for name in decks if key(str(name).strip())==key(requested)]
+    if len(matches)!=1: return None
+    count_match=re.search(r'\b(\d{1,2})\s+(?:lern)?karten\b',message,re.IGNORECASE)
+    count=min(max(int(count_match.group(1)),1),20) if count_match else 5
+    return {'deckName':matches[0],'cardCount':count}
 
-
-def language_name(value: str) -> str:
-    names = {"de": "German", "deutsch": "German", "german": "German", "en": "English", "englisch": "English", "english": "English", "fr": "French", "französisch": "French", "es": "Spanish", "spanisch": "Spanish", "it": "Italian", "italienisch": "Italian", "pt": "Portuguese", "ja": "Japanese", "zh": "Chinese", "nl": "Dutch"}
-    return names.get(value.casefold(), value or "German")
-
-
-def requests_translation_help(message: str, source_language: str) -> bool:
-    normalized = message.casefold().strip()
-    explicit_requests = (
-        "translate", "translation", "übersetz", "uebersetz", "auf deutsch", "in german",
-        "what does", "what do you mean", "was heißt", "was bedeutet", "verstehe nicht",
-        "versteh ich nicht", "i don't understand", "i dont understand", "don't understand",
-    )
-    if any(phrase in normalized for phrase in explicit_requests):
-        return True
-    source_aliases = {
-        "german": ("german", "deutsch"), "english": ("english", "englisch"),
-        "french": ("french", "französisch", "franzosisch"), "spanish": ("spanish", "español", "spanisch"),
-        "italian": ("italian", "italiano", "italienisch"),
-    }
-    aliases = source_aliases.get(source_language.casefold(), (source_language.casefold(),))
-    return any(f"in {name}" in normalized or f"auf {name}" in normalized for name in aliases)
-
-
-def detect_deck_tree_request(message: str) -> dict[str, Any] | None:
-    if not re.search(r"\bdeck\b.*\bunterdeck\b", message, re.IGNORECASE | re.DOTALL):
-        return None
-    def name_after(pattern: str) -> str | None:
-        match = re.search(pattern + r'\s+mit\s+dem\s+namen\s*["“„]?([^"”„\n.]+)', message, re.IGNORECASE)
-        return match.group(1).strip().strip('"\'“”„ ').strip() if match else None
-    main, child = name_after(r"\bdeck"), name_after(r"\bunterdeck")
-    if not main or not child:
-        return None
-    count = requested_flashcard_count(message) or 10
-    return {"deckName": main, "subdeckName": child, "cardCount": count}
-
-
-def requested_flashcard_count(message: str) -> int | None:
-    number_words = {
-        "ein": 1, "eine": 1, "einen": 1, "eins": 1, "zwei": 2, "drei": 3, "vier": 4,
-        "fünf": 5, "funf": 5, "sechs": 6, "sieben": 7, "acht": 8, "neun": 9, "zehn": 10,
-        "elf": 11, "zwölf": 12, "zwolf": 12, "dreizehn": 13, "vierzehn": 14, "fünfzehn": 15,
-        "funfzehn": 15, "sechzehn": 16, "siebzehn": 17, "achtzehn": 18, "neunzehn": 19, "zwanzig": 20,
-    }
-    match = re.search(
-        r"\b(\d{1,2}|ein(?:e|en|s)?|zwei|drei|vier|fünf|funf|sechs|sieben|acht|neun|zehn|elf|zwölf|zwolf|dreizehn|vierzehn|fünfzehn|funfzehn|sechzehn|siebzehn|achtzehn|neunzehn|zwanzig)\s+(?:(?:neue?|weitere|zusätzliche|zusaetzliche)\s+)?(?:lern)?karten\b",
-        message,
-        re.IGNORECASE,
-    )
-    if not match:
-        return None
-    token = match.group(1).casefold()
-    amount = int(token) if token.isdigit() else number_words[token]
-    return min(max(amount, 1), 20)
-
-
-def enforce_requested_card_count(plan: dict[str, Any], count: int) -> dict[str, Any]:
-    remaining = count
-    card_action_types = {"create_deck_tree", "create_subdeck", "create_cards"}
-    for action in plan.get("actions", []):
-        if action.get("type") not in card_action_types:
-            continue
-        cards = action.get("cards") or []
-        if not isinstance(cards, list):
-            cards = []
-        action["cards"] = cards[:remaining]
-        remaining -= len(action["cards"])
-    if remaining > 0:
-        raise HTTPException(status_code=502, detail="AI did not create the requested number of cards; please try again")
-    plan["actions"] = [
-        action for action in plan.get("actions", [])
-        if action.get("type") not in {"create_cards"} or action.get("cards")
-    ]
-    return plan
-
-
-def detect_new_subdeck_request(message: str, decks: list[str]) -> dict[str, Any] | None:
-    """Recognize creation of a named subdeck and cards inside an existing parent deck."""
-    if not re.search(r"\b(?:erstelle|erstell|lege\s+an|create|add)\b", message, re.IGNORECASE):
-        return None
-    parent_match = re.search(
-        r"\b(?:im|in\s+dem|in)\s+deck\s+[\"“„]?(.+?)[\"”„]?\s+mit\s+dem\s+namen\b",
-        message,
-        re.IGNORECASE,
-    )
-    child_match = re.search(
-        r"\bmit\s+dem\s+namen\s+[\"“„]?(.+?)[\"”„]?"
-        r"(?=\s+und\s+(?:passend|dazu|erstelle|erstell|generiere)|[,;.!?]|$)",
-        message,
-        re.IGNORECASE,
-    )
-    if not parent_match or not child_match or not re.search(r"\b(?:unterdeck|subdeck)\b", message, re.IGNORECASE):
-        return None
-    parent = parent_match.group(1).strip().strip(" '\"“”„")
-    child = child_match.group(1).strip().strip(" '\"“”„")
-    matching_parents = [str(deck).strip() for deck in decks if str(deck).strip().casefold() == parent.casefold()]
-    if len(matching_parents) != 1 or not child:
-        return None
-    count = requested_flashcard_count(message) or 10
-    return {"parentDeck": matching_parents[0], "deckName": child, "cardCount": count}
-
-
-def detect_existing_deck_cards_request(message: str, decks: list[str]) -> dict[str, Any] | None:
-    """Recognize explicit card creation requests aimed at a deck the app already has."""
-    if not re.search(r"\b(?:erstelle|erstell|mache|mach|füge|fuege|generiere|create|add|make|generate)\b", message, re.IGNORECASE):
-        return None
-    if re.search(r"\b(?:erstelle|erstell|create)\s+(?:mir\s+)?(?:ein(?:en)?\s+)?(?:neues?\s+)?unterdeck\b", message, re.IGNORECASE):
-        return None
-    if not re.search(r"\b(?:karten|lern?karten|flashcards|cards)\b", message, re.IGNORECASE):
-        return None
-
-    explicit_subdeck = re.search(
-        r"\b(?:in\s+dem|im|in)\s+unterdeck\s+[\"“„]?([^()\[\],;:!?]+?)[\"”„]?"
-        r"(?=\s*(?:\(|,?\s+(?:karten|lern?karten|cards)\b|[:;,.!?]|$))",
-        message,
-        re.IGNORECASE,
-    )
-    explicit_parent = re.search(r"\(\s*(?:im|in\s+dem)\s+deck\s+[\"“„]?([^()\n]+?)[\"”„]?\s*\)", message, re.IGNORECASE)
-    if explicit_subdeck and explicit_parent:
-        target = explicit_subdeck.group(1).strip().strip(" '\"“”„")
-        parent = explicit_parent.group(1).strip().strip(" '\"“”„")
-        matching_parents = [str(name).strip() for name in decks if str(name).strip().casefold() == parent.casefold()]
-        if target and len(matching_parents) == 1:
-            count = requested_flashcard_count(message) or 10
-            return {"deckName": target, "parentDeck": matching_parents[0], "cardCount": count}
-
-    matches: list[tuple[int, int, str, bool]] = []
-    for raw_name in decks:
-        name = str(raw_name).strip()
-        if not name:
-            continue
-        for match in re.finditer(r"(?<!\w)" + re.escape(name) + r"(?!\w)", message, re.IGNORECASE):
-            prefix = re.split(r"[,;:.!?()\n]", message[:match.start()])[-1]
-            is_subdeck_reference = bool(
-                re.search(r"\b(?:unterdeck|subdeck)\s*$", prefix, re.IGNORECASE)
-                or re.search(r"\b(?:in|im|für|fuer|for)\s+(?:dem\s+|den\s+)?$", prefix, re.IGNORECASE)
-            )
-            matches.append((match.start(), len(name), name, is_subdeck_reference))
-
-    if not matches:
-        return None
-    # Prefer an exact deck name explicitly introduced as an Unterdeck; otherwise use the
-    # last named existing deck in the request (e.g. "Satzglieder im Deck Deutsch").
-    subdeck_matches = [item for item in matches if item[3]]
-    candidates = subdeck_matches or matches
-    target_match = max(candidates, key=lambda item: (item[0], item[1]))
-    target = target_match[2]
-    parent_matches = [item for item in matches if item[2].casefold() != target.casefold() and re.search(r"\bdeck\s*$", re.split(r"[,;:.!?()\n]", message[:item[0]])[-1], re.IGNORECASE)]
-    parent = max(parent_matches, key=lambda item: item[0])[2] if parent_matches else None
-    if sum(1 for name in decks if str(name).strip().casefold() == target.casefold()) > 1 and not parent:
-        return None
-
-    count = requested_flashcard_count(message) or 10
-    return {"deckName": target, "parentDeck": parent, "cardCount": count}
-
-
-def sanitize_agent_plan(plan: dict[str, Any]) -> dict[str, Any]:
-    actions = plan.get("actions", [])
-    if not isinstance(actions, list):
-        actions = []
-    kept: list[dict[str, Any]] = []
-    seen: set[tuple[str, ...]] = set()
+def sanitize_agent_plan(plan):
+    """Drop malformed/duplicate operations and cap action fan-out before showing approval UI."""
+    actions=plan.get('actions',[])
+    if not isinstance(actions,list): actions=[]
+    kept=[]; seen=set(); dropped=0
     for action in actions:
-        if not isinstance(action, dict):
-            continue
-        kind = action.get("type")
-        if kind == "create_deck_tree" and (not str(action.get("deckName", "")).strip() or not str(action.get("subdeckName", "")).strip()):
-            continue
-        if kind == "create_subdeck" and (not str(action.get("deckName", "")).strip() or not str(action.get("parentDeck", "")).strip()):
-            continue
-        if kind == "create_deck" and not str(action.get("deckName", "")).strip():
-            continue
-        if kind == "create_cards" and (not str(action.get("deckName", "")).strip() or not action.get("cards")):
-            continue
-        if kind in ("create_vocabulary_folder", "add_vocabulary") and (not str(action.get("folderName", "")).strip() or not action.get("vocabularyEntries")):
-            continue
-        if kind == "create_calendar_entry" and (not str(action.get("title", "")).strip() or not str(action.get("dateISO", "")).strip()):
-            continue
-        signature = (str(kind), str(action.get("deckName", "")).casefold(), str(action.get("subdeckName", "")).casefold(), str(action.get("parentDeck", "")).casefold(), str(action.get("folderName", "")).casefold(), str(action.get("title", "")).casefold())
-        if signature in seen:
-            continue
-        seen.add(signature)
-        kept.append(action)
-        if len(kept) >= 6:
+        if not isinstance(action,dict): dropped+=1; continue
+        kind=action.get('type')
+        if kind=='create_deck_tree' and (not str(action.get('deckName','')).strip() or not str(action.get('subdeckName','')).strip()): dropped+=1; continue
+        if kind=='create_subdeck' and (not str(action.get('deckName','')).strip() or not str(action.get('parentDeck','')).strip()): dropped+=1; continue
+        if kind=='create_deck' and not str(action.get('deckName','')).strip(): dropped+=1; continue
+        if kind=='create_cards' and (not str(action.get('deckName','')).strip() or not action.get('cards')): dropped+=1; continue
+        if kind in ('create_vocabulary_folder','add_vocabulary') and (not str(action.get('folderName','')).strip() or not action.get('vocabularyEntries')): dropped+=1; continue
+        if kind=='create_calendar_entry' and (not str(action.get('title','')).strip() or not str(action.get('dateISO','')).strip()): dropped+=1; continue
+        signature=(kind,str(action.get('deckName','')).casefold(),str(action.get('subdeckName','')).casefold(),str(action.get('parentDeck','')).casefold(),str(action.get('folderName','')).casefold(),str(action.get('title','')).casefold())
+        if signature in seen: dropped+=1; continue
+        seen.add(signature); kept.append(action)
+        if len(kept)>=6:
+            dropped += max(len(actions)-len(kept)-dropped,0)
             break
-    plan["actions"] = kept
+    if dropped: print('Agent plan sanitized: received=%d kept=%d dropped=%d.'%(len(actions),len(kept),dropped),flush=True)
+    plan['actions']=kept
     return plan
 
+CARD_SCHEMA={'type':'OBJECT','properties':{'cards':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'question':{'type':'STRING'},'answer':{'type':'STRING'}},'required':['question','answer']}}},'required':['cards']}
+EVALUATION_SCHEMA={'type':'OBJECT','properties':{'rating':{'type':'STRING','enum':['easy','good','hard','wrong']},'feedback':{'type':'STRING'}},'required':['rating','feedback']}
+REPLY_SCHEMA={'type':'OBJECT','properties':{'reply':{'type':'STRING'}},'required':['reply']}
+SUMMARY_SCHEMA={'type':'OBJECT','properties':{'summary':{'type':'STRING'}},'required':['summary']}
+VOCABULARY_DRAFT_SCHEMA={'type':'OBJECT','properties':{'term':{'type':'STRING'},'translation':{'type':'STRING'},'pronunciation':{'type':'STRING'},'example':{'type':'STRING'},'synonyms':{'type':'ARRAY','items':{'type':'STRING'}},'difficulty':{'type':'INTEGER'}},'required':['term','translation','pronunciation']}
+AGENT_PLAN_SCHEMA={'type':'OBJECT','properties':{'reply':{'type':'STRING'},'actions':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'type':{'type':'STRING','enum':['create_deck','create_deck_tree','create_subdeck','create_cards','create_calendar_entry','create_vocabulary_folder','add_vocabulary']},'parentDeck':{'type':'STRING'},'createParentDeck':{'type':'BOOLEAN'},'deckName':{'type':'STRING'},'subdeckName':{'type':'STRING'},'folderName':{'type':'STRING'},'title':{'type':'STRING'},'dateISO':{'type':'STRING'},'kind':{'type':'STRING','enum':['exam','test','assignment','other']},'note':{'type':'STRING'},'cards':{'type':'ARRAY','items':{'type':'OBJECT','properties':{'question':{'type':'STRING'},'answer':{'type':'STRING'}},'required':['question','answer']}},'vocabularyEntries':{'type':'ARRAY','items':VOCABULARY_DRAFT_SCHEMA}},'required':['type']}}},'required':['reply','actions']}
 
-@app.get("/api/health")
-def health(db: Session = Depends(get_db)):
-    db.execute(select(1))
-    return {"ok": True, "service": "word-express-api", "database": "ok"}
-
-
-@app.get("/api/v1/content")
-def content():
-    try:
-        payload = CONTENT_PATH.read_bytes()
-    except OSError:
-        raise HTTPException(status_code=503, detail="Content is unavailable")
-    return Response(payload, media_type="application/json; charset=utf-8", headers={"Cache-Control": "public, max-age=300"})
-
-
-@app.post("/api/v1/auth/register", status_code=status.HTTP_201_CREATED)
-def register(body: Credentials, request: Request, db: Session = Depends(get_db)):
-    email = str(body.email).strip().lower()
-    fail_rate_limit(db, request, "register-global", limit=30, window_seconds=3600, subject="all", by_ip=False)
-    fail_rate_limit(db, request, "register-ip", limit=5, window_seconds=3600)
-    fail_rate_limit(db, request, "register-email", limit=3, window_seconds=3600, subject=email, by_ip=False)
-    if not REGISTRATION_INVITE_CODE:
-        raise HTTPException(status_code=503, detail="Account creation is not configured")
-    if not body.invite_code or not secrets.compare_digest(body.invite_code, REGISTRATION_INVITE_CODE):
-        raise HTTPException(status_code=403, detail="Invalid invitation code")
-    if db.scalar(select(Account.id).where(Account.email == email)):
-        raise HTTPException(status_code=409, detail="An account with this email already exists")
-    account = Account(id=UUID(bytes=secrets.token_bytes(16), version=4), email=email, password_hash=hash_password(body.password))
-    db.add(account)
-    db.add(UserProfile(account_id=account.id, document=None, revision=0, updated_at=utcnow()))
-    try:
-        db.commit()
-    except Exception:
-        db.rollback()
-        # Avoid surfacing database details; a concurrent duplicate registration is common.
-        if db.scalar(select(Account.id).where(Account.email == email)):
-            raise HTTPException(status_code=409, detail="An account with this email already exists")
-        raise HTTPException(status_code=503, detail="Account could not be created")
-    return {"access_token": issue_token(account), "token_type": "bearer", "expires_in": int(TOKEN_TTL.total_seconds()), "email": account.email}
-
-
-@app.post("/api/v1/auth/login")
-def login(body: LoginCredentials, request: Request, db: Session = Depends(get_db)):
-    email = str(body.email).strip().lower()
-    fail_rate_limit(db, request, "login-ip", limit=10, window_seconds=900)
-    fail_rate_limit(db, request, "login-email", limit=8, window_seconds=900, subject=email, by_ip=False)
-    account = db.scalar(select(Account).where(Account.email == email))
-    # Use a dummy hash for unknown emails to reduce timing-based account discovery.
-    encoded_hash = account.password_hash if account is not None else DUMMY_PASSWORD_HASH
-    password_ok = verify_password(body.password, encoded_hash)
-    if account is None or not password_ok:
-        raise HTTPException(status_code=401, detail="Email or password is incorrect")
-    return {"access_token": issue_token(account), "token_type": "bearer", "expires_in": int(TOKEN_TTL.total_seconds()), "email": account.email}
-
-
-@app.post("/api/v1/auth/logout", status_code=status.HTTP_204_NO_CONTENT)
-def logout(account: Account = Depends(current_account), db: Session = Depends(get_db)):
-    account.token_version += 1
-    db.commit()
-    return Response(status_code=status.HTTP_204_NO_CONTENT)
-
-
-@app.get("/api/v1/profile")
-def get_profile(response: Response, account: Account = Depends(current_account), db: Session = Depends(get_db)):
-    row = db.get(UserProfile, account.id)
-    if row is None or row.document is None:
-        raise HTTPException(status_code=404, detail="Profile has not been uploaded")
-    response.headers["ETag"] = f'"{row.revision}"'
-    response.headers["Cache-Control"] = "no-store"
-    return {"profile": row.document, "revision": row.revision}
-
-
-@app.put("/api/v1/profile")
-def put_profile(
-    body: ProfileWrite,
-    response: Response,
-    request: Request,
-    if_match: str | None = Header(default=None, alias="If-Match"),
-    account: Account = Depends(current_account),
-    db: Session = Depends(get_db),
-):
-    fail_rate_limit(db, request, "profile-write", limit=120, window_seconds=60, subject=str(account.id), by_ip=False)
-    if if_match is None or not re.fullmatch(r'"?\d+"?', if_match.strip()):
-        raise HTTPException(status_code=428, detail="If-Match revision is required")
-    expected_revision = int(if_match.strip('"'))
-    document = validate_profile_document(body.profile, account.id)
-    row = db.scalar(select(UserProfile).where(UserProfile.account_id == account.id).with_for_update())
-    if row is None:
-        raise HTTPException(status_code=404, detail="Profile record is missing")
-    if row.revision != expected_revision:
-        raise HTTPException(status_code=409, detail="Profile changed on another device", headers={"ETag": f'"{row.revision}"'})
-    row.document = document
-    row.revision += 1
-    row.updated_at = utcnow()
-    db.commit()
-    response.headers["ETag"] = f'"{row.revision}"'
-    response.headers["Cache-Control"] = "no-store"
-    return {"profile": document, "revision": row.revision}
-
-
-@app.delete("/api/v1/account", status_code=status.HTTP_204_NO_CONTENT)
-def delete_account(body: DeleteAccountRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
-    fail_rate_limit(db, request, "account-delete", limit=5, window_seconds=3600, subject=str(account.id), by_ip=False)
-    if not verify_password(body.password, account.password_hash):
-        raise HTTPException(status_code=401, detail="Password is incorrect")
-    db.delete(account)
-    db.commit()
-    return Response(status_code=status.HTTP_204_NO_CONTENT)
-
-
-@app.post("/api/generate-cards")
-def generate_cards(body: GenerateCardsRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
-    parts: list[dict[str, Any]] = []
-    if body.text and body.text.strip():
-        parts.append({"text": "Material:\n" + body.text})
-    if body.imageBase64:
-        if body.mimeType not in {"image/jpeg", "image/png", "image/webp"}:
-            raise HTTPException(status_code=400, detail="Unsupported image type")
+class Handler(BaseHTTPRequestHandler):
+    def send_json(self, status, body):
+        data=json.dumps(body,ensure_ascii=False).encode()
+        self.send_response(status); self.send_header('Content-Type','application/json; charset=utf-8'); self.send_header('Cache-Control','no-store'); self.send_header('X-Content-Type-Options','nosniff'); self.send_header('Content-Length',str(len(data))); self.end_headers()
+        try: self.wfile.write(data)
+        except (BrokenPipeError, ConnectionResetError): pass
+    def read_body(self):
+        try: size=int(self.headers.get('Content-Length','-1'))
+        except ValueError: raise error(400,'Ungültige Anfrage.')
+        if size < 0 or size > MAX_BODY: raise error(413,'Die Anfrage ist zu groß (maximal 8 MB).')
+        try: return json.loads(self.rfile.read(size) or b'{}')
+        except (json.JSONDecodeError, UnicodeDecodeError): raise error(400,'Ungültiges JSON.')
+    def client_ip(self): return self.client_address[0]
+    def rate_limit_login(self):
+        now=int(time.time())
+        with DB_LOCK, db() as conn:
+            conn.execute('DELETE FROM attempts WHERE stamp<?',(now-900,))
+            attempts=conn.execute('SELECT count(*) FROM attempts WHERE ip=? AND stamp>?',(self.client_ip(),now-900)).fetchone()[0]
+            if attempts >= 10: raise error(429,'Zu viele Anmeldeversuche. Bitte 15 Minuten warten.')
+    def record_login_failure(self):
+        with DB_LOCK, db() as conn: conn.execute('INSERT INTO attempts VALUES(?,?)',(self.client_ip(),int(time.time())))
+    def rate_limit_http(self):
+        now=int(time.time())
+        with DB_LOCK, db() as conn:
+            conn.execute('DELETE FROM traffic WHERE stamp<?',(now-60,))
+            conn.execute('DELETE FROM attempts WHERE stamp<?',(now-900,))
+            count=conn.execute('SELECT count(*) FROM traffic WHERE ip=? AND stamp>?',(self.client_ip(),now-60)).fetchone()[0]
+            if count >= 120: raise error(429,'Zu viele Anfragen von diesem Anschluss. Bitte kurz warten.')
+            conn.execute('INSERT INTO traffic VALUES(?,?)',(self.client_ip(),now))
+    def authenticate(self):
+        if LOCAL_AUTH_DISABLED: return 'local-development'
+        token=self.headers.get('Authorization','')
+        if not token.startswith('Bearer '): raise error(401,'Bitte melde dich für den Privatpilot an.')
+        digest=hashlib.sha256(token[7:].encode()).hexdigest(); now=int(time.time())
+        with DB_LOCK, db() as conn:
+            row=conn.execute('SELECT expires FROM sessions WHERE token_hash=?',(digest,)).fetchone()
+            if not row or row[0] < now:
+                conn.execute('DELETE FROM sessions WHERE token_hash=?',(digest,)); raise error(401,'Deine Sitzung ist abgelaufen. Bitte melde dich erneut an.')
+        return digest
+    def do_GET(self):
+        if self.path == '/api/health': self.send_json(200,{'ok':True}); return
+        self.send_json(404,{'error':'Route nicht gefunden.'})
+    def do_POST(self):
         try:
-            image_bytes = base64.b64decode(body.imageBase64, validate=True)
-        except (ValueError, binascii.Error):
-            raise HTTPException(status_code=400, detail="Invalid image data")
-        if len(image_bytes) > IMAGE_MAX_BYTES:
-            raise HTTPException(status_code=413, detail="Image exceeds 6 MB")
-        parts.append({"inlineData": {"mimeType": body.mimeType, "data": body.imageBase64}})
-    if not parts:
-        raise HTTPException(status_code=400, detail="Provide source text or an image")
-    language = language_name(body.language)
-    prompt = build_card_generation_prompt(language, body.style, body.instructions)
-    result = execute_ai(request, db, account, "generate-cards", [{"text": prompt}, *parts], CARD_SCHEMA)
-    cards = result.get("cards")
-    if not isinstance(cards, list):
-        raise HTTPException(status_code=502, detail="AI returned invalid flashcards")
-    valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
-    return {"cards": valid[:20]}
+            self.rate_limit_http()
+            body=self.read_body()
+            if self.path == '/api/login':
+                self.rate_limit_login()
+                email=str(body.get('email','')).strip().lower(); password=str(body.get('password',''))
+                expected=os.environ.get('PILOT_EMAIL','').strip().lower()
+                if not expected or not os.environ.get('PILOT_PASSWORD_HASH') and not os.environ.get('PILOT_PASSWORD'): raise error(503,'Privatpilot-Anmeldung ist nicht konfiguriert.')
+                if not hmac.compare_digest(email.encode('utf-8'),expected.encode('utf-8')) or not password_ok(password):
+                    self.record_login_failure()
+                    raise error(401,'E-Mail oder Passwort ist falsch.')
+                raw=secrets.token_urlsafe(32); digest=hashlib.sha256(raw.encode()).hexdigest(); expiry=int(time.time())+TOKEN_TTL
+                with DB_LOCK, db() as conn:
+                    conn.execute('DELETE FROM attempts WHERE ip=?',(self.client_ip(),))
+                    conn.execute('INSERT INTO sessions VALUES(?,?)',(digest,expiry))
+                self.send_json(200,{'token':raw,'expiresAt':expiry}); return
+            if self.path == '/api/logout':
+                digest=self.authenticate()
+                with DB_LOCK, db() as conn: conn.execute('DELETE FROM sessions WHERE token_hash=?',(digest,))
+                self.send_json(200,{'ok':True}); return
+            self.authenticate()
+            if self.path not in ('/api/generate-cards','/api/evaluate','/api/tutor','/api/summary','/api/agent-plan'):
+                self.send_json(404,{'error':'Route nicht gefunden.'}); return
+            if not os.environ.get('GEMINI_API_KEY'): raise error(503,'Das KI-Backend ist noch nicht konfiguriert.')
+            rowid=reserve_usage()
+            try:
+                result=self.handle_ai(self.path,body)
+                # Handle returns (payload, selected model, raw usage metadata).
+                response, model, raw = result
+                if self.path=='/api/agent-plan':
+                    actions=response.get('actions',[]) if isinstance(response,dict) else []
+                    print('Tutor agent plan completed: actions=%d model=%s.'%(len(actions) if isinstance(actions,list) else 0,model),flush=True)
+                settle_usage(rowid,model,raw); self.send_json(200,response)
+            except Exception as exc:
+                # Validation failures release the reservation; upstream failures stay reserved conservatively.
+                if getattr(exc,'status',500) < 500:
+                    with DB_LOCK, db() as conn: conn.execute('UPDATE usage SET cost=0 WHERE id=?',(rowid,))
+                raise
+        except Exception as exc:
+            status=getattr(exc,'status',500)
+            if status >= 500: print('Request %s failed (%s).'%(self.path,status),flush=True)
+            message = str(exc) if status < 500 else 'Der Dienst ist vorübergehend nicht verfügbar. Bitte später erneut versuchen.'
+            self.send_json(status,{'error':message})
+    def handle_ai(self,path,body):
+        tree_request=None
+        cards_request=None
+        def textval(name,limit,required=False):
+            value=str(body.get(name,'') or '')
+            if len(value)>limit: raise error(413,'Ein Textfeld ist zu lang.')
+            if required and not value.strip(): raise error(400,'Bitte fülle die erforderlichen Felder aus.')
+            return value
+        if path=='/api/generate-cards':
+            source=textval('text',18000); instruction=textval('instructions',1000)
+            image=body.get('imageBase64'); parts=[]
+            if source: parts.append({'text':'Material:\n'+source})
+            if image:
+                if len(image)>7_000_000: raise error(413,'Das Bild ist zu groß.')
+                mime=body.get('mimeType','image/jpeg')
+                if mime not in ('image/jpeg','image/png','image/webp'): raise error(400,'Dieses Bildformat wird nicht unterstützt.')
+                try: base64.b64decode(image,validate=True)
+                except Exception: raise error(400,'Das Bild ist ungültig.')
+                parts.append({'inlineData':{'mimeType':mime,'data':image}})
+            if not parts: raise error(400,'Bitte füge Text oder ein Bild hinzu.')
+            lang='English' if body.get('language') in ('English','Englisch') else 'German'
+            prompt='Create 5 to 12 accurate flashcards in '+lang+'. Cover key facts without duplicates or invention. '+instruction+' Reply only with requested JSON.'
+            result,model=request_gemini([{'text':prompt}]+parts,CARD_SCHEMA)
+        elif path=='/api/evaluate':
+            q=textval('question',1500,True); expected=textval('expected',3000,True); answer=textval('answer',3000)
+            response_language=textval('language',60) or 'German'
+            language_aliases={'de':'German','deutsch':'German','german':'German','en':'English','englisch':'English','english':'English','fr':'French','französisch':'French','es':'Spanish','spanisch':'Spanish','it':'Italian','italienisch':'Italian','pt':'Portuguese','ja':'Japanese','zh':'Chinese','nl':'Dutch'}
+            response_language=language_aliases.get(response_language.casefold(),response_language)
+            prompt='Evaluate this study answer. Accept accurate paraphrases and synonyms. easy=complete and correct; good=core right with minor omission; hard=materially incomplete; wrong=incorrect, contradictory, or empty. Provide concise, specific feedback. REQUIRED OUTPUT LANGUAGE: '+response_language+'. Write the rating feedback entirely in this language. Do not copy or switch to the learner response language if it differs from the card language. Keep this same language for every evaluation.\nQuestion: '+q+'\nExpected answer: '+expected+'\nLearner response: '+answer
+            result,model=request_gemini([{'text':prompt}],EVALUATION_SCHEMA)
+        elif path=='/api/tutor':
+            history=body.get('history') or []
+            if not isinstance(history,list) or len(history)>10: raise error(400,'Der Chatverlauf ist ungültig.')
+            transcript='\n'.join(('Tutor' if m.get('role')=='assistant' else 'Lernende Person')+': '+str(m.get('text',''))[:1000] for m in history if isinstance(m,dict))
+            prompt='You are a concise, friendly study tutor. Use context accurately; state uncertainty.\nContext: '+textval('answer',4000)+'\nHistory:\n'+transcript+'\nQuestion: '+textval('message',1500,True)
+            result,model=request_gemini([{'text':prompt}],REPLY_SCHEMA)
+        elif path=='/api/agent-plan':
+            decks=body.get('decks') or []
+            if not isinstance(decks,list) or len(decks)>100: raise error(400,'Die Deckliste ist ungültig.')
+            deck_lines='\n'.join(str(d)[:120] for d in decks)
+            folders=body.get('vocabularyFolders') or []
+            if not isinstance(folders,list) or len(folders)>100: raise error(400,'Die Vokabelliste ist ungültig.')
+            folder_lines='\n'.join(str(folder)[:120] for folder in folders)
+            source=textval('sourceLanguage',80,True); target=textval('targetLanguage',80,True)
+            mode=textval('mode',40) or 'automatic'
+            lang='English' if body.get('language') in ('English','Englisch') else 'German'
+            message=textval('message',1500,True)
+            tree_request=detect_deck_tree_request(message)
+            cards_request=detect_existing_deck_cards_request(message,decks) if not tree_request else None
+            if tree_request:
+                prompt=('Create exactly '+str(tree_request['cardCount'])+' flashcards in German for the requested subdeck. Main deck: '+tree_request['deckName']+'. Subdeck: '+tree_request['subdeckName']+'. Follow the full user instruction and its exact learning objective. The FRONT of every card must be a distinct complex sentence and a task to identify its sentence constituents. The BACK must give the same sentence segmented and clearly label each constituent (subject, predicate, objects, adverbials as applicable). Never make cards that merely translate the subdeck title or explain what sentence constituents are. No duplicates. Return only the required JSON. User instruction: '+message)
+                result,model=request_gemini([{'text':prompt}],CARD_SCHEMA)
+            elif cards_request:
+                prompt=('Create exactly '+str(cards_request['cardCount'])+' accurate, non-duplicate flashcards in '+lang+' for the existing deck or subdeck named "'+cards_request['deckName']+'". Treat the user\'s full instruction as the learning objective. Turn each requested topic into a useful question and a precise answer. Do not claim the cards are already saved. Return only the required JSON. User instruction: '+message)
+                result,model=request_gemini([{'text':prompt}],CARD_SCHEMA)
+            else:
+                prompt=build_agent_plan_prompt(
+                    language=lang,
+                    mode=mode,
+                    source_language=source,
+                    target_language=target,
+                    deck_lines=deck_lines,
+                    folder_lines=folder_lines,
+                    message=message,
+                )
+                result,model=request_gemini([{'text':prompt}],AGENT_PLAN_SCHEMA)
+        else:
+            cards=body.get('cards') or []
+            if not isinstance(cards,list) or len(cards)>100: raise error(400,'Das Deck darf höchstens 100 Karten enthalten.')
+            material='\n'.join('Q: '+str(c.get('question',''))[:300]+'\nA: '+str(c.get('answer',''))[:500] for c in cards if isinstance(c,dict))
+            if not material: raise error(400,'Dieses Deck enthält noch keine Karten.')
+            result,model=request_gemini([{'text':'Summarize these study cards concisely, group related ideas, do not invent facts.\n'+material}],SUMMARY_SCHEMA)
+        candidates=result.get('candidates',[])
+        raw={'usageMetadata':result.get('usageMetadata',{})}
+        output=''.join(p.get('text','') for p in candidates[0].get('content',{}).get('parts',[])) if candidates else ''
+        if not output: raise error(502,'Die KI hat keine auswertbare Antwort geliefert.')
+        try:
+            payload=json.loads(output)
+            if path=='/api/agent-plan':
+                if tree_request:
+                    cards=payload.get('cards',[]) if isinstance(payload,dict) else []
+                    valid=[c for c in cards if isinstance(c,dict) and str(c.get('question','')).strip() and str(c.get('answer','')).strip()]
+                    if len(valid)<tree_request['cardCount']: raise error(502,'Die KI hat nicht alle angeforderten Karten erstellt. Bitte erneut versuchen.')
+                    payload={'reply':'Vorschau für '+tree_request['deckName']+' › '+tree_request['subdeckName']+' mit '+str(tree_request['cardCount'])+' Karten.','actions':[{'type':'create_deck_tree','deckName':tree_request['deckName'],'subdeckName':tree_request['subdeckName'],'cards':valid[:tree_request['cardCount']]}]}
+                elif cards_request:
+                    cards=payload.get('cards',[]) if isinstance(payload,dict) else []
+                    valid=[c for c in cards if isinstance(c,dict) and str(c.get('question','')).strip() and str(c.get('answer','')).strip()]
+                    if len(valid)<cards_request['cardCount']: raise error(502,'Die KI hat nicht alle angeforderten Karten erstellt. Bitte erneut versuchen.')
+                    payload={'reply':'Vorschlag für '+cards_request['deckName']+' mit '+str(cards_request['cardCount'])+' Karten.','actions':[{'type':'create_cards','deckName':cards_request['deckName'],'cards':valid[:cards_request['cardCount']]}]}
+                else:
+                    payload=sanitize_agent_plan(payload if isinstance(payload,dict) else {})
+            return payload,model,raw
+        except json.JSONDecodeError: raise error(502,'Die KI-Antwort war nicht im erwarteten Format.')
+    def log_message(self,fmt,*args):
+        # Avoid logging source IPs, paths, query strings, request bodies, tokens, and prompts.
+        print('HTTP %s'%fmt.split(' ')[0],flush=True)
 
+class PilotHTTPServer(ThreadingHTTPServer):
+    daemon_threads = True
+    request_queue_size = 16
+    _slots = threading.BoundedSemaphore(16)
+    def process_request(self, request, client_address):
+        self._slots.acquire()
+        try: super().process_request(request, client_address)
+        except Exception:
+            self._slots.release()
+            raise
+    def process_request_thread(self, request, client_address):
+        try: super().process_request_thread(request, client_address)
+        finally: self._slots.release()
 
-@app.post("/api/evaluate")
-def evaluate_answer(body: EvaluateRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
-    if not body.question.strip() or not body.expected.strip():
-        raise HTTPException(status_code=400, detail="Question and expected answer are required")
-    language = language_name(body.language)
-    prompt = build_evaluation_prompt(language, body.question, body.expected, body.answer)
-    return execute_ai(request, db, account, "evaluate", [{"text": prompt}], EVALUATION_SCHEMA)
-
-
-@app.post("/api/tutor")
-def tutor(body: TutorRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
-    transcript = "\n".join(("Tutor" if message.role == "assistant" else "Learner") + ": " + message.text for message in body.history)
-    language = language_name(body.language)
-    source_language = language_name(body.sourceLanguage)
-    target_language = language_name(body.targetLanguage)
-    prompt = build_tutor_prompt(
-        body.mode,
-        language,
-        source_language,
-        target_language,
-        body.question,
-        body.answer,
-        transcript,
-        body.message,
-        requests_translation_help(body.message, body.sourceLanguage),
-    )
-    return execute_ai(request, db, account, "tutor", [{"text": prompt}], REPLY_SCHEMA)
-
-
-@app.post("/api/agent-plan")
-def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
-    language = language_name(body.language)
-    decks = "\n".join(deck[:120] for deck in body.decks)
-    folders = "\n".join(folder[:120] for folder in body.vocabularyFolders)
-    tree = detect_deck_tree_request(body.message)
-    new_subdeck = detect_new_subdeck_request(body.message, body.decks) if not tree else None
-    existing_cards = detect_existing_deck_cards_request(body.message, body.decks) if not tree and not new_subdeck else None
-    if tree:
-        print(f"[TutorAgent][plan] route=new_deck_tree cards={tree['cardCount']}", flush=True)
-    elif new_subdeck:
-        print(f"[TutorAgent][plan] route=new_subdeck cards={new_subdeck['cardCount']}", flush=True)
-    elif existing_cards:
-        print(f"[TutorAgent][plan] route=existing_deck_cards cards={existing_cards['cardCount']}", flush=True)
+if __name__=='__main__':
+    if APP_ENV == 'production' and LOCAL_AUTH_DISABLED:
+        raise SystemExit('Authentifizierung kann in Produktion nicht deaktiviert sein.')
+    if not LOCAL_AUTH_DISABLED and (not os.environ.get('PILOT_EMAIL') or not (os.environ.get('PILOT_PASSWORD_HASH') or os.environ.get('PILOT_PASSWORD'))):
+        raise SystemExit('Setze PILOT_EMAIL und PILOT_PASSWORD_HASH (oder PILOT_PASSWORD) für den Privatpilot.')
+    if APP_ENV=='production' and os.environ.get('TRUST_PROXY_HTTPS')!='1':
+        raise SystemExit('Produktion nur hinter HTTPS-Proxy bereitstellen (TRUST_PROXY_HTTPS=1 nach aktivem TLS setzen).')
+    if APP_ENV=='production' and not os.environ.get('PILOT_PASSWORD_HASH'):
+        raise SystemExit('Produktion erfordert PILOT_PASSWORD_HASH; Klartextpasswörter sind nur für lokale Entwicklung erlaubt.')
+    if LOCAL_AUTH_DISABLED:
+        print('Lokaler Lernkarten-Server ohne Anmeldung; nur auf 127.0.0.1 erreichbar.',flush=True)
     else:
-        requested_count = requested_flashcard_count(body.message)
-        print(f"[TutorAgent][plan] route=general mode={body.mode!r} known_decks={len(body.decks)} requested_cards={requested_count or '-'}", flush=True)
-    if tree:
-        prompt = build_new_tree_cards_prompt(tree["cardCount"], tree["deckName"], tree["subdeckName"], body.message)
-        result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
-        cards = result.get("cards", []) if isinstance(result, dict) else []
-        valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
-        if len(valid) < tree["cardCount"]:
-            raise HTTPException(status_code=502, detail="AI did not create all requested cards; please try again")
-        return {"reply": "Preview for " + tree["deckName"] + " › " + tree["subdeckName"] + " with " + str(tree["cardCount"]) + " cards.", "actions": [{"type": "create_deck_tree", "deckName": tree["deckName"], "subdeckName": tree["subdeckName"], "cards": valid[:tree["cardCount"]]}]}
-    if new_subdeck:
-        count = new_subdeck["cardCount"]
-        prompt = build_new_subdeck_cards_prompt(count, language, new_subdeck["deckName"], new_subdeck["parentDeck"], body.message)
-        result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
-        cards = result.get("cards", []) if isinstance(result, dict) else []
-        valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
-        if len(valid) < count:
-            raise HTTPException(status_code=502, detail="AI did not create all requested cards; please try again")
-        action = {"type": "create_subdeck", "parentDeck": new_subdeck["parentDeck"], "deckName": new_subdeck["deckName"], "cards": valid[:count]}
-        return {"reply": "Preview for " + new_subdeck["parentDeck"] + " › " + new_subdeck["deckName"] + " with " + str(count) + " cards.", "actions": [action]}
-    if existing_cards:
-        count = existing_cards["cardCount"]
-        prompt = build_existing_deck_cards_prompt(count, language, existing_cards["deckName"], body.message)
-        result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], CARD_SCHEMA)
-        cards = result.get("cards", []) if isinstance(result, dict) else []
-        valid = [card for card in cards if isinstance(card, dict) and str(card.get("question", "")).strip() and str(card.get("answer", "")).strip()]
-        if len(valid) < count:
-            raise HTTPException(status_code=502, detail="AI did not create all requested cards; please try again")
-        action = {"type": "create_cards", "deckName": existing_cards["deckName"], "cards": valid[:count]}
-        if existing_cards["parentDeck"]:
-            action["parentDeck"] = existing_cards["parentDeck"]
-        return {"reply": "Preview for " + existing_cards["deckName"] + " with " + str(count) + " cards.", "actions": [action]}
-    prompt = build_agent_plan_prompt(language, body.mode, body.sourceLanguage, body.targetLanguage, decks, folders, body.message)
-    result = execute_ai(request, db, account, "agent-plan", [{"text": prompt}], AGENT_PLAN_SCHEMA)
-    plan = sanitize_agent_plan(result if isinstance(result, dict) else {})
-    requested_count = requested_flashcard_count(body.message)
-    if requested_count is not None:
-        generated_count = sum(len(action.get("cards") or []) for action in plan["actions"] if action.get("type") in {"create_deck_tree", "create_subdeck", "create_cards"})
-        print(f"[TutorAgent][plan] requested_cards={requested_count} generated_cards={generated_count}", flush=True)
-        plan = enforce_requested_card_count(plan, requested_count)
-    if not plan["actions"] and re.search(r"\b(?:vorbereit|erstellt|angelegt|hinzugefügt|added|created|prepared|ready)\w*\b", plan.get("reply", ""), re.IGNORECASE):
-        plan["reply"] = "Ich konnte noch keinen umsetzbaren Vorschlag erstellen. Bitte nenne das genaue Ziel-Deck oder präzisiere den Auftrag."
-    return plan
-
-
-@app.post("/api/summary")
-def summarize_cards(body: SummaryRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
-    material = "\n".join("Q: " + card.question + "\nA: " + card.answer for card in body.cards)
-    if not material.strip():
-        raise HTTPException(status_code=400, detail="This deck has no cards")
-    prompt = build_summary_prompt(language_name(body.language), material)
-    return execute_ai(request, db, account, "summary", [{"text": prompt}], SUMMARY_SCHEMA)
-
-
-@app.get("/privacy")
-def privacy_page():
-    page = FRONTEND / "privacy.html"
-    if not page.exists():
-        raise HTTPException(status_code=404, detail="Privacy page is unavailable")
-    return FileResponse(page)
-
-
-app.mount("/", StaticFiles(directory=str(FRONTEND), html=True), name="frontend")
+        print('Lernkarten Privatpilot API bereit; Modell %s; Limits %s/Tag, %s gesamt, $%.2f.'%(MODEL,PILOT_DAILY_LIMIT,PILOT_TOTAL_LIMIT,PILOT_BUDGET_USD),flush=True)
+    bind_host = '127.0.0.1' if LOCAL_AUTH_DISABLED else '0.0.0.0'
+    PilotHTTPServer((bind_host,int(os.environ.get('PORT','8787'))),Handler).serve_forever()
