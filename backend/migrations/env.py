@@ -7,7 +7,7 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from server import Base  # noqa: E402
+from db import Base  # noqa: E402
 
 config = context.config
 if config.config_file_name is not None:
