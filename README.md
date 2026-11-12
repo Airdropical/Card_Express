@@ -1,13 +1,14 @@
-# Word Express
+# ELearnCard
 
-Word Express is an iOS vocabulary-learning app with a browser preview. The iOS app keeps working locally when signed out. When an account is connected, its folders, favorites, quiz settings, progress, activity, and language preferences sync to the Word Express API.
+ELearnCard is an iOS vocabulary-learning app with a browser preview and a FastAPI backend. The iOS app keeps working locally when signed out. When an account is connected, its folders, favorites, quiz settings, progress, activity, and language preferences sync to the ELearnCard API.
 
 ## Components
 
-- `ios/` — SwiftUI app for iOS 17+, including invite-only account sign-in and profile sync
+- `iOS/` — active SwiftUI app for iOS 17+, including invite-only account sign-in and profile sync
 - `frontend/` — static browser preview served by the same origin as the API
-- `backend/` — FastAPI service, account authentication, profile storage, rate limiting, and content endpoint
+- `backend/` — FastAPI service: `server.py` (routes), `config.py`, `db.py`, `auth.py`, `rate_limit.py`, `ai_client.py` (Gemini and usage limits), `agent_plan.py` (tutor plan helpers), `ai_prompts/`, `tests/`
 - `data/` — word data and JSON schemas
+- `archive/wordexpress-ios-prototype/` — preserved earlier standalone Xcode prototype; not part of the active app or Railway build
 - PostgreSQL — account, profile, and rate-limit storage; provisioned separately in Railway
 
 ## Local development
@@ -23,10 +24,19 @@ Word Express is an iOS vocabulary-learning app with a browser preview. The iOS a
    sh backend/entrypoint.sh
    ```
 
-4. Open `http://localhost:8080/`; the API health check is at `/api/health`.
-5. In the iOS app's Profile tab, set the server URL to `http://127.0.0.1:8080` for the simulator. On a physical iPhone, use the Railway HTTPS domain; the app intentionally rejects non-HTTPS LAN endpoints.
+   The server refuses to start without a `JWT_SECRET` of at least 32 characters and a `DATABASE_URL`, in every environment.
 
-The iOS app remains local-only until an account is created or signed in. Registration requires the configured invitation code. Passwords must be at least 12 characters. API tokens are kept in the iOS Keychain.
+4. Run the backend tests (no database or API key needed):
+
+   ```sh
+   pip install -r requirements-dev.txt
+   python -m pytest backend/tests
+   ```
+
+5. Open `http://localhost:8080/`; the API health check is at `/api/health`.
+6. In the iOS app's Profile tab, set the server URL to `http://127.0.0.1:8080` for the simulator. On a physical iPhone, use the Railway HTTPS domain; the app intentionally rejects non-HTTPS LAN endpoints.
+
+Open `iOS/Lernkarten.xcodeproj` to build the active app. It remains local-only until an account is created or signed in. Registration requires the configured invitation code. Passwords must be at least 12 characters. API tokens are kept in the iOS Keychain.
 
 ## Railway deployment
 
@@ -62,4 +72,4 @@ Authentication attempts and profile writes are limited in PostgreSQL. Login is l
 
 ## Current operating limits
 
-This backend provides invite-only accounts, cloud storage for the existing profile model, and authenticated Gemini endpoints for card generation, answer evaluation, tutor chat, tutor action plans, and deck summaries. Keep registration invite-only for private use. AI request limits and a conservative token-cost budget are enforced per account; set a separate Google AI Studio spending limit as a second safeguard. The app shows every tutor action plan for review and confirmation before applying it. This pilot does not send email verification or password-reset emails or deliver push notifications. Before public release, configure support/contact details, review the privacy notice for the actual legal entity and Railway region/retention settings, and add verified email and account recovery.
+This backend provides invite-only accounts, cloud storage for the existing profile model, and authenticated Gemini endpoints for card generation, answer evaluation, tutor chat, tutor action plans, and deck summaries. Keep registration invite-only for private use. AI request limits and a conservative token-cost budget are enforced per account (lifetime caps by default; set `AI_LIMIT_WINDOW_DAYS=30` for rolling 30-day caps). Requests that fail before Gemini answers do not count against them; set a separate Google AI Studio spending limit as a second safeguard. The app shows every tutor action plan for review and confirmation before applying it. This pilot does not send email verification or password-reset emails or deliver push notifications. Before public release, configure support/contact details, review the privacy notice for the actual legal entity and Railway region/retention settings, and add verified email and account recovery.
