@@ -41,7 +41,8 @@ class DeleteAccountRequest(BaseModel):
 
 class GenerateCardsRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    text: str | None = Field(default=None, max_length=18_000)
+    # Matches the app's import limit for pasted text and PDFs.
+    text: str | None = Field(default=None, max_length=120_000)
     imageBase64: str | None = Field(default=None, max_length=IMAGE_BASE64_MAX_CHARS)
     mimeType: str = Field(default="image/jpeg", max_length=64)
     language: str = Field(default="German", max_length=60)
@@ -58,14 +59,23 @@ class EvaluateRequest(BaseModel):
     mode: str = Field(default="automatic", max_length=40)
 
 
+class AttachmentFields(BaseModel):
+    """Optional material the learner attached in the tutor chat: one image and/or extracted document text."""
+
+    model_config = ConfigDict(extra="forbid")
+    imageBase64: str | None = Field(default=None, max_length=IMAGE_BASE64_MAX_CHARS)
+    mimeType: str = Field(default="image/jpeg", max_length=64)
+    documentText: str | None = Field(default=None, max_length=120_000)
+    documentName: str = Field(default="", max_length=200)
+
+
 class TutorHistoryItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     role: str = Field(max_length=24)
     text: str = Field(max_length=1_000)
 
 
-class TutorRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+class TutorRequest(AttachmentFields):
     question: str = Field(default="", max_length=1_500)
     answer: str = Field(default="", max_length=9_000)
     message: str = Field(min_length=1, max_length=1_500)
@@ -76,8 +86,7 @@ class TutorRequest(BaseModel):
     targetLanguage: str = Field(default="English", max_length=80)
 
 
-class AgentPlanRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+class AgentPlanRequest(AttachmentFields):
     message: str = Field(min_length=1, max_length=1_500)
     decks: list[str] = Field(default_factory=list, max_length=100)
     language: str = Field(default="German", max_length=60)

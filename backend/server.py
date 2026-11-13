@@ -44,6 +44,7 @@ from profiles import validate_profile_document
 from rate_limit import fail_rate_limit
 from schemas import (
     AGENT_PLAN_SCHEMA,
+    AttachmentFields,
     CARD_SCHEMA,
     EVALUATION_SCHEMA,
     REPLY_SCHEMA,
@@ -197,22 +198,45 @@ def delete_account(body: DeleteAccountRequest, request: Request, account: Accoun
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
 
+ALLOWED_IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp"}
+ATTACHMENT_NOTE = (
+    "The learner attached the material that follows. When the request refers to it (for example 'this', 'the picture', "
+    "'the PDF', 'the document'), use it as the primary source. Do not invent content that is not in it, and say so "
+    "when the material does not answer the question."
+)
+
+
+def image_part(image_base64: str, mime_type: str) -> dict[str, Any]:
+    """Validated inline image part for Gemini."""
+    if mime_type not in ALLOWED_IMAGE_TYPES:
+        raise HTTPException(status_code=400, detail="Unsupported image type")
+    try:
+        image_bytes = base64.b64decode(image_base64, validate=True)
+    except (ValueError, binascii.Error):
+        raise HTTPException(status_code=400, detail="Invalid image data")
+    if len(image_bytes) > config.IMAGE_MAX_BYTES:
+        raise HTTPException(status_code=413, detail="Image exceeds 6 MB")
+    return {"inlineData": {"mimeType": mime_type, "data": image_base64}}
+
+
+def attachment_parts(body: AttachmentFields) -> list[dict[str, Any]]:
+    """Prompt parts for material attached to a tutor request; empty when nothing is attached."""
+    parts: list[dict[str, Any]] = []
+    if body.documentText and body.documentText.strip():
+        name = body.documentName.strip() or "document"
+        parts.append({"text": f"Attached document ({name}):\n" + body.documentText})
+    if body.imageBase64:
+        parts.append(image_part(body.imageBase64, body.mimeType))
+    return [{"text": ATTACHMENT_NOTE}, *parts] if parts else []
+
+
 @app.post("/api/generate-cards")
 def generate_cards(body: GenerateCardsRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
     parts: list[dict[str, Any]] = []
     if body.text and body.text.strip():
         parts.append({"text": "Material:\n" + body.text})
     if body.imageBase64:
-        if body.mimeType not in {"image/jpeg", "image/png", "image/webp"}:
-            raise HTTPException(status_code=400, detail="Unsupported image type")
-        try:
-            image_bytes = base64.b64decode(body.imageBase64, validate=True)
-        except (ValueError, binascii.Error):
-            raise HTTPException(status_code=400, detail="Invalid image data")
-        if len(image_bytes) > config.IMAGE_MAX_BYTES:
-            raise HTTPException(status_code=413, detail="Image exceeds 6 MB")
-        del image_bytes
-        parts.append({"inlineData": {"mimeType": body.mimeType, "data": body.imageBase64}})
+        parts.append(image_part(body.imageBase64, body.mimeType))
     if not parts:
         raise HTTPException(status_code=400, detail="Provide source text or an image")
     prompt = ai_prompts.card_generation(language_name(body.language), body.style, body.instructions)
@@ -244,7 +268,7 @@ def tutor(body: TutorRequest, request: Request, account: Account = Depends(curre
         body.message,
         requests_translation_help(body.message, body.sourceLanguage),
     )
-    return execute_ai(request, db, account, [{"text": prompt}], REPLY_SCHEMA)
+    return execute_ai(request, db, account, [{"text": prompt}, *attachment_parts(body)], REPLY_SCHEMA)
 
 
 def explicit_card_request(body: AgentPlanRequest, language: str) -> Optional[tuple[str, str, int, dict[str, Any], list[str]]]:
@@ -276,11 +300,12 @@ def explicit_card_request(body: AgentPlanRequest, language: str) -> Optional[tup
 @app.post("/api/agent-plan")
 def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
     language = language_name(body.language)
+    attached = attachment_parts(body)
     explicit = explicit_card_request(body, language)
     if explicit:
         route, prompt, count, action, path = explicit
-        print(f"[TutorAgent][plan] route={route} cards={count}", flush=True)
-        result = execute_ai(request, db, account, [{"text": prompt}], CARD_SCHEMA)
+        print(f"[TutorAgent][plan] route={route} cards={count} attachment={bool(attached)}", flush=True)
+        result = execute_ai(request, db, account, [{"text": prompt}, *attached], CARD_SCHEMA)
         action["cards"] = exact_cards(result, count)
         return {"reply": preview_reply(language, path, count), "actions": [action]}
 
@@ -289,7 +314,7 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     decks = "\n".join(deck[:120] for deck in body.decks)
     folders = "\n".join(folder[:120] for folder in body.vocabularyFolders)
     prompt = ai_prompts.agent_plan(language, body.mode, body.sourceLanguage, body.targetLanguage, decks, folders, body.message)
-    plan = sanitize_agent_plan(execute_ai(request, db, account, [{"text": prompt}], AGENT_PLAN_SCHEMA))
+    plan = sanitize_agent_plan(execute_ai(request, db, account, [{"text": prompt}, *attached], AGENT_PLAN_SCHEMA))
     if requested_count is not None:
         generated_count = sum(len(action.get("cards") or []) for action in plan["actions"] if action.get("type") in CARD_ACTION_TYPES)
         print(f"[TutorAgent][plan] requested_cards={requested_count} generated_cards={generated_count}", flush=True)

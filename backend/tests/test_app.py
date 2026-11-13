@@ -178,3 +178,35 @@ def test_app_refuses_to_start_with_invalid_configuration(monkeypatch):
     with pytest.raises(RuntimeError, match="DATABASE_URL"):
         with TestClient(server.app):
             pass
+
+
+def test_attachment_parts_are_empty_without_material():
+    from schemas import TutorRequest
+
+    assert server.attachment_parts(TutorRequest(message="hi")) == []
+    assert server.attachment_parts(TutorRequest(message="hi", documentText="   ")) == []
+
+
+def test_attachment_parts_carry_document_and_image():
+    import base64
+
+    from schemas import AgentPlanRequest
+
+    image = base64.b64encode(b"not really a jpeg").decode()
+    body = AgentPlanRequest(message="10 Karten aus dem PDF", documentText="Zellen bestehen aus ...", documentName="bio.pdf", imageBase64=image)
+    parts = server.attachment_parts(body)
+    assert parts[0] == {"text": server.ATTACHMENT_NOTE}
+    assert parts[1]["text"].startswith("Attached document (bio.pdf):") and "Zellen" in parts[1]["text"]
+    assert parts[2] == {"inlineData": {"mimeType": "image/jpeg", "data": image}}
+
+
+@pytest.mark.parametrize("fields, status", [
+    ({"imageBase64": "@@not-base64@@"}, 400),
+    ({"imageBase64": "aGk=", "mimeType": "image/heic"}, 400),
+])
+def test_invalid_image_attachment_is_rejected(fields, status):
+    from schemas import TutorRequest
+
+    with pytest.raises(HTTPException) as error:
+        server.attachment_parts(TutorRequest(message="hi", **fields))
+    assert error.value.status_code == status
