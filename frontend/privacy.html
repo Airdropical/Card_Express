@@ -3,26 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Datenschutzhinweise · Word Express</title>
+  <title>Datenschutzerklärung · Lernkarten</title>
   <style>
-    body { max-width: 760px; margin: 48px auto; padding: 0 20px; color: #242424; font: 17px/1.6 system-ui, sans-serif; }
-    h1, h2 { line-height: 1.2; }
-    .draft { padding: 14px 16px; border-left: 4px solid #6950d8; background: #f4f1ff; }
+    :root { color-scheme: light dark; }
+    body { max-width: 760px; margin: 48px auto; padding: 0 20px 48px; font: 17px/1.6 system-ui, sans-serif; }
+    h1, h2 { line-height: 1.25; }
+    h2 { margin-top: 2em; }
+    nav { font-size: 15px; margin-bottom: 2em; }
+    nav a { margin-right: 1em; }
+    .todo { background: #fff3a8; color: #3a2f00; padding: 1px 6px; border-radius: 4px; }
+    .note { padding: 14px 16px; border-left: 4px solid #5e45d4; background: rgba(94, 69, 212, 0.1); }
   </style>
 </head>
 <body>
-  <h1>Datenschutzhinweise für Word Express</h1>
-  <p class="draft"><strong>Technischer Entwurf für den privaten Testbetrieb.</strong> Vor einer Veröffentlichung müssen Betreibername, Kontakt, Rechtsgrundlage, Hosting-Region, Aufbewahrungsfristen und Betroffenenrechte mit den tatsächlichen Betriebsbedingungen ergänzt und rechtlich geprüft werden.</p>
-  <h2>Welche Daten verarbeitet werden</h2>
-  <p>Bei einem Konto werden die E-Mail-Adresse und ein kryptografisch gehashter Passwortwert gespeichert. Nach der Anmeldung kann die App Ordner, Favoriten, Quiz-Einstellungen, Lernfortschritt, Aktivitätstage und Spracheinstellungen als Profil synchronisieren. Das Passwort wird nicht im Klartext gespeichert. Die App speichert das Sitzungstoken im iOS-Schlüsselbund.</p>
-  <h2>Technische Betriebsdaten</h2>
-  <p>Die API verarbeitet Verbindungsdaten zur Bereitstellung und zum Schutz vor übermäßigen Anfragen. Für Anmelde- und Registrierungsgrenzen werden gehashte IP-/Kontokennungen und zeitlich begrenzte Zähler in PostgreSQL gespeichert. Anfrageinhalte und Passwörter werden nicht in Anwendungslogs geschrieben. Railway kann eigene Infrastruktur- und Sicherungsprotokolle nach den dort geltenden Einstellungen führen.</p>
-  <h2>Speicherung und Löschung</h2>
-  <p>Profildaten bleiben lokal auf dem Gerät, wenn kein Konto verwendet wird. Cloud-Profile werden in der PostgreSQL-Datenbank des Betreibers gespeichert. In der App kann ein angemeldetes Konto nach erneuter Passworteingabe gelöscht werden; dabei werden Konto und zugeordnetes Cloud-Profil aus der Datenbank entfernt. Lokale App-Daten werden dabei zurückgesetzt.</p>
-  <h2>Inhalte und Drittanbieter</h2>
-  <p>Die Wortdaten werden mit der App bereitgestellt. In dieser Version werden keine KI-Anfragen, Werbe- oder Analyse-Tracker an externe Anbieter gesendet. Der Hosting-Anbieter verarbeitet technische Verbindungsdaten, soweit dies für den Betrieb erforderlich ist.</p>
-  <h2>Kontakt</h2>
-  <p>Verantwortlicher und Kontaktadresse müssen vor einer Veröffentlichung hier eingetragen werden.</p>
+  <nav><a href="/privacy">Datenschutzerklärung</a><a href="/terms">Nutzungsbedingungen</a><a href="/imprint">Impressum</a></nav>
+  <h1>Datenschutzerklärung</h1>
+  <p>Stand: <span class="todo">‹Datum eintragen›</span></p>
+  <p>Diese Erklärung beschreibt, welche personenbezogenen Daten die App „Lernkarten“ und der dazugehörige Server verarbeiten.</p>
+
+  <h2>1. Verantwortlicher</h2>
+  <p><span class="todo">‹Vor- und Nachname›</span><br><span class="todo">‹Straße und Hausnummer›</span><br><span class="todo">‹PLZ und Ort›</span><br>E-Mail: <span class="todo">‹Kontakt-E-Mail›</span></p>
+
+  <h2>2. Nutzung ohne Konto</h2>
+  <p>Ohne Anmeldung bleiben alle Inhalte – Decks, Karten, Vokabeln, Termine, Lernfortschritt und Einstellungen – ausschließlich auf deinem Gerät. Der Server erhält sie nicht. Die KI-Funktionen und der Abgleich zwischen Geräten stehen ohne Konto nicht zur Verfügung.</p>
+
+  <h2>3. Konto und Anmeldung mit Apple</h2>
+  <p>Die Anmeldung erfolgt über „Mit Apple anmelden“. Apple übermittelt dabei eine Kennung, die dich dieser App gegenüber identifiziert, und – je nach deiner Auswahl – deine E-Mail-Adresse oder eine von Apple erzeugte Weiterleitungsadresse. Der Server speichert diese Kennung, die Adresse, den Zeitpunkt der Kontoerstellung und gegebenenfalls ein Token, mit dem die Verknüpfung bei Apple nach einer Kontolöschung widerrufen wird. Ein Passwort wird nicht erhoben. Die App bewahrt ein Sitzungstoken im iOS-Schlüsselbund auf.</p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung des Kontos).</p>
+
+  <h2>4. Abgleich deiner Lerndaten</h2>
+  <p>Bist du angemeldet, lädt die App deinen Lernstand (Decks, Karten, Vokabeln, Ordner, Sprachpaare, Termine, Lernzeiten und Lerntage) auf den Server, damit er gesichert ist und auf deinen anderen Geräten zur Verfügung steht. Einstellungen wie Sprache und Erscheinungsbild bleiben auf dem Gerät.</p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+  <h2>5. KI-Funktionen</h2>
+  <p>Wenn du eine KI-Funktion nutzt (Karten erstellen, Antworten bewerten, Tutor, Zusammenfassung), sendet die App die dafür nötigen Inhalte an den Server: den eingegebenen oder aus einem PDF gelesenen Text, ein ausgewähltes oder aufgenommenes Foto, die betroffenen Karten oder Vokabeln, deine Antwort und den bisherigen Gesprächsverlauf. Der Server leitet diese Inhalte zur Verarbeitung an Google weiter (Gemini API; Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Dabei können Daten in Länder außerhalb der EU übertragen werden, insbesondere in die USA.</p>
+  <p>Der Server speichert die Inhalte der Anfragen nicht. Gespeichert werden pro Anfrage Zeitpunkt, verwendetes Modell, Anzahl der verarbeiteten Tokens und geschätzte Kosten, um die täglichen Nutzungsgrenzen einzuhalten.</p>
+  <p>Gib in KI-Funktionen keine vertraulichen Informationen und keine personenbezogenen Daten anderer Personen ein.</p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO. <span class="todo">‹Vor Veröffentlichung prüfen: Google-Tarif, Vertrag zur Auftragsverarbeitung mit Google und Grundlage der Drittlandübermittlung›</span></p>
+
+  <h2>6. Tests und Mitteilungen</h2>
+  <p>Startest du einen vom Tutor erstellten Test, sendet die App die dafür nötigen Karten mit ihren Lernwerten (Anzahl falscher und mühsamer Antworten, letzte Bewertung) an den Server. Der Server prüft, ob der Test fällig ist, lässt ihn über die in Abschnitt 5 beschriebene KI-Funktion erstellen und speichert die erzeugten Fragen höchstens sieben Tage, damit derselbe Test am selben Tag nicht erneut erzeugt wird.</p>
+  <p>Erinnerungen an Tests plant die App auf deinem Gerät; dafür werden keine Daten übertragen. Hast du Mitteilungen eingeschaltet und bist angemeldet, speichert der Server zusätzlich die von Apple vergebene Geräte-Kennung (Push-Token) und die Sprache der App, um dir Mitteilungen über Apples Push-Dienst senden zu können. Dafür prüft der Server einmal täglich deine abgeglichenen Lerndaten auf anstehende Termine und schwere Karten; KI kommt dabei nicht zum Einsatz. Schaltest du die Erinnerungen aus oder meldest dich ab, wird die Geräte-Kennung gelöscht.</p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO; für Mitteilungen deine Einwilligung über die iOS-Abfrage (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit in den iOS-Einstellungen widerrufen kannst.</p>
+
+  <h2>7. Technische Daten und Schutz vor Missbrauch</h2>
+  <p>Bei jeder Anfrage verarbeitet der Server die IP-Adresse deines Geräts. Für Anmeldeversuche und Nutzungsgrenzen werden daraus und aus der Kontokennung gekürzte Prüfwerte (Hashes) mit Zählern gebildet und nach spätestens 24 Stunden gelöscht. Inhalte von Anfragen werden nicht in Protokolle geschrieben.</p>
+  <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Sicherheit und Stabilität des Dienstes).</p>
+
+  <h2>8. Hosting</h2>
+  <p>Server und Datenbank werden bei Railway betrieben (Railway Corp., San Francisco, USA). Railway verarbeitet die Daten in unserem Auftrag. Serverstandort: <span class="todo">‹Railway-Region eintragen, z. B. EU West›</span>. <span class="todo">‹Vor Veröffentlichung prüfen: Vertrag zur Auftragsverarbeitung mit Railway›</span></p>
+
+  <h2>9. Kamera, Fotos und Dateien</h2>
+  <p>Die App greift nur dann auf Kamera, Fotomediathek oder Dateien zu, wenn du ein Foto aufnimmst oder ein Foto bzw. PDF auswählst. Das gewählte Material wird ausschließlich für die jeweilige KI-Funktion verwendet (siehe Abschnitt 5).</p>
+
+  <h2>10. Keine Werbung, kein Tracking</h2>
+  <p>Die App enthält keine Werbung, keine Analyse- oder Tracking-Dienste und gibt keine Daten zu Werbezwecken weiter.</p>
+
+  <h2>11. Speicherdauer und Löschung</h2>
+  <p>Konto, abgeglichene Lerndaten, Nutzungszähler, erzeugte Tests und Geräte-Kennungen bleiben höchstens gespeichert, bis du dein Konto löschst. Das geht jederzeit in der App unter Einstellungen → Konto → „Konto löschen“; die Daten werden dann sofort vom Server entfernt. Die Daten auf deinem Gerät löschst du unter Einstellungen → „Daten auf diesem Gerät löschen“ oder durch Entfernen der App.</p>
+
+  <h2>12. Deine Rechte</h2>
+  <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Wende dich dafür an die oben genannte Kontaktadresse. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der für deinen Wohnort zuständigen.</p>
+
+  <h2>13. Änderungen</h2>
+  <p>Wenn sich die App oder die Rechtslage ändert, wird diese Erklärung angepasst. Es gilt die jeweils hier veröffentlichte Fassung.</p>
 </body>
 </html>

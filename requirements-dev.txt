@@ -1,5 +1,6 @@
 -r requirements.txt
 pytest==8.4.2
-httpx==0.28.1
+# Bundled PostgreSQL for the integration tests; they are skipped when it is missing.
+pgserver==0.1.4
 # Only needed to run the tests on Python older than 3.10.
 eval_type_backport; python_version < '3.10'

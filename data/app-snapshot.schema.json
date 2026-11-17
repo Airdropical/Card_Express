@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lernkarten cloud snapshot",
+  "description": "The complete learning data of one account as the iOS app stores it. The server keeps it as an opaque document; this schema only guards its shape and size.",
+  "type": "object",
+  "required": ["schemaVersion", "decks", "vocabulary"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "minimum": 1, "maximum": 1000 },
+    "savedAt": { "type": "number" },
+    "decks": { "type": "array", "maxItems": 5000, "items": { "type": "object" } },
+    "vocabulary": { "type": "array", "maxItems": 100000, "items": { "type": "object" } },
+    "vocabularyDecks": { "type": "array", "maxItems": 5000, "items": { "type": "object" } },
+    "vocabularyLanguages": { "type": "array", "maxItems": 500, "items": { "type": "object" } },
+    "vocabularyLanguagePairs": { "type": "array", "maxItems": 500, "items": { "type": "object" } },
+    "calendarEntries": { "type": "array", "maxItems": 10000, "items": { "type": "object" } },
+    "activities": { "type": "array", "maxItems": 100000, "items": { "type": "object" } },
+    "studyDays": { "type": "array", "maxItems": 20000, "items": { "type": "number" } }
+  },
+  "additionalProperties": true
+}

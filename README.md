@@ -57,18 +57,48 @@ Railway terminates public TLS; mobile requests must use the generated `https://`
 ## API
 
 - `GET /api/health` — readiness check including PostgreSQL connectivity
-- `GET /api/v1/content` — bundled word data
-- `POST /api/v1/auth/register` — invite-only account creation
-- `POST /api/v1/auth/login` — email/password login
-- `POST /api/v1/auth/logout` — revoke current account sessions
-- `GET /api/v1/profile` — current account profile and revision
-- `PUT /api/v1/profile` — validate and persist profile using the required `If-Match` revision
-- `DELETE /api/v1/account` — delete account and cloud profile after password confirmation
-- `GET /privacy` — technical privacy notice
+- `POST /api/v1/auth/apple` — sign in with Apple: verifies the identity token and returns a session
+- `GET /api/v1/account` — account email and today's AI usage
+- `DELETE /api/v1/account` — delete the account with its synced data and usage records
+- `POST /api/v1/auth/logout` — revoke the account's sessions
+- `GET /api/v1/profile` — the synced learning data and its revision (`profile` is null before the first upload)
+- `PUT /api/v1/profile` — upload the learning data; requires the current revision in `If-Match`, answers 409 otherwise
+- `POST /api/generate-cards`, `/api/evaluate`, `/api/tutor`, `/api/agent-plan`, `/api/summary` — AI features
+- `POST /api/v1/tests` — a tutor-written test, checked before it is generated
+- `PUT`/`DELETE /api/v1/devices` — register or remove a device for push notifications
+- `POST /api/internal/daily-tests` — scheduled job that sends the daily test notifications
+- `POST /api/v1/auth/register`, `/api/v1/auth/login` — legacy email/password accounts; registration stays closed unless `REGISTRATION_INVITE_CODE` is set
+- `GET /privacy`, `/terms`, `/imprint` — legal pages (`frontend/*.html`)
 
-When an account is created, the current local profile is copied to that account. Signing into an existing account loads its cloud profile onto the device. Profile updates use revision checks so an older device cannot silently overwrite a newer cloud copy. Offline changes remain on-device and are retried when synchronization is requested or the app starts with a stored session.
+### Accounts and sync
 
-Authentication attempts and profile writes are limited in PostgreSQL. Login is limited by both client address and email; registration also requires the private invitation code. Profiles are capped at 1 MB. Keep Railway's database and service usage visible in its billing dashboard and configure budget/usage alerts there; the app cannot enforce the provider's infrastructure bill.
+The app signs in with Apple; the server checks the token's signature, audience (`APPLE_BUNDLE_ID`) and nonce. Signed-in devices keep one snapshot of the learning data per account. A device uploads when the cloud still has the revision it last saw and downloads when it has no changes of its own; if both sides changed, the app asks which version to keep. To revoke the Apple grant on account deletion, set `APPLE_TEAM_ID`, `APPLE_KEY_ID` and `APPLE_PRIVATE_KEY`.
+
+### Daily tests and notifications
+
+`POST /api/v1/tests` writes a test from the cards the app sends: for a calendar entry with a linked deck in the next three days (`exam`) or from cards that went badly before (`weak`). The rules in `backend/daily_tests.py` run first; a test that is not due is refused without an AI request, and a written test is stored and served again for the rest of the day.
+
+The app plans reminders on the device. Server-sent push is optional: set `APPLE_TEAM_ID`, `APNS_KEY_ID`, `APNS_PRIVATE_KEY` and `JOB_SECRET`, then let a scheduler (for example a Railway cron service) call the job once a day:
+
+```sh
+curl -fsS -X POST -H "X-Job-Secret: $JOB_SECRET" https://<your-domain>/api/internal/daily-tests
+```
+
+The job checks each registered account's synced data with the same rules and sends at most one notification per account and day. It makes no AI request. Accounts that get server push stop planning their own reminders.
+
+### Plans
+
+Every account has a `plan` (`free` today). `AI_DAILY_REQUEST_LIMIT_PLUS` is the daily limit for `plus`, prepared for a later subscription; nothing sets it yet.
+
+### AI limits
+
+Every account gets `AI_DAILY_REQUEST_LIMIT` requests per rolling 24 hours; `AI_GLOBAL_DAILY_REQUEST_LIMIT` caps all accounts together. The account named in `AI_UNLIMITED_ACCOUNT_EMAIL` is exempt.
+
+### Before going public
+
+- Fill in every highlighted `‹…›` placeholder in `frontend/privacy.html`, `terms.html` and `imprint.html` and have the texts checked.
+- Check the Gemini API terms for your audience and region (paid tier for EU users, age restrictions) and conclude the data-processing agreements with Google and Railway.
+- The Sign in with Apple capability needs a paid Apple Developer account.
 
 ## Current operating limits
 

@@ -8,3 +8,6 @@ argon2-cffi==25.1.0
 PyJWT==2.15.1
 email-validator==2.3.0
 jsonschema==4.25.1
+cryptography==50.0.2
+# HTTP/2 client for Apple push notifications.
+httpx[http2]==0.28.1
