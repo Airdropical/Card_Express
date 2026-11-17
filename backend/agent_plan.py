@@ -66,6 +66,7 @@ def requested_flashcard_count(message: str) -> int | None:
     return min(max(amount, 1), 20)
 
 
+VOCABULARY_PER_RESPONSE = 60
 CARD_ACTION_TYPES = {"create_deck_tree", "create_subdeck", "create_cards"}
 
 
@@ -228,6 +229,17 @@ def sanitize_agent_plan(plan: dict[str, Any]) -> dict[str, Any]:
             continue
         if kind == "create_calendar_entry" and (not str(action.get("title", "")).strip() or not str(action.get("dateISO", "")).strip()):
             continue
+        if kind == "update_calendar_entry" and (not str(action.get("title", "")).strip() or not (str(action.get("newDateISO", "")).strip() or str(action.get("newTitle", "")).strip())):
+            continue
+        if kind == "delete_calendar_entry" and not str(action.get("title", "")).strip():
+            continue
+        if kind == "rename_deck" and (not str(action.get("deckName", "")).strip() or not str(action.get("newName", "")).strip()):
+            continue
+        if kind == "start_test" and not str(action.get("deckName", "")).strip():
+            continue
+        if kind in ("create_vocabulary_folder", "add_vocabulary"):
+            # One response never carries more than a batch; larger lists arrive over several requests.
+            action["vocabularyEntries"] = action["vocabularyEntries"][:VOCABULARY_PER_RESPONSE]
         signature = (str(kind), str(action.get("deckName", "")).casefold(), str(action.get("subdeckName", "")).casefold(), str(action.get("parentDeck", "")).casefold(), str(action.get("folderName", "")).casefold(), str(action.get("title", "")).casefold())
         if signature in seen:
             continue

@@ -44,6 +44,23 @@ def token_usage(response: dict[str, Any]) -> tuple[int, int]:
     return count("promptTokenCount"), count("candidatesTokenCount") + count("thoughtsTokenCount")
 
 
+def is_unlimited(account: Account) -> bool:
+    """The operator account named in AI_UNLIMITED_ACCOUNT_EMAIL is exempt from all AI limits."""
+    return bool(config.AI_UNLIMITED_ACCOUNT_EMAIL) and account.email.strip().casefold() == config.AI_UNLIMITED_ACCOUNT_EMAIL
+
+
+def daily_limit_for(account: Account) -> int:
+    """The account's AI requests per rolling 24 hours, by plan."""
+    return config.AI_DAILY_REQUEST_LIMIT_PLUS if getattr(account, "plan", "free") == "plus" else config.AI_DAILY_REQUEST_LIMIT
+
+
+def requests_in_last_day(db: Session, account: Account) -> int:
+    since = utcnow() - timedelta(hours=24)
+    return db.scalar(
+        select(func.count(AIUsage.id)).where(AIUsage.account_id == account.id, AIUsage.state != "failed", AIUsage.created_at >= since)
+    ) or 0
+
+
 def reserve_ai_usage(db: Session, account: Account, enforce_limits: bool = True) -> AIUsage:
     # Serialize reservation checks per account so concurrent requests cannot overshoot the budget.
     db.execute(
@@ -68,12 +85,17 @@ def reserve_ai_usage(db: Session, account: Account, enforce_limits: bool = True)
         estimate_ai_cost(config.GEMINI_FALLBACK_MODEL or config.GEMINI_MODEL, RESERVED_INPUT_TOKENS, config.AI_MAX_OUTPUT_TOKENS),
     )
     if enforce_limits:
-        if daily_count >= config.AI_DAILY_REQUEST_LIMIT:
+        if daily_count >= daily_limit_for(account):
             raise HTTPException(status_code=429, detail="Daily AI request limit reached")
-        if total_count >= config.AI_TOTAL_REQUEST_LIMIT:
+        if config.AI_TOTAL_REQUEST_LIMIT > 0 and total_count >= config.AI_TOTAL_REQUEST_LIMIT:
             raise HTTPException(status_code=429, detail="Private pilot AI request limit reached")
-        if spent + reservation > config.AI_BUDGET_USD:
+        if config.AI_BUDGET_USD > 0 and spent + reservation > config.AI_BUDGET_USD:
             raise HTTPException(status_code=429, detail="Private pilot AI budget reached")
+        if config.AI_GLOBAL_DAILY_REQUEST_LIMIT > 0:
+            # Approximate across accounts (the lock above is per account); good enough for a cost ceiling.
+            global_count = db.scalar(select(func.count(AIUsage.id)).where(in_last_day)) or 0
+            if global_count >= config.AI_GLOBAL_DAILY_REQUEST_LIMIT:
+                raise HTTPException(status_code=429, detail="Daily AI capacity for all users is used up")
     usage = AIUsage(
         id=UUID(bytes=secrets.token_bytes(16), version=4), account_id=account.id,
         created_at=now, reserved_cost=reservation, actual_cost=None,
@@ -164,7 +186,7 @@ def parse_gemini_output(response: dict[str, Any]) -> dict[str, Any]:
 def execute_ai(request: Request, db: Session, account: Account, parts: list[dict[str, Any]], schema: dict[str, Any]) -> dict[str, Any]:
     if not config.GEMINI_API_KEY:
         raise HTTPException(status_code=503, detail="Set GEMINI_API_KEY (or GOOGLE_API_KEY) in the Railway service variables")
-    unlimited_operator = bool(config.AI_UNLIMITED_ACCOUNT_EMAIL) and account.email.strip().casefold() == config.AI_UNLIMITED_ACCOUNT_EMAIL
+    unlimited_operator = is_unlimited(account)
     if not unlimited_operator:
         fail_rate_limit(db, request, "ai", limit=config.AI_RATE_LIMIT_PER_MINUTE, window_seconds=60, subject=str(account.id), by_ip=False)
     usage = reserve_ai_usage(db, account, enforce_limits=not unlimited_operator)

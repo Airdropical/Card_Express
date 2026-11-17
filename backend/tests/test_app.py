@@ -39,12 +39,10 @@ def test_startup_checks_do_not_depend_on_app_env(monkeypatch):
     assert any("DATABASE_URL" in problem for problem in config.startup_problems())
 
 
-def test_invite_code_is_required_in_production(monkeypatch):
+def test_missing_invite_code_only_closes_password_registration(monkeypatch):
     monkeypatch.setattr(config, "DATABASE_URL", "postgresql+psycopg://u:p@localhost/db")
     monkeypatch.setattr(config, "REGISTRATION_INVITE_CODE", "")
     monkeypatch.setattr(config, "APP_ENV", "production")
-    assert any("REGISTRATION_INVITE_CODE" in problem for problem in config.startup_problems())
-    monkeypatch.setattr(config, "APP_ENV", "development")
     assert config.startup_problems() == []
 
 
@@ -87,7 +85,7 @@ def test_missing_or_invalid_token_is_rejected(header):
 
 
 def test_ai_and_profile_routes_require_authentication():
-    protected = {"/api/generate-cards", "/api/evaluate", "/api/tutor", "/api/agent-plan", "/api/summary", "/api/v1/profile", "/api/v1/account", "/api/v1/auth/logout"}
+    protected = {"/api/generate-cards", "/api/evaluate", "/api/tutor", "/api/agent-plan", "/api/summary", "/api/v1/profile", "/api/v1/account", "/api/v1/auth/logout", "/api/v1/tests", "/api/v1/devices"}  # /account covers GET and DELETE
     seen = set()
     for route in server.app.routes:
         if getattr(route, "path", None) in protected:
@@ -157,7 +155,7 @@ def test_app_starts_and_serves_public_routes(monkeypatch):
 
     monkeypatch.setattr(config, "DATABASE_URL", "postgresql+psycopg://u:p@localhost/db")
     with TestClient(server.app) as client:
-        for path in ("/", "/privacy", "/api/v1/content"):
+        for path in ("/", "/privacy", "/terms", "/imprint", "/api/v1/content"):
             response = client.get(path)
             assert response.status_code == 200, path
             assert response.headers["x-frame-options"] == "DENY"

@@ -34,9 +34,11 @@ class ProfileWrite(BaseModel):
     profile: dict[str, Any]
 
 
-class DeleteAccountRequest(BaseModel):
+class AppleSignInRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    password: str = Field(min_length=1, max_length=256)
+    identityToken: str = Field(min_length=20, max_length=8_000)
+    nonce: str = Field(min_length=16, max_length=200)
+    authorizationCode: str | None = Field(default=None, max_length=2_000)
 
 
 class GenerateCardsRequest(BaseModel):
@@ -69,6 +71,38 @@ class AttachmentFields(BaseModel):
     documentName: str = Field(default="", max_length=200)
 
 
+class TestCard(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    question: str = Field(max_length=600)
+    answer: str = Field(max_length=1_200)
+    lapses: int = Field(default=0, ge=0, le=100_000)
+    hardCount: int = Field(default=0, ge=0, le=100_000)
+    lastRating: str | None = Field(default=None, max_length=16)
+
+
+class DailyTestRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    kind: str = Field(pattern="^(exam|weak)$")
+    # The calendar entry the test belongs to; empty for the daily test from difficult cards.
+    reference: str = Field(default="", max_length=64, pattern="^[A-Za-z0-9-]*$")
+    localDay: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
+    examDay: str | None = Field(default=None, pattern=r"^\d{4}-\d{2}-\d{2}$")
+    title: str = Field(default="", max_length=120)
+    cards: list[TestCard] = Field(min_length=1, max_length=400)
+
+
+class DeviceRegistration(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    token: str = Field(min_length=32, max_length=200, pattern="^[0-9a-fA-F]+$")
+    environment: str = Field(default="production", pattern="^(production|sandbox)$")
+    language: str = Field(default="de", pattern="^(de|en)$")
+
+
+class DeviceRemoval(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    token: str = Field(min_length=32, max_length=200, pattern="^[0-9a-fA-F]+$")
+
+
 class TutorHistoryItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     role: str = Field(max_length=24)
@@ -94,6 +128,12 @@ class AgentPlanRequest(AttachmentFields):
     sourceLanguage: str = Field(default="German", max_length=80)
     targetLanguage: str = Field(default="English", max_length=80)
     vocabularyFolders: list[str] = Field(default_factory=list, max_length=100)
+    # "YYYY-MM-DD · title" for each entry, so the tutor can change or remove existing ones.
+    calendarEntries: list[str] = Field(default_factory=list, max_length=100)
+    # The learner's own calendar day, so "next Friday" resolves correctly.
+    today: str | None = Field(default=None, pattern=r"^\d{4}-\d{2}-\d{2}$")
+    # Vocabulary already taken from the attached material in earlier rounds; the next round continues after them.
+    excludeTerms: list[str] = Field(default_factory=list, max_length=1_000)
 
 
 class SummaryCard(BaseModel):
@@ -122,7 +162,10 @@ AGENT_PLAN_SCHEMA = {
             "items": {
                 "type": "OBJECT",
                 "properties": {
-                    "type": {"type": "STRING", "enum": ["create_deck", "create_deck_tree", "create_subdeck", "create_cards", "create_calendar_entry", "create_vocabulary_folder", "add_vocabulary"]},
+                    "type": {"type": "STRING", "enum": ["create_deck", "create_deck_tree", "create_subdeck", "create_cards", "create_calendar_entry", "update_calendar_entry", "delete_calendar_entry", "rename_deck", "start_test", "create_vocabulary_folder", "add_vocabulary"]},
+                    "newTitle": {"type": "STRING"},
+                    "newDateISO": {"type": "STRING"},
+                    "newName": {"type": "STRING"},
                     "parentDeck": {"type": "STRING"},
                     "createParentDeck": {"type": "BOOLEAN"},
                     "deckName": {"type": "STRING"},

@@ -8,6 +8,7 @@ import binascii
 import re
 import secrets
 from contextlib import asynccontextmanager
+from datetime import timedelta
 from typing import Any, Optional
 from uuid import UUID
 
@@ -15,11 +16,14 @@ from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response, 
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
 import ai_prompts
+import apns
+import apple_auth
 import config
+import daily_tests
 from agent_plan import (
     CARD_ACTION_TYPES,
     CLAIMS_DONE,
@@ -36,11 +40,11 @@ from agent_plan import (
     sanitize_agent_plan,
     valid_cards,
 )
-from ai_client import execute_ai
+from ai_client import daily_limit_for, execute_ai, is_unlimited, requests_in_last_day
 from auth import DUMMY_PASSWORD_HASH, current_account, hash_password, issue_token, verify_password
-from db import Account, Base, UserProfile, get_db, utcnow  # noqa: F401  (Base is re-exported for tooling)
+from db import Account, Base, DeviceToken, GeneratedTest, UserProfile, get_db, utcnow  # noqa: F401  (Base is re-exported for tooling)
 from middleware import BodyLimitAndSecurityHeadersMiddleware
-from profiles import validate_profile_document
+from profiles import validate_snapshot
 from rate_limit import fail_rate_limit
 from schemas import (
     AGENT_PLAN_SCHEMA,
@@ -50,8 +54,11 @@ from schemas import (
     REPLY_SCHEMA,
     SUMMARY_SCHEMA,
     AgentPlanRequest,
+    AppleSignInRequest,
     Credentials,
-    DeleteAccountRequest,
+    DailyTestRequest,
+    DeviceRegistration,
+    DeviceRemoval,
     EvaluateRequest,
     GenerateCardsRequest,
     LoginCredentials,
@@ -135,12 +142,162 @@ def login(body: LoginCredentials, request: Request, db: Session = Depends(get_db
     fail_rate_limit(db, request, "login-email-ip", limit=8, window_seconds=900, subject=email)
     fail_rate_limit(db, request, "login-email", limit=40, window_seconds=900, subject=email, by_ip=False)
     account = db.scalar(select(Account).where(Account.email == email))
-    # Use a dummy hash for unknown emails to reduce timing-based account discovery.
-    encoded_hash = account.password_hash if account is not None else DUMMY_PASSWORD_HASH
+    # Use a dummy hash for unknown emails (and Apple-only accounts) to reduce timing-based account discovery.
+    encoded_hash = account.password_hash if account is not None and account.password_hash else DUMMY_PASSWORD_HASH
     password_ok = verify_password(body.password, encoded_hash)
-    if account is None or not password_ok:
+    if account is None or not account.password_hash or not password_ok:
         raise HTTPException(status_code=401, detail="Email or password is incorrect")
     return session_response(account)
+
+
+def account_for_apple_identity(db: Session, apple_sub: str, email: Optional[str]) -> Account:
+    """Find the account for an Apple identity, link an existing one by verified email, or create it."""
+    account = db.scalar(select(Account).where(Account.apple_sub == apple_sub))
+    if account is not None:
+        return account
+    existing = db.scalar(select(Account).where(Account.email == email)) if email else None
+    if existing is not None and existing.apple_sub is None:
+        existing.apple_sub = apple_sub
+        return existing
+    # No usable email (hidden, or already taken by another Apple identity): keep the address column unique anyway.
+    address = email if email and existing is None else f"{apple_sub[:200]}@apple.invalid"
+    account = Account(id=UUID(bytes=secrets.token_bytes(16), version=4), email=address, password_hash=None, apple_sub=apple_sub)
+    db.add(account)
+    db.add(UserProfile(account_id=account.id, document=None, revision=0, updated_at=utcnow()))
+    return account
+
+
+@app.post("/api/v1/auth/apple")
+def sign_in_with_apple(body: AppleSignInRequest, request: Request, db: Session = Depends(get_db)):
+    fail_rate_limit(db, request, "apple-ip", limit=20, window_seconds=900)
+    claims = apple_auth.verify_identity_token(body.identityToken, body.nonce)
+    apple_sub = str(claims["sub"])
+    account = account_for_apple_identity(db, apple_sub, apple_auth.verified_email(claims))
+    refresh_token = apple_auth.refresh_token_for(body.authorizationCode or "")
+    if refresh_token:
+        account.apple_refresh_token = refresh_token
+    try:
+        db.commit()
+    except Exception:
+        db.rollback()
+        # Two first sign-ins at once: the other request created the account.
+        account = db.scalar(select(Account).where(Account.apple_sub == apple_sub))
+        if account is None:
+            raise HTTPException(status_code=503, detail="Account could not be created")
+    return session_response(account)
+
+
+@app.get("/api/v1/account")
+def account_overview(response: Response, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+    response.headers["Cache-Control"] = "no-store"
+    hidden_email = account.email.endswith("@apple.invalid")
+    return {
+        "email": None if hidden_email else account.email,
+        "ai": {
+            "usedToday": requests_in_last_day(db, account),
+            "dailyLimit": daily_limit_for(account),
+            "unlimited": is_unlimited(account),
+        },
+        "plan": account.plan or "free",
+        # True when this account gets its test reminders from the server; the app then plans none itself.
+        "serverPush": apns.configured() and db.scalar(select(DeviceToken.token).where(DeviceToken.account_id == account.id).limit(1)) is not None,
+    }
+
+
+@app.put("/api/v1/devices", status_code=status.HTTP_204_NO_CONTENT)
+def register_device(body: DeviceRegistration, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+    """Remember a device for push notifications. A token belongs to whichever account registered it last."""
+    fail_rate_limit(db, request, "device", limit=30, window_seconds=3600, subject=str(account.id), by_ip=False)
+    token = body.token.lower()
+    row = db.get(DeviceToken, token)
+    if row is None:
+        db.add(DeviceToken(token=token, account_id=account.id, environment=body.environment, language=body.language, updated_at=utcnow()))
+    else:
+        row.account_id, row.environment, row.language, row.updated_at = account.id, body.environment, body.language, utcnow()
+    db.commit()
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@app.delete("/api/v1/devices", status_code=status.HTTP_204_NO_CONTENT)
+def remove_device(body: DeviceRemoval, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+    db.execute(delete(DeviceToken).where(DeviceToken.token == body.token.lower(), DeviceToken.account_id == account.id))
+    db.commit()
+    return Response(status_code=status.HTTP_204_NO_CONTENT)
+
+
+@app.post("/api/v1/tests")
+def daily_test(body: DailyTestRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+    """A test the tutor writes from the learner's cards: checked first, written once per day, then served from storage."""
+    today = daily_tests.parse_day(body.localDay)
+    if today is None or not daily_tests.plausible_today(today):
+        raise HTTPException(status_code=422, detail="The device date does not match the current date")
+    cards = [card.model_dump() for card in body.cards]
+    if body.kind == "exam":
+        material, reason = daily_tests.exam_material(cards, today, daily_tests.parse_day(body.examDay or ""))
+    else:
+        material, reason = daily_tests.weak_material(cards)
+    if not material:
+        # Checked before any AI request: nothing is generated, and nothing is counted, for a test that is not due.
+        raise HTTPException(status_code=409, detail=reason)
+    key = {"account_id": account.id, "kind": body.kind, "reference": body.reference, "day": body.localDay}
+    stored = db.get(GeneratedTest, key)
+    if stored is not None:
+        return {"questions": stored.questions, "cached": True}
+    count = daily_tests.question_count(len(material))
+    lines = "\n".join("Q: " + card["question"][:300] + "\nA: " + card["answer"][:500] for card in material)
+    prompt = ai_prompts.daily_test(body.kind, body.title.strip() or "an exam", count, lines)
+    result = execute_ai(request, db, account, [{"text": prompt}], CARD_SCHEMA)
+    questions = [{"question": str(card["question"]).strip(), "answer": str(card["answer"]).strip()} for card in valid_cards(result.get("cards"))][:count]
+    if len(questions) < daily_tests.MIN_EXAM_CARDS:
+        raise HTTPException(status_code=502, detail="AI did not create a usable test; please try again")
+    db.add(GeneratedTest(**key, questions=questions, created_at=utcnow()))
+    # Old tests are of no further use.
+    db.execute(delete(GeneratedTest).where(GeneratedTest.created_at < utcnow() - timedelta(days=7)))
+    try:
+        db.commit()
+    except Exception:
+        db.rollback()  # A parallel request stored the same test first; this one is still valid to return.
+    return {"questions": questions, "cached": False}
+
+
+@app.post("/api/internal/daily-tests")
+def send_daily_test_notifications(x_job_secret: Optional[str] = Header(default=None, alias="X-Job-Secret"), db: Session = Depends(get_db)):
+    """Run once a day by a scheduler: notify accounts whose synced data qualifies for a test. Makes no AI request."""
+    if not config.JOB_SECRET or not x_job_secret or not secrets.compare_digest(x_job_secret.encode(), config.JOB_SECRET.encode()):
+        raise HTTPException(status_code=404, detail="Not Found")
+    if not apns.configured():
+        raise HTTPException(status_code=503, detail="Push notifications are not configured")
+    today = utcnow().date()
+    day = today.isoformat()
+    sent = skipped = removed = 0
+    account_ids = db.scalars(select(DeviceToken.account_id).distinct()).all()
+    with apns.open_client() as client:
+        for account_id in account_ids:
+            account = db.get(Account, account_id)
+            profile = db.get(UserProfile, account_id)
+            if account is None or account.last_test_push_day == day:
+                skipped += 1
+                continue
+            offers = daily_tests.snapshot_offers(profile.document if profile else None, today)
+            if not offers:
+                skipped += 1
+                continue
+            for device in db.scalars(select(DeviceToken).where(DeviceToken.account_id == account_id)).all():
+                title, text = daily_tests.push_text(offers, device.language)
+                try:
+                    result = apns.send(client, device.token, device.environment, title, text, offers[0]["kind"])
+                except Exception:
+                    print("Push delivery failed.", flush=True)
+                    continue
+                if result == 200:
+                    sent += 1
+                elif result in (400, 410):
+                    # Apple no longer knows this device (app removed or token replaced).
+                    db.delete(device)
+                    removed += 1
+            account.last_test_push_day = day
+            db.commit()
+    return {"sent": sent, "skipped": skipped, "removedDevices": removed}
 
 
 @app.post("/api/v1/auth/logout", status_code=status.HTTP_204_NO_CONTENT)
@@ -153,10 +310,11 @@ def logout(account: Account = Depends(current_account), db: Session = Depends(ge
 @app.get("/api/v1/profile")
 def get_profile(response: Response, account: Account = Depends(current_account), db: Session = Depends(get_db)):
     row = db.get(UserProfile, account.id)
-    if row is None or row.document is None:
-        raise HTTPException(status_code=404, detail="Profile has not been uploaded")
+    if row is None:
+        raise HTTPException(status_code=404, detail="Profile record is missing")
     response.headers["ETag"] = f'"{row.revision}"'
     response.headers["Cache-Control"] = "no-store"
+    # `profile` is null until a device has uploaded its data for the first time.
     return {"profile": row.document, "revision": row.revision}
 
 
@@ -169,11 +327,11 @@ def put_profile(
     account: Account = Depends(current_account),
     db: Session = Depends(get_db),
 ):
-    fail_rate_limit(db, request, "profile-write", limit=120, window_seconds=60, subject=str(account.id), by_ip=False)
+    fail_rate_limit(db, request, "profile-write", limit=30, window_seconds=60, subject=str(account.id), by_ip=False)
     if if_match is None or not re.fullmatch(r'"?\d+"?', if_match.strip()):
         raise HTTPException(status_code=428, detail="If-Match revision is required")
     expected_revision = int(if_match.strip().strip('"'))
-    document = validate_profile_document(body.profile, account.id)
+    document = validate_snapshot(body.profile)
     row = db.scalar(select(UserProfile).where(UserProfile.account_id == account.id).with_for_update())
     if row is None:
         raise HTTPException(status_code=404, detail="Profile record is missing")
@@ -185,16 +343,18 @@ def put_profile(
     db.commit()
     response.headers["ETag"] = f'"{row.revision}"'
     response.headers["Cache-Control"] = "no-store"
-    return {"profile": document, "revision": row.revision}
+    # The device already has the document; only the new revision goes back.
+    return {"revision": row.revision}
 
 
 @app.delete("/api/v1/account", status_code=status.HTTP_204_NO_CONTENT)
-def delete_account(body: DeleteAccountRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+def delete_account(request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+    """Delete the account with its synced data and usage records. The app asks for confirmation first."""
     fail_rate_limit(db, request, "account-delete", limit=5, window_seconds=3600, subject=str(account.id), by_ip=False)
-    if not verify_password(body.password, account.password_hash):
-        raise HTTPException(status_code=401, detail="Password is incorrect")
+    refresh_token = account.apple_refresh_token
     db.delete(account)
     db.commit()
+    apple_auth.revoke(refresh_token)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 
 
@@ -313,7 +473,9 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     print(f"[TutorAgent][plan] route=general mode={body.mode!r} known_decks={len(body.decks)} requested_cards={requested_count or '-'}", flush=True)
     decks = "\n".join(deck[:120] for deck in body.decks)
     folders = "\n".join(folder[:120] for folder in body.vocabularyFolders)
-    prompt = ai_prompts.agent_plan(language, body.mode, body.sourceLanguage, body.targetLanguage, decks, folders, body.message)
+    calendar_entries = "\n".join(entry[:160] for entry in body.calendarEntries)
+    exclude_terms = "\n".join(term[:120] for term in body.excludeTerms) if attached else ""
+    prompt = ai_prompts.agent_plan(language, body.mode, body.sourceLanguage, body.targetLanguage, decks, folders, body.message, calendar_entries, body.today or "", exclude_terms)
     plan = sanitize_agent_plan(execute_ai(request, db, account, [{"text": prompt}, *attached], AGENT_PLAN_SCHEMA))
     if requested_count is not None:
         generated_count = sum(len(action.get("cards") or []) for action in plan["actions"] if action.get("type") in CARD_ACTION_TYPES)
@@ -333,12 +495,26 @@ def summarize_cards(body: SummaryRequest, request: Request, account: Account = D
     return execute_ai(request, db, account, [{"text": prompt}], SUMMARY_SCHEMA)
 
 
+def legal_page(name: str) -> FileResponse:
+    page = config.FRONTEND / f"{name}.html"
+    if not page.is_file():
+        raise HTTPException(status_code=404, detail="Page is unavailable")
+    return FileResponse(page)
+
+
 @app.get("/privacy")
 def privacy_page():
-    page = config.FRONTEND / "privacy.html"
-    if not page.exists():
-        raise HTTPException(status_code=404, detail="Privacy page is unavailable")
-    return FileResponse(page)
+    return legal_page("privacy")
+
+
+@app.get("/terms")
+def terms_page():
+    return legal_page("terms")
+
+
+@app.get("/imprint")
+def imprint_page():
+    return legal_page("imprint")
 
 
 app.mount("/", StaticFiles(directory=str(config.FRONTEND), html=True), name="frontend")
