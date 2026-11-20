@@ -24,6 +24,7 @@ import apns
 import apple_auth
 import config
 import daily_tests
+import math_skill
 from agent_plan import (
     CARD_ACTION_TYPES,
     CLAIMS_DONE,
@@ -42,7 +43,7 @@ from agent_plan import (
 )
 from ai_client import daily_limit_for, execute_ai, is_unlimited, requests_in_last_day
 from auth import DUMMY_PASSWORD_HASH, current_account, hash_password, issue_token, verify_password
-from db import Account, Base, DeviceToken, GeneratedTest, UserProfile, get_db, utcnow  # noqa: F401  (Base is re-exported for tooling)
+from db import Account, Base, DeviceToken, GeneratedTest, MathAttempt, UserProfile, get_db, utcnow  # noqa: F401  (Base is re-exported for tooling)
 from middleware import BodyLimitAndSecurityHeadersMiddleware
 from profiles import validate_snapshot
 from rate_limit import fail_rate_limit
@@ -51,6 +52,8 @@ from schemas import (
     AttachmentFields,
     CARD_SCHEMA,
     EVALUATION_SCHEMA,
+    MATH_CHECK_SCHEMA,
+    MATH_TASK_SCHEMA,
     REPLY_SCHEMA,
     SUMMARY_SCHEMA,
     AgentPlanRequest,
@@ -59,6 +62,8 @@ from schemas import (
     DailyTestRequest,
     DeviceRegistration,
     DeviceRemoval,
+    MathCheckRequest,
+    MathTaskRequest,
     EvaluateRequest,
     GenerateCardsRequest,
     LoginCredentials,
@@ -258,6 +263,83 @@ def daily_test(body: DailyTestRequest, request: Request, account: Account = Depe
     except Exception:
         db.rollback()  # A parallel request stored the same test first; this one is still valid to return.
     return {"questions": questions, "cached": False}
+
+
+def math_attempts(db: Session, account: Account, topic: Optional[str] = None, limit: int = 200) -> list[MathAttempt]:
+    query = select(MathAttempt).where(MathAttempt.account_id == account.id)
+    if topic:
+        query = query.where(MathAttempt.topic == topic)
+    return list(db.scalars(query.order_by(MathAttempt.created_at.desc()).limit(limit)).all())
+
+
+def topic_summary(rows: list[MathAttempt]) -> dict[str, Any]:
+    attempts = [math_skill.Attempt(row.difficulty, row.score) for row in rows]
+    score = math_skill.mastery(attempts)
+    return {
+        "attempts": len(rows),
+        "mastery": None if score is None else round(score, 3),
+        "status": math_skill.label(score, len(rows)),
+        "nextDifficulty": math_skill.recommended_difficulty(attempts),
+        "recentMistakes": [row.mistake_skill for row in rows[:5] if row.mistake_skill],
+    }
+
+
+@app.get("/api/v1/math/profile")
+def math_profile(response: Response, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+    """Strengths and weaknesses per topic, from the learner's checked exercises."""
+    response.headers["Cache-Control"] = "no-store"
+    by_topic: dict[str, list[MathAttempt]] = {}
+    for row in math_attempts(db, account, limit=1000):
+        by_topic.setdefault(row.topic, []).append(row)
+    return {"topics": {topic: topic_summary(rows[:math_skill.RECENT_ATTEMPTS]) for topic, rows in by_topic.items()}}
+
+
+@app.post("/api/v1/math/task")
+def math_task(body: MathTaskRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+    """A new exercise. Without a requested difficulty the server picks one from the learner's recent results."""
+    summary = topic_summary(math_attempts(db, account, body.topic, limit=math_skill.RECENT_ATTEMPTS))
+    difficulty = body.difficulty or summary["nextDifficulty"]
+    weaknesses = ", ".join(dict.fromkeys(summary["recentMistakes"]))[:300]
+    avoid = " | ".join(question[:200] for question in body.recentQuestions)
+    prompt = ai_prompts.math_task(body.level, body.topicName, difficulty, language_name(body.language), weaknesses, avoid)
+    result = execute_ai(request, db, account, [{"text": prompt}], MATH_TASK_SCHEMA)
+    question = str(result.get("question", "")).strip()
+    steps = [str(step).strip() for step in result.get("solutionSteps") or [] if str(step).strip()][:20]
+    answer = str(result.get("finalAnswer", "")).strip()
+    if not question or not answer:
+        raise HTTPException(status_code=502, detail="AI did not create a usable exercise; please try again")
+    return {"question": question, "hint": str(result.get("hint", "")).strip(), "solutionSteps": steps, "finalAnswer": answer, "difficulty": difficulty}
+
+
+@app.post("/api/v1/math/check")
+def math_check(body: MathCheckRequest, request: Request, account: Account = Depends(current_account), db: Session = Depends(get_db)):
+    """Check the learner's working, record the attempt and return the updated standing in the topic."""
+    steps = "\n".join(f"{index}. {step[:300]}" for index, step in enumerate((s for s in body.steps if s.strip()), start=1))
+    reference = "\n".join(step[:300] for step in body.referenceSteps)
+    prompt = ai_prompts.math_check(body.level, body.topicName, body.question, reference, body.referenceAnswer, steps, body.answer, language_name(body.language))
+    result = execute_ai(request, db, account, [{"text": prompt}], MATH_CHECK_SCHEMA)
+    try:
+        score = max(0.0, min(1.0, float(result.get("score", 0))))
+    except (TypeError, ValueError):
+        score = 0.0
+    correct = bool(result.get("correct")) and score > 0
+    mistake = "" if correct else str(result.get("mistakeSkill", "")).strip()[:120]
+    db.add(MathAttempt(
+        id=UUID(bytes=secrets.token_bytes(16), version=4), account_id=account.id, created_at=utcnow(),
+        level=body.level, topic=body.topic, difficulty=body.difficulty, score=score, mistake_skill=mistake,
+    ))
+    db.commit()
+    try:
+        first_error = max(0, int(result.get("firstErrorStep") or 0))
+    except (TypeError, ValueError):
+        first_error = 0
+    return {
+        "correct": correct,
+        "score": round(score, 3),
+        "feedback": str(result.get("feedback", "")).strip(),
+        "firstErrorStep": first_error,
+        "topic": topic_summary(math_attempts(db, account, body.topic, limit=math_skill.RECENT_ATTEMPTS)),
+    }
 
 
 @app.post("/api/internal/daily-tests")
@@ -475,7 +557,8 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     folders = "\n".join(folder[:120] for folder in body.vocabularyFolders)
     calendar_entries = "\n".join(entry[:160] for entry in body.calendarEntries)
     exclude_terms = "\n".join(term[:120] for term in body.excludeTerms) if attached else ""
-    prompt = ai_prompts.agent_plan(language, body.mode, body.sourceLanguage, body.targetLanguage, decks, folders, body.message, calendar_entries, body.today or "", exclude_terms)
+    term_subjects = "\n".join(subject[:120] for subject in body.termSubjects)
+    prompt = ai_prompts.agent_plan(language, body.mode, body.sourceLanguage, body.targetLanguage, decks, folders, body.message, calendar_entries, body.today or "", exclude_terms, term_subjects)
     plan = sanitize_agent_plan(execute_ai(request, db, account, [{"text": prompt}, *attached], AGENT_PLAN_SCHEMA))
     if requested_count is not None:
         generated_count = sum(len(action.get("cards") or []) for action in plan["actions"] if action.get("type") in CARD_ACTION_TYPES)

@@ -39,6 +39,19 @@ def tutor_conversation(
                 "Translate the immediately preceding tutor question or phrase into " + source_language + ", explain its key words briefly, and optionally give a simpler paraphrase in " + target_language + ". "
                 "Then invite the learner to answer the original question; accept an answer in either language while they are clarifying."
             )
+    elif mode == "terms_quiz":
+        instructions = (
+            "You are quizzing the learner on technical terms from one subject of their glossary, listed in the study context as 'term: definition'. "
+            "Ask about exactly one term per turn, alternating between 'What does <term> mean?' and describing a definition and asking for the term. "
+            "Never reveal the answer before the learner replies. Then judge the reply against the stored definition, accept answers that capture the meaning in other words, "
+            "give brief feedback and the correct explanation if needed, and ask the next unused term. Reply in " + language + ". Do not invent terms that are not in the list."
+        )
+    elif mode == "terms_explain":
+        instructions = (
+            "You are explaining technical terms from the learner's glossary in plain, simple language, as if to someone new to the subject. "
+            "Use the stored definitions in the study context as the basis, add an everyday analogy or example, avoid jargon, and keep each explanation short. "
+            "If the learner asks about a term that is not in the list, explain it as well but say that it is not in their glossary yet. Reply in " + language + "."
+        )
     elif mode == "quiz":
         instructions = (
             "You are conducting a vocabulary translation quiz, not a role-play. Quiz from " + source_language + " to " + target_language + ". "

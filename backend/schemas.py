@@ -103,6 +103,36 @@ class DeviceRemoval(BaseModel):
     token: str = Field(min_length=32, max_length=200, pattern="^[0-9a-fA-F]+$")
 
 
+MATH_LEVEL_PATTERN = "^(middle|upper|university)$"
+MATH_TOPIC_PATTERN = r"^[a-z0-9_]{1,64}$"
+
+
+class MathTaskRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    level: str = Field(pattern=MATH_LEVEL_PATTERN)
+    topic: str = Field(pattern=MATH_TOPIC_PATTERN)
+    topicName: str = Field(min_length=1, max_length=120)
+    # None: the server chooses from the learner's results (adaptive).
+    difficulty: int | None = Field(default=None, ge=1, le=5)
+    language: str = Field(default="German", max_length=60)
+    # The last few questions, so the next one differs.
+    recentQuestions: list[str] = Field(default_factory=list, max_length=5)
+
+
+class MathCheckRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    level: str = Field(pattern=MATH_LEVEL_PATTERN)
+    topic: str = Field(pattern=MATH_TOPIC_PATTERN)
+    topicName: str = Field(min_length=1, max_length=120)
+    difficulty: int = Field(ge=1, le=5)
+    question: str = Field(min_length=1, max_length=3_000)
+    referenceSteps: list[str] = Field(default_factory=list, max_length=30)
+    referenceAnswer: str = Field(default="", max_length=1_000)
+    steps: list[str] = Field(default_factory=list, max_length=40)
+    answer: str = Field(default="", max_length=1_000)
+    language: str = Field(default="German", max_length=60)
+
+
 class TutorHistoryItem(BaseModel):
     model_config = ConfigDict(extra="forbid")
     role: str = Field(max_length=24)
@@ -128,6 +158,8 @@ class AgentPlanRequest(AttachmentFields):
     sourceLanguage: str = Field(default="German", max_length=80)
     targetLanguage: str = Field(default="English", max_length=80)
     vocabularyFolders: list[str] = Field(default_factory=list, max_length=100)
+    # Subjects in the "Begriffe" area, each with its term count, e.g. "Biologie (24)".
+    termSubjects: list[str] = Field(default_factory=list, max_length=100)
     # "YYYY-MM-DD · title" for each entry, so the tutor can change or remove existing ones.
     calendarEntries: list[str] = Field(default_factory=list, max_length=100)
     # The learner's own calendar day, so "next Friday" resolves correctly.
@@ -153,6 +185,8 @@ EVALUATION_SCHEMA = {"type": "OBJECT", "properties": {"rating": {"type": "STRING
 REPLY_SCHEMA = {"type": "OBJECT", "properties": {"reply": {"type": "STRING"}}, "required": ["reply"]}
 SUMMARY_SCHEMA = {"type": "OBJECT", "properties": {"summary": {"type": "STRING"}}, "required": ["summary"]}
 VOCABULARY_DRAFT_SCHEMA = {"type": "OBJECT", "properties": {"term": {"type": "STRING"}, "translation": {"type": "STRING"}, "pronunciation": {"type": "STRING"}, "example": {"type": "STRING"}, "synonyms": {"type": "ARRAY", "items": {"type": "STRING"}}, "difficulty": {"type": "INTEGER"}}, "required": ["term", "translation", "pronunciation"]}
+MATH_TASK_SCHEMA = {"type": "OBJECT", "properties": {"question": {"type": "STRING"}, "hint": {"type": "STRING"}, "solutionSteps": {"type": "ARRAY", "items": {"type": "STRING"}}, "finalAnswer": {"type": "STRING"}}, "required": ["question", "solutionSteps", "finalAnswer"]}
+MATH_CHECK_SCHEMA = {"type": "OBJECT", "properties": {"correct": {"type": "BOOLEAN"}, "score": {"type": "NUMBER"}, "feedback": {"type": "STRING"}, "firstErrorStep": {"type": "INTEGER"}, "mistakeSkill": {"type": "STRING"}}, "required": ["correct", "score", "feedback"]}
 AGENT_PLAN_SCHEMA = {
     "type": "OBJECT",
     "properties": {
@@ -162,7 +196,9 @@ AGENT_PLAN_SCHEMA = {
             "items": {
                 "type": "OBJECT",
                 "properties": {
-                    "type": {"type": "STRING", "enum": ["create_deck", "create_deck_tree", "create_subdeck", "create_cards", "create_calendar_entry", "update_calendar_entry", "delete_calendar_entry", "rename_deck", "start_test", "create_vocabulary_folder", "add_vocabulary"]},
+                    "type": {"type": "STRING", "enum": ["create_deck", "create_deck_tree", "create_subdeck", "create_cards", "create_calendar_entry", "update_calendar_entry", "delete_calendar_entry", "rename_deck", "start_test", "create_vocabulary_folder", "add_vocabulary", "create_term_subject", "add_terms"]},
+                    "subjectName": {"type": "STRING"},
+                    "termEntries": {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {"term": {"type": "STRING"}, "definition": {"type": "STRING"}, "example": {"type": "STRING"}}, "required": ["term", "definition"]}},
                     "newTitle": {"type": "STRING"},
                     "newDateISO": {"type": "STRING"},
                     "newName": {"type": "STRING"},

@@ -15,6 +15,7 @@ def agent_plan(
     calendar_entries: str = "",
     today: str = "",
     exclude_terms: str = "",
+    term_subjects: str = "",
 ) -> str:
     return (
         "You are an assistant inside a local study app. Reply in " + language + ". Selected action mode: " + mode + ". "
@@ -22,6 +23,10 @@ def agent_plan(
         "For vocabulary, the active source language is " + source_language + " and the target language is " + target_language + ". Keep term in the source language and translation in the target language. "
         "Write every vocabulary example sentence entirely in the target language (" + target_language + "), never in the app interface language or source language. "
         "For a new folder use create_vocabulary_folder with folderName and vocabularyEntries. For an existing folder use add_vocabulary with folderName and vocabularyEntries. "
+        "The app also has a glossary area 'Begriffe' with subjects (for example Biologie, Jura) holding technical terms with explanations; these are not vocabulary pairs. "
+        "For a new subject use create_term_subject with subjectName and, if terms are requested, termEntries. To add terms to an existing subject use add_terms with subjectName and termEntries. "
+        "Each term entry has term, a precise but understandable definition in " + language + ", and optionally a short example. Use these actions only when the user talks about terms, Begriffe, a subject or a glossary, never for language vocabulary. "
+        "When the user gives no quantity, suggest 10 terms; maximum 60. "
         "Folders can have one level of subfolders, written as 'Folder › Subfolder'. To use or create a subfolder, set folderName to that full path (for example 'Englisch › Unit 3'); the parent folder is created if it does not exist. "
         "When you suggest vocabulary yourself and the user says many or gives no quantity, suggest 10 useful entries; maximum 30. "
         "When the user wants vocabulary taken from attached material, copy the entries from the material instead of inventing new ones, in the order they appear, and return up to " + str(ATTACHMENT_BATCH) + " entries in one add_vocabulary or create_vocabulary_folder action. "
@@ -39,6 +44,7 @@ def agent_plan(
         + ("Today is " + today + "; resolve relative dates such as 'tomorrow' or 'next Friday' from it. " if today else "")
         + "Keep at most 20 flashcards per deck action and return at most 6 total actions. Existing flashcard decks:\n" + decks
         + "\nExisting calendar entries:\n" + (calendar_entries or "(none)")
+        + "\nExisting glossary subjects:\n" + (term_subjects or "(none)")
         + "\nFolders for active language pair " + source_language + " → " + target_language + ":\n" + folders
         + "\nUser request: " + user_message
     )

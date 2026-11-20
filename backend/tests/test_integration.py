@@ -33,7 +33,7 @@ import server  # noqa: E402
 ROOT = Path(__file__).resolve().parents[2]
 APPLE_KEY = rsa.generate_private_key(public_exponent=65537, key_size=2048)
 NONCE = "integration-test-nonce"
-TABLES = ["accounts", "user_profiles", "ai_usage", "device_tokens", "generated_tests"]
+TABLES = ["accounts", "user_profiles", "ai_usage", "device_tokens", "generated_tests", "math_attempts"]
 
 
 def alembic(url, *arguments):
@@ -295,3 +295,32 @@ def test_deleting_an_account_removes_every_trace(client, database, monkeypatch):
     # Signing in again starts from nothing.
     fresh = sign_in(client, "apple-delete", "delete@example.com")
     assert client.get("/api/v1/profile", headers=fresh).json() == {"profile": None, "revision": 0}
+
+
+def test_math_task_adapts_and_check_records_strengths(client, database, monkeypatch):
+    _, engine = database
+    headers = sign_in(client, "apple-math")
+    prompts = []
+
+    def fake(parts, schema):
+        prompts.append(parts[0]["text"])
+        if "correct" in schema["properties"]:
+            return gemini_reply({"correct": False, "score": 0.5, "feedback": "Fast", "firstErrorStep": 2, "mistakeSkill": "Vorzeichen"}), "primary-flash-lite"
+        return gemini_reply({"question": "Löse 2x + 3 = 7", "hint": "Erst subtrahieren", "solutionSteps": ["2x = 4", "x = 2"], "finalAnswer": "x = 2"}), "primary-flash-lite"
+
+    monkeypatch.setattr(ai_client, "call_gemini", fake)
+    base = {"level": "middle", "topic": "linear_equations", "topicName": "Lineare Gleichungen"}
+    task = client.post("/api/v1/math/task", json=base, headers=headers).json()
+    assert task["difficulty"] == 2 and task["finalAnswer"] == "x = 2" and "Difficulty 2" in prompts[-1]
+
+    check = {**base, "difficulty": 2, "question": task["question"], "referenceSteps": task["solutionSteps"], "referenceAnswer": "x = 2", "steps": ["2x = 10", "x = 5"], "answer": "x = 5"}
+    result = client.post("/api/v1/math/check", json=check, headers=headers).json()
+    assert result["correct"] is False and result["firstErrorStep"] == 2 and result["topic"]["attempts"] == 1
+    assert count(engine, "math_attempts", "mistake_skill = 'Vorzeichen'") == 1
+
+    client.post("/api/v1/math/task", json=base, headers=headers)
+    assert "Vorzeichen" in prompts[-1]
+    profile = client.get("/api/v1/math/profile", headers=headers).json()
+    assert profile["topics"]["linear_equations"]["attempts"] == 1
+
+    assert client.post("/api/v1/math/task", json={**base, "topic": "Bad Topic!"}, headers=headers).status_code == 422

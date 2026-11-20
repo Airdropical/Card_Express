@@ -170,3 +170,23 @@ def test_planning_prompt_continues_after_extracted_terms():
     later = ai_prompts.agent_plan("German", "vocabulary", "German", "English", "", "ENGS", "Alle Vokabeln aus der PDF", exclude_terms="husband\nwife")
     assert "copy the entries from the material" in first and "already taken over" not in first
     assert "already taken over" in later and "husband\nwife" in later
+
+
+def test_term_actions_are_kept_only_when_complete():
+    plan = {"reply": "ok", "actions": [
+        {"type": "create_term_subject", "subjectName": "Biologie", "termEntries": [{"term": "Zelle", "definition": "Kleinste Einheit"}, {"term": "", "definition": "x"}]},
+        {"type": "create_term_subject"},
+        {"type": "add_terms", "subjectName": "Jura"},
+        {"type": "add_terms", "subjectName": "Jura", "termEntries": [{"term": "Vertrag", "definition": "Zwei übereinstimmende Willenserklärungen"}]},
+    ]}
+    kept = agent_plan.sanitize_agent_plan(plan)["actions"]
+    assert [(a["type"], a["subjectName"]) for a in kept] == [("create_term_subject", "Biologie"), ("add_terms", "Jura")]
+    assert kept[0]["termEntries"] == [{"term": "Zelle", "definition": "Kleinste Einheit"}]
+
+
+def test_tutor_has_glossary_modes_and_planner_knows_subjects():
+    quiz = ai_prompts.tutor_conversation("terms_quiz", "German", "German", "English", "Biologie", "Zelle: Einheit", "", "Start")
+    explain = ai_prompts.tutor_conversation("terms_explain", "German", "German", "English", "Biologie", "Zelle: Einheit", "", "Was ist eine Zelle?")
+    assert "one term per turn" in quiz and "simple language" in explain
+    plan = ai_prompts.agent_plan("German", "automatic", "German", "English", "", "", "Lege Fach Biologie an", term_subjects="Jura (3)")
+    assert "create_term_subject" in plan and "Jura (3)" in plan

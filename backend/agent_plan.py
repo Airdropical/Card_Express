@@ -237,10 +237,16 @@ def sanitize_agent_plan(plan: dict[str, Any]) -> dict[str, Any]:
             continue
         if kind == "start_test" and not str(action.get("deckName", "")).strip():
             continue
+        if kind == "create_term_subject" and not str(action.get("subjectName", "")).strip():
+            continue
+        if kind == "add_terms" and (not str(action.get("subjectName", "")).strip() or not action.get("termEntries")):
+            continue
+        if kind in ("create_term_subject", "add_terms") and isinstance(action.get("termEntries"), list):
+            action["termEntries"] = [entry for entry in action["termEntries"] if isinstance(entry, dict) and str(entry.get("term", "")).strip() and str(entry.get("definition", "")).strip()][:VOCABULARY_PER_RESPONSE]
         if kind in ("create_vocabulary_folder", "add_vocabulary"):
             # One response never carries more than a batch; larger lists arrive over several requests.
             action["vocabularyEntries"] = action["vocabularyEntries"][:VOCABULARY_PER_RESPONSE]
-        signature = (str(kind), str(action.get("deckName", "")).casefold(), str(action.get("subdeckName", "")).casefold(), str(action.get("parentDeck", "")).casefold(), str(action.get("folderName", "")).casefold(), str(action.get("title", "")).casefold())
+        signature = (str(kind), str(action.get("deckName", "")).casefold(), str(action.get("subdeckName", "")).casefold(), str(action.get("parentDeck", "")).casefold(), str(action.get("folderName", "")).casefold(), str(action.get("title", "")).casefold(), str(action.get("subjectName", "")).casefold())
         if signature in seen:
             continue
         seen.add(signature)

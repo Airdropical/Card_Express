@@ -7,7 +7,7 @@ from typing import Any, Optional
 from uuid import UUID
 
 from fastapi import HTTPException
-from sqlalchemy import BigInteger, DateTime, ForeignKey, Index, Integer, Numeric, String, Text, create_engine
+from sqlalchemy import BigInteger, DateTime, Float, ForeignKey, Index, Integer, Numeric, String, Text, create_engine
 from sqlalchemy.dialects.postgresql import JSONB, UUID as PGUUID
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
@@ -97,6 +97,22 @@ class GeneratedTest(Base):
     day: Mapped[str] = mapped_column(String(10), primary_key=True)
     questions: Mapped[Any] = mapped_column(JSONB, nullable=False)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow)
+
+
+class MathAttempt(Base):
+    """One checked maths exercise: what it was about, how hard, and how well it went."""
+
+    __tablename__ = "math_attempts"
+    __table_args__ = (Index("ix_math_attempts_account_topic", "account_id", "topic", "created_at"),)
+
+    id: Mapped[UUID] = mapped_column(PGUUID(as_uuid=True), primary_key=True)
+    account_id: Mapped[UUID] = mapped_column(PGUUID(as_uuid=True), ForeignKey("accounts.id", ondelete="CASCADE"), nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow)
+    level: Mapped[str] = mapped_column(String(16), nullable=False)
+    topic: Mapped[str] = mapped_column(String(64), nullable=False)
+    difficulty: Mapped[int] = mapped_column(Integer, nullable=False)
+    score: Mapped[float] = mapped_column(Float, nullable=False)
+    mistake_skill: Mapped[str] = mapped_column(String(120), nullable=False, default="", server_default="")
 
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True, pool_size=5, max_overflow=5) if DATABASE_URL else None

@@ -9,7 +9,7 @@
 - Wortart, Niveau, Bedeutungen, Übersetzungen, deutsche Artikel und Pluralangaben sind geprüft.
 - Pro Sense gibt es genau eine Erklärung auf Deutsch und Englisch, jeweils auf Lemma-Niveau.
 - Jedes Beispiel enthält das Lemma oder eine gebeugte Form; jede Erklärung hat 2–3 Beispiele.
-- Bei A1/A2/B1 halten Definitionen und Beispiele die Längenvorgabe aus `prompts.md` ein.
+- Bei A1/A2/B1 halten Definitionen und Beispiele die Längenvorgabe aus `pipeline/prompts.md` ein.
 - Bei gleicher Lern- und Erklärsprache ist die Beispielübersetzung `null`; bei verschiedenen Sprachen ist sie vorhanden und passend.
 - Inhalt, Natürlichkeit und Übersetzungen wurden manuell gegengelesen. Unsicherheiten sind in `qualitaet.hinweise` erfasst.
 

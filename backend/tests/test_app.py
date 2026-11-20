@@ -85,7 +85,7 @@ def test_missing_or_invalid_token_is_rejected(header):
 
 
 def test_ai_and_profile_routes_require_authentication():
-    protected = {"/api/generate-cards", "/api/evaluate", "/api/tutor", "/api/agent-plan", "/api/summary", "/api/v1/profile", "/api/v1/account", "/api/v1/auth/logout", "/api/v1/tests", "/api/v1/devices"}  # /account covers GET and DELETE
+    protected = {"/api/generate-cards", "/api/evaluate", "/api/tutor", "/api/agent-plan", "/api/summary", "/api/v1/profile", "/api/v1/account", "/api/v1/auth/logout", "/api/v1/tests", "/api/v1/devices", "/api/v1/math/profile", "/api/v1/math/task", "/api/v1/math/check"}  # /account covers GET and DELETE
     seen = set()
     for route in server.app.routes:
         if getattr(route, "path", None) in protected:
