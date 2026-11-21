@@ -1,0 +1,18 @@
+{"functions": [
+ {"name": "Aktion", "expect": ["action"], "prompts": [
+  "erstell n paar vokabeln zu tieren", "Ich hätte gern 15 Vokabeln zum Thema Krankenhaus.", "vokabeln farben bitte", "füg zu englisch noch 5 verben hinzu",
+  "neues deck mathe ableitungen", "karteikarten zellbiologie", "kannst du mir 5 karten zu newton machen", "lernkarten aus dem pdf erstellen",
+  "mathe klausur am 20.1", "trag mir bitte für donnerstag ne vokabeltest ein", "ich schreib übermorgen eine latein arbeit",
+  "verschieb die chemie klausur auf januar", "chemie klausur löschen bitte", "chemie grundlagen soll chemie basics heißen",
+  "frag mich ab", "quiz mich in englisch", "lass uns chemie grundlagen üben", "teste mein wissen in biologie",
+  "neues fach informatik", "füg bei jura noch begriffe zum strafrecht hinzu", "begriffe zu demokratie erstellen", "glossar für physik anlegen"
+ ]},
+ {"name": "Chat", "expect": ["chat"], "prompts": [
+  "Wie viele Vokabeln sollte ich pro Tag lernen?", "was bedeutet der begriff inflation", "Ich hab voll Angst vor der Mathe Klausur",
+  "welches deck soll ich heute lernen", "wann ist meine chemie klausur?", "Was heißt Haus auf Englisch?",
+  "kannst du mir erklären wie man ableitungen macht", "Gib mir einen Tipp für die Prüfung", "Wie funktionieren Karteikarten am besten?",
+  "Hallo!", "danke dir", "Was ist ein Deck?", "kannst du mir bei der hausaufgabe helfen", "Ich verstehe den Unterschied zwischen since und for nicht.",
+  "fasse mir die französische revolution zusammen", "wie viele karten hab ich in chemie grundlagen", "Bin müde, lohnt sich lernen heute noch?",
+  "Was ist der Satz des Pythagoras?", "erkläre mitochondrien einfach", "warum vergesse ich vokabeln so schnell"
+ ]}
+]}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	APPLE-DEVELOPER: Push-Mitteilungen und „Mit Apple anmelden“ brauchen den bezahlten
+	Apple-Developer-Account. Mit einem kostenlosen Account lässt sich die App sonst nicht signieren.
+	Zum Wiedereinschalten diesen Block wieder aktivieren:
+
+	<key>aps-environment</key>
+	<string>development</string>
+	<key>com.apple.developer.applesignin</key>
+	<array>
+		<string>Default</string>
+	</array>
+	-->
+</dict>
+</plist>

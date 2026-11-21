@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CEB93B1309F2F6C00E0A604 /* Logo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CEB93B0309F2F6C00E0A604 /* Logo.xcassets */; };
+		3CEB93B2309F2F6C00E0A604 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3CEB93B3309F2F6C00E0A604 /* PrivacyInfo.xcprivacy */; };
+		A10000000000000000000001 /* LernkartenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* LernkartenApp.swift */; };
+		A10000000000000000000002 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* Models.swift */; };
+		A10000000000000000000003 /* LearningStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* LearningStore.swift */; };
+		A10000000000000000000004 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* DesignSystem.swift */; };
+		A10000000000000000000005 /* MainTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* MainTabsView.swift */; };
+		A10000000000000000000006 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* HomeView.swift */; };
+		A10000000000000000000007 /* DecksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007 /* DecksView.swift */; };
+		A10000000000000000000008 /* DeckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* DeckDetailView.swift */; };
+		A10000000000000000000009 /* AIImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* AIImportView.swift */; };
+		A1000000000000000000000A /* StudySessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* StudySessionView.swift */; };
+		A1000000000000000000000B /* CardTutorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000B /* CardTutorSheet.swift */; };
+		A1000000000000000000000C /* AssistantChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000C /* AssistantChatView.swift */; };
+		A1000000000000000000000D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000D /* SettingsView.swift */; };
+		A1000000000000000000000E /* LearningAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000E /* LearningAPI.swift */; };
+		A1000000000000000000000F /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000F /* AppConfiguration.swift */; };
+		A10000000000000000000010 /* CardSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* CardSearchView.swift */; };
+		A10000000000000000000011 /* VocabularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* VocabularyView.swift */; };
+		A10000000000000000000012 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000012 /* FeedView.swift */; };
+		A10000000000000000000013 /* VocabularyStudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000013 /* VocabularyStudyView.swift */; };
+		A10000000000000000000014 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000014 /* CalendarView.swift */; };
+		A10000000000000000000015 /* DeckSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000015 /* DeckSheets.swift */; };
+		A10000000000000000000016 /* VocabularyEditors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000016 /* VocabularyEditors.swift */; };
+		A10000000000000000000017 /* CardFlipAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000017 /* CardFlipAnimation.swift */; };
+		A10000000000000000000018 /* VocabularySpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000018 /* VocabularySpeech.swift */; };
+		A10000000000000000000064 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000064 /* TermsView.swift */; };
+		A10000000000000000000065 /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000065 /* MathView.swift */; };
+		A10000000000000000000066 /* MathFormulas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000066 /* MathFormulas.swift */; };
+		A10000000000000000000067 /* TutorIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000067 /* TutorIntent.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CEB93B0309F2F6C00E0A604 /* Logo.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Logo.xcassets; sourceTree = "<group>"; };
+		3CEB93B3309F2F6C00E0A604 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		B10000000000000000000001 /* LernkartenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LernkartenApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* LearningStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningStore.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* MainTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabsView.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B10000000000000000000007 /* DecksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksView.swift; sourceTree = "<group>"; };
+		B10000000000000000000008 /* DeckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailView.swift; sourceTree = "<group>"; };
+		B10000000000000000000009 /* AIImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIImportView.swift; sourceTree = "<group>"; };
+		B1000000000000000000000A /* StudySessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySessionView.swift; sourceTree = "<group>"; };
+		B1000000000000000000000B /* CardTutorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTutorSheet.swift; sourceTree = "<group>"; };
+		B1000000000000000000000C /* AssistantChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantChatView.swift; sourceTree = "<group>"; };
+		B1000000000000000000000D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B1000000000000000000000E /* LearningAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningAPI.swift; sourceTree = "<group>"; };
+		B1000000000000000000000F /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		B10000000000000000000010 /* CardSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSearchView.swift; sourceTree = "<group>"; };
+		B10000000000000000000011 /* VocabularyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyView.swift; sourceTree = "<group>"; };
+		B10000000000000000000012 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		B10000000000000000000013 /* VocabularyStudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyStudyView.swift; sourceTree = "<group>"; };
+		B10000000000000000000014 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		B10000000000000000000015 /* DeckSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSheets.swift; sourceTree = "<group>"; };
+		B10000000000000000000016 /* VocabularyEditors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyEditors.swift; sourceTree = "<group>"; };
+		B10000000000000000000017 /* CardFlipAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipAnimation.swift; sourceTree = "<group>"; };
+		B10000000000000000000018 /* VocabularySpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularySpeech.swift; sourceTree = "<group>"; };
+		C10000000000000000000001 /* Lernkarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lernkarten.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000064 /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
+		B10000000000000000000065 /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
+		B10000000000000000000066 /* MathFormulas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathFormulas.swift; sourceTree = "<group>"; };
+		B10000000000000000000067 /* TutorIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorIntent.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E10000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				D10000000000000000000002,
+				D10000000000000000000008 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D10000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				D10000000000000000000003 /* Lernkarten */,
+			);
+			sourceTree = "<group>";
+		};
+		D10000000000000000000003 /* Lernkarten */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000001 /* LernkartenApp.swift */,
+				B10000000000000000000002 /* Models.swift */,
+				B10000000000000000000003 /* LearningStore.swift */,
+				B10000000000000000000004 /* DesignSystem.swift */,
+				D10000000000000000000004 /* Services */,
+				D10000000000000000000005 /* Views */,
+				3CEB93B0309F2F6C00E0A604 /* Logo.xcassets */,
+				3CEB93B3309F2F6C00E0A604 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Lernkarten;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000004 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B1000000000000000000000E /* LearningAPI.swift */,
+				B1000000000000000000000F /* AppConfiguration.swift */,
+				B10000000000000000000018 /* VocabularySpeech.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000005 /* MainTabsView.swift */,
+				B10000000000000000000006 /* HomeView.swift */,
+				B10000000000000000000067 /* TutorIntent.swift */,
+				B10000000000000000000066 /* MathFormulas.swift */,
+				B10000000000000000000065 /* MathView.swift */,
+				B10000000000000000000064 /* TermsView.swift */,
+				B10000000000000000000007 /* DecksView.swift */,
+				B10000000000000000000008 /* DeckDetailView.swift */,
+				B10000000000000000000009 /* AIImportView.swift */,
+				B1000000000000000000000A /* StudySessionView.swift */,
+				B1000000000000000000000B /* CardTutorSheet.swift */,
+				B1000000000000000000000C /* AssistantChatView.swift */,
+				B1000000000000000000000D /* SettingsView.swift */,
+				B10000000000000000000010 /* CardSearchView.swift */,
+				B10000000000000000000011 /* VocabularyView.swift */,
+				B10000000000000000000012 /* FeedView.swift */,
+				B10000000000000000000013 /* VocabularyStudyView.swift */,
+				B10000000000000000000014 /* CalendarView.swift */,
+				B10000000000000000000015 /* DeckSheets.swift */,
+				B10000000000000000000016 /* VocabularyEditors.swift */,
+				B10000000000000000000017 /* CardFlipAnimation.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D10000000000000000000008 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C10000000000000000000001 /* Lernkarten.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E10000000000000000000001 /* Lernkarten */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F10000000000000000000002 /* Build configuration list for PBXNativeTarget "Lernkarten" */;
+			buildPhases = (
+				E10000000000000000000002 /* Sources */,
+				E10000000000000000000003 /* Frameworks */,
+				E10000000000000000000004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lernkarten;
+			productName = Lernkarten;
+			productReference = C10000000000000000000001 /* Lernkarten.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E10000000000000000000005 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					E10000000000000000000001 = {
+						CreatedOnToolsVersion = 27.2;
+					};
+				};
+			};
+			buildConfigurationList = F10000000000000000000001 /* Build configuration list for PBXProject "Lernkarten" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = de;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				de,
+				en,
+				Base,
+			);
+			mainGroup = D10000000000000000000001;
+			productRefGroup = D10000000000000000000008 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E10000000000000000000001 /* Lernkarten */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E10000000000000000000004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CEB93B1309F2F6C00E0A604 /* Logo.xcassets in Resources */,
+				3CEB93B2309F2F6C00E0A604 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E10000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* LernkartenApp.swift in Sources */,
+				A10000000000000000000002 /* Models.swift in Sources */,
+				A10000000000000000000003 /* LearningStore.swift in Sources */,
+				A10000000000000000000004 /* DesignSystem.swift in Sources */,
+				A10000000000000000000005 /* MainTabsView.swift in Sources */,
+				A10000000000000000000006 /* HomeView.swift in Sources */,
+				A10000000000000000000067 /* TutorIntent.swift in Sources */,
+				A10000000000000000000066 /* MathFormulas.swift in Sources */,
+				A10000000000000000000065 /* MathView.swift in Sources */,
+				A10000000000000000000064 /* TermsView.swift in Sources */,
+				A10000000000000000000007 /* DecksView.swift in Sources */,
+				A10000000000000000000008 /* DeckDetailView.swift in Sources */,
+				A10000000000000000000009 /* AIImportView.swift in Sources */,
+				A1000000000000000000000A /* StudySessionView.swift in Sources */,
+				A1000000000000000000000B /* CardTutorSheet.swift in Sources */,
+				A1000000000000000000000C /* AssistantChatView.swift in Sources */,
+				A1000000000000000000000D /* SettingsView.swift in Sources */,
+				A1000000000000000000000E /* LearningAPI.swift in Sources */,
+				A1000000000000000000000F /* AppConfiguration.swift in Sources */,
+				A10000000000000000000010 /* CardSearchView.swift in Sources */,
+				A10000000000000000000011 /* VocabularyView.swift in Sources */,
+				A10000000000000000000012 /* FeedView.swift in Sources */,
+				A10000000000000000000013 /* VocabularyStudyView.swift in Sources */,
+				A10000000000000000000014 /* CalendarView.swift in Sources */,
+				A10000000000000000000015 /* DeckSheets.swift in Sources */,
+				A10000000000000000000016 /* VocabularyEditors.swift in Sources */,
+				A10000000000000000000017 /* CardFlipAnimation.swift in Sources */,
+				A10000000000000000000018 /* VocabularySpeech.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F10000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F10000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F10000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lernkarten/Lernkarten.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = US6ZKK6377;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lernkarten;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fotografiere dein Lernmaterial, um daraus Karteikarten zu erstellen.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Wähle ein Lernfoto, aus dem Karteikarten erstellt werden.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.codex.lernkarten;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F10000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Lernkarten/Lernkarten.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = US6ZKK6377;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lernkarten;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Fotografiere dein Lernmaterial, um daraus Karteikarten zu erstellen.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Wähle ein Lernfoto, aus dem Karteikarten erstellt werden.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.codex.lernkarten;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F10000000000000000000001 /* Build configuration list for PBXProject "Lernkarten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000003 /* Debug */,
+				F10000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F10000000000000000000002 /* Build configuration list for PBXNativeTarget "Lernkarten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F10000000000000000000005 /* Debug */,
+				F10000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E10000000000000000000005 /* Project object */;
+}

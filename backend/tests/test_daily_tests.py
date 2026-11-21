@@ -190,3 +190,35 @@ def test_tutor_has_glossary_modes_and_planner_knows_subjects():
     assert "one term per turn" in quiz and "simple language" in explain
     plan = ai_prompts.agent_plan("German", "automatic", "German", "English", "", "", "Lege Fach Biologie an", term_subjects="Jura (3)")
     assert "create_term_subject" in plan and "Jura (3)" in plan
+
+
+def test_calendar_title_falls_back_to_note():
+    from agent_plan import drop_unknown_deck_actions, sanitize_agent_plan
+
+    plan = sanitize_agent_plan({"reply": "", "actions": [
+        {"type": "create_calendar_entry", "dateISO": "2026-12-03", "note": "Mathe-Klausur am 3. Dezember 2026 eingetragen."},
+        {"type": "create_calendar_entry", "dateISO": "2026-12-04", "note": ""},
+    ]})
+    assert [action.get("title") for action in plan["actions"]] == ["Mathe-Klausur"]
+
+
+def test_test_and_rename_need_an_existing_deck():
+    from agent_plan import drop_unknown_deck_actions
+
+    plan = {"reply": "", "actions": [
+        {"type": "start_test", "deckName": "Biologie"},
+        {"type": "start_test", "deckName": "chemie grundlagen"},
+        {"type": "create_deck", "deckName": "Neu"},
+        {"type": "rename_deck", "deckName": "Neu", "newName": "Neu 2"},
+    ]}
+    kept = drop_unknown_deck_actions(plan, ["Chemie Grundlagen"])["actions"]
+    assert [action["type"] for action in kept] == ["start_test", "create_deck", "rename_deck"]
+
+
+def test_translation_help_names_the_tutor_line_to_translate():
+    from ai_prompts.conversation import last_tutor_line, tutor_conversation
+
+    transcript = "Learner: hi\nTutor: Are you a tourist here?\nLearner: was heißt das?"
+    assert last_tutor_line(transcript) == "Are you a tourist here?"
+    prompt = tutor_conversation("conversation", "German", "German", "English", "", "", transcript, "was heißt das?", True)
+    assert 'The line to translate is: "Are you a tourist here?"' in prompt

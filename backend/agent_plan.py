@@ -227,6 +227,11 @@ def sanitize_agent_plan(plan: dict[str, Any]) -> dict[str, Any]:
             continue
         if kind in ("create_vocabulary_folder", "add_vocabulary") and (not str(action.get("folderName", "")).strip() or not action.get("vocabularyEntries")):
             continue
+        if kind == "create_calendar_entry" and not str(action.get("title", "")).strip():
+            # Gemini sometimes writes the name into note ("Mathe-Klausur am 3. Dezember eingetragen.").
+            fallback = re.split(r"\s+(?:am|für|fuer|on|at)\s+|[.,;:!]", str(action.get("note", "")).strip(), maxsplit=1)[0].strip()
+            if fallback and len(fallback) <= 60:
+                action["title"] = fallback
         if kind == "create_calendar_entry" and (not str(action.get("title", "")).strip() or not str(action.get("dateISO", "")).strip()):
             continue
         if kind == "update_calendar_entry" and (not str(action.get("title", "")).strip() or not (str(action.get("newDateISO", "")).strip() or str(action.get("newTitle", "")).strip())):
@@ -254,4 +259,18 @@ def sanitize_agent_plan(plan: dict[str, Any]) -> dict[str, Any]:
         if len(kept) >= 6:
             break
     plan["actions"] = kept
+    return plan
+
+
+def drop_unknown_deck_actions(plan: dict[str, Any], decks: list[str]) -> dict[str, Any]:
+    """Testing or renaming needs a deck that exists or is created in the same plan.
+
+    "hab nächsten freitag bio test" otherwise also started a test for a "Biologie" deck nobody has.
+    """
+    known = {str(name).strip().casefold() for name in decks}
+    known |= {str(action.get("deckName", "")).strip().casefold() for action in plan["actions"] if action.get("type") in ("create_deck", "create_deck_tree", "create_subdeck")}
+    plan["actions"] = [
+        action for action in plan["actions"]
+        if action.get("type") not in ("start_test", "rename_deck") or str(action.get("deckName", "")).strip().casefold() in known
+    ]
     return plan

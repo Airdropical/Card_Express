@@ -1,0 +1,82 @@
+{
+  "_info": "5 Prompts pro Tutor-Funktion in unterschiedlichem Schreibstil: förmlich, locker/klein, Tippfehler/Umgangssprache, Stichworte, indirekt/als Frage. 'expect' ist die erwartete Aktion; 'chat' heißt: keine Aktion, normale Antwort. Genutzt von tests/test_tutor_routing (App-Erkennung) und scripts/tutor_eval.py (echter Gemini-Test).",
+  "functions": [
+    {"name": "Vokabeln: neuer Ordner", "expect": ["create_vocabulary_folder", "add_vocabulary"], "prompts": [
+      "Bitte erstelle mir einen neuen Vokabelordner zum Thema Reisen mit 10 Vokabeln.",
+      "mach mal vokabeln zum thema essen",
+      "ich brauch vokablen für urlaub in spanien pls",
+      "10 wörter wetter",
+      "Kannst du mir ein paar Vokabeln rund ums Einkaufen geben?"
+    ]},
+    {"name": "Vokabeln: zu bestehendem Ordner", "expect": ["add_vocabulary"], "prompts": [
+      "Füge bitte 5 weitere Vokabeln zum Ordner Englisch hinzu.",
+      "pack noch paar wörter in englisch rein",
+      "kanst du in meinen englisch ordner noch vokabeln zu sport tun",
+      "Englisch + 8 Vokabeln Schule",
+      "Mein Englisch-Ordner ist noch etwas leer, hast du noch Vokabeln zum Thema Familie dafür?"
+    ]},
+    {"name": "Lernkarten: neues Deck", "expect": ["create_deck", "create_deck_tree", "create_cards", "create_subdeck"], "prompts": [
+      "Erstelle mir bitte ein neues Deck Photosynthese mit 8 Lernkarten.",
+      "mach mir karteikarten zu den bundesländern",
+      "brauch lernkarten für bio zellatmung bis morgen",
+      "Deck Französische Revolution, 10 Karten",
+      "Könntest du mir Karteikarten zum Satz des Pythagoras machen?"
+    ]},
+    {"name": "Lernkarten: zu bestehendem Deck", "expect": ["create_cards"], "prompts": [
+      "Bitte ergänze das Deck Chemie Grundlagen um 5 Karten zu Säuren und Basen.",
+      "pack noch 3 karten zu ionenbindung in chemie grundlagen",
+      "kanst du bei chemie grundlagen noch karten zu redox hinzufügen",
+      "Chemie Grundlagen: +5 Karten Periodensystem",
+      "In meinem Chemie-Deck fehlt noch was zu Molen, kannst du das ergänzen?"
+    ]},
+    {"name": "Termin anlegen", "expect": ["create_calendar_entry"], "prompts": [
+      "Bitte trage am 3. Dezember eine Mathe-Klausur in meinen Kalender ein.",
+      "hab nächsten freitag bio test",
+      "schreib mir die englisch arbeit am 10.12 rein",
+      "Deutsch Referat 15.12.",
+      "Kannst du dir merken, dass ich am Montag eine Physik-Prüfung habe?"
+    ]},
+    {"name": "Termin verschieben", "expect": ["update_calendar_entry"], "prompts": [
+      "Bitte verschiebe die Chemie-Klausur auf den 5. Dezember.",
+      "chemie klausur ist jetzt am 8.12",
+      "die chemi klausur wurde verlegt auf nächsten mittwoch, änder das mal",
+      "Chemie-Klausur → 12.12.",
+      "Kannst du die Chemie-Klausur eine Woche nach hinten schieben?"
+    ]},
+    {"name": "Termin löschen", "expect": ["delete_calendar_entry"], "prompts": [
+      "Bitte lösche den Termin Chemie-Klausur aus meinem Kalender.",
+      "chemie klausur fällt aus, mach weg",
+      "lösch mal die chemie klausur raus is abgesagt",
+      "Chemie-Klausur entfernen",
+      "Die Chemie-Klausur findet nicht mehr statt, kannst du den Termin rausnehmen?"
+    ]},
+    {"name": "Deck umbenennen", "expect": ["rename_deck"], "prompts": [
+      "Bitte benenne das Deck Chemie Grundlagen in Chemie Klasse 10 um.",
+      "nenn chemie grundlagen um in chemie 10",
+      "kanst du chemie grundlagen umbenenen zu anorganische chemie",
+      "Chemie Grundlagen → Chemie Abi",
+      "Mir gefällt der Name Chemie Grundlagen nicht mehr, kannst du das Deck Allgemeine Chemie nennen?"
+    ]},
+    {"name": "Abfragen / Test starten", "expect": ["start_test"], "prompts": [
+      "Bitte frage mich das Deck Chemie Grundlagen ab.",
+      "teste mich mal in chemie grundlagen",
+      "frag mich chemie ab bitte bin unsicher",
+      "Test Chemie Grundlagen",
+      "Kannst du mich zu Chemie Grundlagen abfragen?"
+    ]},
+    {"name": "Begriffe: Fach und Begriffe", "expect": ["create_term_subject", "add_terms"], "prompts": [
+      "Bitte lege das Fach Geschichte an und füge 10 Begriffe zur Weimarer Republik hinzu.",
+      "mach mir begriffe für bio zur zelle",
+      "ich brauch fachbegriffe für jura vertragsrecht",
+      "Begriffe Wirtschaft Marktformen",
+      "Kannst du in mein Fach Biologie noch ein paar Begriffe zur Genetik packen?"
+    ]},
+    {"name": "Normale Frage (keine Aktion)", "expect": ["chat"], "prompts": [
+      "Was ist der Unterschied zwischen Mitose und Meiose?",
+      "wie lern ich am besten vokabeln",
+      "erklär mir mal den begriff osmose",
+      "Photosynthese kurz erklärt?",
+      "Warum ist der Himmel blau?"
+    ]}
+  ]
+}

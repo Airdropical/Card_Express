@@ -207,7 +207,7 @@ AGENT_PLAN_SCHEMA = {
                     "deckName": {"type": "STRING"},
                     "subdeckName": {"type": "STRING"},
                     "folderName": {"type": "STRING"},
-                    "title": {"type": "STRING"},
+                    "title": {"type": "STRING", "description": "Calendar entry name, e.g. 'Mathe-Klausur'. Required for every calendar action; never put it into note."},
                     "dateISO": {"type": "STRING"},
                     "kind": {"type": "STRING", "enum": ["exam", "test", "assignment", "other"]},
                     "note": {"type": "STRING"},
@@ -215,8 +215,15 @@ AGENT_PLAN_SCHEMA = {
                     "vocabularyEntries": {"type": "ARRAY", "items": VOCABULARY_DRAFT_SCHEMA},
                 },
                 "required": ["type"],
+                # Without a fixed order Gemini fills the fields in its own order and leaves newDateISO
+                # and cards empty or writes flashcards into vocabularyEntries (seen in tools/tutor_eval.py).
+                "propertyOrdering": [
+                    "type", "title", "dateISO", "newDateISO", "newTitle", "kind", "deckName", "newName", "parentDeck",
+                    "createParentDeck", "subdeckName", "cards", "folderName", "vocabularyEntries", "subjectName", "termEntries", "note",
+                ],
             },
         },
     },
     "required": ["reply", "actions"],
+    "propertyOrdering": ["reply", "actions"],
 }

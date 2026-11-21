@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import socket
 import secrets
 import urllib.error
 import urllib.parse
@@ -157,7 +158,7 @@ def call_gemini(parts: list[dict[str, Any]], schema: dict[str, Any]) -> tuple[di
             if exc.code in RETRYABLE_STATUS:
                 raise HTTPException(status_code=503, detail="AI service is temporarily unavailable")
             raise HTTPException(status_code=502, detail="AI service rejected the request")
-        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError):
+        except (urllib.error.URLError, TimeoutError, socket.timeout, json.JSONDecodeError):
             if not is_last:
                 continue
             raise HTTPException(status_code=502, detail="AI service could not be reached")
