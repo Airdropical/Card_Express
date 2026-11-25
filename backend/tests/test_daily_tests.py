@@ -222,3 +222,18 @@ def test_translation_help_names_the_tutor_line_to_translate():
     assert last_tutor_line(transcript) == "Are you a tourist here?"
     prompt = tutor_conversation("conversation", "German", "German", "English", "", "", transcript, "was heißt das?", True)
     assert 'The line to translate is: "Are you a tourist here?"' in prompt
+
+
+def test_folder_names_are_mapped_to_existing_folders():
+    from agent_plan import canonical_folder_names
+
+    folders = ["ENGH01", "ENGH01 › Unit 1", "Spanisch › Unit 2"]
+    plan = {"actions": [
+        {"type": "add_vocabulary", "folderName": "ENGH01 ‰ Unit 1"},
+        {"type": "create_vocabulary_folder", "folderName": "engh01 > unit 1"},
+        {"type": "add_vocabulary", "folderName": "Unit 2"},
+        {"type": "create_vocabulary_folder", "folderName": "pronouns"},
+    ]}
+    result = canonical_folder_names(plan, folders)["actions"]
+    assert [a["folderName"] for a in result] == ["ENGH01 › Unit 1", "ENGH01 › Unit 1", "Spanisch › Unit 2", "pronouns"]
+    assert [a["type"] for a in result] == ["add_vocabulary", "add_vocabulary", "add_vocabulary", "create_vocabulary_folder"]

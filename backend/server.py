@@ -40,6 +40,7 @@ from agent_plan import (
     requests_translation_help,
     sanitize_agent_plan,
     drop_unknown_deck_actions,
+    canonical_folder_names,
     valid_cards,
 )
 from ai_client import daily_limit_for, execute_ai, is_unlimited, requests_in_last_day
@@ -448,7 +449,11 @@ ATTACHMENT_NOTE = (
     "when the material does not answer the question. "
     "If it is a word list or table, every row is exactly one entry: take the row's main word as it is written and put "
     "words from a synonym or alternatives column only into synonyms. Never turn a synonym into its own entry or use it "
-    "instead of the main word."
+    "instead of the main word. "
+    "Tables are sometimes extracted column by column: first one long line with all words of one column (often after "
+    "row numbers), then the words of the other column one per line. Pair them strictly in order (the n-th line belongs "
+    "to the n-th expression of the long line, which can have several words like 'pleased to meet you'), and go on to "
+    "the very last line, so that every row becomes an entry."
 )
 
 
@@ -565,6 +570,7 @@ def tutor_agent_plan(body: AgentPlanRequest, request: Request, account: Account 
     prompt = ai_prompts.agent_plan(language, body.mode, body.sourceLanguage, body.targetLanguage, decks, folders, body.message, calendar_entries, body.today or "", exclude_terms, term_subjects)
     plan = sanitize_agent_plan(execute_ai(request, db, account, [{"text": prompt}, *attached], AGENT_PLAN_SCHEMA))
     plan = drop_unknown_deck_actions(plan, body.decks)
+    plan = canonical_folder_names(plan, body.vocabularyFolders)
     if requested_count is not None:
         generated_count = sum(len(action.get("cards") or []) for action in plan["actions"] if action.get("type") in CARD_ACTION_TYPES)
         print(f"[TutorAgent][plan] requested_cards={requested_count} generated_cards={generated_count}", flush=True)

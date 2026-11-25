@@ -168,17 +168,39 @@ struct AssistantChatView: View {
     /// Kurze Zeilen bedeuten viele Einträge auf wenig Text; deshalb zählt auch die Zeilenzahl.
     private static let documentPartLines = 26
 
-    /// Teilt ein Dokument an Zeilengrenzen in Stücke von etwa `documentPartCharacters` Zeichen.
-    /// Bei sehr langen Dokumenten werden die Stücke größer, damit es höchstens `maxDocumentParts` werden.
+    /// Teilt ein Dokument in Stücke, die die KI vollständig übernehmen kann.
+    /// PDF-Seiten (getrennt durch einen Seitenvorschub) bleiben dabei ganz: PDFKit liefert Tabellen oft spaltenweise
+    /// (erst alle englischen, dann alle deutschen Wörter); ein Schnitt mitten in der Seite trennte Wort und Übersetzung.
+    /// Kurze Seiten werden zusammengelegt, nur sehr lange Seiten an Zeilengrenzen geteilt.
     static func documentParts(_ text: String) -> [String] {
-        let lines = text.split(separator: "\n", omittingEmptySubsequences: false)
-        let size = max(documentPartCharacters, text.count / maxDocumentParts + 1)
+        let pages = text.components(separatedBy: "\u{0C}")
+            .map { $0.trimmingCharacters(in: .newlines) }
+            .filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        var units: [String] = []
+        for page in pages {
+            if page.count <= maxPageCharacters { units.append(page) } else { units += lineChunks(page) }
+        }
+        // Zusammenlegen, solange ein Stück klein bleibt; bei sehr vielen Seiten werden die Stücke größer.
+        let target = max(documentPartCharacters, text.count / maxDocumentParts + 1)
         var parts: [String] = []
-        let maxLines = max(documentPartLines, lines.count / maxDocumentParts + 1)
+        for unit in units {
+            if let last = parts.last, last.count + unit.count + 1 <= target {
+                parts[parts.count - 1] = last + "\n" + unit
+            } else {
+                parts.append(unit)
+            }
+        }
+        return parts
+    }
+
+    /// Teilt Text ohne Seiten an Zeilengrenzen in Stücke von etwa `documentPartCharacters` Zeichen.
+    private static func lineChunks(_ text: String) -> [String] {
+        let lines = text.split(separator: "\n", omittingEmptySubsequences: false)
+        var parts: [String] = []
         var current = ""
         var currentLines = 0
         for line in lines {
-            if !current.isEmpty, current.count + line.count + 1 > size || currentLines >= maxLines {
+            if !current.isEmpty, current.count + line.count + 1 > documentPartCharacters || currentLines >= documentPartLines {
                 parts.append(current)
                 current = ""
                 currentLines = 0
@@ -189,6 +211,8 @@ struct AssistantChatView: View {
         if !current.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { parts.append(current) }
         return parts
     }
+    /// Eine ganze Seite bis zu dieser Länge bleibt ein Stück (eine Vokabelseite hat meist 600–1000 Zeichen).
+    private static let maxPageCharacters = 2_400
     private static let maxVocabularyPerAction = 500
     private static let isoDayFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -582,16 +606,13 @@ struct AssistantChatView: View {
                         attachment: part
                     )
                 }
-                func vocabularyEntries(of plan: TutorAgentPlan) -> [TutorVocabularyDraft] {
-                    plan.actions.first(where: { $0.type == "create_vocabulary_folder" || $0.type == "add_vocabulary" })?.vocabularyEntries ?? []
-                }
                 // Lange Dokumente: schon die erste Anfrage bekommt nur Teil 1. Mit dem ganzen Dokument wurde die
                 // Antwort bei ~200 Vokabeln zu lang (abgeschnitten), und der ganze Import schlug fehl.
                 let parts = payload?.documentText.map(Self.documentParts) ?? []
                 func partNote(_ index: Int) -> String {
                     store.language == "Englisch"
-                        ? "\n(Part \(index + 1) of \(parts.count) of the attached document. Take over every vocabulary entry in this part. term is always \(sourceName), translation always \(targetName), even if the table lists them the other way round.)"
-                        : "\n(Teil \(index + 1) von \(parts.count) des angehängten Dokuments. Übernimm alle Vokabeln aus diesem Teil. term ist immer \(sourceName), translation immer \(targetName), auch wenn die Tabelle andersherum aufgebaut ist.)"
+                        ? "\n(Part \(index + 1) of \(parts.count) of the attached document. Take over every vocabulary entry in this part and apply my instructions (filters, target folders) to it as well. term is always \(sourceName), translation always \(targetName), even if the table lists them the other way round.)"
+                        : "\n(Teil \(index + 1) von \(parts.count) des angehängten Dokuments. Übernimm alle Vokabeln aus diesem Teil und wende meine Anweisungen (Filter, Zielordner) auch auf diesen Teil an. term ist immer \(sourceName), translation immer \(targetName), auch wenn die Tabelle andersherum aufgebaut ist.)"
                 }
                 func partPayload(_ index: Int) -> TutorAttachmentPayload {
                     TutorAttachmentPayload(name: "\(payload?.name ?? "") (\(index + 1)/\(parts.count))", documentText: parts[index])
@@ -618,44 +639,84 @@ struct AssistantChatView: View {
                 for index in plan.actions.indices where plan.actions[index].vocabularyEntries != nil {
                     plan.actions[index].vocabularyEntries = VocabularyDirection.oriented(plan.actions[index].vocabularyEntries ?? [], sourceCode: sourceCode, targetCode: targetCode)
                 }
-                if payload != nil, let vocabIndex = plan.actions.firstIndex(where: { $0.type == "create_vocabulary_folder" || $0.type == "add_vocabulary" }) {
-                    var collected: [TutorVocabularyDraft] = []
+                func isVocabulary(_ action: TutorAgentAction) -> Bool {
+                    action.type == "create_vocabulary_folder" || action.type == "add_vocabulary"
+                }
+                if payload != nil, plan.actions.contains(where: isVocabulary) {
+                    // Je Zielordner eine Aktion: Aufträge wie „Pronomen in den Ordner pronouns“ verteilen die Einträge
+                    // auf mehrere Ordner, und jeder Teil der PDF kann zu jedem dieser Ordner etwas beitragen.
+                    var folderActions: [TutorAgentAction] = []
                     var seen = Set<String>()
-                    func add(_ entries: [TutorVocabularyDraft]) -> Int {
-                        let entries = VocabularyDirection.oriented(entries, sourceCode: sourceCode, targetCode: targetCode)
-                        let fresh = entries.filter { seen.insert(VocabKey.make($0.term, $0.translation)).inserted }
-                        collected.append(contentsOf: fresh)
-                        return fresh.count
+                    var collectedCount: Int { folderActions.reduce(0) { $0 + ($1.vocabularyEntries?.count ?? 0) } }
+                    func add(_ next: TutorAgentPlan) -> Int {
+                        var freshTotal = 0
+                        for action in next.actions where isVocabulary(action) {
+                            let entries = VocabularyDirection.oriented(action.vocabularyEntries ?? [], sourceCode: sourceCode, targetCode: targetCode)
+                            let fresh = entries.filter { seen.insert(VocabKey.make($0.term, $0.translation)).inserted }
+                            let key = (action.folderName ?? "").trimmingCharacters(in: .whitespaces).lowercased()
+                            if let index = folderActions.firstIndex(where: { ($0.folderName ?? "").trimmingCharacters(in: .whitespaces).lowercased() == key }) {
+                                folderActions[index].vocabularyEntries = (folderActions[index].vocabularyEntries ?? []) + fresh
+                            } else {
+                                var copy = action
+                                copy.vocabularyEntries = fresh
+                                folderActions.append(copy)
+                            }
+                            freshTotal += fresh.count
+                        }
+                        return freshTotal
                     }
                     var failedParts = 0
+                    /// Liefert die KI für eine Wortliste deutlich weniger Einträge, als der Teil Zeilen hat,
+                    /// hat sie vorzeitig aufgehört: einmal nachfragen, mit den schon übernommenen Einträgen als Ausschluss.
+                    func fillGaps(_ index: Int, after answer: TutorAgentPlan) async {
+                        let taken = answer.actions.filter(isVocabulary).flatMap { $0.vocabularyEntries ?? [] }
+                        let lines = parts[index].split(separator: "\n").filter { $0.trimmingCharacters(in: .whitespaces).count > 1 }.count
+                        guard taken.count >= 5, Double(taken.count) < Double(lines - 3) * 0.85 else { return }
+                        let excluded = taken.map { "\($0.term) → \($0.translation)" }
+                        if let more = await retrying({ try await requestPlan(message: String(text.prefix(1300)) + partNote(index), excluding: excluded, attachment: partPayload(index)) }) {
+                            _ = add(more)
+                        }
+                    }
                     if parts.count > 1 {
-                        _ = add(plan.actions[vocabIndex].vocabularyEntries ?? [])
+                        _ = add(plan)
+                        await fillGaps(firstPart, after: plan)
                         // Lange Dokumente werden Teil für Teil gelesen: Jeder Teil ist kurz genug, dass die KI alle
                         // Einträge darin vollständig übernimmt. Die erste Anfrage (ein Teil) gibt Ordner und Aktionstyp vor.
                         for index in parts.indices where index > firstPart {
-                            progressNote = store.tf("Teil %d von %d · %d Vokabeln", index + 1, parts.count, collected.count)
+                            progressNote = store.tf("Teil %d von %d · %d Vokabeln", index + 1, parts.count, collectedCount)
                             if let next = await retrying({ try await requestPlan(message: String(text.prefix(1300)) + partNote(index), attachment: partPayload(index)) }) {
-                                _ = add(vocabularyEntries(of: next))
+                                _ = add(next)
+                                await fillGaps(index, after: next)
                             } else {
                                 failedParts += 1
                             }
                         }
                     } else {
                         // Bild oder kurzes Dokument: weiterfragen, solange neue Einträge kommen.
-                        _ = add(plan.actions[vocabIndex].vocabularyEntries ?? [])
+                        _ = add(plan)
                         var round = 1
-                        var lastFresh = collected.count
-                        while lastFresh > 0, collected.count >= Self.vocabularyBatchThreshold, round < Self.maxVocabularyRounds {
+                        var lastFresh = collectedCount
+                        while lastFresh > 0, collectedCount >= Self.vocabularyBatchThreshold, round < Self.maxVocabularyRounds {
                             round += 1
-                            progressNote = store.tf("%d Vokabeln gelesen, weitere folgen …", collected.count)
-                            guard let next = await retrying({ try await requestPlan(excluding: collected.map { "\($0.term) → \($0.translation)" }) }) else { failedParts += 1; break }
-                            lastFresh = add(vocabularyEntries(of: next))
+                            progressNote = store.tf("%d Vokabeln gelesen, weitere folgen …", collectedCount)
+                            let known = folderActions.flatMap { $0.vocabularyEntries ?? [] }.map { "\($0.term) → \($0.translation)" }
+                            guard let next = await retrying({ try await requestPlan(excluding: known) }) else { failedParts += 1; break }
+                            lastFresh = add(next)
                         }
                     }
                     if failedParts > 0 {
                         errorText = store.t("Nicht alle Vokabeln konnten gelesen werden. Du kannst den Rest mit einem weiteren Auftrag ergänzen.")
                     }
-                    plan.actions[vocabIndex].vocabularyEntries = Array(collected.prefix(Self.maxVocabularyPerAction))
+                    // Vokabel-Aktionen durch die gesammelten ersetzen; andere Aktionen (Termine, Decks) bleiben, wie sie sind.
+                    let firstVocabulary = plan.actions.firstIndex(where: isVocabulary) ?? plan.actions.endIndex
+                    var others = plan.actions.filter { !isVocabulary($0) }
+                    let merged = folderActions.filter { !($0.vocabularyEntries ?? []).isEmpty }.map { action -> TutorAgentAction in
+                        var limited = action
+                        limited.vocabularyEntries = Array((action.vocabularyEntries ?? []).prefix(Self.maxVocabularyPerAction))
+                        return limited
+                    }
+                    others.insert(contentsOf: merged, at: min(firstVocabulary, others.count))
+                    plan.actions = others
                     progressNote = nil
                 }
                 // Die Duplikat-Erkennung normalisiert jede Vokabel (teuer) und läuft deshalb im Hintergrund.

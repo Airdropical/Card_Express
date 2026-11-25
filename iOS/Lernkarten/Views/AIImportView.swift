@@ -806,7 +806,8 @@ struct AIImportView: View {
         guard fileSize <= ImportLimits.pdfBytes else { throw LearningAPIError.message("PDF überschreitet 20 MB.") }
         guard let pdf = PDFDocument(url: url) else { throw LearningAPIError.message("PDF ließ sich nicht öffnen.") }
         guard pdf.pageCount <= ImportLimits.pdfPages else { throw LearningAPIError.message("Das PDF hat zu viele Seiten (maximal 250).") }
-        let extractedText = (0..<pdf.pageCount).compactMap { pdf.page(at: $0)?.string }.joined(separator: "\n")
+        // Seitenvorschub zwischen den Seiten: Der Tutor teilt lange PDFs seitenweise auf.
+        let extractedText = (0..<pdf.pageCount).compactMap { pdf.page(at: $0)?.string }.joined(separator: "\n\u{0C}\n")
         guard extractedText.count <= ImportLimits.textCharacters else {
             throw LearningAPIError.message("Der Text im PDF ist zu umfangreich. Verwende ein kürzeres Dokument.")
         }

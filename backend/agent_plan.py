@@ -274,3 +274,30 @@ def drop_unknown_deck_actions(plan: dict[str, Any], decks: list[str]) -> dict[st
         if action.get("type") not in ("start_test", "rename_deck") or str(action.get("deckName", "")).strip().casefold() in known
     ]
     return plan
+
+
+def _folder_key(name: str) -> str:
+    return re.sub(r"[^0-9a-zäöüß]+", "", str(name).casefold())
+
+
+def canonical_folder_names(plan: dict[str, Any], folders: list[str]) -> dict[str, Any]:
+    """Map folder names from the model onto the learner's existing folders.
+
+    Gemini sometimes garbles the path separator ("ENGH01 ‰ Unit 1") or drops the parent ("Unit 1"),
+    which would otherwise create a second, wrongly named folder.
+    """
+    known = [str(folder).strip() for folder in folders if str(folder).strip()]
+    by_key = {_folder_key(folder): folder for folder in known}
+    for action in plan["actions"]:
+        if action.get("type") not in ("create_vocabulary_folder", "add_vocabulary") or not action.get("folderName"):
+            continue
+        name = str(action["folderName"]).strip()
+        match = by_key.get(_folder_key(name))
+        if not match:
+            # Only the subfolder named: accept it when exactly one existing path ends with it.
+            endings = [folder for folder in known if "›" in folder and _folder_key(folder.split("›")[-1]) == _folder_key(name)]
+            match = endings[0] if len(endings) == 1 else None
+        if match:
+            action["folderName"] = match
+            action["type"] = "add_vocabulary"
+    return plan
